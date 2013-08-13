@@ -1,0 +1,10 @@
+<div class="container">
+	<h1>{{guide.title}}</h1>
+	<table class="table">
+		<tbody>
+			<tr ng-repeat="child in guide.children">
+				<td><a ng-click="state.transitionTo('app.guides.view.book', {guideID: guide.slug, bookID:child.slug});">{{child.title}}</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

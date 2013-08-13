@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="row">
+		<div class="span12">
+			<table class="table">
+				<tbody>
+					<tr ng-repeat="guide in guideData">
+						<td>
+							<!-- <a href="#/guides/{{guide.id}}">{{guide.title}}</a> -->
+							<a ng-click="state.transitionTo('app.guides.view', {guideID: guide.slug});">{{guide.title}}</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+

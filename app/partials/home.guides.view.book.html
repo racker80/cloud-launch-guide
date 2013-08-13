@@ -1,0 +1,24 @@
+<div class="container">
+	<h1>{{guide.title}}</h1>
+	<h2>{{book.title}}</h2>
+	<div markdown="book.content" ng-bind-html-unsafe="markdown"></div>
+	<hr>
+	<div ng-repeat="content in book.additionalContent">
+		<div markdown="content.text" parent="content" ng-bind-html-unsafe="markdown"></div>
+	</div>
+	<table class="table">
+		<tbody>
+			<tr ng-repeat="child in book.children" >
+				<td>
+					<h3>{{child.title}}</h3>
+					<div markdown="child.content" parent="child" ng-bind-html-unsafe="markdown"></div>
+					<hr>
+					<div ng-repeat="test in child.children">
+						<h4>{{test.title}}</h4>
+						<div markdown="test.content" parent="test" ng-bind-html-unsafe="markdown"></div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
