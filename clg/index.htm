@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<title>Cloud Launch Guide | Rackpace Hosting</title>
+	<link rel="stylesheet" href="includes/css/main.css">
+	
+	<script src="includes/js/jquery-1.8.2.min.js"></script>
+	<script src="includes/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="includes/js/plugins/ZeroClipboard.min.js"></script>
+	<script src="includes/js/main.js"></script>
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<article>
+		<header>
+			<div id="eyebrow-wrapper"> <!-- START Black Bar (Eyebrow) -->
+				<div id="eyebrow-container" class="container clearfix">
+					<div class="sixteen columns">
+						<div id="eyebrow-logo"><a href=""><img src="images/logo-rackspace.png" /></a></div>
+						<div id="eyebrow-login" class="dropdown-menu">
+							<ul>
+								<li><span class="btn medium gray flat dropdown">Log In</span>
+									<ul class="right">
+										<li><a href="">MyRackspace Portal</a></li>
+										<li><a href="">Cloud Control Panel</a></li>
+										<li><a href="">Classic Control Panel</a></li>
+										<li><a href="">Rackspace Webmail Login</a></li>
+										<li><a href="">Email Admin Login</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div id="eyebrow-signup" class="dropdown-menu">
+							<ul>
+								<li><span class="btn medium gray flat dropdown">Sign Up</span>
+									<ul class="right">
+										<li><a href="">Rackspace Cloud</a></li>
+										<li><a href="">Cloud Sites</a></li>
+										<li><a href="">Email &amp; Apps</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<nav id="eyebrow-nav-right">
+							<a href="" id="support-chat" class="icon">Support Chat</a>
+							<a href="" id="support-phone" class="icon">Support</a>: 1&#8211;800&#8211;961&#8211;4454
+						</nav>
+					</div>
+				</div>
+			</div> <!-- END Eyebrow (Black Bar) -->	
+					
+			<div id="nav-global-wrapper"> <!-- START Global Navigation -->
+				<div id="nav-global-container" class="container">
+					<div class="sixteen columns">
+						<aside id="logo">
+							<img src="images/logo-cloud-launch-guide.png" />
+							<h1>Cloud Launch Guides</h1>
+							<p>powered by Rackspace</p>
+						</aside>
+						<nav id="nav-global">
+							<a href="">Guides</a>
+							<a href="">About</a>
+							<a href="">Feedback</a>
+							<a href="">Support</a>
+						</nav>
+					</div>
+				</div>
+			</div>  <!-- END Global Navigation -->
+			
+			<div id="header-breadcrumbs-wrapper">
+				<div id="header-breadcrumbs-container" class="container clearfix">
+					<div class="sixteen columns">
+						<nav id="header-breadcrumbs">
+							<a href="">Guides</a> &#187;
+							<a href="">Scalable WordPress In the Cloud</a> &#187;
+							<a href="" class="selected">Server</a>
+						</nav>
+						<div id="toggle-nav"><a href="">navigation <img src="images/icon-cross.png" /></a></div>
+					</div>
+				</div>
+			</div>
+			
+			<progress id="header-progress" value="20" max="100"></progress>
+			
+			<div id="nav-index-wrapper">
+				<div id="nav-index-container" class="container">
+					<div class="sixteen columns">
+						<div id="nav-index" class="clearfix">
+							<nav>
+								<h5 class="completed">Database</h5>
+								<ul>
+									<li><a href="" class="completed">Database Setup</a></li>
+								</ul>
+							</nav>
+							<nav>
+								<h5>Server</h5>
+								<ul>
+									<li><a href="" class="selected">Server Setup</a></li>
+									<li><a href="" class="completed">Prepare the OS</a></li>
+									<li><a href="" class="completed">Install Your Webserver </a></li>
+									<li><a href="" class="completed">Stack</a></li>
+									<li><a href="" class="completed">Prepare WordPress</a></li>
+									<li><a href="" class="completed">Create a Server Image</a></li>
+									<li><a href="" class="completed">Create a Clone Server</a></li>
+									<li><a href="" class="completed">Load Balancer Set Up</a></li>
+									<li><a href="" class="completed">SSH Keys</a></li>
+									<li><a href="" class="completed">Lsync</a></li>
+									<li><a href="" class="completed">Varnish</a></li>
+									<li><a href="" class="completed">Create Your Clone</a></li>
+									<li><a href="" class="completed">Image</a></li>
+									<li><a href="" class="completed">Create Your Master</a></li>
+									<li><a href="">Image</a></li>
+									<li><a href="">A Functional Setup</a></li>
+								</ul>
+							</nav>
+							<nav>
+								<h5>DNS</h5>
+								<ul>
+									<li><a href="">Purchasing Your Domain</a></li>
+									<li><a href="">Rackspace DNS</a></li>
+									<li><a href="">DNS Records</a></li>
+								</ul>
+							</nav>
+							<nav>
+								<h5>Load Balancer</h5>
+								<ul>
+									<li><a href="">Optional Features</a></li>
+								</ul>
+							</nav>
+							<nav>
+								<h5>Install WordPress</h5>
+								<ul>
+									<li><a href="">The 5-minute Install</a></li>
+									<li><a href="">Modify WP&#8211;Config</a></li>
+									<li><a href="">Upload Themes, Files, &amp; Plug&#8211;ins</a></li>
+									<li><a href=""></a></li>
+								</ul>
+							</nav>
+							<nav>
+								<h5>Scaling</h5>
+								<ul>
+									<li><a href="">Scaling Servers</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div id="nav-index-utility-wrapper">
+					<div id="nav-index-utility-container" class="container">
+						<div id="nav-index-utility">
+							<div class="onoffswitch">
+							    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked />
+							    <label class="onoffswitch-label" for="myonoffswitch">
+							        <div class="onoffswitch-inner"></div>
+							        <div class="onoffswitch-switch"></div>
+							    </label>
+							</div>
+							<p class="label">Expert mode</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<section class="container">
+			<div class="sixteen columns">
+				<div id="content-container">
+					<div class="row">
+						<div class="sidebar five columns alpha">
+							<aside id="well-time">The Web Server: <span>1 hour</span></aside> <!-- sidebar-well-time -->
+							<aside id="chapters"> <!-- sidebar-contents -->
+								<h3>Chapters</h3>
+								<ol>
+									<li>Server Setup</li>
+									<li>Prepare the OS</li>
+									<li>Install Your Webserver Stack</li>
+									<li>Prepare WordPress</li>
+									<li>Create a Server Image</li>
+									<li>Create a Clone Server</li>
+									<li>Load Balancer Set Up</li>
+									<li>SSH Keys</li>
+									<li>Lsync</li>
+									<li>Varnish</li>
+									<li>Create Your Clone Image</li>
+									<li>Create Your Master Image</li>
+									<li>A Functional Setup</li>
+								</ol>
+							</aside>
+						</div>
+						<div class="eleven columns omega">
+							<h3>The Web Server</h3>
+							<p>Getting your Cloud Server configured correctly is the goal of this walkthrough. In this section, we show you everything you need to do to make sure this web server is 100% WordPress ready.</p>
+					
+							<h3>Prepare for Scale</h3>
+							<p>This exercise will demonstrate how the Rackspace Cloud infrastructure, when properly configured, can give you the ability to scale your site to meet demand. We’ll be doing what’s called “Horizontal Scale”. Horizontal scaling is the practice of using multiple servers to scale a configuration. Needless to say, you are going to have a very robust cloud configuration.</p>
+					
+							<h3>Checklist</h3>
+							<p>Before we begin, let’s take a moment to look over what we will accomplish in this server build out:</p>
+							<ul class="features-list">
+								<li>Configure the Apache Web Server.</li>
+								<li>Provide Permalinks for clean <span class="tooltip" title="Nulla vitae elit libero a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.">URL Structures</span>.</li>
+								<li>Create an FTP User for Uploading Files.</li>
+								<li>Create a Load Balanced Multinode configuration.</li>
+								<li>Configure user permissions for Apache and your FTP User.</li>
+								<li>Provide clean URL structures based on Permalinks using .htaccess.</li>
+								<li>Allow you to download and install WordPress plugins and Themes.</li>
+								<li>Create an image of your server for future Scaling.</li>
+								<li>Configure Replication and Proxy Software to support your MultiServer Configuration.</li>
+							</ul>
+						</div>
+					</div> 
+					<div class="row">
+						<h2><span>Chapter 1</span> Creating Your Master Server</h2>
+						<div class="sidebar five columns alpha">
+							&nbsp;
+						</div>
+						<div class="eleven columns omega">
+							<p>WordPress’s famous 5 minute install is a magical thing, but only if you have your server configured properly to handle it.  We don’t want you bumping into problems with user permissions and file uploads, so the following steps will ensure that your server and WordPress fall deeply in love from the very beginning.</p>
+							
+							<h4 class="header-icon-wrench"><span>1</span> Getting Started</h4>
+							<h5>Control Panel Steps:</h5>
+							<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p class="block-quote-command">Log into the <a href="">control panel</a></p>
+							<p class="block-quote-command">Click "Servers" from the product navigation bar at the top</p>
+							<p class="block-quote-command">Click "Create Server"</p>
+							
+							<hr />
+							
+							<h4 class="header-icon-wrench"><span>2</span> Instance Details </h4>
+							<h5>Server Name:</h5>
+							<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p class="block-quote-command">Give your server a  name, "WPMaster01"</p>
+							
+							<h5>Region:</h5>
+							<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p class="block-quote-command">Give your server a region, "Dallas (DFW)"</p>
+							
+							<h5>Image:</h5>
+							<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<ul>
+								<li>Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis.</li>
+								<li>Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis: 
+									<ul>
+										<li>Sed posuere consectetur</li>
+										<li>Sed posuere consectetur</li>
+									</ul>
+								</li>
+								<li>Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis.</li>
+							</ul>
+							<ol>
+								<li>Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis.</li>
+								<li>Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis: 
+									<ul>
+										<li>Sed posuere consectetur</li>
+										<li>Sed posuere consectetur</li>
+									</ul>
+								</li>
+								<li>Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis.</li>
+							</ol>
+							
+							<p class="block-quote-terminal">ssh root@192.0.2.1 <a href="##" class="tooltip terminal" title="Copy to clipboard">copy</a></p>
+							<p class="block-quote-terminal">
+								ssh root@192.0.2.1<br />
+								ssh root@192.0.2.1<br />
+								ssh root@192.0.2.1 <a href="##" class="tooltip terminal" title="Copy to clipboard">copy</a>
+							</p>
+						
+							<hr />
+						
+						</div>						
+					</div>
+					
+					<div class="row">
+						<h2><span>Chapter 2</span> The Other Things</h2>
+						<div class="sidebar five columns alpha">
+							&nbsp;
+						</div>
+						<div class="eleven columns omega">
+							<p>WordPress’s famous 5 minute install is a magical thing, but only if you have your server configured properly to handle it.  We don’t want you bumping into problems with user permissions and file uploads, so the following steps will ensure that your server and WordPress fall deeply in love from the very beginning.</p>
+							
+							<h4 class="header-icon-wrench"><span>1</span> Getting Started</h4>
+							<h5>Control Panel Steps:</h5>
+							<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p class="block-quote-command">Log into the <a href="">control panel</a></p>
+							<p class="block-quote-command">Click "Servers" from the product navigation bar at the top</p>
+							<p class="block-quote-command">Click "Create Server"</p>
+							
+							<hr />
+							
+							<h4 class="header-icon-wrench"><span>2</span> Instance Details </h4>
+							<h5>Server Name:</h5>
+							<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p class="block-quote-command">Give your server a  name, "WPMaster01"</p>
+							
+							<h5>Region:</h5>
+							<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p class="block-quote-command">Give your server a region, "Dallas (DFW)"</p>
+							
+							<h5>Image:</h5>
+							<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<ul>
+								<li>Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis.</li>
+								<li>Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis: 
+									<ul>
+										<li>Sed posuere consectetur</li>
+										<li>Sed posuere consectetur</li>
+									</ul>
+								</li>
+								<li>Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis.</li>
+							</ul>
+							<ol>
+								<li>Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis.</li>
+								<li>Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis: 
+									<ul>
+										<li>Sed posuere consectetur</li>
+										<li>Sed posuere consectetur</li>
+									</ul>
+								</li>
+								<li>Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis.</li>
+							</ol>
+							
+							<p class="block-quote-terminal">ssh root@192.0.2.1 <a href="##" class="tooltip terminal" title="Copy to clipboard">copy</a></p>
+							<p class="block-quote-terminal">
+								ssh root@192.0.2.1<br />
+								ssh root@192.0.2.1<br />
+								ssh root@192.0.2.1 <a href="##" class="tooltip terminal" title="Copy to clipboard">copy</a>
+							</p>
+						</div>						
+					</div>
+					
+					<!-- MOAR CONENT HUR -->
+					
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div id="basement-wrapper">
+				<div id="basement-container" class="clearfix">
+					<div id="basement-copyright">
+						<p>&#169; 2013 <a href="">Rackspace</a>, US Inc.</p>
+					</div>
+					<nav id="basement-nav">
+						<a href="">About Rackspace</a>
+						<a href="">Fanatical Support</a>
+						<a href="">Hosting Solutions</a>
+						<a href="">Investors</a>
+						<a href="">Careers</a>
+						<a href="">Privacy Statement</a>
+						<a href="">Website Terms</a>
+						<a href="">Sitemap</a>
+					</nav>
+				</div>
+			</div>
+		</footer>
+	</article>
+		
+</body>
+</html>

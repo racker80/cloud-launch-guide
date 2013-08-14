@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<title>Cloud Launch Guide | Rackpace Hosting</title>
+	<link rel="stylesheet" href="clg/includes/css/main.css">
+
+    <!-- <link rel="stylesheet" href="css/vendor/bootstrap/bootstrap.min.css"> -->
+
+    <!-- <link rel="stylesheet" href="css/vendor/ng-grid/ng-grid.css"> -->
+
+    <!-- <link rel="stylesheet" href="css/vendor/bootstrap/bootstrap-responsive.min.css"> -->
+
+    <!-- TODO needed? -->
+    <!-- <link href="css/vendor/angularstrap/styles.css" rel="stylesheet"> -->
+
+    <!-- <link rel="stylesheet" href="css/vendor/angularstrap/bootstrap-datepicker.css"> -->
+
+    <!-- <link rel="stylesheet" href="css/vendor/angularstrap/bootstrap-timepicker.css"> -->
+
+    <link rel="stylesheet" href="app/css/vendor/animate/animate.css">
+
+    <!-- <link rel="stylesheet" type="text/css" href="css/app.css"/> -->
+
+    <script src="app/js/vendor/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>	
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body ng-app="myApp">
+	<article>
+		<header>
+			<div id="eyebrow-wrapper"> <!-- START Black Bar (Eyebrow) -->
+				<div id="eyebrow-container" class="container clearfix">
+					<div class="sixteen columns">
+						<div id="eyebrow-logo"><a href=""><img src="images/logo-rackspace.png" /></a></div>
+						<div id="eyebrow-login" class="dropdown-menu">
+							<ul>
+								<li><span class="btn medium gray flat dropdown">Log In</span>
+									<ul class="right">
+										<li><a href="">MyRackspace Portal</a></li>
+										<li><a href="">Cloud Control Panel</a></li>
+										<li><a href="">Classic Control Panel</a></li>
+										<li><a href="">Rackspace Webmail Login</a></li>
+										<li><a href="">Email Admin Login</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div id="eyebrow-signup" class="dropdown-menu">
+							<ul>
+								<li><span class="btn medium gray flat dropdown">Sign Up</span>
+									<ul class="right">
+										<li><a href="">Rackspace Cloud</a></li>
+										<li><a href="">Cloud Sites</a></li>
+										<li><a href="">Email &amp; Apps</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<nav id="eyebrow-nav-right">
+							<a href="" id="support-chat" class="icon">Support Chat</a>
+							<a href="" id="support-phone" class="icon">Support</a>: 1&#8211;800&#8211;961&#8211;4454
+						</nav>
+					</div>
+				</div>
+			</div> <!-- END Eyebrow (Black Bar) -->	
+					
+			<div id="nav-global-wrapper"> <!-- START Global Navigation -->
+				<div id="nav-global-container" class="container">
+					<div class="sixteen columns">
+						<aside id="logo">
+							<img src="images/logo-cloud-launch-guide.png" />
+							<h1>Cloud Launch Guides</h1>
+							<p>powered by Rackspace</p>
+						</aside>
+						<nav id="nav-global">
+							<a href="">Guides</a>
+							<a href="">About</a>
+							<a href="">Feedback</a>
+							<a href="">Support</a>
+						</nav>
+					</div>
+				</div>
+			</div>  <!-- END Global Navigation -->
+			
+			<div id="header-breadcrumbs-wrapper">
+				<div id="header-breadcrumbs-container" class="container clearfix">
+					<div class="sixteen columns">
+						<nav id="header-breadcrumbs">
+							<a href="">Guides</a> &#187;
+							<a href="">Scalable WordPress In the Cloud</a> &#187;
+							<a href="" class="selected">Server</a>
+						</nav>
+						<div id="toggle-nav"><a href="">navigation <img src="images/icon-cross.png" /></a></div>
+					</div>
+				</div>
+			</div>
+			
+			<progress id="header-progress" value="20" max="100"></progress>
+			
+			<div id="nav-index-wrapper">
+				<div id="nav-index-container" class="container">
+					<div class="sixteen columns">
+						<div id="nav-index" class="clearfix">
+							<nav>
+								<h5 class="completed">Database</h5>
+								<ul>
+									<li><a href="" class="completed">Database Setup</a></li>
+								</ul>
+							</nav>
+							<nav>
+								<h5>Server</h5>
+								<ul>
+									<li><a href="" class="selected">Server Setup</a></li>
+									<li><a href="" class="completed">Prepare the OS</a></li>
+									<li><a href="" class="completed">Install Your Webserver </a></li>
+									<li><a href="" class="completed">Stack</a></li>
+									<li><a href="" class="completed">Prepare WordPress</a></li>
+									<li><a href="" class="completed">Create a Server Image</a></li>
+									<li><a href="" class="completed">Create a Clone Server</a></li>
+									<li><a href="" class="completed">Load Balancer Set Up</a></li>
+									<li><a href="" class="completed">SSH Keys</a></li>
+									<li><a href="" class="completed">Lsync</a></li>
+									<li><a href="" class="completed">Varnish</a></li>
+									<li><a href="" class="completed">Create Your Clone</a></li>
+									<li><a href="" class="completed">Image</a></li>
+									<li><a href="" class="completed">Create Your Master</a></li>
+									<li><a href="">Image</a></li>
+									<li><a href="">A Functional Setup</a></li>
+								</ul>
+							</nav>
+							<nav>
+								<h5>DNS</h5>
+								<ul>
+									<li><a href="">Purchasing Your Domain</a></li>
+									<li><a href="">Rackspace DNS</a></li>
+									<li><a href="">DNS Records</a></li>
+								</ul>
+							</nav>
+							<nav>
+								<h5>Load Balancer</h5>
+								<ul>
+									<li><a href="">Optional Features</a></li>
+								</ul>
+							</nav>
+							<nav>
+								<h5>Install WordPress</h5>
+								<ul>
+									<li><a href="">The 5-minute Install</a></li>
+									<li><a href="">Modify WP&#8211;Config</a></li>
+									<li><a href="">Upload Themes, Files, &amp; Plug&#8211;ins</a></li>
+									<li><a href=""></a></li>
+								</ul>
+							</nav>
+							<nav>
+								<h5>Scaling</h5>
+								<ul>
+									<li><a href="">Scaling Servers</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div id="nav-index-utility-wrapper">
+					<div id="nav-index-utility-container" class="container">
+						<div id="nav-index-utility">
+							<div class="onoffswitch">
+							    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked />
+							    <label class="onoffswitch-label" for="myonoffswitch">
+							        <div class="onoffswitch-inner"></div>
+							        <div class="onoffswitch-switch"></div>
+							    </label>
+							</div>
+							<p class="label">Expert mode</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<section ui-view></section>
+
+		<footer>
+			<div id="basement-wrapper">
+				<div id="basement-container" class="clearfix">
+					<div id="basement-copyright">
+						<p>&#169; 2013 <a href="">Rackspace</a>, US Inc.</p>
+					</div>
+					<nav id="basement-nav">
+						<a href="">About Rackspace</a>
+						<a href="">Fanatical Support</a>
+						<a href="">Hosting Solutions</a>
+						<a href="">Investors</a>
+						<a href="">Careers</a>
+						<a href="">Privacy Statement</a>
+						<a href="">Website Terms</a>
+						<a href="">Sitemap</a>
+					</nav>
+				</div>
+			</div>
+		</footer>
+	</article>
+
+
+
+
+
+<script src="app/js/vendor/jquery/jquery-1.9.0.min.js"></script>
+
+<!-- <script src="http://angular-ui.github.com/lib/bootstrap/docs/assets/js/bootstrap.min.js"></script> -->
+<script src="app/js/vendor/bootstrap/bootstrap.min.js"></script>
+
+<!-- TODO localize -->
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script> -->
+<script src="app/js/vendor/jqueryui/jquery-ui-1.9.2.js"></script>
+
+<script src="app/js/vendor/angular/angularjs.v1.0.4-51d501aa.js"></script>
+
+<script src="app/js/vendor/angularui/angular-ui.js"></script>
+
+<script src="app/js/vendor/ng-grid/ng-grid.debug.js"></script>
+
+<!-- TODO needed?  Then localize... -->
+<script src="app/js/vendor/bootstrap/ui-bootstrap-tpls-0.1.0-SNAPSHOT.js"></script>
+
+<!-- enables rendering of injected html -->
+<!-- TODO localize -->
+<!-- <script src="http://code.angularjs.org/1.0.1/angular-sanitize-1.0.1.js"></script> -->
+<script src="app/js/vendor/angularsanatize/angular-sanitize-1.0.1.js"></script>
+
+<!-- angular strap -->
+<!-- TODO move from cdn to local -->
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+ --><!-- needed? -->
+
+<script src="app/js/vendor/underscore/underscore-min.js"></script>
+
+<script src="app/js/vendor/prettify/prettify.js"></script>
+
+<script src="app/js/vendor/angularstrap/angular-strap.min.js"></script>
+
+<script src="app/js/vendor/angularstrap/bootstrap-datepicker.js"></script>
+
+<script src="app/js/vendor/angularstrap/bootstrap-timepicker.js"></script>
+
+<!-- MY SUTFF -->
+<script src="app/js/vendor/angularuirouter/angular-ui-router.js"></script>
+<script src="app/js/vendor/showdown/showdown.js"></script>
+
+<script src="clg/includes/js/plugins/ZeroClipboard.min.js"></script>
+<script src="clg/includes/js/main.js"></script>
+
+
+
+<!--  TODO compile/optimise these during build -->
+<script src="app/js/app.js"></script>
+<script src="app/js/services.js"></script>
+<script src="app/js/controllers.js"></script>
+<script src="app/js/filters.js"></script>
+<script src="app/js/directives.js"></script>	
+		
+</body>
+</html>
