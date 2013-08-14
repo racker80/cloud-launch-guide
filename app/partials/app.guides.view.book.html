@@ -34,7 +34,7 @@
 							<aside id="chapters"> <!-- sidebar-contents -->
 								<h3>Chapters</h3>
 								<ol>
-									<li ng-repeat="chapter in book.children">{{chapter.title}}</li>
+									<li ng-repeat="chapter in book.children"><a href="#/guides/{{guide.slug}}/{{book.slug}}#{{chapter.slug}}">{{chapter.title}}</a></li>
 								</ol>
 							</aside>
 						</div>
