@@ -1,68 +1,43 @@
-<!-- add navbar-inverse class for black/google-like bar -->
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar navbar-fixed-top" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-            </i><a class="brand" href="#">{{constants.navbar_title}}</a>
-
-            <div class="nav-collapse collapse">
-                <ul class="nav">
-
-                    <!-- <li><a href="#/about">Support</a></li> -->
-
-                    <li ng-show="isLoggedIn()" class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="icon-th icon-white"></i>
-                            Dev Playground
-                            <b class="caret"></b>
-                        </a>
-
-                        <ul class="dropdown-menu">
-                            <li class="nav-header">Examples</li>
-                            <li><a href="#/playground/accordion">Accordion</a></li>
-                            <li><a href="#/playground/calendar">Calendar</a></li>
-                            <li><a href="#/playground/carousel">Carousel</a></li>
-
-                            <li><a href="#/playground/date">Date</a></li>
-                            <li><a href="#/playground/datagrid">Data grid</a></li>
-                            <li><a href="#/playground/fileupload">File upload</a></li>
-                            <li><a href="#/playground/modal">Modal</a></li>
-                            <li><a href="#/playground/pagination">Pagination</a></li>
-                            <li><a href="#/playground/progress">Progress bars</a></li>
-                            <li><a href="#/playground/tabs">Tabs</a></li>
-                            <li><a href="#/playground/tooltips">Tooltips</a></li>
-                            <li><a href="#/playground/tree">Tree</a></li>
-
-                            <li class="nav-header">References</li>
-                            <li><a ng-href="https://github.com/angular-ui/bootstrap/">Angular UI Bootstrap</a></li>
-                            <li><a ng-href="http://angular-ui.github.com/">AngularUI</a></li>
-                            <li><a ng-href="http://mgcrea.github.com/angular-strap/">Angular Strap</a></li>
-
-                            <li>
-                                <a ng-href="https://docs.google.com/document/d/1lWNCt0cajL5QaV-A6AOur-YOJ_NcXUDyIZELiU-tRhM/edit#">Angular
-                                    Cheatsheet</a></li>
-
-                        </ul>
-                    </li>
-                </ul>
-                <div class="nav navbar-form pull-right">
-                    <div ng-show="!isLoggedIn()">
-                        <input class="span2" ng-model="loginInput" type="text" placeholder="Email">
-                        <input ng-model="passwordInput" class="span2" type="password" placeholder="Password">
-                        <a class="btn btn-primary" ng-click="login()">
-                            <i class="icon-circle icon-large"></i> Sign in</a>
-                    </div>
-                    <div ng-show="isLoggedIn()"><span>Logged in as {{currentUser}}</span>
-                        <a class="btn btn-inverse" ng-click="logout()">
-                            <i class="icon-circle-blank icon-large"></i> Sign out</a>
+            <div id="header-breadcrumbs-wrapper">
+                <div id="header-breadcrumbs-container" class="container clearfix">
+                    <div class="sixteen columns">
+                        <nav id="header-breadcrumbs">
+                            <a href="#/guides">Guides</a> &#187;
+                            <a href="#/guides/{{guide.slug}}">{{guide.title}}</a> &#187;
+                            <a href="" class="selected" ng-show="state.is('app.guides.view.book')">{{book.title}}</a>
+                        </nav>
+                        <div id="toggle-nav"><a href="" toggle-nav>navigation <img src="clg/images/icon-cross.png" /></a></div>
                     </div>
                 </div>
             </div>
-            <!--/.nav-collapse -->
-        </div>
-    </div>
-</div>
+            
+            <progress id="header-progress" value="20" max="100"></progress>
+            
+            <div id="nav-index-wrapper">
+                <div id="nav-index-container" class="container">
+                    <div class="sixteen columns">
+                        <div nav-index id="nav-index" class="clearfix">
+                            <nav class="nav-thing" ng-repeat="book in guide.children">
+                                <h5 class="">{{book.title}}</h5>
+                                <ul ng-repeat="chapter in book.children">
+                                    <li><a href="#/guides/{{guide.slug}}/{{book.slug}}#{{chapter.slug}}" class="">{{chapter.title}}</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div id="nav-index-utility-wrapper">
+                    <div id="nav-index-utility-container" class="container">
+                        <div id="nav-index-utility">
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked />
+                                <label class="onoffswitch-label" for="myonoffswitch">
+                                    <div class="onoffswitch-inner"></div>
+                                    <div class="onoffswitch-switch"></div>
+                                </label>
+                            </div>
+                            <p class="label">Expert mode</p>
+                        </div>
+                    </div>
+                </div>
+            </div>

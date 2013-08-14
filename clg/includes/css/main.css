@@ -245,7 +245,8 @@ nav#nav-global a.active:hover {}
 
 #nav-index-container nav {
 	float: left;
-	margin-right: 20px;
+	margin-right: 10px;
+	width:15%;
 }
 
 #nav-index-container h5 {

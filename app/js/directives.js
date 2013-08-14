@@ -29,6 +29,41 @@ directives.directive('stopEvent', function () {
 });
 
 
+directives.directive('toggleNav', function(){
+    return {
+        restrict:'A',
+        link: function(scope, element, attr) {
+            
+            element.bind('click', function(){
+                var nav = scope.navState;
+
+                if (nav == 'open') {
+                    $('#nav-index-wrapper').show();
+                    $('#toggle-nav img').addClass('close');
+                }
+                $('#nav-index-wrapper').slideToggle('fast', function(){
+                    if ($('#nav-index-wrapper').is(':visible')) {
+                        $('#toggle-nav img').addClass('close');
+                        scope.navState = 'open';
+                    } else { 
+                        $('#toggle-nav img').removeClass('close');
+                        delete scope.navState;
+                    }       
+                });
+            });
+            // element.click();
+        }
+    }
+});
+directives.directive('navIndex', function(){
+    return {
+        restrict:'A',
+        link: function(scope, element, attr) {
+            
+        }
+    }
+});
+
 
 myApp.directive('markdown', function(){
     return {

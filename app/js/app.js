@@ -85,6 +85,12 @@ myApp.config(['$routeProvider', '$locationProvider', '$stateProvider', '$urlRout
                                 })
 
                             }
+                        },
+                        'guideNav@': {
+                            templateUrl:'app/partials/navbar.html',
+                            controller:function($scope, $rootScope){
+                                console.log($rootScope)
+                            }
                         }
                     }
                 })
@@ -100,7 +106,7 @@ myApp.config(['$routeProvider', '$locationProvider', '$stateProvider', '$urlRout
                                     _.each($rootScope.guide.children, function(value, key, list){
                                     if(value.slug === $stateParams.bookID) {
                                         console.log('setting book...')
-                                        $scope.book = list[key];
+                                        $rootScope.book = list[key];
                                     }
                                 })
                             }

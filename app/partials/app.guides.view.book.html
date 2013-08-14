@@ -34,7 +34,7 @@
 							<aside id="chapters"> <!-- sidebar-contents -->
 								<h3>Chapters</h3>
 								<ol>
-									<li ng-repeat="child in book.children">{{child.title}}</li>
+									<li ng-repeat="chapter in book.children">{{chapter.title}}</li>
 								</ol>
 							</aside>
 						</div>
@@ -46,15 +46,15 @@
 							</div>
 						</div>
 					</div> 
-					<div class="row" ng-repeat="child in book.children">
-						<h2><span>Chapter {{$index+1}}</span> {{child.title}}</h2>
+					<div id="{{chapter.slug}}" class="row" ng-repeat="chapter in book.children">
+						<h2><span>Chapter {{$index+1}}</span> {{chapter.title}}</h2>
 						<div class="sidebar five columns alpha">
 							&nbsp;
 						</div>
 						<div class="eleven columns omega">
-							<div markdown="child.content" parent="child" ng-bind-html-unsafe="markdown"></div>
+							<div markdown="chapter.content" parent="chapter" ng-bind-html-unsafe="markdown"></div>
 							
-							<section ng-repeat="page in child.children">
+							<section ng-repeat="page in chapter.children">
 								<h4 class="header-icon-wrench"><span>{{$index}}</span> {{page.title}}</h4>
 								<div markdown="page.content" parent="page" ng-bind-html-unsafe="markdown"></div>
 							

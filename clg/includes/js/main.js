@@ -1,30 +1,32 @@
 $(document).ready(function() {
-
 	// toggle menu and state handling
 
-	var nav = localStorage.getItem('navState');
+	navToggle = function() {
+		var nav = localStorage.getItem('navState');
     
-	if (nav == 'open') {
-		$('#nav-index-wrapper').show();
-		$('#toggle-nav img').addClass('close');
+		if (nav == 'open') {
+			$('#nav-index-wrapper').show();
+			$('#toggle-nav img').addClass('close');
+		}
+	
+		$(function() {	
+			$('#toggle-nav a').click(function() {
+
+				$('#nav-index-wrapper').slideToggle('fast', function(){
+					if ($('#nav-index-wrapper').is(':visible')) {
+						$('#toggle-nav img').addClass('close');
+						localStorage.setItem('navState','open');
+					} else { 
+						$('#toggle-nav img').removeClass('close');
+						localStorage.removeItem('navState');
+					}		
+				});
+					
+				return false;
+			});
+		});
 	}
 	
-	$(function() {	
-		$('#toggle-nav a').click(function() {
-
-			$('#nav-index-wrapper').slideToggle('fast', function(){
-				if ($('#nav-index-wrapper').is(':visible')) {
-					$('#toggle-nav img').addClass('close');
-					localStorage.setItem('navState','open');
-				} else { 
-					$('#toggle-nav img').removeClass('close');
-					localStorage.removeItem('navState');
-				}		
-			});
-				
-			return false;
-		});
-	});
 	
 	// expert-mode state handling
 	
