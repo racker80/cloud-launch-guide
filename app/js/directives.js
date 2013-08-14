@@ -42,16 +42,26 @@ myApp.directive('markdown', function(){
             return function link(scope, element, attr) {
 
                 var converter = new Showdown.converter();
-                scope.markdown = converter.makeHtml(scope.markdown)
+                if(scope.markdown) {
+                    scope.markdown = converter.makeHtml(scope.markdown)
 
-                 //REPLACE THE CODE
-                angular.forEach(scope.parent.code, function(value, key) {
-                    scope.markdown = scope.markdown.replace('[code '+key+']', '<pre>'+value+'</pre>');
-                });
-                //REPLACE THE IMAGES
-                angular.forEach(scope.parent.images, function(value, key) {
-                    scope.markdown = scope.markdown.replace('[image '+key+']', '<img src="'+value.url+'">');
-                }); 
+
+
+                     //REPLACE THE CODE
+                     if(scope.parent.code) {
+                        angular.forEach(scope.parent.code, function(value, key) {
+                            scope.markdown = scope.markdown.replace('[code '+key+']', '<p class="block-quote-terminal">'+value.text+'</p>');
+                        });
+                    }
+
+                    //REPLACE THE IMAGES
+                    if(scope.parent.images) {
+                        angular.forEach(scope.parent.images, function(value, key) {
+                            scope.markdown = scope.markdown.replace('[image '+key+']', '<img src="'+value.url+'">');
+                        }); 
+                    }
+                }
+
 
 
 

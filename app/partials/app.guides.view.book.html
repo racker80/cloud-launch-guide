@@ -40,28 +40,10 @@
 						</div>
 						<div class="eleven columns omega">
 							<h3>{{book.title}}</h3>
-							<div markdown="book.content" ng-bind-html-unsafe="markdown"></div>
+							<div markdown="book.content" parent="book" ng-bind-html-unsafe="markdown"></div>
 							<div ng-repeat="content in book.additionalContent">
 								<div markdown="content.text" parent="content" ng-bind-html-unsafe="markdown"></div>
 							</div>
-<!-- 							<p>Getting your Cloud Server configured correctly is the goal of this walkthrough. In this section, we show you everything you need to do to make sure this web server is 100% WordPress ready.</p>
-					
-							<h3>Prepare for Scale</h3>
-							<p>This exercise will demonstrate how the Rackspace Cloud infrastructure, when properly configured, can give you the ability to scale your site to meet demand. We’ll be doing what’s called “Horizontal Scale”. Horizontal scaling is the practice of using multiple servers to scale a configuration. Needless to say, you are going to have a very robust cloud configuration.</p>
-					
-							<h3>Checklist</h3>
-							<p>Before we begin, let’s take a moment to look over what we will accomplish in this server build out:</p>
-							<ul class="features-list">
-								<li>Configure the Apache Web Server.</li>
-								<li>Provide Permalinks for clean <span class="tooltip" title="Nulla vitae elit libero a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.">URL Structures</span>.</li>
-								<li>Create an FTP User for Uploading Files.</li>
-								<li>Create a Load Balanced Multinode configuration.</li>
-								<li>Configure user permissions for Apache and your FTP User.</li>
-								<li>Provide clean URL structures based on Permalinks using .htaccess.</li>
-								<li>Allow you to download and install WordPress plugins and Themes.</li>
-								<li>Create an image of your server for future Scaling.</li>
-								<li>Configure Replication and Proxy Software to support your MultiServer Configuration.</li>
-							</ul> -->
 						</div>
 					</div> 
 					<div class="row" ng-repeat="child in book.children">
@@ -70,11 +52,11 @@
 							&nbsp;
 						</div>
 						<div class="eleven columns omega">
-							<div markdown="child.content" ng-bind-html-unsafe="markdown"></div>
+							<div markdown="child.content" parent="child" ng-bind-html-unsafe="markdown"></div>
 							
 							<section ng-repeat="page in child.children">
 								<h4 class="header-icon-wrench"><span>{{$index}}</span> {{page.title}}</h4>
-								<div markdown="page.content" ng-bind-html-unsafe="markdown"></div>
+								<div markdown="page.content" parent="page" ng-bind-html-unsafe="markdown"></div>
 							
 								<hr />
 

@@ -20,7 +20,10 @@ myApp.config(['$routeProvider', '$locationProvider', '$stateProvider', '$urlRout
     $stateProvider
         .state('app', {
             url:'/',
-            templateUrl:'app/partials/app.html',
+            // templateUrl:'app/partials/app.html',
+            // controller:function(){
+            //     console.log('setting root controller...'); 
+            // },
             resolve: {
                 data: function($http, $rootScope){
                         return $http.jsonp('http://192.237.165.197/CLG/app/api/?action=getAll&jsonp=true&callback=JSON_CALLBACK').then(function(data){
@@ -30,22 +33,32 @@ myApp.config(['$routeProvider', '$locationProvider', '$stateProvider', '$urlRout
                         });
                 }
             },
-            controller:function(){
-                console.log('setting root controller...');
- 
-            }
+            views: {
+                '': {
+                    templateUrl:'app/partials/app.html',
+                    controller: function(){
+                        console.log('running guides controller');
+                    }
+                },
+                'home@app': {
+                    templateUrl:'app/partials/views/home.html',
+                    controller: function(){
+                        console.log('fuck yea?')
+                    }
+                }
+            }                                   
         })
             .state('app.guides', {
                 url: "guides",
                 views: {
                     '': {
-                        templateUrl:'app/partials/home.guides.html',
+                        templateUrl:'app/partials/app.guides.html',
                         controller: function(){
                             console.log('running guides controller');
                         }
                     },
                     'list@app.guides': {
-                        templateUrl:'app/partials/views/home.guides.html',
+                        templateUrl:'app/partials/views/guides.list.html',
                         controller: function(){
                             console.log('running guides content controller');
                             
@@ -60,7 +73,7 @@ myApp.config(['$routeProvider', '$locationProvider', '$stateProvider', '$urlRout
                     url: "/:guideID",
                     views: {
                         "content@app.guides": {
-                            templateUrl:'app/partials/home.guides.view.html',
+                            templateUrl:'app/partials/app.guides.view.html',
                             controller: function($scope, $rootScope, $stateParams){
                                 console.log('running guides view controller...')
                                 console.log($stateParams)
@@ -81,7 +94,7 @@ myApp.config(['$routeProvider', '$locationProvider', '$stateProvider', '$urlRout
                         views: {
 
                             "book@app.guides": {
-                                templateUrl:'app/partials/home.guides.view.book.html',
+                                templateUrl:'app/partials/app.guides.view.book.html',
                                 controller: function($scope, $rootScope, $stateParams){
                                     console.log('running guides book controller...')
                                     _.each($rootScope.guide.children, function(value, key, list){
