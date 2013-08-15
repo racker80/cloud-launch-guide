@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
 	<h1>{{guide.title}}</h1>
 	<table class="table">
 		<tbody>
@@ -7,4 +7,33 @@
 			</tr>
 		</tbody>
 	</table>
-</div>
+</div> -->
+
+		<section class="container">
+			<div class="sixteen columns">
+				<div id="content-container">
+					<div class="row">
+						<div class="sidebar five columns alpha">
+							<aside id="well-time">{{guide.title}}<span>1 hour</span></aside> <!-- sidebar-well-time -->
+							<aside id="chapters"> <!-- sidebar-contents -->
+								<h3>Sections</h3>
+								<ol>
+									<li ng-repeat="book in guide.children"><a href="#/guides/{{guide.slug}}/{{book.slug}}">{{book.title}}</a></li>
+								</ol>
+							</aside>
+						</div>
+						<div class="eleven columns omega">
+							<div markdown="guide.content" parent="guide" ng-bind-html-unsafe="markdown"></div>
+							<div ng-repeat="content in guide.additionalContent">
+								<div markdown="content.text" parent="guide" ng-bind-html-unsafe="markdown"></div>
+							</div>
+							<a class="button full-width large" href="#/guides/{{guide.slug}}/{{guide.children[0].slug}}">Get Started &raquo;</a>
+						</div>
+					</div> 
+					
+
+					<!-- MOAR CONENT HUR -->
+					
+				</div>
+			</div>
+		</section>
