@@ -33,12 +33,13 @@ directives.directive('toggleNav', function(){
     return {
         restrict:'A',
         link: function(scope, element, attr) {
-            
+
             element.bind('click', function(){
                 var nav = scope.navState;
 
                 if (nav == 'open') {
                     $('#nav-index-wrapper').show();
+                    // angular.element(element.children('img').addClass('close'));
                     $('#toggle-nav img').addClass('close');
                 }
                 $('#nav-index-wrapper').slideToggle('fast', function(){
@@ -59,7 +60,7 @@ directives.directive('navIndex', function(){
     return {
         restrict:'A',
         link: function(scope, element, attr) {
-            
+            // console.log(angular.element(element[0].children('.nav-thing')))
         }
     }
 });
