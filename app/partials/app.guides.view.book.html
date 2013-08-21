@@ -1,37 +1,10 @@
-<!-- <div class="container">
-	<h1>{{guide.title}}</h1>
-	<h2>{{book.title}}</h2>
-	<div markdown="book.content" ng-bind-html-unsafe="markdown"></div>
-	<hr>
-	<div ng-repeat="content in book.additionalContent">
-		<div markdown="content.text" parent="content" ng-bind-html-unsafe="markdown"></div>
-	</div>
-	<table class="table">
-		<tbody>
-			<tr ng-repeat="child in book.children" >
-				<td>
-					<h3>{{child.title}}</h3>
-					<div markdown="child.content" parent="child" ng-bind-html-unsafe="markdown"></div>
-					<hr>
-					<div ng-repeat="test in child.children">
-						<h4>{{test.title}}</h4>
-						<div markdown="test.content" parent="test" ng-bind-html-unsafe="markdown"></div>
-					</div>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div> -->
-
-
-
 		<section class="container">
 			<div class="sixteen columns">
 				<div id="content-container">
 					<div class="row">
 						<div class="sidebar five columns alpha">
-							<aside id="well-time">The Web Server: <span>1 hour</span></aside> <!-- sidebar-well-time -->
-							<aside id="chapters"> <!-- sidebar-contents -->
+							<aside id="well-time">{{book.title}}: <span>1 hour</span></aside> <!-- sidebar-well-time -->
+							<aside id="chapters" > <!-- sidebar-contents -->
 								<h3>Chapters</h3>
 								<ol>
 									<li ng-repeat="chapter in book.children"><a href="#/guides/{{guide.slug}}/{{book.slug}}#{{chapter.slug}}">{{chapter.title}}</a></li>
@@ -39,13 +12,21 @@
 							</aside>
 						</div>
 						<div class="eleven columns omega">
-							<h3>{{book.title}}</h3>
+							<h3>{{book.longTitle}}</h3>
+
+							<div ng-repeat="image in book.images | filter:{type:'heading'}">
+								<img src="{{image.url}}">
+							</div>
+
 							<div markdown="book.content" parent="book" ng-bind-html-unsafe="markdown"></div>
+
 							<div ng-repeat="content in book.additionalContent">
 								<div markdown="content.text" parent="content" ng-bind-html-unsafe="markdown"></div>
 							</div>
 						</div>
 					</div> 
+
+
 					<div id="{{chapter.slug}}" class="row" ng-repeat="chapter in book.children">
 						<h2><span>Chapter {{$index+1}}</span> {{chapter.title}}</h2>
 						<div class="sidebar five columns alpha">
@@ -59,11 +40,17 @@
 								<div markdown="page.content" parent="page" ng-bind-html-unsafe="markdown"></div>
 							
 								<hr />
-
+								
 							</section><!-- steps -->
 						
 						</div>						
 					</div>
+
+
+							<p>
+								<a href="#/guides/{{guide.slug}}/{{prevBook.slug}}" class="btn large green flat round4" title="">Previous: {{prevBook.title}}</a>
+								<a href="#/guides/{{guide.slug}}/{{nextBook.slug}}" class="btn large green flat round4" title="">Next: {{nextBook.title}}</a>
+							</p>
 
 					<!-- MOAR CONENT HUR -->
 					

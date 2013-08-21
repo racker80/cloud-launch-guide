@@ -59,8 +59,13 @@ directives.directive('toggleNav', function(){
 directives.directive('navIndex', function(){
     return {
         restrict:'A',
-        link: function(scope, element, attr) {
-            // console.log(angular.element(element[0].children('.nav-thing')))
+        
+        link: function(scope, elm, attr) {
+            
+            var w = elm.parent().width();
+            var n = elm.parent().children('.nav-thing');
+            console.log(n)
+
         }
     }
 });

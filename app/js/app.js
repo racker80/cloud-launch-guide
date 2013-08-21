@@ -107,6 +107,11 @@ myApp.config(['$routeProvider', '$locationProvider', '$stateProvider', '$urlRout
                                     if(value.slug === $stateParams.bookID) {
                                         console.log('setting book...')
                                         $rootScope.book = list[key];
+                                        $rootScope.nextBook = list[key+1];
+
+                                        if(key > 0) {
+                                            $rootScope.prevBook = list[key-1];
+                                        }
                                     }
                                 })
                             }

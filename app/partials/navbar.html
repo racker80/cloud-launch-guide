@@ -16,8 +16,8 @@
             <div id="nav-index-wrapper">
                 <div id="nav-index-container" class="container">
                     <div class="sixteen columns">
-                        <div nav-index id="nav-index" class="clearfix">
-                            <nav class="nav-thing" ng-repeat="book in guide.children">
+                        <div id="nav-index" class="clearfix">
+                            <nav nav-index class="nav-thing" ng-repeat="book in guide.children">
                                 <h5 class="">{{book.title}}</h5>
                                 <ul ng-repeat="chapter in book.children">
                                     <li><a href="#/guides/{{guide.slug}}/{{book.slug}}#{{chapter.slug}}" class="">{{chapter.title}}</a></li>

@@ -9,31 +9,54 @@
 	</table>
 </div> -->
 
-		<section class="container">
-			<div class="sixteen columns">
+
+<section class="container">
+	<div class="sixteen columns">
 				<div id="content-container">
 					<div class="row">
+						<img src="{{guide.images[0].url}}">
+					</div>
+					<div class="row">
 						<div class="sidebar five columns alpha">
-							<aside id="well-time">{{guide.title}}<span>1 hour</span></aside> <!-- sidebar-well-time -->
-							<aside id="chapters"> <!-- sidebar-contents -->
-								<h3>Sections</h3>
-								<ol>
-									<li ng-repeat="book in guide.children"><a href="#/guides/{{guide.slug}}/{{book.slug}}">{{book.title}}</a></li>
-								</ol>
+							<aside id="well-time" class="home">Guide Time: <span>{{guide.time}}</span></aside> <!-- sidebar-well-time -->
+
+							
+							<aside id="well-section" ng-repeat="book in guide.children">
+								{{book.title}} <span>Completion Time: {{book.time}}</span>
 							</aside>
+							
 						</div>
 						<div class="eleven columns omega">
+							<h2>Overview</h2>
 							<div markdown="guide.content" parent="guide" ng-bind-html-unsafe="markdown"></div>
-							<div ng-repeat="content in guide.additionalContent">
-								<div markdown="content.text" parent="guide" ng-bind-html-unsafe="markdown"></div>
-							</div>
-							<a class="button full-width large" href="#/guides/{{guide.slug}}/{{guide.children[0].slug}}">Get Started &raquo;</a>
-						</div>
-					</div> 
-					
 
+							<hr>
+
+							<section ng-repeat="book in guide.children">
+								<h3>{{book.title}}</h3>
+								<div markdown="book.description" parent="book" ng-bind-html-unsafe="markdown"></div>
+							</section>
+							
+
+							
+							<div class="notice help">
+								<h4>One Last Thing:</h4>
+								<p>You can remove all the detailed explanations and just get down to the brass tacks with <strong>Expert Mode</strong>. <a href="">Lorem ipsum dolor</a> sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+							
+							<hr>
+							
+							<p><a href="#/guides/{{guide.slug}}/{{guide.children[0].slug}}" class="btn large green flat round4" title="">Get Started</a></p>
+						</div>
+					</div>
+															
 					<!-- MOAR CONENT HUR -->
 					
 				</div>
 			</div>
-		</section>
+
+
+</section>
+
+
+
