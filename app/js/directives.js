@@ -29,6 +29,34 @@ directives.directive('stopEvent', function () {
 });
 
 
+directives.directive('globalNavigation', function($window){
+    return {
+        restrict:"AE",
+        link:function(scope, element, attr) {
+            var windowEl = angular.element($window);
+            var offsetTop = element[0].offsetTop;
+
+            windowEl.on('scroll', function() {
+                scope.$apply(function() {
+                    scope.scrollPosition = windowEl.scrollTop();
+                });
+            });
+            scope.$watch('scrollPosition', function(scrollPosition){
+                if(scrollPosition >= offsetTop) {
+                    $(element[0]).addClass('fixed');
+                    $('body').css('paddingTop', element[0].offsetHeight)
+                }
+                if(scrollPosition < offsetTop) {
+                    $(element[0]).removeClass('fixed');
+                    $('body').css('paddingTop', 0)
+                }
+            })
+
+        }
+    }
+})
+
+
 directives.directive('toggleNav', function(){
     return {
         restrict:'A',
