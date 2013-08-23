@@ -1,59 +1,119 @@
-		<section class="container">
 			<div class="sixteen columns">
 				<div id="content-container">
-					<div class="row">
-						<div class="sidebar five columns alpha">
-							<aside id="well-time">{{book.title}}: <span>1 hour</span></aside> <!-- sidebar-well-time -->
-							<aside id="chapters" > <!-- sidebar-contents -->
-								<h3>Chapters</h3>
-								<ol>
-									<li ng-repeat="chapter in book.children"><a href="#/guides/{{guide.slug}}/{{book.slug}}#{{chapter.slug}}">{{chapter.title}}</a></li>
-								</ol>
-							</aside>
-						</div>
-						<div class="eleven columns omega">
-							<h3>{{book.longTitle}}</h3>
 
-							<div ng-repeat="image in book.images | filter:{type:'heading'}">
-								<img src="{{image.url}}">
+					<!-- BOOK HEADING -->
+					<section class="container">
+						<div class="row">
+							<div class="sidebar five columns alpha col-md-5">
+								<aside id="well-time">{{book.title}}: <span>1 hour</span></aside> <!-- sidebar-well-time -->
+								<aside id="chapters" > <!-- sidebar-contents -->
+									<h3>Chapters</h3>
+									<ol>
+										<li ng-repeat="chapter in book.children"><a href="#/guides/{{guide.slug}}/{{book.slug}}#{{chapter.slug}}">{{chapter.title}}</a></li>
+									</ol>
+								</aside>
 							</div>
+							<div class="eleven columns omega col-md-11">
+								<h3>{{book.longTitle}}</h3>
 
-							<div markdown="book.content" parent="book" ng-bind-html-unsafe="markdown"></div>
+								<div ng-repeat="image in book.images | filter:{type:'heading'}">
+									<img src="{{image.url}}">
+								</div>
 
-							<div ng-repeat="content in book.additionalContent">
-								<div markdown="content.text" parent="content" ng-bind-html-unsafe="markdown"></div>
+								<div markdown="book.content" parent="book" ng-bind-html-unsafe="markdown"></div>
+
+								<div ng-repeat="content in book.additionalContent">
+									<div markdown="content.text" parent="content" ng-bind-html-unsafe="markdown"></div>
+								</div>
+							</div>
+						</div> 
+					</section>
+					
+
+
+
+					<!-- CHAPTER HEADING -->
+					<div id="chapter-{{chapter.slug}}" class="chapter-container" ng-repeat="chapter in book.children">
+						<div class="container">
+							<div class="row">
+								<h2><span>Chapter {{$index+1}}</span> {{chapter.title}}</h2>
+								<div class="sidebar five columns alpha col-md-5">
+									&nbsp;
+								</div>
+
+								<div class="eleven columns omega col-md-11">
+									<div markdown="chapter.content" parent="chapter" ng-bind-html-unsafe="markdown"></div> 
+								</div>
 							</div>
 						</div>
-					</div> 
+
+							<!-- PAGE SECTION -->
+						<div id="page-{{page.slug}}" class="page-container" ng-repeat="page in chapter.children">
+							<div class="container">
+								<div class="row">
+									<div class="sidebar five columns alpha col-md-5">
+										&nbsp;
+										
+										<!-- A cool example of what we can do with base bootstrap styles -->
+										<!-- remove the 'hide' class to see it -->
+										<div class="panel panel-default hide">
+											<!-- Default panel contents -->
+											<div class="panel-heading">Panel heading <button type="button" class="close" aria-hidden="true">&times;</button></div>
+											<div class="panel-body">
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, natus excepturi est sit doloribus vero ex rem deleniti eius omnis quisquam molestias repellendus quam provident eaque molestiae soluta cumque fuga!</p>
+											</div>
+
+											<!-- Table -->
+											<table class="table">
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>Mark</td>
+														<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+													</tr>
+													<tr>
+														<td>2</td>
+														<td>Mark</td>
+														<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+													</tr>
+													<tr>
+														<td>3</td>
+														<td>Mark</td>
+														<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+													</tr>
+													<tr>
+														<td>4</td>
+														<td>Mark</td>
+														<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
 
 
-					<div id="{{chapter.slug}}" class="row" ng-repeat="chapter in book.children">
-						<h2><span>Chapter {{$index+1}}</span> {{chapter.title}}</h2>
-						<div class="sidebar five columns alpha">
-							&nbsp;
+
+									</div>
+									<div class="page-content col-md-11" >
+										<h4 class=""><span>{{$index}}</span> {{page.title}}</h4>
+										<div markdown="page.content" parent="page" ng-bind-html-unsafe="markdown"></div>
+									</div><!-- steps -->
+								</div>
+							</div>
 						</div>
-						<div class="eleven columns omega">
-							<div markdown="chapter.content" parent="chapter" ng-bind-html-unsafe="markdown"></div>
-							
-							<section ng-repeat="page in chapter.children">
-								<h4 class="header-icon-wrench"><span>{{$index}}</span> {{page.title}}</h4>
-								<div markdown="page.content" parent="page" ng-bind-html-unsafe="markdown"></div>
-							
-								<hr />
-								
-							</section><!-- steps -->
-						
-						</div>						
+					</div> <!-- CHAPTER -->
+
+
+					<hr>
+					<div class="container">
+						<p style="text-align:center;">
+							<a href="#/guides/{{guide.slug}}/{{prevBook.slug}}" class="btn btn-primary btn-lg" title="">Previous: {{prevBook.title}}</a>
+
+							<a href="#/guides/{{guide.slug}}/{{nextBook.slug}}" class="btn btn-primary btn-lg" title="">Next: {{nextBook.title}}</a>
+						</p>
 					</div>
 
-
-							<p>
-								<a href="#/guides/{{guide.slug}}/{{prevBook.slug}}" class="btn large green flat round4" title="">Previous: {{prevBook.title}}</a>
-								<a href="#/guides/{{guide.slug}}/{{nextBook.slug}}" class="btn large green flat round4" title="">Next: {{nextBook.title}}</a>
-							</p>
 
 					<!-- MOAR CONENT HUR -->
 					
 				</div>
 			</div>
-		</section>

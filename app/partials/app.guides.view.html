@@ -13,12 +13,15 @@
 <section class="container">
 	<div class="sixteen columns">
 				<div id="content-container">
-					<div class="row">
+					<div id="book-header-image">
 						<img src="{{guide.images[0].url}}">
 					</div>
+
 					<div class="row">
-						<div class="sidebar five columns alpha">
-							<aside id="well-time" class="home">Guide Time: <span>{{guide.time}}</span></aside> <!-- sidebar-well-time -->
+						<div class="sidebar five columns alpha col-md-5">
+							<aside id="well-time" class="home">
+								Guide Time: <span>{{guide.time}}</span>
+							</aside> <!-- sidebar-well-time -->
 
 							
 							<aside id="well-section" ng-repeat="book in guide.children">
@@ -26,7 +29,7 @@
 							</aside>
 							
 						</div>
-						<div class="eleven columns omega">
+						<div class="eleven columns omega col-md-11">
 							<h2>Overview</h2>
 							<div markdown="guide.content" parent="guide" ng-bind-html-unsafe="markdown"></div>
 
@@ -38,15 +41,16 @@
 							</section>
 							
 
-							
+							<hr>
 							<div class="notice help">
 								<h4>One Last Thing:</h4>
 								<p>You can remove all the detailed explanations and just get down to the brass tacks with <strong>Expert Mode</strong>. <a href="">Lorem ipsum dolor</a> sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							</div>
-							
+							</div>		
 							<hr>
+							<div style="text-align:center;">
+								<p><a href="#/guides/{{guide.slug}}/{{guide.children[0].slug}}" class="btn btn-primary btn-lg btn-block" title="">Get Started</a></p>
+							</div>				
 							
-							<p><a href="#/guides/{{guide.slug}}/{{guide.children[0].slug}}" class="btn large green flat round4" title="">Get Started</a></p>
 						</div>
 					</div>
 															
@@ -57,6 +61,7 @@
 
 
 </section>
+
 
 
 

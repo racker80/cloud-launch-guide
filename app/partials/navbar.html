@@ -1,6 +1,25 @@
-<div global-navigation>
-            <div id="header-breadcrumbs-wrapper">
+<div id="guide-navbar" global-navigation>
+    <div id="header-breadcrumbs-wrapper">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="#/guides">Guides</a></li>
+                <li><a href="#/guides/{{guide.slug}}">{{guide.title}}</a></li>
+                <li ng-show="state.is('app.guides.view.book')" class="active">
+                    <a href="#/guides/{{guide.slug}}/{{book.slug}}#">{{book.title}}</a>
+                </li>
+<!--                 <li toggle-nav>
+                    <img src="clg/images/icon-cross.png" />
+                </li> -->
+            </ol>
+            <div id="toggle-nav"><a href="" toggle-nav>navigation <img src="clg/images/icon-cross.png" /></a></div>
+        </div>
+        
+    </div>
+
+<!--             <div id="header-breadcrumbs-wrapper">
                 <div id="header-breadcrumbs-container" class="container clearfix">
+
+
                     <div class="sixteen columns">
                         <nav id="header-breadcrumbs">
                             <a href="#/guides">Guides</a> &#187;
@@ -9,8 +28,10 @@
                         </nav>
                         <div id="toggle-nav"><a href="" toggle-nav>navigation <img src="clg/images/icon-cross.png" /></a></div>
                     </div>
+
+
                 </div>
-            </div>
+            </div> -->
             
             <progress id="header-progress" value="20" max="100"></progress>
             
@@ -19,7 +40,7 @@
                     <div class="sixteen columns">
                         <div id="nav-index" class="clearfix">
                             <nav nav-index class="nav-thing" ng-repeat="book in guide.children">
-                                <h5 class="">{{book.title}}</h5>
+                                <h5 class=""><a href="#/guides/{{guide.slug}}/{{book.slug}}">{{book.title}}</a></h5>
                                 <ul ng-repeat="chapter in book.children">
                                     <li><a href="#/guides/{{guide.slug}}/{{book.slug}}#{{chapter.slug}}" class="">{{chapter.title}}</a></li>
                                 </ul>

@@ -35,6 +35,7 @@ directives.directive('globalNavigation', function($window){
         link:function(scope, element, attr) {
             var windowEl = angular.element($window);
             var offsetTop = element[0].offsetTop;
+            console.log(element[0].offsetTop)
 
             windowEl.on('scroll', function() {
                 scope.$apply(function() {
@@ -42,6 +43,7 @@ directives.directive('globalNavigation', function($window){
                 });
             });
             scope.$watch('scrollPosition', function(scrollPosition){
+
                 if(scrollPosition >= offsetTop) {
                     $(element[0]).addClass('fixed');
                     $('body').css('paddingTop', element[0].offsetHeight)
@@ -119,14 +121,14 @@ myApp.directive('markdown', function(){
                      //REPLACE THE CODE
                      if(scope.parent.code) {
                         angular.forEach(scope.parent.code, function(value, key) {
-                            scope.markdown = scope.markdown.replace('[code '+key+']', '<p class="block-quote-terminal">'+value.text+'</p>');
+                            scope.markdown = scope.markdown.replace('[code '+key+']', '<pre class="'+value.type+'">'+value.text+'</pre>');
                         });
                     }
 
                     //REPLACE THE IMAGES
                     if(scope.parent.images) {
                         angular.forEach(scope.parent.images, function(value, key) {
-                            scope.markdown = scope.markdown.replace('[image '+key+']', '<img src="'+value.url+'">');
+                            scope.markdown = scope.markdown.replace('[image '+key+']', '<img src="'+value.url+'" class="'+value.type+'">');
                         }); 
                     }
                 }
