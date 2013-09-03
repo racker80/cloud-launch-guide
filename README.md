@@ -1,4 +1,7 @@
-cloud-launch-guide
-==================
+# My Own Boilerplate
 
-angular js project for cloud launch guide front end
+A Slim based project boilerplate preconfigured with Twig and Compass.
+
+## Why?
+
+For convenience. Instead of downloading everything separated I just need to clone this repository and can start hacking right away!
