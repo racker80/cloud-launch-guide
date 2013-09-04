@@ -9,12 +9,6 @@ html {
 /*	-webkit-text-size-adjust: 100%;*/
 }
 
-/*body {height: 100%;	font-size: 1em;}*/
-
-/*article {margin: 0 auto;}
-article.home {background: #fefefe;}
-article.home #content-container {padding-top: 30px;}*/
-
 
 a {
 	-moz-transition: all .15s linear;
@@ -22,29 +16,15 @@ a {
 	transition: all .15s linear;
 }
 
-/* START Header */
-
-header {
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;         /* IE 8+ */
-	width: 100%;
-	z-index: 1000;
-	position: relative;
-	/*font-size: 75%;*/
-}
 
 
-
-
-
+/* ----------------------------------------------------------------
+	EYEBROW-WRAPPER
+	a reset of the bootstrap navbar
+---------------------------------------------------------------- */
 #eyebrow-wrapper {
 	background: #333;
 	border-radius:0;
-
-	/*height: 45px;*/
-	/*width: 100%;*/
-
 	margin:0;
 
 	.navbar-brand {
@@ -52,7 +32,6 @@ header {
 		text-indent:-999px;
 		background:url('../../images/logo-rackspace.png') center no-repeat;
 		width:100px;
-
 	}
 
 	.navbar-collapse {
@@ -80,12 +59,17 @@ header {
 }
 
 
-
-#nav-global-wrapper {
+/* ----------------------------------------------------------------
+	banner-content
+	a reset of the bootstrap jumbotron class
+---------------------------------------------------------------- */
+#banner-content {
 	margin:0;
 	padding-bottom:15px;
 	padding-top:30px;
 	
+
+	/* Banner Logo */
 	#logo {
 			position: relative;
 			height: 90px;
@@ -105,7 +89,7 @@ header {
 				
 				font-family: 'RobotoLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 				text-transform: uppercase;
-				font-size: 140%;
+				/*font-size: 140%;*/
 				margin:0;
 				line-height:.9em;
 			}
@@ -137,7 +121,9 @@ header {
 				}
 			}
 	}
+	
 
+	/* Banner Navigation */
 	#nav-global {
 			font-family: 'RobotoLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 			ul.nav.nav-tabs {
@@ -166,15 +152,23 @@ header {
 
 #guide-navbar {
 	z-index:900;
+	position:relative;
 }
 
 
+
+/* ----------------------------------------------------------------
+	HEADER BREADCRUMBS
+	a reset of the bootstrap breadcrumbs
+---------------------------------------------------------------- */
 #header-breadcrumbs-wrapper {
 	@breadcrumb-color:#aaa;
 	background: #333;
 	/*font-size: 150%;*/
 	position: relative;
 	
+
+	/* Bootstrap breadcrumbs */
 	ol.breadcrumb {
 		float:left;
 		border-radius:0;
@@ -214,6 +208,8 @@ header {
 		}
 	}
 
+
+	/* navigation button */
 	#toggle-nav {
 		float: right;
 		text-transform: lowercase;
@@ -266,7 +262,10 @@ header {
 
 
 
-
+/* ----------------------------------------------------------------
+	DROPDOWN NAVIGATION
+	tihs should be re-done as a panel
+---------------------------------------------------------------- */
 #nav-index-wrapper {
 	display: none;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -339,7 +338,10 @@ header {
 
 
 
-
+/* ----------------------------------------------------------------
+	OPTIONS AT THE BOTTOM OF THE DROPDOWN NAV
+	
+---------------------------------------------------------------- */
 #nav-index-utility-wrapper {
 	background: #000;
 	-moz-transition: all .15s linear;
@@ -467,7 +469,7 @@ header {
 	#well-time {
 		background: #333 url('../../images/icon-clock.png') no-repeat 15px 13px;
 		color: #fff;
-		font-size: 130%;
+		/*font-size: 130%;*/
 		padding: 15px 0 15px 85px;	
 		margin-bottom: 25px;
 		line-height: 25px;
@@ -483,7 +485,7 @@ header {
 
 	#well-section {
 		background: #ccc;
-		font-size: 90%;
+		/*font-size: 90%;*/
 		padding: 15px;	
 		margin-bottom: 10px;
 		font-family:'RobotoBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -496,8 +498,8 @@ header {
 	}	
 
 	#chapters {
-		h3 {font-size: 110%;}
-		ol li {font-size: 90%;}
+		/*h3 {font-size: 110%;}*/
+		/*ol li {font-size: 90%;}*/
 	}
 
 }
@@ -623,7 +625,7 @@ header {
 			-moz-border-radius: 3px;
 			border-radius: 3px;
 			padding: 15px;
-			font-size: 85%;
+			/*font-size: 85%;*/
 			margin-bottom: 15px;
 
 			a {
@@ -651,7 +653,7 @@ header {
 			-moz-border-radius: 3px;
 			border-radius: 3px;
 			padding: 15px;
-			font-size: 80%;
+			/*font-size: 80%;*/
 			margin-bottom: 15px;
 
 			&:hover {
@@ -660,7 +662,7 @@ header {
 		}
 
 		&.intro {
-			font-size: 110%;
+			/*font-size: 110%;*/
 			line-height: 25px;
 		}
 
@@ -675,7 +677,7 @@ header {
 	.notice {
 		margin: 30px 0;
 		padding: 3px 0 5px 50px;
-		font-size: 90%;
+		/*font-size: 90%;*/
 		&.info {
 			background: url('../../images/icon-notepad.png') no-repeat left top;
 		}
@@ -804,7 +806,7 @@ header {
 	width: 100%;
 	z-index: 1000;
 	position: relative;
-	font-size: 75%;
+	/*font-size: 75%;*/
 	background: #333;
 	padding: 17px 0;
 }
@@ -882,14 +884,6 @@ header {
 
 
 
-
-
-.fixed {
-	position:fixed;
-	top:0;
-	left:0;
-	width:100%;
-}
 
 
 

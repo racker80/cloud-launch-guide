@@ -10,9 +10,6 @@
                 <li class="currentChapter">
                     
                 </li>
-<!--                 <li toggle-nav>
-                    <img src="clg/images/icon-cross.png" />
-                </li> -->
             </ol>
             <div id="toggle-nav"><a href="#" toggle-nav>navigation <img src="/clg/images/icon-cross.png" /></a></div>
         </div>
@@ -60,7 +57,7 @@
                     <div id="nav-index-utility-container" class="container">
                         <div id="nav-index-utility">
                             <div class="onoffswitch">
-                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked />
+                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked/>
                                 <label class="onoffswitch-label" for="myonoffswitch">
                                     <div class="onoffswitch-inner"></div>
                                     <div class="onoffswitch-switch"></div>

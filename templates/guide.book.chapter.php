@@ -4,43 +4,12 @@
 			<div class="sixteen columns">
 				<div id="content-container">
 
-					<!-- BOOK HEADING -->
-					<section class="container">
-						<div class="row">
-							<div class="sidebar five columns alpha col-md-5">
-								<aside id="well-time">{{book.title}}: <span>1 hour</span></aside> <!-- sidebar-well-time -->
-								<aside id="chapters" > <!-- sidebar-contents -->
-									<h3>Chapters</h3>
-									<ol>
-										{% for chapter in book.children %}
-										<li ng-repeat="chapter in book.children"><a href="#/guides/{{guide.slug}}/{{book.slug}}#{{chapter.slug}}">{{chapter.title}}</a></li>
-										{%endfor%}
-									</ol>
-								</aside>
-							</div>
-							<div class="eleven columns omega col-md-11">
-								<h3>{{book.longTitle}}</h3>
 
-								<div ng-repeat="image in book.images | filter:{type:'heading'}">
-									<img src="{{image.url}}">
-								</div>
-
-								{{book.content|raw}}
-								{% for content in book.additionalContent %}
-								<div ng-repeat="content in book.additionalContent">
-									{{content.text|raw}}
-									<div markdown="content.text" parent="content" ng-bind-html-unsafe="markdown"></div>
-								</div>
-								{%endfor%}
-							</div>
-						</div> 
-					</section>
 					
 
 
 
 					<!-- CHAPTER HEADING -->
-					{% for chapter in book.children %}
 					<div id="{{chapter.slug}}" class="chapter-container" ng-repeat="chapter in book.children">
 						<div class="container chapterHeader">
 
@@ -91,7 +60,6 @@
 						</div>
 						{%endfor%}
 					</div> <!-- CHAPTER -->
-					{%endfor%}
 
 					<hr>
 					<div class="container">

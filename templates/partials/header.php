@@ -75,12 +75,12 @@
 	</div>
 </nav>
 
-			<div id="nav-global-wrapper" class="jumbotron">
+			<div id="banner-content" class="jumbotron ">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-8 col-med-8 col-lg-8">
 							<div id="logo">
-								<img src="/clg/images/logo-cloud-launch-guide.png" />
+								<a href="/"><img src="/clg/images/logo-cloud-launch-guide.png" /></a>
 								<span>
 									<h1>Cloud Launch Guides</h1>
 									<p>powered by Rackspace</p>

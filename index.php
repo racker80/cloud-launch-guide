@@ -14,8 +14,8 @@ $app = new Slim(array(
 
 $app->get('/', function() use($app) {
 		// jSON URL which should be requested
-	$json_url = 'http://192.237.165.197/CLG/app/api/?action=getAll';
-	$json_url = 'http://projects.mongo/app/api/?action=getGuides';
+	$json_url = 'http://192.237.165.197/CLG/app/api/?action=getGuides';
+	// $json_url = 'http://projects.mongo/app/api/?action=getGuides';
 	// jSON String for request
 
 	// Initializing curl
@@ -42,10 +42,11 @@ $app->get('/', function() use($app) {
 
 function getChildBySlug($children, $slug) {
 	foreach($children as $child) {
-		if($child->slug === $slug) {
+		if(isset($child->slug) && $child->slug === $slug) {
 			return $child;
 		}
 	}
+	return;
 }
 
 function filterContent($content, $parent) {
@@ -153,5 +154,19 @@ $app->get('/guides/(:guideSlug)/(:bookSlug)', function ($guideSlug, $bookSlug) u
 	$app->render('guide.book.php', array('guide'=> $guide, 'book'=>$book));
 
 });
+
+$app->get('/guides/(:guideSlug)/(:bookSlug)/(:chapterSlug)', function ($guideSlug, $bookSlug, $chapterSlug) use ($app) {
+
+	$guides = getData();
+
+	$guide = getChildBySlug($guides, $guideSlug);
+
+	$book = getChildBySlug($guide->children, $bookSlug);
+	$chapter = getChildBySlug($book->children, $chapterSlug);
+
+	$app->render('guide.book.chapter.php', array('guide'=> $guide, 'book'=>$book, 'chapter'=>$chapter));
+
+});
+
 
 $app->run();

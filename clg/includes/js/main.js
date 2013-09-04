@@ -1,5 +1,18 @@
 $(document).ready(function() {
 	// toggle menu and state handling
+
+	showNav = function() {
+		$('#nav-index-wrapper').slideToggle('fast', function(){
+			if ($('#nav-index-wrapper').is(':visible')) {
+				$('#toggle-nav img').addClass('close');
+				localStorage.setItem('navState','open');
+			} else { 
+				$('#toggle-nav img').removeClass('close');
+				localStorage.removeItem('navState');
+			}		
+		});
+	}
+
 	navToggle = function() {
 		var nav = localStorage.getItem('navState');
     
@@ -10,15 +23,7 @@ $(document).ready(function() {
 	
 		$(function() {	
 			$('#toggle-nav a').click(function() {
-				$('#nav-index-wrapper').slideToggle('fast', function(){
-					if ($('#nav-index-wrapper').is(':visible')) {
-						$('#toggle-nav img').addClass('close');
-						localStorage.setItem('navState','open');
-					} else { 
-						$('#toggle-nav img').removeClass('close');
-						localStorage.removeItem('navState');
-					}		
-				});
+				showNav();
 					
 				return false;
 			});
@@ -26,38 +31,37 @@ $(document).ready(function() {
 	}
 
 	navToggle();
-	
-	
-	// expert-mode state handling
-	
-	var expert = localStorage.getItem('expertChecked');
-    
-	if (expert == 'yes') {
-		$('#myonoffswitch').prop('checked', true);
-	} else {
-		$('#myonoffswitch').prop('checked', false);
+
+
+	var toggleExpert = function(expert) {
+		var expert = localStorage.getItem('expertChecked');
+		if (expert === 'yes') {
+			$('.page-container').hide();
+			$('.actionOverview').removeClass('hide');
+		} else {
+			$('.page-container').show();
+			$('.actionOverview').addClass('hide');
+		}
 	}
+	toggleExpert();
 	
 	function checkExpert() {
 		if ($('#myonoffswitch').is(':checked')) {
 			localStorage.setItem('expertChecked','yes');
+			toggleExpert();
 		} else { 
 			localStorage.setItem('expertChecked','no');
+			toggleExpert();
 		}		
 	}
-		
-	$(function() {	
+	
+	checkExpert();
+
 		$('#myonoffswitch').click(function() {
 			checkExpert();
+			showNav();
+			$.waypoints('refresh');
 		});
-		return false;
-	});
-	
-	// scroll-to-fixed plugin
-	
-    // $('#header-breadcrumbs-wrapper').scrollToFixed();
-    // $('##header-progress').scrollToFixed();
-	
 	
 	
 	// zeroClipboard 
