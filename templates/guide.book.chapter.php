@@ -64,9 +64,9 @@
 					<hr>
 					<div class="container">
 						<p style="text-align:center;">
-							<a href="#/guides/{{guide.slug}}/{{prevBook.slug}}" class="btn btn-primary btn-lg" title="">Previous: {{prevBook.title}}</a>
+							<a href="/guides/{{guide.slug}}/{{book.slug}}/{{chapter.previous.slug}}" class="btn btn-primary btn-lg" title="">Previous: {{chapter.previous.title}}</a>
 
-							<a href="#/guides/{{guide.slug}}/{{nextBook.slug}}" class="btn btn-primary btn-lg" title="">Next: {{nextBook.title}}</a>
+							<a href="/guides/{{guide.slug}}/{{book.slug}}/{{chapter.next.slug}}" class="btn btn-primary btn-lg" title="">Next: {{chapter.next.title}}</a>
 						</p>
 					</div>
 

@@ -33,8 +33,13 @@ $(document).ready(function() {
 	navToggle();
 
 
+
+
+
+
 	var toggleExpert = function(expert) {
 		var expert = localStorage.getItem('expertChecked');
+		console.log(expert);
 		if (expert === 'yes') {
 			$('.page-container').hide();
 			$('.actionOverview').removeClass('hide');
@@ -54,8 +59,7 @@ $(document).ready(function() {
 			toggleExpert();
 		}		
 	}
-	
-	checkExpert();
+
 
 		$('#myonoffswitch').click(function() {
 			checkExpert();

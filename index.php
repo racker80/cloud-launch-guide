@@ -41,10 +41,14 @@ $app->get('/', function() use($app) {
 
 
 function getChildBySlug($children, $slug) {
+	$i = 0;
 	foreach($children as $child) {
 		if(isset($child->slug) && $child->slug === $slug) {
+			$child->next = $children[$i+1];
+			$child->previous = $children[$i-1];
 			return $child;
 		}
+		$i++;
 	}
 	return;
 }
@@ -162,6 +166,7 @@ $app->get('/guides/(:guideSlug)/(:bookSlug)/(:chapterSlug)', function ($guideSlu
 	$guide = getChildBySlug($guides, $guideSlug);
 
 	$book = getChildBySlug($guide->children, $bookSlug);
+	
 	$chapter = getChildBySlug($book->children, $chapterSlug);
 
 	$app->render('guide.book.chapter.php', array('guide'=> $guide, 'book'=>$book, 'chapter'=>$chapter));
