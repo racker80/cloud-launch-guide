@@ -1,79 +1,87 @@
 $(document).ready(function() {
 	// toggle menu and state handling
 
+	var navState = 'close';
+
+
+
+/* ----------------------------------------------------------------
+	NAVIGATION
+	
+---------------------------------------------------------------- */
 	showNav = function() {
-		$('#nav-index-wrapper').slideToggle('fast', function(){
-			if ($('#nav-index-wrapper').is(':visible')) {
-				$('#toggle-nav img').addClass('close');
-				localStorage.setItem('navState','open');
+		var wrapper = $('.nav-index-wrapper');
+		wrapper.slideToggle('fast', function(){
+			if (wrapper.is(':visible')) {
+				navState = 'open';
 			} else { 
-				$('#toggle-nav img').removeClass('close');
-				localStorage.removeItem('navState');
+				navState = 'close';
 			}		
 		});
 	}
 
-	navToggle = function() {
-		var nav = localStorage.getItem('navState');
-    
-		if (nav == 'open') {
-			$('#nav-index-wrapper').show();
-			$('#toggle-nav img').addClass('close');
-		}
+	$('*[data-toggle-nav]').click(function(){
+		showNav();
+	});
+
+
+
+
+
+/* ----------------------------------------------------------------
+	EXPERT MODE
 	
-		$(function() {	
-			$('#toggle-nav a').click(function() {
-				showNav();
-					
-				return false;
-			});
-		});
-	}
+---------------------------------------------------------------- */
+var expertBtn = $('*[data-toggle-expert]');
 
-	navToggle();
-
-
-
-
-
-
-	var toggleExpert = function(expert) {
+	var toggleExpert = function() {
 		var expert = localStorage.getItem('expertChecked');
-		console.log(expert);
 		if (expert === 'yes') {
+			$(window).scrollTop(0);
 			$('.page-container').hide();
 			$('.actionOverview').removeClass('hide');
+
+			expertBtn.addClass('btn-warning');
+			expertBtn.find('.glyphicon').removeClass('glyphicon-save').addClass('glyphicon-saved');
+
 		} else {
 			$('.page-container').show();
 			$('.actionOverview').addClass('hide');
+			expertBtn.removeClass('btn-warning');
+			expertBtn.find('.glyphicon').removeClass('glyphicon-saved').addClass('glyphicon-save');
 		}
 	}
+	
+	expertBtn.click(function(){
+		var expert = localStorage.getItem('expertChecked');
+		if(expert === 'yes') {
+			expert = localStorage.setItem('expertChecked', 'no');
+		} else {
+			expert = localStorage.setItem('expertChecked', 'yes');
+		}
+		toggleExpert();
+
+		$.waypoints('refresh');
+
+	});
+
 	toggleExpert();
-	
-	function checkExpert() {
-		if ($('#myonoffswitch').is(':checked')) {
-			localStorage.setItem('expertChecked','yes');
-			toggleExpert();
-		} else { 
-			localStorage.setItem('expertChecked','no');
-			toggleExpert();
-		}		
-	}
 
 
-		$('#myonoffswitch').click(function() {
-			checkExpert();
-			showNav();
-			$.waypoints('refresh');
-		});
+/* ----------------------------------------------------------------
+	CLIPBOARD
 	
-	
+---------------------------------------------------------------- */
 	// zeroClipboard 
 		
 	//set path
 	ZeroClipboard.setDefaults( { moviePath: 'includes/js/plugins/ZeroClipboard.swf' } );
 
 	
+/* ----------------------------------------------------------------
+	TOOLTIPS
+	
+---------------------------------------------------------------- */
 	// Tooltips
 	
     $(function() {
@@ -107,12 +115,19 @@ $(document).ready(function() {
 
 
 
-    //STICKY NAV
-    //using the jquery waypoints plugin
+/* ----------------------------------------------------------------
+	STICKY NAV WITH WAYPOINTS
+	//using the jquery waypoints plugin
 
-    $('#guide-navbar').waypoint('sticky', {
+---------------------------------------------------------------- */
+
+    $('#waypoint-header').waypoint('sticky', {
     	wrapper: '<div class="sticky-wrapper" />',
-    	stuckClass: 'stuck'
+    	stuckClass: 'stuck',
+    	offset:-200,
+    	handler: function(direction){
+    		$('.nav-index-wrapper').hide();
+    	}
     });
 
 

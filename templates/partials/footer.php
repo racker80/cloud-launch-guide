@@ -27,6 +27,7 @@
 
 <!-- MY SUTFF -->
 
+<script src="/clg/includes/css/bower_components/bootstrap/js/dropdown.js"></script>
 <script src="/clg/includes/js/plugins/ZeroClipboard.min.js"></script>
 <script src="/clg/includes/js/plugins/waypoints.js"></script>
 <script src="/clg/includes/js/plugins/shortcuts/sticky-elements/waypoints-sticky.js"></script>

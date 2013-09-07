@@ -17,73 +17,141 @@
 @icon-font-path:          "bower_components/bootstrap/fonts/";
 
 
-.text18 {
-	font-size:18px;
-	font-weight:200;
-	line-height:140%;
-	letter-spacing:.01em;
-	margin:0 0 1em 0;
-}
-.text16 {
-	font-size:16px;
-	line-height:140%;
-	letter-spacing:.01em;
-	margin:0 0 1em 0;
-}
-.text14 {
-	font-size:14px;
-	line-height:140%;
-	letter-spacing:.01em;
-	margin:0 0 1em 0;
-}
-.text12 {
-	font-size:12px;
-	line-height:130%;
-	letter-spacing:.02em;
-	margin:0 0 1em 0;
-}
-.text11 {
-	font-size:11px;
-	line-height:115%;
-	letter-spacing:.02em;
-	margin:0 0 1em 0;
-}
 
 
-
-.content {
-
-	p {
-		.text18;
+.book-intro, .chapter-intro {
+	.page-header {}
+	.book-intro-content {
+		img {display:none;}
+		p {
+			.lead;
+			line-height:1.6em!important;
+		}
+		margin-bottom:45px;
 	}
 
 }
 
-
-
-
-
-
-.centered-three {
-	.col-lg-4  { width: percentage((4 / 12)); }
-	text-align:center;
-	* {
-		text-align:center;
+.chapter-list {
+	.row {
+		padding:35px 15px 35px;
+		border-bottom:1px solid #ddd;
+		&:hover {
+			border-color:#a80000;
+		}
 	}
-
+	p.lead {
+		font-size:1.2em;
+	}
 }
 
 
-#guide-navbar {
+.book-casing {
+	border:1px solid #d2d2d2;
+	background:#f1f1f1;
+	overflow:hidden;
+	margin:10px 0;
+	h2 {
+		margin:0;
+		line-height:1em;
+		padding:0;
+		font-size:24px;
+	}
+	p.lead {
+		font-size:1.2em;
+		height:180px;
+		overflow:hidden;
+	}
+}
+
+
+.list-options {
+	a.btn.title-btn {
+		width:200px;
+		overflow:hidden;
+	}
+}
+
+
+
+#guide-nav-container {
+	display:none;
+		#guide-navbar-bs {
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+
+			.navbar {
+				margin:0;
+				padding:0;
+				border-radius: 0;
+			}
+		}
+}
+.stuck {
+	#guide-nav-container {
+		display:block;
+	}
+}
+
+.show-this {
+	display:none!important;
+ }
+#waypoint-header {
+	position:relative;
+	z-index:999;
+	background:gray;
 	&.stuck {
 		position:fixed;
 		top:0;
 		left:0;
 		width:100%;
+		.show-this {
+			display:block!important;
+		}
 	}
 }
 
 
+
+
+
+
+
+
+
+
+.container {
+	position:relative;
+}
+
+
+.page-header {
+	position:relative;
+	.page-header-options {
+		position:absolute;
+		top:0px;
+		right:0;
+	}
+}
+
+.navbar-options {
+	padding:0 10px;
+	.action-options {
+		position:relative;
+		.btn {
+			.navbar-btn;
+		}
+		.caret {
+			border-top-color: #333 !important;
+			border-bottom-color: #333 !important;
+		}
+	}
+}
+.action-options {
+
+}
 
 
 

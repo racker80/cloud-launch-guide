@@ -18,30 +18,13 @@
 			
 		</section>
 
-		<section class="chapter-list container">
-			{% for chapter in book.children %}
-				<div class="row">
-					<div class="col-md-11">
-						<h3>{{chapter.title}}</h3>
-						<p class="lead">{{chapter.description}} &nbsp;</p>
-					</div>
-
-					<div class="col-md-3">
-						30 minutes  
-					</div>
-					<div class="col-md-1">
-						<a href="/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}" class="btn btn-primary btn-sm">Start Chapter</a>
-					</div>
-				</div>
-			{%endfor%}
-		</section>
+		
 
 
 
-<div class="hide">
 
 		<!-- BOOK HEADING -->
-		<section class="container">
+		<section class="container hide">
 			<div class="row">
 				<div class="sidebar five columns alpha col-md-5">
 					<!-- <aside id="well-time">{{book.title}}: <span>1 hour</span></aside>  -->
@@ -77,19 +60,36 @@
 		<!-- CHAPTER HEADING -->
 		{% for chapter in book.children %}
 		<div id="{{chapter.slug}}" class="chapter-container" ng-repeat="chapter in book.children">
+			<section class="chapter-intro container">
+				<div class="page-header ">
+					<h1>{{chapter.title}} <small>{{chapter.time}}</small></h1>
+					<div class="page-header-options">
+						{% include 'partials/action-options-all.php' %}
+					</div>
+				</div>			
+			</section>
+			
+					<!-- CHAPTER HEADING -->
+		<div id="{{chapter.slug}}" class="chapter-container" ng-repeat="chapter in book.children">
 			<div class="container chapterHeader">
 
-				<div class="row">
-					<h2 class="chapterTitle" data-title="{{chapter.title}}"><span>Chapter {{ loop.index }}</span> {{chapter.title}}</h2>
 
-					<div class="sidebar five columns alpha col-md-5">
+				<div class="row">
+
+					<div class="sidebar col-md-4">
 						&nbsp;
 						<div class="">
-							{% include 'partials/ip-tool.php' %}
+							<h5>Requires:</h5>
+							{% if requires %}
+								{% include 'partials/ip-tool.php' %}
+
+							{% else %}
+							
+							{% endif %}
 						</div>
 					</div>
 
-					<div class="eleven columns omega col-md-11">
+					<div class="col-md-11 col-md-offset-1">
 						{{chapter.content|raw}}
 
 						<div class="actionOverview hide">
@@ -104,19 +104,20 @@
 
 					
 				</div>
+				<hr>
+
 			</div>
-			
 				<!-- PAGE SECTION -->
 			{% for page in chapter.children %}
 			<div id="{{page.slug}}" class="page-container" ng-repeat="page in chapter.children">
 				<div class="container">
 					<div class="row">
-						<div class="sidebar five columns alpha col-md-5">
+						<div class="sidebar five columns alpha col-md-4">
 							&nbsp;
 
 
 						</div>
-						<div class="page-content col-md-11" >
+						<div class="page-content col-md-11 col-md-offset-1">
 							<h4 class=""><span>{{loop.index}}</span> {{page.title}}</h4>
 							{{page.content | raw}}
 							<div markdown="page.content" parent="page" ng-bind-html-unsafe="markdown"></div>
@@ -126,22 +127,16 @@
 			</div>
 			{%endfor%}
 		</div> <!-- CHAPTER -->
+
 		{%endfor%}
 
 		<hr>
-		<div class="container">
-			<p style="text-align:center;">
-				<a href="#/guides/{{guide.slug}}/{{prevBook.slug}}" class="btn btn-primary btn-lg" title="">Previous: {{prevBook.title}}</a>
 
-				<a href="#/guides/{{guide.slug}}/{{nextBook.slug}}" class="btn btn-primary btn-lg" title="">Next: {{nextBook.title}}</a>
-			</p>
-		</div>
 
 </div>
 
 		<!-- MOAR CONENT HUR -->
 		
-	</div>
 
 
 

@@ -42,10 +42,14 @@ $app->get('/', function() use($app) {
 
 function getChildBySlug($children, $slug) {
 	$i = 0;
+
 	foreach($children as $child) {
 		if(isset($child->slug) && $child->slug === $slug) {
-			$child->next = $children[$i+1];
-			$child->previous = $children[$i-1];
+				$child->next = $children[$i+1];
+
+			if($i > 0)
+				$child->previous = $children[$i-1];
+
 			return $child;
 		}
 		$i++;
@@ -140,7 +144,7 @@ $app->get('/guides/(:guideSlug)', function ($guideSlug) use ($app) {
 
 	$guide = getChildBySlug($guides, $guideSlug);
 
-	$app->render('guide.landing.php', array('guide'=>$guide));
+	$app->render('guide.landing.php', array('guides'=>$guides, 'guide'=>$guide));
 
 });
 
@@ -155,7 +159,18 @@ $app->get('/guides/(:guideSlug)/(:bookSlug)', function ($guideSlug, $bookSlug) u
 
 	$book = getChildBySlug($guide->children, $bookSlug);
 
-	$app->render('guide.book.php', array('guide'=> $guide, 'book'=>$book));
+	$app->render('guide.book.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book));
+
+});
+$app->get('/guides/(:guideSlug)/(:bookSlug)/all', function ($guideSlug, $bookSlug) use ($app) {
+
+	$guides = getData();
+
+	$guide = getChildBySlug($guides, $guideSlug);
+
+	$book = getChildBySlug($guide->children, $bookSlug);
+
+	$app->render('guide.book.all.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book, 'allsteps'=>true));
 
 });
 
@@ -166,10 +181,11 @@ $app->get('/guides/(:guideSlug)/(:bookSlug)/(:chapterSlug)', function ($guideSlu
 	$guide = getChildBySlug($guides, $guideSlug);
 
 	$book = getChildBySlug($guide->children, $bookSlug);
-	
+
 	$chapter = getChildBySlug($book->children, $chapterSlug);
 
-	$app->render('guide.book.chapter.php', array('guide'=> $guide, 'book'=>$book, 'chapter'=>$chapter));
+
+	$app->render('guide.book.chapter.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book, 'chapter'=>$chapter, 'chapterslug'=>'#'.$chapter->slug));
 
 });
 
