@@ -73,7 +73,7 @@
 
 					<ul class="dropdown-menu">
 						{% for guide in guides %}
-						<li><a href="{{baseurl}}/guides/{{guide.slug}}">{{guide.title}}</a></li>	
+						<li><a href="{{ baseurl }}/guides/{{guide.slug}}">{{guide.title}}</a></li>	
 						{% endfor %}
 					</ul>
 				</li>

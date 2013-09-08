@@ -5,7 +5,7 @@
 
 		<section class="chapter-intro container">
 			<div class="page-header ">
-				<h5><a href="{{baseurl}}/guides/{{guide.slug}}/{{book.slug}}">{{book.title}}</a></h5>
+				<h5><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">{{book.title}}</a></h5>
 				<h1>{{chapter.title}} <small>{{chapter.time}}</small></h1>
 				<div class="page-header-options">
 					{% include 'partials/action-options.php' %}
@@ -80,9 +80,9 @@
 		<hr>
 		<div class="container">
 			<p style="text-align:center;">
-				<a href="{{baseurl}}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.previous.slug}}" class="btn btn-primary btn-lg" title="">Previous: {{chapter.previous.title}}</a>
+				<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.previous.slug}}" class="btn btn-primary btn-lg" title="">Previous: {{chapter.previous.title}}</a>
 
-				<a href="{{baseurl}}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.next.slug}}" class="btn btn-primary btn-lg" title="">Next: {{chapter.next.title}}</a>
+				<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.next.slug}}" class="btn btn-primary btn-lg" title="">Next: {{chapter.next.title}}</a>
 			</p>
 		</div>
 

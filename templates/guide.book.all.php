@@ -32,7 +32,7 @@
 						<h3>Chapters</h3>
 						<ol>
 							{% for chapter in book.children %}
-							<li ng-repeat="chapter in book.children"><a href="#{{baseurl}}/guides/{{guide.slug}}/{{book.slug}}#{{chapter.slug}}">{{chapter.title}}</a></li>
+							<li ng-repeat="chapter in book.children"><a href="#{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}#{{chapter.slug}}">{{chapter.title}}</a></li>
 							{%endfor%}
 						</ol>
 					</aside>

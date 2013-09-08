@@ -12,7 +12,7 @@
         <div class="col-md-11">
           <h2 class="featurette-heading">{{guide.title}}</h2>
           <p class="lead">{{guide.description}}</p>
-          <a href="{{baseurl}}/guides/{{guide.slug}}" class="btn btn-primary">View Guide</a>
+          <a href="{{ baseurl }}/guides/{{guide.slug}}" class="btn btn-primary">View Guide</a>
         </div>
         <div class="col-md-5">
         	<!-- <img src="{{guide.images[0].url}}"> -->

@@ -9,8 +9,7 @@ $app = new Slim(array(
 	'templates.path' => 'templates'
 ));
 
-$twig = $app->view();
-$twig->getEnvironment()->addGlobal('baseUrl', $_SERVER['REQUEST_URI']);
+$app->view()->getEnvironment()->addGlobal('baseUrl', $_SERVER['REQUEST_URI']);
 
 
 

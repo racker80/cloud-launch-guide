@@ -1,11 +1,11 @@
 	<div class="action-options btn-group btn-group-sm">
 		
 		{% if allsteps %}
-		    <a href="{{baseurl}}/guides/{{guide.slug}}/{{book.slug}}" class="btn btn-default btn-warning">
+		    <a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}" class="btn btn-default btn-warning">
 				<span class="glyphicon glyphicon-th-list"></span> All Steps
 			</a>
 		{% else %}
-			<a href="{{baseurl}}/guides/{{guide.slug}}/{{book.slug}}/all{{chapterslug}}" class="btn btn-default">
+			<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/all{{chapterslug}}" class="btn btn-default">
 				<span class="glyphicon glyphicon-th-list"></span> All Steps
 			</a>
 		{% endif %}
@@ -19,15 +19,15 @@
 		</button>
 
 		{% if chapter %}
-		    <a href="{{baseurl}}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.next.slug}}" class="btn btn-default">
+		    <a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.next.slug}}" class="btn btn-default">
 				<span class="glyphicon glyphicon-arrow-right"></span>
 			</a>
 		{% elseif allsteps %}
-			<a href="{{baseurl}}/guides/{{guide.slug}}/{{book.next.slug}}/all" class="btn btn-default">
+			<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.next.slug}}/all" class="btn btn-default">
 				<span class="glyphicon glyphicon-arrow-right"></span>
 			</a>
 		{% else %}
-			<a href="{{baseurl}}/guides/{{guide.slug}}/{{book.slug}}/{{book.children[0].slug}}" class="btn btn-default">
+			<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{book.children[0].slug}}" class="btn btn-default">
 				<span class="glyphicon glyphicon-arrow-right"></span>
 			</a>
 		{% endif %}

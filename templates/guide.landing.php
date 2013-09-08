@@ -22,7 +22,7 @@
 						Get Started:<br>
 						<div class="list-options btn-group ">
 
-							<a href="{{baseurl}}/guides/{{guide.slug}}/{{book.slug}}/{{book.children[0].slug}}" class="btn btn-default title-btn">
+							<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{book.children[0].slug}}" class="btn btn-default title-btn">
 							{{book.children[0].title}}
 							</a>
 							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -30,7 +30,7 @@
 							</button>
 							<ul class="dropdown-menu">
 								{% for chapter in book.children %}
-								<li><a href="{{baseurl}}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}">{{chapter.title}}</a></li>
+								<li><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}">{{chapter.title}}</a></li>
 								{% endfor %}
 							</ul>					
 						</div>
@@ -53,7 +53,7 @@
 								<p class="lead">{{book.description}}</p>
 								<p>time: <strong>{{book.time}}</strong></p>
 								<hr>
-								<a href="{{baseurl}}/guides/{{guide.slug}}/{{book.slug}}" class="btn btn-primary btn-lg btn-block">Start</a>
+								<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}" class="btn btn-primary btn-lg btn-block">Start</a>
 
 							</div>
 						</div>
@@ -109,7 +109,7 @@
 				</div>		
 				<hr>
 				<div style="text-align:center;">
-					<p><a href="{{baseurl}}/guides/{{guide.slug}}/{{guide.children[0].slug}}" class="btn btn-primary btn-lg btn-block" title="">Get Started</a></p>
+					<p><a href="{{ baseurl }}/guides/{{guide.slug}}/{{guide.children[0].slug}}" class="btn btn-primary btn-lg btn-block" title="">Get Started</a></p>
 				</div>				
 				
 			</div>
