@@ -3,7 +3,7 @@
 			<div class="row">
 				<div class="col-sm-8 col-med-8 col-lg-8">
 					<div id="logo">
-						<a href="/"><img src="/clg/images/logo-cloud-launch-guide.png" /></a>
+						<a href="/"><img src="{{ baseurl }}/clg/images/logo-cloud-launch-guide.png" /></a>
 						<span>
 							<h1>Cloud Launch Guides</h1>
 							<p>powered by Rackspace</p>

@@ -63,7 +63,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#"><img src="/clg/images/logo-cloud-launch-guide.png" /> Cloud Launch Guide</a>
+			<a class="navbar-brand" href="{{ baseurl }}/"><img src="{{ baseurl }}/clg/images/logo-cloud-launch-guide.png" /> Cloud Launch Guide</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
