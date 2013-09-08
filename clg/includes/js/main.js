@@ -134,7 +134,6 @@ var expertBtn = $('*[data-toggle-expert]');
 	$('.chapter-container').waypoint( function(direction) {
 	  var $active = $(this);
 
-
 	  /* The waypoint is triggered at the top of each list item representing a dial section. When triggering in the down direction we want to use the dial section the waypoint is attached to. But in the up direction we want to use the previous dial section. */
 	  if (direction === "up") {
 	    $active = $active.prev();
@@ -146,9 +145,9 @@ var expertBtn = $('*[data-toggle-expert]');
 	    // $('.currentChapter').html();
 	  }
 
-	  $('.currentChapter').html($active.find('h2.chapterTitle').data('title'));
+	  $('.currentChapter a').html($active.find('.chapterTitle').data('title'));
 	  $('.nav-thing li a').each(function(){
-	  	if( $(this).text() === $active.find('h2.chapterTitle').data('title') ) {
+	  	if( $(this).text() === $active.find('.chapterTitle').data('title') ) {
 	  		$('.nav-thing li a').removeClass('completed');
 	  		$(this).toggleClass('completed');
 	  	}

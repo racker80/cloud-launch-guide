@@ -13,7 +13,8 @@
 					<div class="col-md-11">
 						<h3>{{book.title}}</h3>
 						<p class="lead">{{book.description}} &nbsp;</p>
-						time: <strong>{{book.time}}</strong>
+						<p>time: <strong>{{book.time}}</strong></p>
+						<p>steps: {% count book.children %}</p>
 					</div>
 
 

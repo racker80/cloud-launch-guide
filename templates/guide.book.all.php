@@ -62,7 +62,7 @@
 		<div id="{{chapter.slug}}" class="chapter-container" ng-repeat="chapter in book.children">
 			<section class="chapter-intro container">
 				<div class="page-header ">
-					<h1>{{chapter.title}} <small>{{chapter.time}}</small></h1>
+					<h1 class="chapterTitle" data-title="{{chapter.title}}">{{chapter.title}} <small>{{chapter.time}}</small></h1>
 					<div class="page-header-options">
 						{% include 'partials/action-options-all.php' %}
 					</div>

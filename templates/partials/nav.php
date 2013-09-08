@@ -10,6 +10,7 @@
                     <ul class="nav navbar-nav">
                         <li class="show-this"><a href="/guides/{{guide.slug}}">{{guide.title}}</a></li>
                         <li><a href="/guides/{{guide.slug}}/{{book.slug}}">{{book.title}}</a></li>
+                        <li class="currentChapter"><a href="#"></a></li>
                         {% if chapter %}
                         <li><a href="/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}">{{chapter.title}}</a></li>
 

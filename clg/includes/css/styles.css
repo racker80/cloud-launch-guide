@@ -7372,16 +7372,16 @@ a {
 .table-layout .alpha {
   line-height: 30px;
 }
-.book-intro .book-intro-content,
-.chapter-intro .book-intro-content {
+.book-intro .intro-content,
+.chapter-intro .intro-content {
   margin-bottom: 45px;
 }
-.book-intro .book-intro-content img,
-.chapter-intro .book-intro-content img {
+.book-intro .intro-content img,
+.chapter-intro .intro-content img {
   display: none;
 }
-.book-intro .book-intro-content p,
-.chapter-intro .book-intro-content p {
+.book-intro .intro-content p,
+.chapter-intro .intro-content p {
   margin-bottom: 20px;
   font-size: 16.099999999999998px;
   font-weight: 200;
@@ -7389,8 +7389,8 @@ a {
   line-height: 1.6em!important;
 }
 @media (min-width: 768px) {
-  .book-intro .book-intro-content p,
-  .chapter-intro .book-intro-content p {
+  .book-intro .intro-content p,
+  .chapter-intro .intro-content p {
     font-size: 21px;
   }
 }
