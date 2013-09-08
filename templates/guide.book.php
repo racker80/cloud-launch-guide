@@ -30,7 +30,7 @@
 						30 minutes  
 					</div>
 					<div class="col-md-1">
-						<a href="/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}" class="btn btn-primary btn-sm">Start Chapter</a>
+						<a href="{{baseurl}}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}" class="btn btn-primary btn-sm">Start Chapter</a>
 					</div>
 				</div>
 			{%endfor%}
@@ -49,7 +49,7 @@
 						<h3>Chapters</h3>
 						<ol>
 							{% for chapter in book.children %}
-							<li ng-repeat="chapter in book.children"><a href="#/guides/{{guide.slug}}/{{book.slug}}#{{chapter.slug}}">{{chapter.title}}</a></li>
+							<li ng-repeat="chapter in book.children"><a href="#{{baseurl}}/guides/{{guide.slug}}/{{book.slug}}#{{chapter.slug}}">{{chapter.title}}</a></li>
 							{%endfor%}
 						</ol>
 					</aside>
@@ -131,9 +131,9 @@
 		<hr>
 		<div class="container">
 			<p style="text-align:center;">
-				<a href="#/guides/{{guide.slug}}/{{prevBook.slug}}" class="btn btn-primary btn-lg" title="">Previous: {{prevBook.title}}</a>
+				<a href="#{{baseurl}}/guides/{{guide.slug}}/{{prevBook.slug}}" class="btn btn-primary btn-lg" title="">Previous: {{prevBook.title}}</a>
 
-				<a href="#/guides/{{guide.slug}}/{{nextBook.slug}}" class="btn btn-primary btn-lg" title="">Next: {{nextBook.title}}</a>
+				<a href="#{{baseurl}}/guides/{{guide.slug}}/{{nextBook.slug}}" class="btn btn-primary btn-lg" title="">Next: {{nextBook.title}}</a>
 			</p>
 		</div>
 

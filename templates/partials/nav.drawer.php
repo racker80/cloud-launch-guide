@@ -3,10 +3,10 @@
                         <div class="nav-index" class="clearfix">
                             {% for book in guide.children %}
                             <nav class="nav-thing" ng-repeat="book in guide.children">
-                                <h5 ><a href="/guides/{{guide.slug}}/{{book.slug}}">{{book.title}}</a></h5>
+                                <h5 ><a href="{{baseurl}}/guides/{{guide.slug}}/{{book.slug}}">{{book.title}}</a></h5>
                                 <ul>
                                 {% for chapter in book.children %}
-                                    <li><a href="/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}" class="">{{chapter.title}}</a></li>
+                                    <li><a href="{{baseurl}}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}" class="">{{chapter.title}}</a></li>
                                 {% endfor %}
                                 </ul>
                             </nav>

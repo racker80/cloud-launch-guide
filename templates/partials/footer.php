@@ -22,16 +22,16 @@
 
 
 
-<script src="/clg/includes/js/jquery-1.8.2.min.js"></script>
-<script src="/clg/includes/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="{{baseurl}}/clg/includes/js/jquery-1.8.2.min.js"></script>
+<script src="{{baseurl}}/clg/includes/js/jquery-ui-1.10.3.custom.min.js"></script>
 
 <!-- MY SUTFF -->
 
-<script src="/clg/includes/css/bower_components/bootstrap/js/dropdown.js"></script>
-<script src="/clg/includes/js/plugins/ZeroClipboard.min.js"></script>
-<script src="/clg/includes/js/plugins/waypoints.js"></script>
-<script src="/clg/includes/js/plugins/shortcuts/sticky-elements/waypoints-sticky.js"></script>
-<script src="/clg/includes/js/main.js"></script>
+<script src="{{baseurl}}/clg/includes/css/bower_components/bootstrap/js/dropdown.js"></script>
+<script src="{{baseurl}}/clg/includes/js/plugins/ZeroClipboard.min.js"></script>
+<script src="{{baseurl}}/clg/includes/js/plugins/waypoints.js"></script>
+<script src="{{baseurl}}/clg/includes/js/plugins/shortcuts/sticky-elements/waypoints-sticky.js"></script>
+<script src="{{baseurl}}/clg/includes/js/main.js"></script>
 
 
 		
