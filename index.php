@@ -9,8 +9,9 @@ $app = new Slim(array(
 	'templates.path' => 'templates'
 ));
 
-$app->view()->getEnvironment()->addGlobal('baseurl', $_SERVER['REQUEST_URI']);
 
+$script_location = str_replace('/index.php', '', $_SERVER['SCRIPT_NAME']);
+$app->view()->getEnvironment()->addGlobal('baseurl', $script_location);
 
 
 $app->get('/', function() use($app) {
@@ -43,9 +44,14 @@ $app->get('/', function() use($app) {
 
 function getChildBySlug($children, $slug) {
 	$i = 0;
+	$c = count($children)-1;
 
+	if(!$children) {
+		return;
+	}
 	foreach($children as $child) {
 		if(isset($child->slug) && $child->slug === $slug) {
+			if($i < $c)
 				$child->next = $children[$i+1];
 
 			if($i > 0)
