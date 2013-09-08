@@ -9,7 +9,7 @@ $app = new Slim(array(
 	'templates.path' => 'templates'
 ));
 
-$app->view()->getEnvironment()->addGlobal('baseUrl', $_SERVER['REQUEST_URI']);
+$app->view()->getEnvironment()->addGlobal('baseurl', $_SERVER['REQUEST_URI']);
 
 
 
