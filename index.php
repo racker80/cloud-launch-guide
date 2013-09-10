@@ -14,31 +14,6 @@ $script_location = str_replace('/index.php', '', $_SERVER['SCRIPT_NAME']);
 $app->view()->getEnvironment()->addGlobal('baseurl', $script_location);
 
 
-$app->get('/', function() use($app) {
-		// jSON URL which should be requested
-	$json_url = 'http://192.237.165.197/CLG/app/api/?action=getGuides';
-	// $json_url = 'http://projects.mongo/app/api/?action=getGuides';
-	// jSON String for request
-
-	// Initializing curl
-	$ch = curl_init( $json_url );
-
-	// Configuring curl options
-	$options = array(
-		CURLOPT_RETURNTRANSFER => true,
-		CURLOPT_HTTPHEADER => array('Content-type: application/json') ,
-		);
-
-	// Setting curl options
-	curl_setopt_array( $ch, $options );
-
-	// Getting results
-	$output =  json_decode(curl_exec($ch)); // Getting jSON result string
-
-
-
-	$app->render('home.php', array('guides'=>$output));
-});
 
 
 
@@ -145,37 +120,69 @@ function getData() {
 
 
 
+
+
+
+
+function getAPI($route) {
+	//GET THE JSON
+	$json_url = 'http://192.237.203.16/'.$route;
+	$ch = curl_init( $json_url );
+	$options = array(
+	CURLOPT_RETURNTRANSFER => true,
+	CURLOPT_HTTPHEADER => array('Content-type: application/json') ,
+	);
+	curl_setopt_array( $ch, $options );
+	//CREATE THE OUTPUT DATA
+	$output =  json_decode(curl_exec($ch)); // Getting jSON result string
+
+	return $output->data;
+}
+
+
+
+$app->get('/', function() use($app) {
+
+	$guides = getAPI('guides/overview')->data;
+
+	$app->render( 'home.php', array('guides'=>$guides) );
+});
+
 $app->get('/guides/(:guideSlug)', function ($guideSlug) use ($app) {
 
-	$guides = getData();
-
-	$guide = getChildBySlug($guides, $guideSlug);
+	$guides = getAPI('guides/overview');
+	
+	$guide = getAPI('guides/slug/'.$guideSlug.'/markdown');
 
 	$app->render('guide.landing.php', array('guides'=>$guides, 'guide'=>$guide));
 
 });
 
 
-
-
 $app->get('/guides/(:guideSlug)/(:bookSlug)', function ($guideSlug, $bookSlug) use ($app) {
 
-	$guides = getData();
 
-	$guide = getChildBySlug($guides, $guideSlug);
+	$guides = getAPI('guides/overview');
 
-	$book = getChildBySlug($guide->children, $bookSlug);
+	$api = getAPI('/guides/slug/'.$guideSlug.'/'.$bookSlug.'/markdown');	
+
+	$guide = $api->guide;
+
+	$book = $api->book;
 
 	$app->render('guide.book.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book));
 
 });
+
 $app->get('/guides/(:guideSlug)/(:bookSlug)/all', function ($guideSlug, $bookSlug) use ($app) {
 
-	$guides = getData();
+	$guides = getAPI('guides/overview');
 
-	$guide = getChildBySlug($guides, $guideSlug);
+	$api = getAPI('/guides/slug/'.$guideSlug.'/'.$bookSlug.'/markdown');	
 
-	$book = getChildBySlug($guide->children, $bookSlug);
+	$guide = $api->guide;
+
+	$book = $api->book;
 
 	$app->render('guide.book.all.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book, 'allsteps'=>true));
 
@@ -183,13 +190,15 @@ $app->get('/guides/(:guideSlug)/(:bookSlug)/all', function ($guideSlug, $bookSlu
 
 $app->get('/guides/(:guideSlug)/(:bookSlug)/(:chapterSlug)', function ($guideSlug, $bookSlug, $chapterSlug) use ($app) {
 
-	$guides = getData();
+	$guides = getAPI('guides/overview');
 
-	$guide = getChildBySlug($guides, $guideSlug);
+	$api = getAPI('/guides/slug/'.$guideSlug.'/'.$bookSlug.'/'.$chapterSlug.'/markdown');	
 
-	$book = getChildBySlug($guide->children, $bookSlug);
+	$guide = $api->guide;
 
-	$chapter = getChildBySlug($book->children, $chapterSlug);
+	$book = $api->book;
+
+	$chapter = $api->chapter;
 
 
 	$app->render('guide.book.chapter.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book, 'chapter'=>$chapter, 'chapterslug'=>'#'.$chapter->slug));

@@ -17,7 +17,6 @@
 		<button type="button" data-toggle-nav class="btn btn-default">
 			Index <span class="caret"></span>
 		</button>
-
 		{% if chapter %}
 		    <a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.next.slug}}" class="btn btn-default">
 				<span class="glyphicon glyphicon-arrow-right"></span>
