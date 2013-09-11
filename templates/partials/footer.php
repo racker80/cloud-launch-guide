@@ -22,15 +22,14 @@
 
 
 
-<script src="{{ baseurl }}/includes/js/jquery-1.8.2.min.js"></script>
-<script src="{{ baseurl }}/includes/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="{{ baseurl }}/includes/bower_components/jquery/jquery.js"></script>
 
 <!-- MY SUTFF -->
 
-<script src="{{ baseurl }}/includes/css/bower_components/bootstrap/js/dropdown.js"></script>
-<script src="{{ baseurl }}/includes/js/plugins/ZeroClipboard.min.js"></script>
-<script src="{{ baseurl }}/includes/js/plugins/waypoints.js"></script>
-<script src="{{ baseurl }}/includes/js/plugins/shortcuts/sticky-elements/waypoints-sticky.js"></script>
+<script src="{{ baseurl }}/includes/bower_components/bootstrap/js/dropdown.js"></script>
+<script src="{{ baseurl }}/includes/bower_components/zeroclipboard/ZeroClipboard.js"></script>
+<script src="{{ baseurl }}/includes/bower_components/jquery-waypoints/waypoints.js"></script>
+<script src="{{ baseurl }}/includes/bower_components/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.js"></script>
 <script src="{{ baseurl }}/includes/js/main.js"></script>
 
 

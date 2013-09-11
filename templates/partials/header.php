@@ -9,7 +9,7 @@
 	
 	<link rel="stylesheet" href="{{ baseurl }}/includes/css/styles.css">
 
-    <script src="{{ baseurl }}/includes/js/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>	
+    <script src="{{ baseurl }}/includes/bower_components/modernizr/modernizr.js"></script>	
 
 	<!-- IE Fix for HTML5 Tags -->
 	<!--[if lt IE 9]>

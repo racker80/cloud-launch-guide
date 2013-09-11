@@ -1,3 +1,9 @@
+//@codekit-prepend "../bower_components/jquery/jquery.js"
+//@codekit-prepend "../bower_components/bootstrap/js/dropdown.js"
+//@codekit-prepend "../bower_components/zeroclipboard/ZeroClipboard.js"
+//@codekit-prepend "../bower_components/jquery-waypoints/waypoints.js"
+//@codekit-prepend "../bower_components/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.js"
+
 $(document).ready(function() {
 	// toggle menu and state handling
 
@@ -75,7 +81,7 @@ var expertBtn = $('*[data-toggle-expert]');
 	// zeroClipboard 
 		
 	//set path
-	ZeroClipboard.setDefaults( { moviePath: 'includes/js/plugins/ZeroClipboard.swf' } );
+	// ZeroClipboard.setDefaults( { moviePath: 'includes/js/plugins/ZeroClipboard.swf' } );
 
 	
 /* ----------------------------------------------------------------
@@ -84,22 +90,22 @@ var expertBtn = $('*[data-toggle-expert]');
 ---------------------------------------------------------------- */
 	// Tooltips
 	
-    $(function() {
-		$( document ).tooltip({
-			position: {
-				my: "center bottom-20",
-				at: "center top",
-				using: function( position, feedback ) {
-					$( this ).css( position );
-					$( "<div>" )
-					.addClass( "arrow" )
-					.addClass( feedback.vertical )
-					.addClass( feedback.horizontal )
-					.appendTo( this );
-				}
-			}
-		});
-	});
+ //    $(function() {
+	// 	$( document ).tooltip({
+	// 		position: {
+	// 			my: "center bottom-20",
+	// 			at: "center top",
+	// 			using: function( position, feedback ) {
+	// 				$( this ).css( position );
+	// 				$( "<div>" )
+	// 				.addClass( "arrow" )
+	// 				.addClass( feedback.vertical )
+	// 				.addClass( feedback.horizontal )
+	// 				.appendTo( this );
+	// 			}
+	// 		}
+	// 	});
+	// });
 
 
 
