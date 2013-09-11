@@ -2,7 +2,6 @@
     "require": {
     	"michelf/php-markdown": "*",
         "twig/twig": "1.8.*",
-        "twig/extensions": "*",
         "slim/slim": "1.6.*",
         "slim/extras": "1.0.*"
     }
