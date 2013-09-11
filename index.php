@@ -1,0 +1,104 @@
+<?php
+    require 'vendor/autoload.php';
+    use \Michelf\Markdown;
+
+    $app = new Slim(array(
+        'templates.path' => __DIR__.'/templates/',
+    ));
+    
+    require 'vendor/slim/extras/Views/TwigView.php';
+    TwigView::$twigExtensions = array('Twig_Extensions_Slim',);
+    
+    $app->view('TwigView');
+
+
+
+    $script_location = str_replace('/index.php', '', $_SERVER['SCRIPT_NAME']);
+    $app->view()->getEnvironment()->addGlobal('baseurl', $script_location);
+    
+
+
+    function getAPI($route) {
+        //GET THE JSON
+        $json_url = 'http://192.237.203.16/'.$route;
+        $ch = curl_init( $json_url );
+        $options = array(
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HTTPHEADER => array('Content-type: application/json') ,
+        );
+        curl_setopt_array( $ch, $options );
+        //CREATE THE OUTPUT DATA
+        $output =  json_decode(curl_exec($ch)); // Getting jSON result string
+
+        return $output->data;
+    }
+
+
+
+    $app->get('/', function() use($app) {
+
+        $guides = getAPI('guides/overview');
+       
+        $app->render( 'home.php', array('guides'=>$guides) );
+        
+    });
+
+    $app->get('/guides/(:guideSlug)', function ($guideSlug) use ($app) {
+
+        $guides = getAPI('guides/overview');
+        
+        $guide = getAPI('guides/slug/'.$guideSlug.'/markdown');
+
+        $app->render('guide.landing.php', array('guides'=>$guides, 'guide'=>$guide));
+
+    });
+
+
+    $app->get('/guides/(:guideSlug)/(:bookSlug)', function ($guideSlug, $bookSlug) use ($app) {
+
+
+        $guides = getAPI('guides/overview');
+
+        $api = getAPI('/guides/slug/'.$guideSlug.'/'.$bookSlug.'/markdown');    
+
+        $guide = $api->guide;
+
+        $book = $api->book;
+
+        $app->render('guide.book.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book));
+
+    });
+
+    $app->get('/guides/(:guideSlug)/(:bookSlug)/all', function ($guideSlug, $bookSlug) use ($app) {
+
+        $guides = getAPI('guides/overview');
+
+        $api = getAPI('/guides/slug/'.$guideSlug.'/'.$bookSlug.'/markdown');    
+
+        $guide = $api->guide;
+
+        $book = $api->book;
+
+        $app->render('guide.book.all.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book, 'allsteps'=>true));
+
+    });
+
+    $app->get('/guides/(:guideSlug)/(:bookSlug)/(:chapterSlug)', function ($guideSlug, $bookSlug, $chapterSlug) use ($app) {
+
+        $guides = getAPI('guides/overview');
+
+        $api = getAPI('/guides/slug/'.$guideSlug.'/'.$bookSlug.'/'.$chapterSlug.'/markdown');   
+
+        $guide = $api->guide;
+
+        $book = $api->book;
+
+        $chapter = $api->chapter;
+
+
+        $app->render('guide.book.chapter.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book, 'chapter'=>$chapter, 'chapterslug'=>'#'.$chapter->slug));
+
+    });
+
+    
+    $app->run();
