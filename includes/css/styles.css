@@ -7114,7 +7114,8 @@ a {
   font-family: 'RobotoBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 #content-container pre.terminal {
-  background: #d2d2d2;
+  background: #666;
+  color: #fff;
 }
 #content-container p {
   line-height: 22px;
