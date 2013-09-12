@@ -85,7 +85,7 @@
 					<div class="sidebar five columns alpha col-md-5">
 						&nbsp;
 						<div class="">
-							{% include 'partials/ip-tool.php' %}
+							
 						</div>
 					</div>
 
