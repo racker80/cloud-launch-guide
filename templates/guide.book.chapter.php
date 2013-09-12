@@ -27,7 +27,14 @@
 					<div class="sidebar col-md-4">
 						&nbsp;
 						<div class="">
+							<h5>Estimated time: 10min</h5>
 							<h5>Requires:</h5>
+							<ul>
+								<li>Terminal</li>
+								<li>Master Public IP</li>
+								<li>Master Private IP</li>
+							</ul>
+
 							{% if requires %}
 								{% include 'partials/ip-tool.php' %}
 
@@ -39,6 +46,7 @@
 
 					<div class="col-md-11 col-md-offset-1">
 						{{chapter.content|raw}}
+						{% include 'partials/ip-tool.php' %}
 
 						<div class="actionOverview hide">
 							<ul>
@@ -60,10 +68,36 @@
 					<div class="row">
 						<div class="sidebar five columns alpha col-md-4">
 							&nbsp;
+							{% if page.title == 'Setup the Startup Scripts' %}
+							    	<h5>Requires:</h5>
+
+
+								{% include 'partials/ip-tool.php' %}
+							{% else %}
+							
+							{% endif %}
+							
+
 						</div>
 						<div class="page-content col-md-11 col-md-offset-1">
 							<h4 class=""><span>{{loop.index}}</span> {{page.title}}</h4>
 							{{page.content | raw}}
+							
+							{% if page.meta.contentNotes %}
+							<div class="notice-container">
+								<h4>Additional Notes</h4>
+								<ul class="notice">
+									{% for note in page.meta.contentNotes %}
+							    		<li class="{{note.type}}">{{note.text | raw}}</li>
+							    	{% endfor  %}
+								</ul>
+							</div>
+
+
+							    	
+							{% else %}
+							
+							{% endif %}
 							<div markdown="page.content" parent="page" ng-bind-html-unsafe="markdown"></div>
 						</div><!-- steps -->
 					</div>

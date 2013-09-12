@@ -21,6 +21,7 @@
     function getAPI($route) {
         //GET THE JSON
         $json_url = 'http://192.237.203.16/'.$route;
+        $json_url = 'http://projects.clgapi/'.$route;
         $ch = curl_init( $json_url );
         $options = array(
         CURLOPT_RETURNTRANSFER => true,
