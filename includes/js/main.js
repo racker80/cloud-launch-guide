@@ -74,6 +74,50 @@ var expertBtn = $('*[data-toggle-expert]');
 	toggleExpert();
 
 
+
+/* ----------------------------------------------------------------
+	IP Tool
+	
+---------------------------------------------------------------- */
+var types = ['your.master.public.ip.address', 'your.master.private.ip.address', 'your.clone.public.ip.address', 'your.clone.private.ip.address'];
+
+
+	
+	$.each(types, function(index, value){
+		$('pre').each(function(){
+			var ths = $(this);
+			var re = new RegExp(value, 'g');
+			var cl = value.replace(/\./g, '-');
+			console.log(cl);
+			var txt = ths.html().replace(re, '<span class="address '+cl+'">'+value+'</span>');
+			
+			$(this).html(txt);
+		})
+			$('.address').css('background', 'red');
+	});
+
+
+	$('.ip-table .edit').click(function(){
+		$(this).parent().toggle().parents('.ip-table').find('.edit-ip').toggle();
+		return false;
+	});
+
+	$('.ip-table .save').click(function(){
+		$(this).parent().toggle().parents('.ip-table').find('.current-ip').toggle();
+		return false;
+	});
+
+	$('*[data-ip-input]').keyup(function() {
+				var cl= $(this).data('ip-input');
+				var vl = $(this).val();
+
+			  $('span.'+cl).html(vl);
+				// $.cookies.set('clg_clone_private_ip', $(this).val());
+			});
+
+
+
+
 /* ----------------------------------------------------------------
 	CLIPBOARD
 	

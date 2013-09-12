@@ -7475,6 +7475,30 @@ ul.notice li.tip {
   padding-left: 50px;
   margin: 15px 0;
 }
+.panel.widget {
+  border-radius: 0;
+  border: 0;
+}
+.panel.widget .panel-heading {
+  border-radius: 0;
+  border: 0;
+}
+.panel.widget .panel-body {
+  padding: 0;
+}
+.panel.widget .panel-footer {
+  padding: 10px 0;
+  background: transparent;
+}
+.panel.widget .ip-table {
+  padding: 15px 0;
+}
+.panel.widget .ip-table h5 {
+  font-size: 14px;
+}
+.panel.widget .ip-table div.edit-ip {
+  display: none;
+}
 .container {
   position: relative;
 }

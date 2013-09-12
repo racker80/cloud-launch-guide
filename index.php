@@ -97,6 +97,23 @@
 
         $chapter = $api->chapter;
 
+        if($chapter->code) {
+            foreach($chapter->code as $code) {
+                if(strstr($code->text, 'your.')) {
+                    $chapter->meta->iptool = true;
+                }
+            }
+            foreach($chapter->children as $child) {
+                if($child->code) {
+                    foreach($child->code as $code) {
+                        if(strstr($code->text, 'your.')) {
+                            $child->meta->iptool = true;
+                        }
+                    }
+                }
+            }
+        }
+
 
         $app->render('guide.book.chapter.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book, 'chapter'=>$chapter, 'chapterslug'=>'#'.$chapter->slug));
 

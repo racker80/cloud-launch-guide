@@ -77,16 +77,12 @@
 				<div class="row">
 
 					<div class="sidebar col-md-4">
-						&nbsp;
-						<div class="">
-							<h5>Requires:</h5>
-							{% if requires %}
-								{% include 'partials/ip-tool.php' %}
+						{% if page.meta.iptool %}
 
+								{% include 'partials/ip-tool.php' %}
 							{% else %}
 							
 							{% endif %}
-						</div>
 					</div>
 
 					<div class="col-md-11 col-md-offset-1">

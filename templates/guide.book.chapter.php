@@ -66,10 +66,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="sidebar five columns alpha col-md-4">
-							&nbsp;
-							{% if page.title == 'Setup the Startup Scripts' %}
-							    	<h5>Requires:</h5>
-
+							{% if page.meta.iptool %}
 
 								{% include 'partials/ip-tool.php' %}
 							{% else %}
