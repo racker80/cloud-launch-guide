@@ -46,7 +46,6 @@
 
 					<div class="col-md-11 col-md-offset-1">
 						{{chapter.content|raw}}
-						{% include 'partials/ip-tool.php' %}
 
 						<div class="actionOverview hide">
 							<ul>
