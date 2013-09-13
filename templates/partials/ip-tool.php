@@ -1,6 +1,6 @@
 	<!-- A cool example of what we can do with base bootstrap styles -->
 	<!-- remove the 'hide' class to see it -->
-	<div class="panel panel-default widget">
+	<div class="panel ip-panel panel-default widget">
 		<!-- Default panel contents -->
 		<div class="panel-heading">Code IP Address <button type="button" class="close" aria-hidden="true">&times;</button></div>
 		

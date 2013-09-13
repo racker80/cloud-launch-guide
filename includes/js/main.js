@@ -103,6 +103,7 @@ var expertBtn = $('*[data-toggle-expert]');
 				
 					if(localStorage.getItem(value)) {
 						var text = localStorage.getItem(value);
+						$('.ip-panel .panel-footer').hide();
 					} else {
 						var text = value;
 					}
@@ -121,7 +122,12 @@ var expertBtn = $('*[data-toggle-expert]');
 
 	$('*[data-ip-current]').each(function(){
 		var type = $(this).parents('.ip-table').data('ip-type');
-		$(this).html(localStorage.getItem(type));
+		if(localStorage.getItem(type)) {
+			$(this).html(localStorage.getItem(type));
+		} else {
+			
+		}
+		
 	});
 
 	//add click functions
