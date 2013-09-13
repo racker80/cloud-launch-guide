@@ -87,6 +87,7 @@
                 foreach($chapter->code as $code) {
                     if(strstr($code->text, 'your.')) {
                         $chapter->meta->iptool = true;
+                        $code->iptool = true;
                     }
                 }
                 foreach($chapter->children as $child) {
@@ -94,6 +95,8 @@
                         foreach($child->code as $code) {
                             if(strstr($code->text, 'your.')) {
                                 $child->meta->iptool = true;
+                                $code->iptool = true;
+
                             }
                         }
                     }
@@ -121,6 +124,8 @@
             foreach($chapter->code as $code) {
                 if(strstr($code->text, 'your.')) {
                     $chapter->meta->iptool = true;
+                    $code->iptool = true;
+
                 }
             }
             foreach($chapter->children as $child) {
@@ -128,6 +133,8 @@
                     foreach($child->code as $code) {
                         if(strstr($code->text, 'your.')) {
                             $child->meta->iptool = true;
+                            $code->iptool = true;
+
                         }
                     }
                 }

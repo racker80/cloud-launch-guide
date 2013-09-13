@@ -117,7 +117,7 @@ var expertBtn = $('*[data-toggle-expert]');
 	});
 
 
-	$('.page-content pre').each(function(){
+	$('pre').each(function(){
 		var txt = $(this).html();
 		var regexp = '';
 		var n = txt.match(/(your\.)(.*)(\.)(address)/g);

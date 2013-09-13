@@ -25,7 +25,6 @@
 				<div class="row">
 
 					<div class="sidebar col-md-4">
-						&nbsp;
 						<div class="">
 							<h5>Estimated time: 10min</h5>
 							<h5>Requires:</h5>
@@ -35,30 +34,41 @@
 								<li>Master Private IP</li>
 							</ul>
 
-							{% if requires %}
-								{% include 'partials/ip-tool.php' %}
-
-							{% else %}
-							
-							{% endif %}
 						</div>
 					</div>
 
 					<div class="col-md-11 col-md-offset-1">
 						{{chapter.content|raw}}
+					</div>
+				</div>
+				
 
-						<div class="actionOverview hide">
-							<ul>
-								{% for code in chapter.code %}
-									<li><pre class="{{code.type}}">{{code.text}}</pre></li>
-								{%endfor%}
-							</ul>
+				<hr>
+			</div>
+
+			{% for code in chapter.code %}
+			<div class="container">
+				<div class="row actionOverview">
+					<div class="sidebar col-md-4">
+						{% if code.iptool %}
+						    {% include 'partials/ip-tool.php' %}
+						{% else %}
 						
+						{% endif %}
+						
+					</div>
+					<div class="col-md-11 col-md-offset-1">
+						<div class="">
+							<ul>
+								<li><pre class="{{code.type}}">{{code.text}}</pre></li>
+							</ul>
+
 						</div>
 					</div>
 				</div>
-				<hr>
 			</div>
+
+			{%endfor%}
 
 			<!-- PAGE SECTION -->
 			{% for page in chapter.children %}
