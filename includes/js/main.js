@@ -119,13 +119,29 @@ var expertBtn = $('*[data-toggle-expert]');
 		}
 	});
 
+	var showIPtoolFooter = function(){
+		var i = 0;
+		$.each(types, function(index, value){
+			if(localStorage.getItem(value)) {
+				i++;
+			}
+		
+		});
+			if(i > 0) {
+				$('.ip-panel .panel-footer').fadeOut();
+			} else {
+				$('.ip-panel .panel-footer').fadeIn();
+			}
+
+	}
+	showIPtoolFooter();
 
 	$('*[data-ip-current]').each(function(){
 		var type = $(this).parents('.ip-table').data('ip-type');
 		if(localStorage.getItem(type)) {
 			$(this).html(localStorage.getItem(type));
 		} else {
-			
+
 		}
 		
 	});
@@ -141,6 +157,7 @@ var expertBtn = $('*[data-toggle-expert]');
 		$(this).parent().toggle().parents('.ip-table').find('.current-ip').toggle();
 		var type = $(this).parents('.ip-table').data('ip-type');
 		localStorage.setItem(type, $(this).parent().find('input').val());
+		showIPtoolFooter();
 
 		console.log(localStorage.getItem(type));
 		return false;
