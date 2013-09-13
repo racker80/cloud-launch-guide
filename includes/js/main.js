@@ -81,18 +81,47 @@ var expertBtn = $('*[data-toggle-expert]');
 ---------------------------------------------------------------- */
 	var types = ['your.master.public.ip.address', 'your.master.private.ip.address', 'your.clone.public.ip.address', 'your.clone.private.ip.address'];
 
+	var showIPtool = function(value) {
+		var n = value.match(/(your\.)(.*)(\.)(address)/g);
+		if(n != null) {
+			var tool = $(this).parentsUntil('.container').find('.sidebar *[data-ip-type="'+n[0]+'"]');
+			tool.show();
+		}
+	}
 
-	//wrap the your.ip.address in a span
-	$.each(types, function(index, value){
-		$('pre').each(function(){
-			var ths = $(this);
-			var re = new RegExp(value, 'g');
-			var cl = value.replace(/\./g, '-');
-			var txt = ths.html().replace(re, '<span class="address '+cl+'">'+value+'</span>');
-			
-			$(this).html(txt);
-		})
+	$('pre').each(function(){
+		var ths = $(this);
+		var	txt = ths.html();
+		var	n = ths.html().match(/(your\.)(.*)(\.)(address)/gi);
+		
+		if(n) {
+			$.each(types, function(index, value){
+				var re = new RegExp(value, 'g');
+				
+				if( ths.html().match(re) ) {
+					var cl = value.replace(/\./g, '-');
+				
+					if(localStorage.getItem(value)) {
+						var text = localStorage.getItem(value);
+					} else {
+						var text = value;
+					}
+
+					var txt = ths.html().replace(re, '<span data-code-ip-type="'+value+'" class="address '+cl+'">'+text+'</span>');
+					$(ths).html(txt);
+					
+					var tool = $(ths).parentsUntil('.container').find('.sidebar *[data-ip-type="'+value+'"]');
+					tool.show();
+				}
+			});
 			$('.address').css('background', 'red');
+		}
+	});
+
+
+	$('*[data-ip-current]').each(function(){
+		var type = $(this).parents('.ip-table').data('ip-type');
+		$(this).html(localStorage.getItem(type));
 	});
 
 	//add click functions
@@ -104,6 +133,10 @@ var expertBtn = $('*[data-toggle-expert]');
 	//add click functions
 	$('.ip-table .save').click(function(){
 		$(this).parent().toggle().parents('.ip-table').find('.current-ip').toggle();
+		var type = $(this).parents('.ip-table').data('ip-type');
+		localStorage.setItem(type, $(this).parent().find('input').val());
+
+		console.log(localStorage.getItem(type));
 		return false;
 	});
 
@@ -111,21 +144,12 @@ var expertBtn = $('*[data-toggle-expert]');
 	$('*[data-ip-input]').keyup(function() {
 		var cl= $(this).data('ip-input');
 		var vl = $(this).val();
-
 		$('span.'+cl).html(vl);
 		// $.cookies.set('clg_clone_private_ip', $(this).val());
 	});
 
 
-	$('pre').each(function(){
-		var txt = $(this).html();
-		var regexp = '';
-		var n = txt.match(/(your\.)(.*)(\.)(address)/g);
-		if(n != null) {
-			var tool = $(this).parentsUntil('.container').find('.sidebar *[data-ip-type="'+n[0]+'"]');
-			tool.show();
-		}
-	});
+
 
 
 

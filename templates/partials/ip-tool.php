@@ -11,7 +11,7 @@
 			<div data-ip-type="your.master.public.ip.address" class="ip-table">
 				<h5>Master Server Public IP:</h5>
 				<div class="current-ip">
-					<span class="ip-current your-master-public-ip-address">
+					<span data-ip-current="your-master-public-ip-address" class="ip-current your-master-public-ip-address">
 							12.23.432.234
 						</span> 
 						<a href="#" class="edit">edit</a>
