@@ -81,7 +81,27 @@
 
         $book = $api->book;
 
-        $app->render('guide.book.all.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book, 'allsteps'=>true));
+        $chapters = $api->book->children;
+        foreach($chapters as $chapter) {
+            if(isset($chapter->code)) {
+                foreach($chapter->code as $code) {
+                    if(strstr($code->text, 'your.')) {
+                        $chapter->meta->iptool = true;
+                    }
+                }
+                foreach($chapter->children as $child) {
+                    if($child->code) {
+                        foreach($child->code as $code) {
+                            if(strstr($code->text, 'your.')) {
+                                $child->meta->iptool = true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        $app->render('guide.book.all.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book, 'chapters'=>$chapters, 'allsteps'=>true));
 
     });
 

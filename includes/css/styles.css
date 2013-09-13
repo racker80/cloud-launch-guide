@@ -7491,6 +7491,7 @@ ul.notice li.tip {
   background: transparent;
 }
 .panel.widget .ip-table {
+  display: none;
   padding: 15px 0;
 }
 .panel.widget .ip-table h5 {

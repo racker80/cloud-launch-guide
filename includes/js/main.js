@@ -79,16 +79,15 @@ var expertBtn = $('*[data-toggle-expert]');
 	IP Tool
 	
 ---------------------------------------------------------------- */
-var types = ['your.master.public.ip.address', 'your.master.private.ip.address', 'your.clone.public.ip.address', 'your.clone.private.ip.address'];
+	var types = ['your.master.public.ip.address', 'your.master.private.ip.address', 'your.clone.public.ip.address', 'your.clone.private.ip.address'];
 
 
-	
+	//wrap the your.ip.address in a span
 	$.each(types, function(index, value){
 		$('pre').each(function(){
 			var ths = $(this);
 			var re = new RegExp(value, 'g');
 			var cl = value.replace(/\./g, '-');
-			console.log(cl);
 			var txt = ths.html().replace(re, '<span class="address '+cl+'">'+value+'</span>');
 			
 			$(this).html(txt);
@@ -96,24 +95,37 @@ var types = ['your.master.public.ip.address', 'your.master.private.ip.address', 
 			$('.address').css('background', 'red');
 	});
 
-
+	//add click functions
 	$('.ip-table .edit').click(function(){
 		$(this).parent().toggle().parents('.ip-table').find('.edit-ip').toggle();
 		return false;
 	});
 
+	//add click functions
 	$('.ip-table .save').click(function(){
 		$(this).parent().toggle().parents('.ip-table').find('.current-ip').toggle();
 		return false;
 	});
 
+	//add keyup function
 	$('*[data-ip-input]').keyup(function() {
-				var cl= $(this).data('ip-input');
-				var vl = $(this).val();
+		var cl= $(this).data('ip-input');
+		var vl = $(this).val();
 
-			  $('span.'+cl).html(vl);
-				// $.cookies.set('clg_clone_private_ip', $(this).val());
-			});
+		$('span.'+cl).html(vl);
+		// $.cookies.set('clg_clone_private_ip', $(this).val());
+	});
+
+
+	$('.page-content pre').each(function(){
+		var txt = $(this).html();
+		var regexp = '';
+		var n = txt.match(/(your\.)(.*)(\.)(address)/g);
+		if(n != null) {
+			var tool = $(this).parentsUntil('.container').find('.sidebar *[data-ip-type="'+n[0]+'"]');
+			tool.show();
+		}
+	});
 
 
 

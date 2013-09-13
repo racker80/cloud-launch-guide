@@ -58,7 +58,7 @@
 
 
 		<!-- CHAPTER HEADING -->
-		{% for chapter in book.children %}
+		{% for chapter in chapters %}
 		<div id="{{chapter.slug}}" class="chapter-container" ng-repeat="chapter in book.children">
 			<section class="chapter-intro container">
 				<div class="page-header ">
@@ -77,12 +77,7 @@
 				<div class="row">
 
 					<div class="sidebar col-md-4">
-						{% if page.meta.iptool %}
 
-								{% include 'partials/ip-tool.php' %}
-							{% else %}
-							
-							{% endif %}
 					</div>
 
 					<div class="col-md-11 col-md-offset-1">
@@ -111,7 +106,12 @@
 						<div class="sidebar five columns alpha col-md-4">
 							&nbsp;
 
+							{% if page.meta.iptool %}
 
+								{% include 'partials/ip-tool.php' %}
+							{% else %}
+							
+							{% endif %}
 						</div>
 						<div class="page-content col-md-11 col-md-offset-1">
 							<h4 class=""><span>{{loop.index}}</span> {{page.title}}</h4>
