@@ -23,71 +23,52 @@
 
 
 
-		<!-- BOOK HEADING -->
-		<section class="container hide">
-			<div class="row">
-				<div class="sidebar five columns alpha col-md-5">
-					<!-- <aside id="well-time">{{book.title}}: <span>1 hour</span></aside>  -->
-					<aside id="chapters" > <!-- sidebar-contents -->
-						<h3>Chapters</h3>
-						<ol>
-							{% for chapter in book.children %}
-							<li ng-repeat="chapter in book.children"><a href="#{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}#{{chapter.slug}}">{{chapter.title}}</a></li>
-							{%endfor%}
-						</ol>
-					</aside>
-				</div>
-				<div class="eleven columns omega col-md-11">
-					<h3>{{book.longTitle}}</h3>
-
-					<div ng-repeat="image in book.images | filter:{type:'heading'}">
-						<img src="{{image.url}}">
-					</div>
-
-					{{book.content|raw}}
-					{% for content in book.additionalContent %}
-					<div ng-repeat="content in book.additionalContent">
-						{{content.text|raw}}
-						<div markdown="content.text" parent="content" ng-bind-html-unsafe="markdown"></div>
-					</div>
-					{%endfor%}
-				</div>
-			</div> 
-		</section>
+		
 		
 
 
 		<!-- CHAPTER HEADING -->
 		{% for chapter in chapters %}
-		<div id="{{chapter.slug}}" class="chapter-container" ng-repeat="chapter in book.children">
-			<section class="chapter-intro container">
-				<div class="page-header ">
-					<h1 class="chapterTitle" data-title="{{chapter.title}}">{{chapter.title}} <small>{{chapter.time}}</small></h1>
-					<div class="page-header-options">
-						{% include 'partials/action-options-all.php' %}
-					</div>
-				</div>			
-			</section>
 			
+
 					<!-- CHAPTER HEADING -->
 		<div id="{{chapter.slug}}" class="chapter-container" ng-repeat="chapter in book.children">
 			<div class="container chapterHeader">
-
+				<hr>
 
 				<div class="row">
 
-					<div class="sidebar col-md-4">
+					<div class="sidebar col-md-4"><br><br>
+						<h4>Chapter {{ loop.index }}</h4>
+						<p>Time: <strong>15 min{{ chapter.time }}</strong></p>
 
 					</div>
 
 					<div class="col-md-11 col-md-offset-1">
+						<section class="chapter-intro ">
+							<div class="page-header ">
+								<h1 class="chapterTitle" data-title="{{chapter.title}}">{{chapter.title}} <small>{{chapter.time}}</small></h1>
+								<div class="page-header-options">
+									{% include 'partials/action-options-all.php' %}
+								</div>
+							</div>			
+						</section>
+
 						{{chapter.content|raw}}
+						{% if chapter.content is empty %}
+						    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, nam ea incidunt unde fugit dignissimos suscipit. Repudiandae, culpa, dolorem, dolor corrupti odio est illum similique dignissimos aperiam praesentium debitis iusto!</p>
+						{% else %}
+						
+						{% endif %}
+
+						<hr>
 
 					</div>
 
 					
 				</div>
-				<hr>
+
+
 
 			</div>
 
@@ -105,7 +86,7 @@
 					</div>
 					<div class="col-md-11 col-md-offset-1">
 						<div class="">
-							<ul>
+							<ul class="list-unstyled">
 								<li><pre class="{{code.type}}">{{code.text}}</pre></li>
 							</ul>
 
@@ -140,7 +121,6 @@
 				</div>
 			</div>
 			{%endfor%}
-		</div> <!-- CHAPTER -->
 
 		{%endfor%}
 

@@ -30,6 +30,7 @@
 <script src="{{ baseurl }}/includes/bower_components/zeroclipboard/ZeroClipboard.js"></script>
 <script src="{{ baseurl }}/includes/bower_components/jquery-waypoints/waypoints.js"></script>
 <script src="{{ baseurl }}/includes/bower_components/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.js"></script>
+<script src="{{ baseurl }}/includes/bower_components/jsPlumb/dist/js/jquery.jsPlumb-1.5.2.js"></script>
 <script src="{{ baseurl }}/includes/js/main.js"></script>
 
 

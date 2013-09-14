@@ -15,7 +15,17 @@
 			{% include 'partials/nav.drawer.php' %}
 			
 		</section>
-
+		
+		<div class="container">
+			<div class="row">
+				<div id="node1" class="col-md-1">
+					col1
+				</div>
+				<div id="node2" class="col-md-1 col-md-offset-10">
+					col2
+				</div>
+			</div>
+		</div>
 
 
 		<!-- CHAPTER HEADING -->
@@ -58,12 +68,9 @@
 						
 					</div>
 					<div class="col-md-11 col-md-offset-1">
-						<div class="">
-							<ul>
+							<ul class="list-unstyled">
 								<li><pre class="{{code.type}}">{{code.text}}</pre></li>
 							</ul>
-
-						</div>
 					</div>
 				</div>
 			</div>

@@ -2,7 +2,7 @@
 	<!-- remove the 'hide' class to see it -->
 	<div class="panel ip-panel panel-default widget">
 		<!-- Default panel contents -->
-		<div class="panel-heading">Code IP Address <button type="button" class="close" aria-hidden="true">&times;</button></div>
+		<div class="panel-heading">IP Address <button type="button" class="close" aria-hidden="true">&times;</button></div>
 		
 		<div class="widgetSection">
 

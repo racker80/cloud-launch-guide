@@ -3,8 +3,16 @@
 //@codekit-prepend "../bower_components/zeroclipboard/ZeroClipboard.js"
 //@codekit-prepend "../bower_components/jquery-waypoints/waypoints.js"
 //@codekit-prepend "../bower_components/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.js"
+//@codekit-prepend "../bower_components/jsPlumb/dist/js/jquery.jsPlumb-1.5.2.js"
+
+
+
 
 $(document).ready(function() {
+
+
+
+
 	// toggle menu and state handling
 
 	var navState = 'close';
@@ -33,7 +41,6 @@ $(document).ready(function() {
 
 
 
-
 /* ----------------------------------------------------------------
 	EXPERT MODE
 	
@@ -56,6 +63,8 @@ var expertBtn = $('*[data-toggle-expert]');
 			expertBtn.removeClass('btn-warning');
 			expertBtn.find('.glyphicon').removeClass('glyphicon-saved').addClass('glyphicon-save');
 		}
+		jsPlumb.repaintEverything();
+
 	}
 	
 	expertBtn.click(function(){
@@ -71,7 +80,6 @@ var expertBtn = $('*[data-toggle-expert]');
 
 	});
 
-	toggleExpert();
 
 
 
@@ -81,19 +89,15 @@ var expertBtn = $('*[data-toggle-expert]');
 ---------------------------------------------------------------- */
 	var types = ['your.master.public.ip.address', 'your.master.private.ip.address', 'your.clone.public.ip.address', 'your.clone.private.ip.address'];
 
-	var showIPtool = function(value) {
-		var n = value.match(/(your\.)(.*)(\.)(address)/g);
-		if(n != null) {
-			var tool = $(this).parentsUntil('.container').find('.sidebar *[data-ip-type="'+n[0]+'"]');
-			tool.show();
-		}
-	}
 
-	$('pre').each(function(){
+	var connections = [];
+
+	$('pre').each(function(index, value){
 		var ths = $(this);
 		var	txt = ths.html();
 		var	n = ths.html().match(/(your\.)(.*)(\.)(address)/gi);
-		
+		var ID = index;
+
 		if(n) {
 			$.each(types, function(index, value){
 				var re = new RegExp(value, 'g');
@@ -103,21 +107,34 @@ var expertBtn = $('*[data-toggle-expert]');
 				
 					if(localStorage.getItem(value)) {
 						var text = localStorage.getItem(value);
+
+						//if a value exists, we don't need the footer
 						$('.ip-panel .panel-footer').hide();
+
 					} else {
 						var text = value;
 					}
+					var indexID = ID + '-' + (ID+1);
+					$(ths).html(
+							ths.text().replace(re, '<span id="plumb-target-'+indexID+'" class="plumb_target"></span><span id="code-ip-target-'+indexID+'" data-code-ip-type="'+value+'" class="address '+cl+'">'+text+'</span>')
+						);
 
-					var txt = ths.html().replace(re, '<span data-code-ip-type="'+value+'" class="address '+cl+'">'+text+'</span>');
-					$(ths).html(txt);
-					
-					var tool = $(ths).parentsUntil('.container').find('.sidebar *[data-ip-type="'+value+'"]');
-					tool.show();
+
+					connections.push({
+						'pre': $('span#plumb-target-'+indexID),
+						'tool': $(ths).parentsUntil('.container').find('.sidebar *[data-ip-type="'+value+'"]')
+								.attr('data-target', '#code-ip-target-'+indexID).show()
+					})
+
 				}
 			});
 			$('.address').css('background', 'red');
+
 		}
 	});
+
+
+
 
 	var showIPtoolFooter = function(){
 		var i = 0;
@@ -125,55 +142,109 @@ var expertBtn = $('*[data-toggle-expert]');
 			if(localStorage.getItem(value)) {
 				i++;
 			}
-		
 		});
-			if(i > 0) {
-				$('.ip-panel .panel-footer').fadeOut();
-			} else {
-				$('.ip-panel .panel-footer').fadeIn();
-			}
+		if(i > 0) {
+			$('.ip-panel .panel-footer').fadeOut();
+		} else {
+			$('.ip-panel .panel-footer').fadeIn();
+		}
 
 	}
 	showIPtoolFooter();
 
-	$('*[data-ip-current]').each(function(){
-		var type = $(this).parents('.ip-table').data('ip-type');
+	var setCurrentIP = function(target, type) {
 		if(localStorage.getItem(type)) {
-			$(this).html(localStorage.getItem(type));
+			if(target.is('input')) {
+				target.val(localStorage.getItem(type));
+			} else {
+				target.html(localStorage.getItem(type));
+			}
 		} else {
 
 		}
-		
-	});
+		return target;
+	}
+
+	var currentIPkeyUp = function(type, value) {
+			$('.ip-panel *[data-ip-type="'+type+'"] .edit-ip input.text').val(value);
+			$('.ip-panel *[data-ip-type="'+type+'"] .ip-current').html(value);
+			$('span[data-code-ip-type="'+type+'"]').html(value);
+			localStorage.setItem(type, value)
+		}
+
+
+	$('.ip-panel *[data-ip-type]').each(function(){
+		var ths = $(this);
+		var target = $(ths.data('target'));
+		var type = ths.data('ip-type');
+
+		var currentIP = setCurrentIP(ths.find('.ip-current'), type);
+
+		var ipInput = setCurrentIP(ths.find('.edit-ip input.text'), type)
+						.keyup(function(){
+							currentIPkeyUp(type, $(this).val());
+						});
+
+	})
+
+
 
 	//add click functions
 	$('.ip-table .edit').click(function(){
-		$(this).parent().toggle().parents('.ip-table').find('.edit-ip').toggle();
+		$('.ip-table .edit-ip').hide();
+		$('.ip-table .current-ip').show();
+
+		$(this).parent().hide().parents('.ip-table').find('.edit-ip').show();
 		return false;
 	});
 
 	//add click functions
 	$('.ip-table .save').click(function(){
-		$(this).parent().toggle().parents('.ip-table').find('.current-ip').toggle();
-		var type = $(this).parents('.ip-table').data('ip-type');
-		localStorage.setItem(type, $(this).parent().find('input').val());
+		$('.ip-table .edit-ip').hide();
+		$(this).parents('.ip-table').find('.current-ip').show();
+
 		showIPtoolFooter();
 
-		console.log(localStorage.getItem(type));
 		return false;
 	});
 
-	//add keyup function
-	$('*[data-ip-input]').keyup(function() {
-		var cl= $(this).data('ip-input');
-		var vl = $(this).val();
-		$('span.'+cl).html(vl);
-		// $.cookies.set('clg_clone_private_ip', $(this).val());
+var plumbInstances = {};
+var doConnections = function(){ 
+	$.each(connections, function(index, value){
+
+		value.pre.offset({
+			left: value.pre.parent().offset().left
+		})
+
+		var firstInstance = jsPlumb.getInstance();
+		firstInstance.importDefaults({
+			Connector : [ "Bezier", { curviness: 50 } ],
+			Anchors : [ "RightMiddle", "LeftMiddle" ],
+			PaintStyle : {
+				lineWidth:2,
+				strokeStyle: 'rgba(200,0,0,100)',
+				"dashstyle":"2 4"
+			},
+			Endpoint:[ "Dot", { radius:3 } ],
+			EndpointStyle : { fillStyle : "rgba(200,0,0,100)" },
+		});
+
+		firstInstance.connect({
+			source:value.tool, 
+			target:value.pre, 
+			container:value.tool.parents('.row')
+		});
 	});
+}
+
+
+jsPlumb.ready(function() {
+	doConnections();
+});
 
 
 
-
+toggleExpert();
 
 
 
@@ -220,6 +291,7 @@ var expertBtn = $('*[data-toggle-expert]');
     //toggle the widget body
     $('.widget .panel-heading .close').click(function(){
     	$(this).parent().parent().find('.widgetSection').toggle();
+    	var con = $(this).parents('.widget').find('.ip-table').first();
     });
 
 
