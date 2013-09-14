@@ -6,7 +6,6 @@
 		<section class="chapter-intro container">
 			<div class="page-header ">
 				<h5><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">&laquo; {{book.title}}</a></h5>
-				<h1>{{chapter.title}} <small>{{chapter.time}}</small></h1>
 				<div class="page-header-options">
 					{% include 'partials/action-options.php' %}
 				</div>
@@ -16,16 +15,7 @@
 			
 		</section>
 		
-		<div class="container">
-			<div class="row">
-				<div id="node1" class="col-md-1">
-					col1
-				</div>
-				<div id="node2" class="col-md-1 col-md-offset-10">
-					col2
-				</div>
-			</div>
-		</div>
+		
 
 
 		<!-- CHAPTER HEADING -->
@@ -35,20 +25,31 @@
 				<div class="row">
 
 					<div class="sidebar col-md-4">
-						<div class="">
-							<h5>Estimated time: 10min</h5>
+							<h4>Chapter 4{{ loop.index }}</h4>						
+							<h1>{{chapter.title}}</h1>
+							<p>Time: <strong>15 min{{ chapter.time }}</strong></p>
+
+<!-- 							<h5>Estimated time: 10min</h5>
 							<h5>Requires:</h5>
 							<ul>
 								<li>Terminal</li>
 								<li>Master Public IP</li>
 								<li>Master Private IP</li>
-							</ul>
+							</ul> -->
 
-						</div>
 					</div>
 
 					<div class="col-md-11 col-md-offset-1">
-						{{chapter.content|raw}}
+						<div class="lead">
+							{{chapter.content|raw}}
+
+						</div>
+						{% if chapter.content is empty %}
+						    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, nam ea incidunt unde fugit dignissimos suscipit. Repudiandae, culpa, dolorem, dolor corrupti odio est illum similique dignissimos aperiam praesentium debitis iusto!</p>
+						{% else %}
+						
+						{% endif %}
+
 					</div>
 				</div>
 				

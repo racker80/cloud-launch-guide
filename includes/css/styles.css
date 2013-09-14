@@ -7372,6 +7372,14 @@ a {
 .table-layout .alpha {
   line-height: 30px;
 }
+.lead img {
+  display: block;
+  margin: 0 auto;
+}
+.book-intro .page-header,
+.chapter-intro .page-header {
+  border: 0;
+}
 .book-intro .intro-content,
 .chapter-intro .intro-content {
   margin-bottom: 45px;
