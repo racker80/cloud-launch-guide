@@ -120,7 +120,7 @@
 
         $chapter = $api->chapter;
 
-        if($chapter->code) {
+        if(isset($chapter->code)) {
             foreach($chapter->code as $code) {
                 if(strstr($code->text, 'your.')) {
                     $chapter->meta->iptool = true;

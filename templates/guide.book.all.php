@@ -115,7 +115,6 @@
 						<div class="page-content col-md-11 col-md-offset-1">
 							<h4 class=""><span>{{loop.index}}</span> {{page.title}}</h4>
 							{{page.content | raw}}
-							<div markdown="page.content" parent="page" ng-bind-html-unsafe="markdown"></div>
 						</div><!-- steps -->
 					</div>
 				</div>
