@@ -294,7 +294,7 @@ toggleExpert();
     	var con = $(this).parents('.widget').find('.ip-table').first();
     });
 
-
+    $('#banner-content .page-header-options').width($(this).find('.action-options').outerWidth() + 10).css('margin', '0 auto');
 
 /* ----------------------------------------------------------------
 	STICKY NAV WITH WAYPOINTS

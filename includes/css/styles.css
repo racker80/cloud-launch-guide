@@ -7376,6 +7376,22 @@ a {
   display: block;
   margin: 0 auto;
 }
+#banner-content {
+  text-align: center;
+}
+#banner-content h1.guideTitle {
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 15px;
+}
+#banner-content h2 {
+  text-align: center;
+  font-size: 2em;
+  font-family: 'RobotoLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+#banner-content .page-header-options {
+  position: relative;
+}
 .book-intro .page-header,
 .chapter-intro .page-header {
   border: 0;
@@ -7420,6 +7436,7 @@ a {
   font-size: 1.2em;
 }
 .chapter-container {
+  margin-top: 60px;
   margin-bottom: 120px;
 }
 .book-casing {

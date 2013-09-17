@@ -2,10 +2,10 @@
 
 	<div id="content-container">
 
-
+<!-- 
 		<section class="chapter-intro container">
 			<div class="page-header ">
-				<h5><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">&laquo; {{book.title}}</a> : Chapter 4 of 9</h5>
+				<h5><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">&laquo; {{book.title}}</a></h5>
 				<div class="page-header-options">
 					{% include 'partials/action-options.php' %}
 				</div>
@@ -15,7 +15,7 @@
 			
 		</section>
 		
-		
+ -->		
 
 
 		<!-- CHAPTER HEADING -->
