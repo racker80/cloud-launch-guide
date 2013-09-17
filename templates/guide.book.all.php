@@ -2,7 +2,7 @@
 
 	<div id="content-container">
 
-		<section class="book-intro container">
+<!-- 		<section class="book-intro container">
 			<div class="page-header ">
 				<h1>{{book.title}}: <small>1 Hour</small></h1>
 				<div class="page-header-options">
@@ -16,7 +16,7 @@
 				{{book.content|raw}}
 			</div>
 			
-		</section>
+		</section> -->
 
 		
 
@@ -33,7 +33,7 @@
 
 					<!-- CHAPTER HEADING -->
 		<div id="{{chapter.slug}}" class="chapter-container" ng-repeat="chapter in book.children">
-					<section class="chapter-intro container">
+<!-- 					<section class="chapter-intro container">
 			<div class="page-header ">
 				<h5><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">&laquo; {{book.title}}</a> : Chapter {{loop.index}} of {{loop.length}}</h5>
 				<div class="page-header-options">
@@ -41,7 +41,7 @@
 			</div>
 			
 			
-		</section>
+		</section> -->
 			
 			{% include 'partials/chapter.header.php' %}
 			
