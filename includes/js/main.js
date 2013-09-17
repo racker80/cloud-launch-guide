@@ -311,6 +311,7 @@ toggleExpert();
     	}
     });
 
+	var singleUrl = $('.allStepsOn').attr('href');
 
 	$('.chapter-container').waypoint( function(direction) {
 	  var $active = $(this);
@@ -327,6 +328,8 @@ toggleExpert();
 	  }
 
 	  $('.currentChapter a').html($active.find('.chapterTitle').data('title'));
+	  
+	  $('.allStepsOn').attr('href',  singleUrl + '/' + $active.find('.chapterTitle').data('slug'));
 	  $('.nav-thing li a').each(function(){
 	  	if( $(this).text() === $active.find('.chapterTitle').data('title') ) {
 	  		$('.nav-thing li a').removeClass('completed');

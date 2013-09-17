@@ -5,7 +5,7 @@
 
 		<section class="chapter-intro container">
 			<div class="page-header ">
-				<h5><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">&laquo; {{book.title}}</a></h5>
+				<h5><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">&laquo; {{book.title}}</a> : Chapter 4 of 9</h5>
 				<div class="page-header-options">
 					{% include 'partials/action-options.php' %}
 				</div>
@@ -21,98 +21,13 @@
 		<!-- CHAPTER HEADING -->
 		<div id="{{chapter.slug}}" class="chapter-container" ng-repeat="chapter in book.children">
 			
-			<div class="container chapterHeader">
-				<div class="row">
+			{% include 'partials/chapter.header.php' %}
 
-					<div class="sidebar col-md-4">
-							<h4>Chapter 4{{ loop.index }}</h4>						
-							<h1>{{chapter.title}}</h1>
-							<p>Time: <strong>15 min{{ chapter.time }}</strong></p>
+			{% include 'partials/chapter.code.php' %}
 
-<!-- 							<h5>Estimated time: 10min</h5>
-							<h5>Requires:</h5>
-							<ul>
-								<li>Terminal</li>
-								<li>Master Public IP</li>
-								<li>Master Private IP</li>
-							</ul> -->
 
-					</div>
+			{% include 'partials/chapter.page.php' %}
 
-					<div class="col-md-11 col-md-offset-1">
-						<div class="lead">
-							{{chapter.content|raw}}
-
-						</div>
-						{% if chapter.content is empty %}
-						    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, nam ea incidunt unde fugit dignissimos suscipit. Repudiandae, culpa, dolorem, dolor corrupti odio est illum similique dignissimos aperiam praesentium debitis iusto!</p>
-						{% else %}
-						
-						{% endif %}
-
-					</div>
-				</div>
-				
-
-				<hr>
-			</div>
-
-			{% for code in chapter.code %}
-			<div class="container">
-				<div class="row actionOverview">
-					<div class="sidebar col-md-4">
-						{% if code.iptool %}
-						    {% include 'partials/ip-tool.php' %}
-						{% else %}
-						
-						{% endif %}
-						
-					</div>
-					<div class="col-md-11 col-md-offset-1">
-							<ul class="list-unstyled">
-								<li><pre class="{{code.type}}">{{code.text}}</pre></li>
-							</ul>
-					</div>
-				</div>
-			</div>
-
-			{%endfor%}
-
-			<!-- PAGE SECTION -->
-			{% for page in chapter.children %}
-			<div id="{{page.slug}}" class="page-container" ng-repeat="page in chapter.children">
-				<div class="container">
-					<div class="row">
-						<div class="sidebar five columns alpha col-md-4">
-							{% if page.meta.iptool %}
-
-								{% include 'partials/ip-tool.php' %}
-							{% else %}
-							
-							{% endif %}
-						</div>
-						<div class="page-content col-md-11 col-md-offset-1">
-							<h4 class=""><span>{{loop.index}}</span> {{page.title}}</h4>
-							{{page.content | raw}}
-							
-							{% if page.meta.contentNotes %}
-								<div class="notice-container">
-									<h4>Additional Notes</h4>
-									<ul class="notice">
-										{% for note in page.meta.contentNotes %}
-								    		<li class="{{note.type}}">{{note.text | raw}}</li>
-								    	{% endfor  %}
-									</ul>
-								</div>
-							{% else %}
-							
-							{% endif %}
-							<div markdown="page.content" parent="page" ng-bind-html-unsafe="markdown"></div>
-						</div><!-- steps -->
-					</div>
-				</div>
-			</div>
-			{%endfor%}
 
 		</div> <!-- CHAPTER -->
 
