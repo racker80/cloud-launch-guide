@@ -83,12 +83,43 @@ var expertBtn = $('*[data-toggle-expert]');
 
 
 
+var plumbInstances = {};
+function doConnections(){ 
+	$.each(connections, function(index, value){
+
+		value.pre.offset({
+			left: value.pre.parent().offset().left
+		})
+
+		var firstInstance = jsPlumb.getInstance();
+		firstInstance.importDefaults({
+			Connector : [ "Bezier", { curviness: 50 } ],
+			Anchors : [ "RightMiddle", "LeftMiddle" ],
+			PaintStyle : {
+				lineWidth:2,
+				strokeStyle: 'rgba(200,0,0,100)',
+				"dashstyle":"2 4"
+			},
+			Endpoint:[ "Dot", { radius:3 } ],
+			EndpointStyle : { fillStyle : "rgba(200,0,0,100)" },
+		});
+
+		firstInstance.connect({
+			source:value.tool, 
+			target:value.pre, 
+			container:value.tool.parents('.row')
+		});
+	});
+}
+
+
 /* ----------------------------------------------------------------
 	IP Tool
 	
 ---------------------------------------------------------------- */
-	var types = ['your.master.public.ip.address', 'your.master.private.ip.address', 'your.clone.public.ip.address', 'your.clone.private.ip.address'];
+	// var types = ['your.master.public.ip.address', 'your.master.private.ip.address', 'your.clone.public.ip.address', 'your.clone.private.ip.address'];
 
+	var types = [];
 
 	var connections = [];
 
@@ -99,39 +130,73 @@ var expertBtn = $('*[data-toggle-expert]');
 		var ID = index;
 
 		if(n) {
-			$.each(types, function(index, value){
+			$.each(n, function(index, value){
+				if($.inArray(value, types) === -1) {
+					types.push(value);
+				}
+				var template = $('<div class="ip-table" data-ip-type="'+value+'">'+
+					'<h5></h5>'+
+					'<div class="current-ip">'+
+					'<span data-ip-current="" class="ip-current"></span>'+
+					'<a href="#" class="edit">edit</a>'+
+					'</div>'+
+					'<div class="edit-ip">'+
+					'<input type="text" class="text" data-ip-input=""> <a href="#" class="save">save</a>'+
+					'</div>'+
+					'</div>');
+				template.find('h5').html(value.split('.').join(' '));
+				$(ths).parentsUntil('.container').find('.sidebar .ip-panel .widgetSection').append(template.show());
+			});
+
+
+			$.each(n, function(index, value){
 				var re = new RegExp(value, 'g');
-				
+
 				if( ths.html().match(re) ) {
 					var cl = value.replace(/\./g, '-');
-				
+					
 					if(localStorage.getItem(value)) {
 						var text = localStorage.getItem(value);
 
-						//if a value exists, we don't need the footer
-						$('.ip-panel .panel-footer').hide();
+							//if a value exists, we don't need the footer
+							$('.ip-panel .panel-footer').hide();
 
-					} else {
-						var text = value;
-					}
-					var indexID = ID + '-' + (ID+1);
-					$(ths).html(
+						} else {
+							var text = value;
+						}
+						var indexID = ID + '-' + (ID + (index));
+
+						if(index < 1) {
+						$(ths).html(
 							ths.text().replace(re, '<span id="plumb-target-'+indexID+'" class="plumb_target"></span><span id="code-ip-target-'+indexID+'" data-code-ip-type="'+value+'" class="address '+cl+'">'+text+'</span>')
-						);
+							);
 
 
-					connections.push({
-						'pre': $('span#plumb-target-'+indexID),
-						'tool': $(ths).parentsUntil('.container').find('.sidebar *[data-ip-type="'+value+'"]')
-								.attr('data-target', '#code-ip-target-'+indexID).show()
-					})
+						connections.push({
+							'pre': $('span#plumb-target-'+indexID),
+							'tool': $(ths).parentsUntil('.container').find('.sidebar *[data-ip-type="'+value+'"]')
+							.attr('data-target', '#code-ip-target-'+indexID).show()
+						})
+						}
 
-				}
+					}
 			});
+			
 			$('.address').css('background', 'red');
+			jsPlumb.ready(function() {
+				doConnections();
 
+			});
+			
 		}
+
+
+		
+			
+
 	});
+
+
 
 
 
@@ -208,38 +273,11 @@ var expertBtn = $('*[data-toggle-expert]');
 		return false;
 	});
 
-var plumbInstances = {};
-var doConnections = function(){ 
-	$.each(connections, function(index, value){
 
-		value.pre.offset({
-			left: value.pre.parent().offset().left
-		})
-
-		var firstInstance = jsPlumb.getInstance();
-		firstInstance.importDefaults({
-			Connector : [ "Bezier", { curviness: 50 } ],
-			Anchors : [ "RightMiddle", "LeftMiddle" ],
-			PaintStyle : {
-				lineWidth:2,
-				strokeStyle: 'rgba(200,0,0,100)',
-				"dashstyle":"2 4"
-			},
-			Endpoint:[ "Dot", { radius:3 } ],
-			EndpointStyle : { fillStyle : "rgba(200,0,0,100)" },
-		});
-
-		firstInstance.connect({
-			source:value.tool, 
-			target:value.pre, 
-			container:value.tool.parents('.row')
-		});
-	});
-}
 
 
 jsPlumb.ready(function() {
-	doConnections();
+	
 });
 
 
