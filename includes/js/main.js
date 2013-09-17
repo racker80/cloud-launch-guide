@@ -112,6 +112,32 @@ function doConnections(){
 	});
 }
 
+function doConnection(source, target){ 
+
+		target.offset({
+			left: target.parent().offset().left
+		})
+
+		var firstInstance = jsPlumb.getInstance();
+		firstInstance.importDefaults({
+			Connector : [ "Bezier", { curviness: 50 } ],
+			Anchors : [ "RightMiddle", "LeftMiddle" ],
+			PaintStyle : {
+				lineWidth:2,
+				strokeStyle: 'rgba(200,0,0,100)',
+				"dashstyle":"2 4"
+			},
+			Endpoint:[ "Dot", { radius:3 } ],
+			EndpointStyle : { fillStyle : "rgba(200,0,0,100)" },
+		});
+
+		firstInstance.connect({
+			source:source, 
+			target:target, 
+			container:source.parents('.row')
+		});
+}
+
 
 /* ----------------------------------------------------------------
 	IP Tool
@@ -158,35 +184,42 @@ function doConnections(){
 					if(localStorage.getItem(value)) {
 						var text = localStorage.getItem(value);
 
-							//if a value exists, we don't need the footer
-							$('.ip-panel .panel-footer').hide();
+						//if a value exists, we don't need the footer
+						$('.ip-panel .panel-footer').hide();
 
-						} else {
-							var text = value;
-						}
-						var indexID = ID + '-' + (ID + (index));
-
-						if(index < 1) {
-						$(ths).html(
-							ths.text().replace(re, '<span id="plumb-target-'+indexID+'" class="plumb_target"></span><span id="code-ip-target-'+indexID+'" data-code-ip-type="'+value+'" class="address '+cl+'">'+text+'</span>')
-							);
-
-
-						connections.push({
-							'pre': $('span#plumb-target-'+indexID),
-							'tool': $(ths).parentsUntil('.container').find('.sidebar *[data-ip-type="'+value+'"]')
-							.attr('data-target', '#code-ip-target-'+indexID).show()
-						})
-						}
-
+					} else {
+						var text = value;
 					}
+
+					var indexID = ID + '-' + (ID + (index));
+
+					var htm = ths.html();
+					var str = htm.replace(re, '<span id="plumb-target-'+indexID+'" class="plumb_target"></span><span id="code-ip-target-'+indexID+'" data-code-ip-type="'+value+'" class="address '+cl+'">'+text+'</span>')
+
+					$(ths).html(str);
+
+					var source = $(ths).parentsUntil('.container').find('.sidebar *[data-ip-type="'+value+'"]')
+						.attr('data-target', '#code-ip-target-'+indexID).show();
+
+					var target = $('span#plumb-target-'+indexID);
+
+					doConnection(source, target)
+
+
+					// connections.push({
+					// 	'pre': $('span#plumb-target-'+indexID),
+					// 	'tool': $(ths).parentsUntil('.container').find('.sidebar *[data-ip-type="'+value+'"]')
+					// 	.attr('data-target', '#code-ip-target-'+indexID).show()
+					// })
+
+				}
 			});
 			
 			$('.address').css('background', 'red');
-			jsPlumb.ready(function() {
-				doConnections();
+			// jsPlumb.ready(function() {
+			// 	doConnections();
 
-			});
+			// });
 			
 		}
 
