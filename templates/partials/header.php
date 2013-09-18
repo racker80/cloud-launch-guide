@@ -21,22 +21,18 @@
 
 <body ng-app="myApp">
 
-	{% include 'partials/eyebrow.php' %}
+{% include 'partials/eyebrow.php' %}
+
+<div id="waypoint-header">
+
+	
+{% include 'brent/banner.php' %}
+	{% include 'brent/nav.php' %}
 
 
 
-{% if chapter is defined %}
-	{% include 'partials/banner.guide.chapter.php' %}
-	{% include 'partials/nav.php' %}
 
 
 
-{% elseif guide is defined %}
-	{% include 'partials/banner.guide.php' %}
-	{% include 'partials/nav.php' %}
+</div>
 
-{% else %}
-
-	{% include 'partials/banner.home.php' %}
-
-{% endif %}

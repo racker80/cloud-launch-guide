@@ -7376,6 +7376,71 @@ a {
   display: block;
   margin: 0 auto;
 }
+#banner-content-brent {
+  margin: 0;
+  padding: 30px 0;
+}
+#banner-content-brent #logo {
+  position: relative;
+  margin-top: -15px;
+}
+#banner-content-brent #logo h1 {
+  margin: 0;
+  font-size: 2em;
+  height: 1.3em;
+  overflow: visible;
+}
+#banner-content-brent #logo p {
+  margin-left: 115px;
+}
+#brent-action-options.btn-group {
+  height: auto;
+}
+#brent-action-options.btn-group a {
+  background: transparent;
+  color: #999;
+  border: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
+#guide-nav-container {
+  padding: 0;
+  margin: 0;
+}
+#guide-nav-container .container {
+  height: 20px;
+  overflow: hidden;
+}
+#guide-nav-container .navbar {
+  margin: 0;
+  padding: 0;
+}
+#guide-nav-container #brent-navbar {
+  padding-top: 8px;
+}
+#guide-nav-container .navbar-inverse {
+  min-height: 38px;
+}
+#guide-nav-container .navbar {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+#guide-nav-container .navbar ul.nav {
+  margin: 0;
+  padding: 0;
+}
+#guide-nav-container .navbar ul.nav.crumbs li a {
+  color: #fff;
+  padding-left: 0;
+  padding-right: 0;
+  padding: 0;
+}
+#guide-nav-container .navbar ul.nav.crumbs li a span {
+  padding-left: 5px;
+  padding-right: 10px;
+}
 #chapter-banner-content {
   padding: 0;
   margin: 0;
@@ -7511,20 +7576,6 @@ a {
 .list-options a.btn.title-btn {
   width: 200px;
   overflow: hidden;
-}
-#guide-nav-container {
-  display: none;
-}
-#guide-nav-container #guide-navbar-bs {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-#guide-nav-container #guide-navbar-bs .navbar {
-  margin: 0;
-  padding: 0;
-  border-radius: 0;
 }
 .stuck #guide-nav-container {
   display: block;
