@@ -16,7 +16,7 @@
 				            <!-- Collect the nav links, forms, and other content for toggling -->
 				            <div class="collapse navbar-collapse navbar-ex1-collapse">
 				                <ul class="nav navbar-nav navbar-right">
-				                    <li><a href="#">Guides</a></li>
+				                    <li><a href="{{ baseurl }}/">Guides</a></li>
 				                    <li><a href="#">About</a></li>
 				                    <li><a href="#">Feedback</a></li>
 				                    <li><a href="#">Support</a></li>

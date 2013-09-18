@@ -25,14 +25,22 @@
 
 <div id="waypoint-header">
 
-	
+
 {% include 'brent/banner.php' %}
+
+{% if guide %}
 	{% include 'brent/nav.php' %}
 
+{% else %}
 
-
-
-
+{% endif %}
 
 </div>
 
+
+{% if guide %}
+
+{% else %}
+	<br>
+	<br>
+{% endif %}

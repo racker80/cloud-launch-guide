@@ -1,9 +1,6 @@
 {% include 'partials/header.php' %}
 
-<div class="jumbotron">
-	<div class="container">
-	</div>
-</div>
+
 
 <div class="container">
 
