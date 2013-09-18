@@ -5,10 +5,15 @@
 							<!-- <h4>Chapter 4{{ loop.index }}</h4>						 -->
 							<!-- <p>Time: <strong>15 min{{ chapter.time }}</strong></p> -->
 							<!-- <a href="" class="btn btn-primary">Share on Twitter <span class="glyphicon glyphicon-share-alt"></span></a> -->
+							{% if allsteps %}
+
+							{% else %}
 							<div class="server-time">
 								<h1>Server</h1>
 								<h2>1 hours 20 minutes</h2>
 							</div>
+							{% endif %}
+							
 							
 					</div>
 
