@@ -21,23 +21,55 @@
 	margin:0 auto;
 }
 
+#chapter-banner-content {
+	padding:0;
+	margin:0;
+	.page-header-options {
+		float:right;
+	}
+	.page-header {
+		* {
+		}
+		img {
+			display:none;
+		}
+	}
+	#guide-nav-container {
+		display:block;
+		position:static;
+		height:54px;
+		#guide-navbar-bs {
+			display:static;
+			height:auto;
+			ul.nav.navbar-nav.crumbs {
+				li a { font-size:.8em!important;}
+			}
+			.page-header-options {
+				position:absolute;
+				top:0;
+				right:0;
+			}
+		}
+	}
+}
 
-#banner-content {
-	text-align:center;
+/*#banner-content {
+	h4, h5 {
+		font-size:1em;
+	}
 	h1.guideTitle {
-			text-align:center;
 
 		font-size:2.2em;
 		margin-bottom:15px;
 	}
 	h2 {
-			text-align:center;
 
 		font-size:2em;
 		.lite;
 	}
 	.page-header-options {
 		position:relative;
+		float:right;
 	}
 	.nav-index-wrapper {
 		text-align:left;
@@ -60,7 +92,7 @@
 			display:none;
 		}
 	}
-}
+}*/
 
 .book-intro, .chapter-intro {
 	.page-header {

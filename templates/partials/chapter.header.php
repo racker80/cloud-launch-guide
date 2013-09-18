@@ -3,7 +3,7 @@
 
 					<div class="sidebar col-md-4">
 							<!-- <h4>Chapter 4{{ loop.index }}</h4>						 -->
-							<h5 style="font-size:1.2em;">Chapter {{loop.index}} of {{loop.length}}</h5>
+							<h5 style="font-size:1.2em;">Chapter {{chapter.index}} of {{chapter.indexOf}}</h5>
 							<!-- <p>Time: <strong>15 min{{ chapter.time }}</strong></p> -->
 							<!-- <a href="" class="btn btn-primary">Share on Twitter <span class="glyphicon glyphicon-share-alt"></span></a> -->
 							<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}" data-text="I really like {{chapter.title}} Chapter in the {{guide.title}} Launch Guide!" data-hashtags="{{chapter.slug}}" data-size="large">Tweet</a>

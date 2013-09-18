@@ -7376,37 +7376,73 @@ a {
   display: block;
   margin: 0 auto;
 }
-#banner-content {
-  text-align: center;
+#chapter-banner-content {
+  padding: 0;
+  margin: 0;
 }
-#banner-content h1.guideTitle {
-  text-align: center;
-  font-size: 2.2em;
-  margin-bottom: 15px;
+#chapter-banner-content .page-header-options {
+  float: right;
 }
-#banner-content h2 {
-  text-align: center;
-  font-size: 2em;
-  font-family: 'RobotoLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-#banner-content .page-header-options {
-  position: relative;
-}
-#banner-content .nav-index-wrapper {
-  text-align: left;
-  font-size: 1em;
-}
-#banner-content .nav-index-wrapper .nav-index .nav-thing h5 {
-  font-size: .8em;
-  font-family: 'RobotoCondensedBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-}
-#banner-content .nav-index-wrapper .nav-index .nav-thing ul li {
-  font-size: .8em;
-}
-#banner-content .nav-index-wrapper .nav-index-utility-wrapper {
+#chapter-banner-content .page-header img {
   display: none;
 }
+#chapter-banner-content #guide-nav-container {
+  display: block;
+  position: static;
+  height: 54px;
+}
+#chapter-banner-content #guide-nav-container #guide-navbar-bs {
+  display: static;
+  height: auto;
+}
+#chapter-banner-content #guide-nav-container #guide-navbar-bs ul.nav.navbar-nav.crumbs li a {
+  font-size: .8em!important;
+}
+#chapter-banner-content #guide-nav-container #guide-navbar-bs .page-header-options {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/*#banner-content {
+	h4, h5 {
+		font-size:1em;
+	}
+	h1.guideTitle {
+
+		font-size:2.2em;
+		margin-bottom:15px;
+	}
+	h2 {
+
+		font-size:2em;
+		.lite;
+	}
+	.page-header-options {
+		position:relative;
+		float:right;
+	}
+	.nav-index-wrapper {
+		text-align:left;
+		font-size:1em;
+		.nav-index {
+			.nav-thing {
+				h5 {
+					font-size:.8em;
+					font-family:'RobotoCondensedBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+					.caps;
+				}
+				ul {
+					li {
+						font-size:.8em;
+					}
+				}
+			}
+		}
+		.nav-index-utility-wrapper {
+			display:none;
+		}
+	}
+}*/
 .book-intro .page-header,
 .chapter-intro .page-header {
   border: 0;
