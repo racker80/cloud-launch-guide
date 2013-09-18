@@ -16,6 +16,27 @@
 @icon-font-path:          "../bower_components/bootstrap/fonts/";
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .lead img  {
 	display:block;
 	margin:0 auto;
@@ -24,6 +45,13 @@
 #chapter-banner-content {
 	padding:0;
 	margin:0;
+		/*Reset the bootstrap jumbotron*/
+	.jumbotron {
+		.bsreset;
+		padding:0px 0;
+		background:@gray-lighter;
+	}
+
 	.page-header-options {
 		float:right;
 	}
@@ -34,15 +62,18 @@
 			display:none;
 		}
 	}
+
 	#guide-nav-container {
 		display:block;
 		position:static;
 		height:54px;
+		border-bottom:1px solid #d2d2d2;
 		#guide-navbar-bs {
 			display:static;
 			height:auto;
+
 			ul.nav.navbar-nav.crumbs {
-				li a { font-size:.8em!important;}
+				li a { }
 			}
 			.page-header-options {
 				position:absolute;
@@ -51,6 +82,25 @@
 			}
 		}
 	}
+}
+
+
+#waypoint-header {
+#guide-nav-container {
+	display:none;
+		#guide-navbar-bs {
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+
+			.navbar {
+				margin:0;
+				padding:0;
+				border-radius: 0;
+			}
+		}
+}
 }
 
 /*#banner-content {
@@ -164,24 +214,10 @@
 
 
 
-#guide-nav-container {
-	display:none;
-		#guide-navbar-bs {
-			position:absolute;
-			top:0;
-			left:0;
-			width:100%;
 
-			.navbar {
-				margin:0;
-				padding:0;
-				border-radius: 0;
-			}
-		}
-}
 .stuck {
 	#guide-nav-container {
-		display:block;
+		display:block!important;
 	}
 }
 

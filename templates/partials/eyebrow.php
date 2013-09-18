@@ -24,7 +24,7 @@
 		      </li>	
 
 		      <li>	      	
-  				<button type="button" class="btn btn-sm btn-default navbar-btn dropdown-toggle" data-toggle="dropdown">
+  				<button type="button" class="btn btn-xs btn-default navbar-btn dropdown-toggle" data-toggle="dropdown">
 					Log In <span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu" role="menu">
@@ -37,7 +37,7 @@
 		      </li>
 
 		      <li>
-		      	<button type="button" class="btn btn-sm btn-default navbar-btn dropdown-toggle" data-toggle="dropdown">
+		      	<button type="button" class="btn btn-xs btn-default navbar-btn dropdown-toggle" data-toggle="dropdown">
 		      		Sign Up <span class="caret"></span>
 		      	</button>
 		      	<ul class="dropdown-menu" role="menu">
@@ -68,7 +68,7 @@
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
-			<ul class="nav navbar-nav">
+			<ul class="nav navbar-nav navbar-right nav-pills">
 				<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Guides <b class="caret"></b></a>
 
 					<ul class="dropdown-menu">

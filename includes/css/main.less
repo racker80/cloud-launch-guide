@@ -17,6 +17,25 @@ a {
 }
 
 
+.navbarReset {
+	.nav {
+		margin:0;
+		padding:0;
+		li {
+			margin:0;
+			padding:0;
+			line-height:auto;
+			a {
+				margin:0;
+				padding:0;
+			}
+		}
+		.navbar-btn {
+			margin:0;
+		}
+	}
+}
+
 
 /* ----------------------------------------------------------------
 	EYEBROW-WRAPPER
@@ -26,27 +45,47 @@ a {
 	background: #333;
 	border-radius:0;
 	margin:0;
+	padding:0;
+	min-height:20px;
+	border:0;
+
+	.navbarReset;
 
 	.navbar-brand {
 		overflow:hidden;
 		text-indent:-999px;
 		background:url('../images/logo-rackspace.png') center no-repeat;
 		width:100px;
+		height:20px;
+		overflow:hidden;
 	}
 
 	.navbar-collapse {
 		ul {
+				
 			li {
+				font-size:.8em;
 				margin-left:10px;
+				padding-top:3px;
+				a {
+					line-height: @line-height-computed;
+				}
 				&.nolink {
-					padding-top:    15px;
-					padding-bottom: 15px;
+					/*padding-top:    15px;
+					padding-bottom: 15px;*/
 					line-height: @line-height-computed;
 					color:#fff;
-					
 				}
 				.glyphicon {
 					margin-right:5px;
+				}
+				.navbar-btn {
+					border-color:#444;
+					background:#000;
+					color:#666;
+					.caret {
+						border-top-color:#666;
+					}
 				}
 
 			}
@@ -63,16 +102,30 @@ a {
 	GLOBAL NAV
 	a reset of the bootstrap navbar
 ---------------------------------------------------------------- */
+@gnHeight: 60px;
+@gnLinkHeight: (@gnHeight - 50);
 #globalNav {
 	border-radius:0;
 	margin:0;
-
+	.navbar-inverse;
+	background:#333;
+	border:0;
+	padding-top:10px;
 	.navbar-brand {
 		img {
-			height:20px;
+			height:@gnHeight;
+
 			width:auto;
 			margin:0;
 		}
+	}
+
+	.nav {
+		li {
+			height:30px;
+			.navbar-vertical-align(10px)
+		}
+
 	}
 }
 
@@ -93,7 +146,7 @@ a {
 #banner-content {
 
 	/*Reset the bootstrap jumbotron*/
-	&.jumbotron {
+	.jumbotron {
 		.bsreset;
 		padding:40px 0;
 		background:@gray-lighter;
@@ -197,9 +250,6 @@ a {
 	position:relative;
 }
 
-#guide-nav-container {
-	position:relative;
-}
 
 
 /* ----------------------------------------------------------------

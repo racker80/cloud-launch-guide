@@ -21,7 +21,7 @@
 
 <body ng-app="myApp">
 
-	{% include 'partials/eyebrow.php' %}
+{% include 'partials/eyebrow.php' %}
 
 
 

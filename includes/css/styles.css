@@ -6549,6 +6549,22 @@ a {
   -webkit-transition: all .15s linear;
   transition: all .15s linear;
 }
+.navbarReset .nav {
+  margin: 0;
+  padding: 0;
+}
+.navbarReset .nav li {
+  margin: 0;
+  padding: 0;
+  line-height: auto;
+}
+.navbarReset .nav li a {
+  margin: 0;
+  padding: 0;
+}
+.navbarReset .nav .navbar-btn {
+  margin: 0;
+}
 /* ----------------------------------------------------------------
 	EYEBROW-WRAPPER
 	a reset of the bootstrap navbar
@@ -6557,24 +6573,58 @@ a {
   background: #333;
   border-radius: 0;
   margin: 0;
+  padding: 0;
+  min-height: 20px;
+  border: 0;
+}
+#eyebrow-wrapper .nav {
+  margin: 0;
+  padding: 0;
+}
+#eyebrow-wrapper .nav li {
+  margin: 0;
+  padding: 0;
+  line-height: auto;
+}
+#eyebrow-wrapper .nav li a {
+  margin: 0;
+  padding: 0;
+}
+#eyebrow-wrapper .nav .navbar-btn {
+  margin: 0;
 }
 #eyebrow-wrapper .navbar-brand {
-  overflow: hidden;
   text-indent: -999px;
   background: url('../images/logo-rackspace.png') center no-repeat;
   width: 100px;
+  height: 20px;
+  overflow: hidden;
 }
 #eyebrow-wrapper .navbar-collapse ul li {
+  font-size: .8em;
   margin-left: 10px;
+  padding-top: 3px;
+}
+#eyebrow-wrapper .navbar-collapse ul li a {
+  line-height: 20px;
 }
 #eyebrow-wrapper .navbar-collapse ul li.nolink {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  /*padding-top:    15px;
+					padding-bottom: 15px;*/
+
   line-height: 20px;
   color: #fff;
 }
 #eyebrow-wrapper .navbar-collapse ul li .glyphicon {
   margin-right: 5px;
+}
+#eyebrow-wrapper .navbar-collapse ul li .navbar-btn {
+  border-color: #444;
+  background: #000;
+  color: #666;
+}
+#eyebrow-wrapper .navbar-collapse ul li .navbar-btn .caret {
+  border-top-color: #666;
 }
 /* ----------------------------------------------------------------
 	GLOBAL NAV
@@ -6583,11 +6633,117 @@ a {
 #globalNav {
   border-radius: 0;
   margin: 0;
+  background-color: #222222;
+  border-color: #080808;
+  background: #333;
+  border: 0;
+  padding-top: 10px;
+}
+#globalNav .navbar-brand {
+  color: #999999;
+}
+#globalNav .navbar-brand:hover,
+#globalNav .navbar-brand:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+#globalNav .navbar-text {
+  color: #999999;
+}
+#globalNav .navbar-nav > li > a {
+  color: #999999;
+}
+#globalNav .navbar-nav > li > a:hover,
+#globalNav .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+#globalNav .navbar-nav > .active > a,
+#globalNav .navbar-nav > .active > a:hover,
+#globalNav .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #080808;
+}
+#globalNav .navbar-nav > .disabled > a,
+#globalNav .navbar-nav > .disabled > a:hover,
+#globalNav .navbar-nav > .disabled > a:focus {
+  color: #444444;
+  background-color: transparent;
+}
+#globalNav .navbar-toggle {
+  border-color: #333333;
+}
+#globalNav .navbar-toggle:hover,
+#globalNav .navbar-toggle:focus {
+  background-color: #333333;
+}
+#globalNav .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+#globalNav .navbar-collapse,
+#globalNav .navbar-form {
+  border-color: #101010;
+}
+#globalNav .navbar-nav > .open > a,
+#globalNav .navbar-nav > .open > a:hover,
+#globalNav .navbar-nav > .open > a:focus {
+  background-color: #080808;
+  color: #ffffff;
+}
+#globalNav .navbar-nav > .dropdown > a:hover .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+#globalNav .navbar-nav > .dropdown > a .caret {
+  border-top-color: #999999;
+  border-bottom-color: #999999;
+}
+#globalNav .navbar-nav > .open > a .caret,
+#globalNav .navbar-nav > .open > a:hover .caret,
+#globalNav .navbar-nav > .open > a:focus .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+@media (max-width: 767px) {
+  #globalNav .navbar-nav .open .dropdown-menu > .dropdown-header {
+    border-color: #080808;
+  }
+  #globalNav .navbar-nav .open .dropdown-menu > li > a {
+    color: #999999;
+  }
+  #globalNav .navbar-nav .open .dropdown-menu > li > a:hover,
+  #globalNav .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+    background-color: transparent;
+  }
+  #globalNav .navbar-nav .open .dropdown-menu > .active > a,
+  #globalNav .navbar-nav .open .dropdown-menu > .active > a:hover,
+  #globalNav .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #080808;
+  }
+  #globalNav .navbar-nav .open .dropdown-menu > .disabled > a,
+  #globalNav .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  #globalNav .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #444444;
+    background-color: transparent;
+  }
+}
+#globalNav .navbar-link {
+  color: #999999;
+}
+#globalNav .navbar-link:hover {
+  color: #ffffff;
 }
 #globalNav .navbar-brand img {
-  height: 20px;
+  height: 60px;
   width: auto;
   margin: 0;
+}
+#globalNav .nav li {
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .bsreset {
   margin: 0;
@@ -6610,7 +6766,7 @@ a {
   /* Banner Navigation */
 
 }
-#banner-content.jumbotron {
+#banner-content .jumbotron {
   margin: 0;
   padding: 0;
   line-height: 1em;
@@ -6704,9 +6860,6 @@ a {
 }
 #guide-navbar {
   z-index: 900;
-  position: relative;
-}
-#guide-nav-container {
   position: relative;
 }
 /* ----------------------------------------------------------------
@@ -7379,6 +7532,17 @@ a {
 #chapter-banner-content {
   padding: 0;
   margin: 0;
+  /*Reset the bootstrap jumbotron*/
+
+}
+#chapter-banner-content .jumbotron {
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+  background: transparent;
+  border: 0;
+  padding: 0px 0;
+  background: #eeeeee;
 }
 #chapter-banner-content .page-header-options {
   float: right;
@@ -7390,18 +7554,30 @@ a {
   display: block;
   position: static;
   height: 54px;
+  border-bottom: 1px solid #d2d2d2;
 }
 #chapter-banner-content #guide-nav-container #guide-navbar-bs {
   display: static;
   height: auto;
 }
-#chapter-banner-content #guide-nav-container #guide-navbar-bs ul.nav.navbar-nav.crumbs li a {
-  font-size: .8em!important;
-}
 #chapter-banner-content #guide-nav-container #guide-navbar-bs .page-header-options {
   position: absolute;
   top: 0;
   right: 0;
+}
+#waypoint-header #guide-nav-container {
+  display: none;
+}
+#waypoint-header #guide-nav-container #guide-navbar-bs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#waypoint-header #guide-nav-container #guide-navbar-bs .navbar {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
 }
 /*#banner-content {
 	h4, h5 {
@@ -7512,22 +7688,8 @@ a {
   width: 200px;
   overflow: hidden;
 }
-#guide-nav-container {
-  display: none;
-}
-#guide-nav-container #guide-navbar-bs {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-#guide-nav-container #guide-navbar-bs .navbar {
-  margin: 0;
-  padding: 0;
-  border-radius: 0;
-}
 .stuck #guide-nav-container {
-  display: block;
+  display: block!important;
 }
 .show-this {
   display: none!important;
