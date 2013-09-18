@@ -2,21 +2,15 @@
 
 	<div id="content-container">
 
-		<section class="book-intro container">
-			<div class="page-header ">
-				<h1>{{book.title}}: <small>1 Hour</small></h1>
-				<div class="page-header-options">
-					{% include 'partials/action-options.php' %}
-				</div>
-			</div>
+<!-- 		<section class="book-intro container">
+
 			
-			{% include 'partials/nav.drawer.php' %}
 
 			<div class="intro-content">
 				{{book.content|raw}}
 			</div>
 			
-		</section>
+		</section> -->
 
 		<section class="chapter-list container">
 			{% for chapter in book.children %}

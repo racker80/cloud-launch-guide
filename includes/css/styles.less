@@ -43,13 +43,14 @@
 }
 
 #chapter-banner-content {
-	padding:0;
+	padding-top:80px;
 	margin:0;
+		background:@gray-lighter;
 		/*Reset the bootstrap jumbotron*/
 	.jumbotron {
 		.bsreset;
 		padding:0px 0;
-		background:@gray-lighter;
+		background:transparent;
 	}
 
 	.page-header-options {
@@ -63,17 +64,42 @@
 		}
 	}
 
-	#guide-nav-container {
+
+}
+
+#guide-nav-container {
 		display:block;
 		position:static;
 		height:54px;
-		border-bottom:1px solid #d2d2d2;
 		#guide-navbar-bs {
 			display:static;
 			height:auto;
-
+			.navbar {
+				padding:0;
+				.navbar-collapse {
+					padding:0;
+					a {
+						
+					}
+				}
+			}
 			ul.nav.navbar-nav.crumbs {
-				li a { }
+				margin:0;
+				padding:0;
+				li {
+					a {
+						border-right:1px solid #000;
+						border-left:1px solid #666;
+
+					} 
+					&:first-child a {
+						border-left:0;
+					}
+					&:last-child a {
+						border-right:0;
+					}
+
+				}
 			}
 			.page-header-options {
 				position:absolute;
@@ -82,7 +108,7 @@
 			}
 		}
 	}
-}
+
 
 
 #waypoint-header {

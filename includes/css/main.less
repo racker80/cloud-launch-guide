@@ -45,7 +45,7 @@ a {
 	background: #333;
 	border-radius:0;
 	margin:0;
-	padding:0;
+	padding:0 0 60px;
 	min-height:20px;
 	border:0;
 
@@ -105,12 +105,11 @@ a {
 @gnHeight: 60px;
 @gnLinkHeight: (@gnHeight - 50);
 #globalNav {
-	border-radius:0;
-	margin:0;
-	.navbar-inverse;
-	background:#333;
+	margin-bottom:0;
+	margin-top:-40px;
+	margin-bottom:-60px;
 	border:0;
-	padding-top:10px;
+	background:#fff;
 	.navbar-brand {
 		img {
 			height:@gnHeight;
@@ -146,7 +145,7 @@ a {
 #banner-content {
 
 	/*Reset the bootstrap jumbotron*/
-	.jumbotron {
+	&.jumbotron {
 		.bsreset;
 		padding:40px 0;
 		background:@gray-lighter;

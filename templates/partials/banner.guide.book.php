@@ -5,11 +5,12 @@
 		<div class="jumbotron">
 			<div class="container">
 				<div class="page-header">
-					<h5 style="font-size:1.2em;">Chapter {{chapter.index}} of {{chapter.indexOf}}</h5>
-					<h1 class="chapterTitle" data-title="{{chapter.title}}" data-slug="{{chapter.slug}}"><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}">{{chapter.title}}</a></h1>
+					<h5 style="font-size:1.2em;">Time: {{book.time}}</h5>
+
+					<h1 class="chapterTitle" data-slug="{{book.slug}}"><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">{{book.title}}</a></h1>
 
 					<div class="lead">
-						{{chapter.content|raw}}
+						{{book.description|raw}}
 					</div>
 
 					<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}" data-text="I really like {{chapter.title}} Chapter in the {{guide.title}} Launch Guide!" data-hashtags="{{chapter.slug}}" data-size="large">Tweet</a>
@@ -32,7 +33,6 @@
 						<div class="collapse navbar-collapse navbar-ex1-collapse">
 							<ul class="nav navbar-nav crumbs">
 								<li class=""><a href="{{ baseurl }}/guides/{{guide.slug}}">{{guide.title}}</a></li>
-								<li><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">{{book.title}}</a></li>
 								<!-- <li class="currentChapter"><a href="#"></a></li> -->
 							</ul>
 

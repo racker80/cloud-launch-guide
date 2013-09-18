@@ -53,8 +53,7 @@
 </nav>
 
 
-<nav id="globalNav" class="navbar navbar-default" role="navigation">
-	<div class="container">
+<nav id="globalNav" class="navbar navbar-default container" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -82,5 +81,4 @@
 				<li><a href="#">Managed Support</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
-	</div>
 </nav>

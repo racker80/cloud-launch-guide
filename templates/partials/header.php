@@ -31,7 +31,12 @@
 
 
 
+{% elseif book is defined %}
+	{% include 'partials/banner.guide.book.php' %}
+	{% include 'partials/nav.php' %}
+
 {% elseif guide is defined %}
+
 	{% include 'partials/banner.guide.php' %}
 	{% include 'partials/nav.php' %}
 

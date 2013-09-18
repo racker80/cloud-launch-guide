@@ -6573,7 +6573,7 @@ a {
   background: #333;
   border-radius: 0;
   margin: 0;
-  padding: 0;
+  padding: 0 0 60px;
   min-height: 20px;
   border: 0;
 }
@@ -6631,109 +6631,11 @@ a {
 	a reset of the bootstrap navbar
 ---------------------------------------------------------------- */
 #globalNav {
-  border-radius: 0;
-  margin: 0;
-  background-color: #222222;
-  border-color: #080808;
-  background: #333;
+  margin-bottom: 0;
+  margin-top: -40px;
+  margin-bottom: -60px;
   border: 0;
-  padding-top: 10px;
-}
-#globalNav .navbar-brand {
-  color: #999999;
-}
-#globalNav .navbar-brand:hover,
-#globalNav .navbar-brand:focus {
-  color: #ffffff;
-  background-color: transparent;
-}
-#globalNav .navbar-text {
-  color: #999999;
-}
-#globalNav .navbar-nav > li > a {
-  color: #999999;
-}
-#globalNav .navbar-nav > li > a:hover,
-#globalNav .navbar-nav > li > a:focus {
-  color: #ffffff;
-  background-color: transparent;
-}
-#globalNav .navbar-nav > .active > a,
-#globalNav .navbar-nav > .active > a:hover,
-#globalNav .navbar-nav > .active > a:focus {
-  color: #ffffff;
-  background-color: #080808;
-}
-#globalNav .navbar-nav > .disabled > a,
-#globalNav .navbar-nav > .disabled > a:hover,
-#globalNav .navbar-nav > .disabled > a:focus {
-  color: #444444;
-  background-color: transparent;
-}
-#globalNav .navbar-toggle {
-  border-color: #333333;
-}
-#globalNav .navbar-toggle:hover,
-#globalNav .navbar-toggle:focus {
-  background-color: #333333;
-}
-#globalNav .navbar-toggle .icon-bar {
-  background-color: #ffffff;
-}
-#globalNav .navbar-collapse,
-#globalNav .navbar-form {
-  border-color: #101010;
-}
-#globalNav .navbar-nav > .open > a,
-#globalNav .navbar-nav > .open > a:hover,
-#globalNav .navbar-nav > .open > a:focus {
-  background-color: #080808;
-  color: #ffffff;
-}
-#globalNav .navbar-nav > .dropdown > a:hover .caret {
-  border-top-color: #ffffff;
-  border-bottom-color: #ffffff;
-}
-#globalNav .navbar-nav > .dropdown > a .caret {
-  border-top-color: #999999;
-  border-bottom-color: #999999;
-}
-#globalNav .navbar-nav > .open > a .caret,
-#globalNav .navbar-nav > .open > a:hover .caret,
-#globalNav .navbar-nav > .open > a:focus .caret {
-  border-top-color: #ffffff;
-  border-bottom-color: #ffffff;
-}
-@media (max-width: 767px) {
-  #globalNav .navbar-nav .open .dropdown-menu > .dropdown-header {
-    border-color: #080808;
-  }
-  #globalNav .navbar-nav .open .dropdown-menu > li > a {
-    color: #999999;
-  }
-  #globalNav .navbar-nav .open .dropdown-menu > li > a:hover,
-  #globalNav .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #ffffff;
-    background-color: transparent;
-  }
-  #globalNav .navbar-nav .open .dropdown-menu > .active > a,
-  #globalNav .navbar-nav .open .dropdown-menu > .active > a:hover,
-  #globalNav .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #ffffff;
-    background-color: #080808;
-  }
-  #globalNav .navbar-nav .open .dropdown-menu > .disabled > a,
-  #globalNav .navbar-nav .open .dropdown-menu > .disabled > a:hover,
-  #globalNav .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-    color: #444444;
-    background-color: transparent;
-  }
-}
-#globalNav .navbar-link {
-  color: #999999;
-}
-#globalNav .navbar-link:hover {
-  color: #ffffff;
+  background: #fff;
 }
 #globalNav .navbar-brand img {
   height: 60px;
@@ -6766,7 +6668,7 @@ a {
   /* Banner Navigation */
 
 }
-#banner-content .jumbotron {
+#banner-content.jumbotron {
   margin: 0;
   padding: 0;
   line-height: 1em;
@@ -7530,8 +7432,9 @@ a {
   margin: 0 auto;
 }
 #chapter-banner-content {
-  padding: 0;
+  padding-top: 80px;
   margin: 0;
+  background: #eeeeee;
   /*Reset the bootstrap jumbotron*/
 
 }
@@ -7539,10 +7442,9 @@ a {
   margin: 0;
   padding: 0;
   line-height: 1em;
-  background: transparent;
   border: 0;
   padding: 0px 0;
-  background: #eeeeee;
+  background: transparent;
 }
 #chapter-banner-content .page-header-options {
   float: right;
@@ -7550,17 +7452,36 @@ a {
 #chapter-banner-content .page-header img {
   display: none;
 }
-#chapter-banner-content #guide-nav-container {
+#guide-nav-container {
   display: block;
   position: static;
   height: 54px;
-  border-bottom: 1px solid #d2d2d2;
 }
-#chapter-banner-content #guide-nav-container #guide-navbar-bs {
+#guide-nav-container #guide-navbar-bs {
   display: static;
   height: auto;
 }
-#chapter-banner-content #guide-nav-container #guide-navbar-bs .page-header-options {
+#guide-nav-container #guide-navbar-bs .navbar {
+  padding: 0;
+}
+#guide-nav-container #guide-navbar-bs .navbar .navbar-collapse {
+  padding: 0;
+}
+#guide-nav-container #guide-navbar-bs ul.nav.navbar-nav.crumbs {
+  margin: 0;
+  padding: 0;
+}
+#guide-nav-container #guide-navbar-bs ul.nav.navbar-nav.crumbs li a {
+  border-right: 1px solid #000;
+  border-left: 1px solid #666;
+}
+#guide-nav-container #guide-navbar-bs ul.nav.navbar-nav.crumbs li:first-child a {
+  border-left: 0;
+}
+#guide-nav-container #guide-navbar-bs ul.nav.navbar-nav.crumbs li:last-child a {
+  border-right: 0;
+}
+#guide-nav-container #guide-navbar-bs .page-header-options {
   position: absolute;
   top: 0;
   right: 0;
