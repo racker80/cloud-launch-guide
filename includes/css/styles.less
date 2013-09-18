@@ -43,9 +43,10 @@
 }
 
 #chapter-banner-content {
-	padding-top:80px;
+	padding-top:60px;
 	margin:0;
 		background:@gray-lighter;
+
 		/*Reset the bootstrap jumbotron*/
 	.jumbotron {
 		.bsreset;
@@ -71,15 +72,18 @@
 		display:block;
 		position:static;
 		height:54px;
+
 		#guide-navbar-bs {
 			display:static;
 			height:auto;
 			.navbar {
+				border-top-left-radius: 0;
+				border-top-right-radius:0;
 				padding:0;
 				.navbar-collapse {
 					padding:0;
 					a {
-						
+
 					}
 				}
 			}

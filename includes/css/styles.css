@@ -7432,7 +7432,7 @@ a {
   margin: 0 auto;
 }
 #chapter-banner-content {
-  padding-top: 80px;
+  padding-top: 60px;
   margin: 0;
   background: #eeeeee;
   /*Reset the bootstrap jumbotron*/
@@ -7462,6 +7462,8 @@ a {
   height: auto;
 }
 #guide-nav-container #guide-navbar-bs .navbar {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   padding: 0;
 }
 #guide-nav-container #guide-navbar-bs .navbar .navbar-collapse {

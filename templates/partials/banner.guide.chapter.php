@@ -1,28 +1,7 @@
 
 <div id="chapter-banner-content">
 
-
-		<div class="jumbotron">
-			<div class="container">
-				<div class="page-header">
-					<h5 style="font-size:1.2em;">Chapter {{chapter.index}} of {{chapter.indexOf}}</h5>
-					<h1 class="chapterTitle" data-title="{{chapter.title}}" data-slug="{{chapter.slug}}"><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}">{{chapter.title}}</a></h1>
-
-					<div class="lead">
-						{{chapter.content|raw}}
-					</div>
-
-					<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}" data-text="I really like {{chapter.title}} Chapter in the {{guide.title}} Launch Guide!" data-hashtags="{{chapter.slug}}" data-size="large">Tweet</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-				</div>
-			</div>
-		</div>
-
-
-
-
-</div>
-	<!-- <progress id="header-progress" value="00" max="100"></progress> -->
+		<!-- <progress id="header-progress" value="00" max="100"></progress> -->
 
 			<div id="guide-nav-container">
 			<div id="guide-navbar-bs" >
@@ -52,3 +31,26 @@
 	<div class="container">
 		{% include 'partials/nav.drawer.php' %}
 	</div>
+
+
+		<div class="jumbotron">
+			<div class="container">
+				<div class="page-header">
+					<h5 style="font-size:1.2em;">Chapter {{chapter.index}} of {{chapter.indexOf}}</h5>
+					<h1 class="chapterTitle" data-title="{{chapter.title}}" data-slug="{{chapter.slug}}"><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}">{{chapter.title}}</a></h1>
+
+					<div class="lead">
+						{{chapter.content|raw}}
+					</div>
+
+					<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}" data-text="I really like {{chapter.title}} Chapter in the {{guide.title}} Launch Guide!" data-hashtags="{{chapter.slug}}" data-size="large">Tweet</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</div>
+			</div>
+		</div>
+
+
+
+
+</div>
+
