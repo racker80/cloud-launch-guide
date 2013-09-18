@@ -4,7 +4,7 @@
 				<div class="col-sm-8 col-med-8 col-lg-8">
 					<div id="logo">
 						<span>
-							<h1><a href="/"><img src="{{ baseurl }}/includes/images/logo-cloud-launch-guide.png" /></a> Cloud Launch Guides</h1>
+							<h1><a href="{{ baseurl }}/"><img src="{{ baseurl }}/includes/images/logo-cloud-launch-guide.png" /></a> Cloud Launch Guides</h1>
 							<p>powered by Rackspace</p>
 						</span>
 					</div>

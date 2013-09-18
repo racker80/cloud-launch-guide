@@ -7393,6 +7393,23 @@ a {
 #banner-content-brent #logo p {
   margin-left: 115px;
 }
+.chapterHeader .server-time {
+  background: #000;
+  padding: 15px;
+}
+.chapterHeader .server-time h1,
+.chapterHeader .server-time h2 {
+  color: #fff;
+  margin: 0!important;
+  padding: 0;
+  border: 0!important;
+  list-style: none;
+  line-height: 1em;
+}
+.chapterHeader .server-time h2 {
+  border: 0;
+  list-style: none;
+}
 #brent-action-options.btn-group {
   height: auto;
 }
