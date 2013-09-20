@@ -22,7 +22,7 @@
         //GET THE JSON
         // $json_url = 'http://192.237.203.16/'.$route;
         $json_url = 'http://192.237.165.197/api/'.$route;
-        // $json_url = 'http://projects.clgapi/'.$route;
+        $json_url = 'http://projects.clgapi/'.$route;
         $ch = curl_init( $json_url );
         $options = array(
         CURLOPT_RETURNTRANSFER => true,
@@ -94,7 +94,7 @@
                     if($child->code) {
                         foreach($child->code as $code) {
                             if(strstr($code->text, 'your.')) {
-                                $child->meta->iptool = true;
+                                $child->meta['iptool'] = true;
                                 $code->iptool = true;
 
                             }
