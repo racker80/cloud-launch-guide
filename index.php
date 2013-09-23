@@ -39,7 +39,7 @@
 
     $app->get('/', function() use($app) {
 
-        $guides = getAPI('guides/overview');
+        $guides = getAPI('guides');
        
         $app->render( 'home.php', array('guides'=>$guides) );
         

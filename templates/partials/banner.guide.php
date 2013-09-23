@@ -7,7 +7,7 @@
 				<div class="row">
 					<div class="col-md-10">
 						<div class="page-header">
-							<h1 class="chapterTitle" data-slug="{{guide.slug}}"><a href="{{ baseurl }}/guides/{{guide.slug}}">{{guide.title}}</a></h1>
+							<h1 class="chapterTitle" data-slug="{{guide.slug}}">{{guide.title}}</h1>
 
 							<div class="lead">
 								{{guide.content|raw}}
