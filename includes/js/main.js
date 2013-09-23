@@ -24,7 +24,7 @@ $(document).ready(function() {
 	
 ---------------------------------------------------------------- */
 	showNav = function() {
-		var wrapper = $('.nav-index-wrapper');
+		var wrapper = $('.nav-drawer-container');
 		wrapper.slideToggle('fast', function(){
 			if (wrapper.is(':visible')) {
 				navState = 'open';

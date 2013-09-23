@@ -1,4 +1,4 @@
-			<div class="container chapterHeader">
+			<div class="container chapter-header-wrapper">
 				<div class="row">
 
 					<div class="sidebar col-md-4">
@@ -25,6 +25,4 @@
 					</div>
 				</div>
 				
-
-				<hr>
 			</div>

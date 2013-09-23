@@ -5,7 +5,7 @@
 				<span class="glyphicon glyphicon-th-list"></span> All Steps
 			</a>
 		{% else %}
-			<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/all{{chapterslug}}" class="btn btn-default allSteps">
+			<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}{{chapterslug}}" class="btn btn-default allSteps">
 				<span class="glyphicon glyphicon-th-list"></span> All Steps
 			</a>
 		{% endif %}
@@ -22,7 +22,7 @@
 				<span class="glyphicon glyphicon-arrow-right"></span>
 			</a>
 		{% elseif allsteps %}
-			<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.next.slug}}/all" class="btn btn-default">
+			<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.next.slug}}" class="btn btn-default">
 				<span class="glyphicon glyphicon-arrow-right"></span>
 			</a>
 		{% else %}

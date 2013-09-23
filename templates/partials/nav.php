@@ -1,13 +1,13 @@
 
 <div id="waypoint-header">
-    
-    <div id="guide-nav-container" class="container">
-        <div id="guide-navbar-bs" >
-            
-            <nav class="navbar navbar-inverse" role="navigation">
+        
+        <div class="guide-menu-wrapper">
+
+            <div class="navbar container navbar-inverse" role="navigation">
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
+                        <li><a href="{{ baseurl }}/"><img src="{{ baseurl }}/includes/images/logo-cloud-launch-guide.png" style="height:20px; width:auto;" /></a></li>
                         <li class="show-this"><a href="{{ baseurl }}/guides/{{guide.slug}}">{{guide.title}}</a></li>
                         <li><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">{{book.title}}</a></li>
                         <li class="currentChapter"><a href="#"></a></li>
@@ -24,16 +24,14 @@
                         </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
-            </nav>
+            </div>
 
-
-            {% include 'partials/nav.drawer.php' %}
+            <div class="nav-drawer-container">
+                {% include 'partials/nav.drawer.php' %}
+            </div>
 
 
         </div>
-    </div>
-
-
 
 </div>
 

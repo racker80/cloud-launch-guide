@@ -45,6 +45,15 @@
         
     });
 
+    $app->get('/index', function() use($app) {
+
+        $guides = getAPI('guides');
+
+       
+        $app->render( 'index.all.php', array('guides'=>$guides) );
+        
+    });
+
     $app->get('/guides/(:guideSlug)', function ($guideSlug) use ($app) {
 
         $guides = getAPI('guides/overview');
@@ -56,22 +65,22 @@
     });
 
 
+    // $app->get('/guides/(:guideSlug)/(:bookSlug)', function ($guideSlug, $bookSlug) use ($app) {
+
+
+    //     $guides = getAPI('guides/overview');
+
+    //     $api = getAPI('/guides/slug/'.$guideSlug.'/'.$bookSlug.'/markdown');    
+
+    //     $guide = $api->guide;
+
+    //     $book = $api->book;
+
+    //     $app->render('guide.book.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book));
+
+    // });
+
     $app->get('/guides/(:guideSlug)/(:bookSlug)', function ($guideSlug, $bookSlug) use ($app) {
-
-
-        $guides = getAPI('guides/overview');
-
-        $api = getAPI('/guides/slug/'.$guideSlug.'/'.$bookSlug.'/markdown');    
-
-        $guide = $api->guide;
-
-        $book = $api->book;
-
-        $app->render('guide.book.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book));
-
-    });
-
-    $app->get('/guides/(:guideSlug)/(:bookSlug)/all', function ($guideSlug, $bookSlug) use ($app) {
 
         $guides = getAPI('guides/overview');
 

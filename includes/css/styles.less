@@ -1,7 +1,7 @@
 @import url('../bower_components/bootstrap/less/bootstrap.less');
 @import url('fonts.less');
 @import url('cornerstone.less');
-@import url('main.less');
+/*@import url('main.less');*/
 
 // Grid system
 // --------------------------------------------------
@@ -16,10 +16,385 @@
 @icon-font-path:          "../bower_components/bootstrap/fonts/";
 
 
+html {
+	height: 100%;
+	background: #fff;
+	font-family:'RobotoRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+/*	-webkit-text-size-adjust: 100%;*/
+}
+
+
+a {
+	-moz-transition: all .15s linear;
+	-webkit-transition: all .15s linear;
+	transition: all .15s linear;
+}
+.container {
+	position:relative;
+}
+
+/* ----------------------------------------------------------------
+	MIXINS
+---------------------------------------------------------------- */
+.bsreset {
+	margin:0;
+	padding:0;
+	line-height:1em;
+	background:transparent;
+	border:0;
+}
+.navbarReset {
+	.nav {
+		margin:0;
+		padding:0;
+		li {
+			margin:0;
+			padding:0;
+			line-height:auto;
+			a {
+				margin:0;
+				padding:0;
+			}
+		}
+		.navbar-btn {
+			margin:0;
+		}
+	}
+}
 
 
 
 
+/* ----------------------------------------------------------------
+	EYEBROW-WRAPPER
+	a reset of the bootstrap navbar
+---------------------------------------------------------------- */
+
+#eyebrow-wrapper {
+	.navbarReset;
+
+	background: #333;
+	border-radius:0;
+	margin:0;
+	padding:0 0 60px;
+	min-height:20px;
+	border:0;
+
+	.navbar-brand {
+		overflow:hidden;
+		text-indent:-999px;
+		background:url('../images/logo-rackspace.png') center no-repeat;
+		width:100px;
+		height:20px;
+		overflow:hidden;
+	}
+
+		.nav {
+			li {
+				font-size:.8em;
+				margin-left:10px;
+				padding-top:3px;
+				a {
+					line-height: @line-height-computed;
+				}
+				&.nolink {
+					/*padding-top:    15px;
+					padding-bottom: 15px;*/
+					line-height: @line-height-computed;
+					color:#fff;
+				}
+				.glyphicon {
+					margin-right:5px;
+				}
+				.navbar-btn {
+					border-color:#444;
+					background:#000;
+					color:#666;
+					.caret {
+						border-top-color:#666;
+					}
+				}
+
+			}
+		}
+}
+
+
+/* ----------------------------------------------------------------
+	GLOBAL NAV
+	a reset of the bootstrap navbar
+---------------------------------------------------------------- */
+@gnHeight: 60px;
+@gnLinkHeight: (@gnHeight - 50);
+#globalnav-wrapper {
+	margin-bottom:0;
+	margin-top:-40px;
+	margin-bottom:-60px;
+	border:0;
+	background:#fff;
+	.navbar-brand {
+		img {
+			height:@gnHeight;
+
+			width:auto;
+			margin:0;
+		}
+	}
+
+	.nav {
+		li {
+			height:30px;
+			.navbar-vertical-align(10px);
+		}
+		.dropdown-menu {
+		}
+
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	banner-content
+	a reset of the bootstrap jumbotron class
+---------------------------------------------------------------- */
+#banner-wrapper {
+	padding-top:60px;
+	margin:0;
+	background:@gray-lighter;
+
+
+
+
+	/*Reset the bootstrap jumbotron*/
+	&.jumbotron {
+		.bsreset;
+		padding:40px 0;
+		background:@gray-lighter;
+	}
+
+	/*Reset the bootstrap page-header*/
+	.page-header {
+		.bsreset;
+		h1 {
+			
+		}
+		p.lead {
+		}
+	}
+
+	.guide-menu-wrapper {}
+
+	#banner-content-wrapper {
+		&.jumbotron {
+			margin:0;
+			padding:20px 0;
+			background:transparent;
+		}
+		
+	}
+
+}
+
+
+
+/* ----------------------------------------------------------------
+	GUIDE MENU
+	
+---------------------------------------------------------------- */
+.guide-menu-wrapper {
+	margin:0;
+	position:relative;
+	z-index:100;
+	.navbar {
+		margin-bottom:0;
+		border-top-left-radius:0;
+		border-top-right-radius:0;
+	}
+}
+
+.navbar-options {
+	padding:0 10px;
+	.action-options {
+		position:relative;
+		.btn {
+			.navbar-btn;
+		}
+		.caret {
+			border-top-color: #333 !important;
+			border-bottom-color: #333 !important;
+		}
+	}
+}
+
+.nav-drawer-container {
+	display:none;
+
+		.nav-index-container {
+			text-align:left;
+			font-size:1em;
+			padding-top:15px;
+			padding-bottom:15px;
+			.nav-thing {
+				h5 {
+					font-size:.8em;
+					font-family:'RobotoCondensedBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+					.caps;
+				}
+				ul {
+					li {
+						font-size:.8em;
+					}
+				}
+			}
+		}
+}
+
+
+/* ----------------------------------------------------------------
+	WAYPOINT STYICKY NAV
+	
+---------------------------------------------------------------- */
+#waypoint-header {
+	.guide-menu-wrapper {
+		display:none;
+	}
+
+	&.stuck {
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		z-index:900;
+		.guide-menu-wrapper {
+			display:block!important;
+		}
+	}
+
+	.nav-index-container {
+		background:#fff;
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	CONTENT
+	
+---------------------------------------------------------------- */
+#content-container {
+	pre {
+		&.terminal {
+			background:#666;
+			color:#fff;
+		}
+	}
+
+	
+	.chapter-container {
+
+		.chapter-header-wrapper {
+			padding:45px 0 0;
+			&:first-child {
+			}
+		}
+
+		.chapter-code-wrapper {
+			padding:45px 0;
+
+			.sidebar {
+
+			}
+			.code {
+
+			}
+		}
+
+		.page-container {
+			padding:45px 0;
+
+			.sidebar {}
+
+			.page-content {
+				.page-title {
+					span {
+						-webkit-border-radius: 99px;
+						-moz-border-radius: 99px;
+						border-radius: 99px;
+						/*	behavior: url(PIE.htc);  <- this is an IE-hack plugin */
+						display: inline-block;
+						width: 36px;
+						height: 36px;
+						padding: 8px 7px 5px 7px;
+						background: #333;
+						color: #fff;
+						letter-spacing: -1px;
+						line-height: 36px;
+						text-align: center;
+						margin: 0 5px 5px 0;
+						line-height:1.1em;
+					}
+				}
+
+
+				.notice-container {
+					margin:25px 0;
+					border:1px solid #d2d2d2;
+					border-width:1px 0;
+					padding:25px 0;
+					ul.notice {
+						margin:0!important;
+						padding:0!important;
+						list-style:none;
+
+						li {
+							&.tip {
+								background:url('../images/icon-bulb.png') top left no-repeat;
+
+								padding-left:50px;
+								margin:15px 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.sidebar {
+		.panel.widget {
+			border-radius:0;
+			border:0;
+
+			.panel-heading {
+				border-radius:0;
+				border:0;
+			}
+			.panel-body {
+
+				padding:0;
+			}	
+			.panel-footer {
+				padding:10px 0;
+				background:transparent;
+			}
+
+			.ip-table {
+				display:none;
+				padding:15px 0;
+				h5 {
+					font-size:14px;
+				}
+				div.current-ip {
+
+				}
+				div.edit-ip {
+					display:none;
+				}
+			}
+		}
+	}
+
+}
 
 
 
@@ -38,41 +413,17 @@
 
 
 .lead img  {
-	display:block;
+	display:none;
 	margin:0 auto;
 }
 
-#chapter-banner-content {
-	padding-top:60px;
-	margin:0;
-		background:@gray-lighter;
 
-		/*Reset the bootstrap jumbotron*/
-	.jumbotron {
-		.bsreset;
-		padding:0px 0;
-		background:transparent;
-	}
-
-	.page-header-options {
-		float:right;
-	}
-	.page-header {
-		* {
-		}
-		img {
-			display:none;
-		}
-	}
-
-
-}
-
+/*
 #guide-nav-container {
 		display:block;
-		position:static;
+		position:relative;
 		height:54px;
-
+		z-index:100;
 		#guide-navbar-bs {
 			display:static;
 			height:auto;
@@ -131,7 +482,7 @@
 			}
 		}
 }
-}
+}*/
 
 /*#banner-content {
 	h4, h5 {
@@ -174,7 +525,7 @@
 	}
 }*/
 
-.book-intro, .chapter-intro {
+/*.book-intro, .chapter-intro {
 	.page-header {
 		border:0;
 		padding:0;
@@ -241,124 +592,23 @@
 		overflow:hidden;
 	}
 }
+*/
 
 
-
-
-.stuck {
-	#guide-nav-container {
-		display:block!important;
-	}
-}
-
-.show-this {
-	display:none!important;
- }
-#waypoint-header {
-	position:relative;
-	z-index:999;
-	background:gray;
-	&.stuck {
-		position:fixed;
-		top:0;
-		left:0;
-		width:100%;
-		.show-this {
-			display:block!important;
-		}
-	}
-}
 
 
 
 
 .notice-container {
-	margin:25px 0;
-	border:1px solid #d2d2d2;
-	border-width:1px 0;
-	padding:25px 0;
-}
-ul.notice {
-	margin:0!important;
-	padding:0!important;
-	list-style:none;
-
-	li {
-		&.tip {
-			background:url('../images/icon-bulb.png') top left no-repeat;
-
-			padding-left:50px;
-			margin:15px 0;
-		}
-	}
-}
-
-
-.panel.widget {
-	border-radius:0;
-	border:0;
-
-	.panel-heading {
-		border-radius:0;
-		border:0;
-	}
-	.panel-body {
 	
-		padding:0;
-	}	
-	.panel-footer {
-		padding:10px 0;
-		background:transparent;
-	}
-
-	.ip-table {
-		display:none;
-		padding:15px 0;
-			h5 {
-				font-size:14px;
-			}
-			div.current-ip {
-
-			}
-			div.edit-ip {
-				display:none;
-			}
-	}
 }
 
 
 
 
-.container {
-	position:relative;
-}
 
 
-.page-header {
-	position:relative;
-	.page-header-options {
-		position:absolute;
-		top:0px;
-		right:0;
-	}
-}
 
-.navbar-options {
-	padding:0 10px;
-	.action-options {
-		position:relative;
-		.btn {
-			.navbar-btn;
-		}
-		.caret {
-			border-top-color: #333 !important;
-			border-bottom-color: #333 !important;
-		}
-	}
-}
-.action-options {
-
-}
 
 
 
