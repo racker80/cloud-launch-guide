@@ -283,6 +283,7 @@ a {
 ---------------------------------------------------------------- */
 #content-container {
 	pre {
+		position:relative;
 		&.terminal {
 			background:#666;
 			color:#fff;
@@ -299,8 +300,17 @@ a {
 		}
 
 		.chapter-code-wrapper {
-			padding:45px 0;
+			margin-bottom:-60px;
+			.chapter-header-wrapper {
+				padding:0;
+			}
+			.page-content-code {
 
+			}
+			.page-container {
+				padding:0px 0;
+				background:black;
+			}
 			.sidebar {
 
 			}
@@ -309,31 +319,15 @@ a {
 			}
 		}
 
+
+
 		.page-container {
 			padding:45px 0;
 
 			.sidebar {}
 
 			.page-content {
-				.page-title {
-					span {
-						-webkit-border-radius: 99px;
-						-moz-border-radius: 99px;
-						border-radius: 99px;
-						/*	behavior: url(PIE.htc);  <- this is an IE-hack plugin */
-						display: inline-block;
-						width: 36px;
-						height: 36px;
-						padding: 8px 7px 5px 7px;
-						background: #333;
-						color: #fff;
-						letter-spacing: -1px;
-						line-height: 36px;
-						text-align: center;
-						margin: 0 5px 5px 0;
-						line-height:1.1em;
-					}
-				}
+				
 
 
 				.notice-container {
@@ -397,11 +391,43 @@ a {
 }
 
 
+.page-title {
+	span {
+		-webkit-border-radius: 99px;
+		-moz-border-radius: 99px;
+		border-radius: 99px;
+		/*	behavior: url(PIE.htc);  <- this is an IE-hack plugin */
+		display: inline-block;
+		width: 36px;
+		height: 36px;
+		padding: 8px 7px 5px 7px;
+		background: #333;
+		color: #fff;
+		letter-spacing: -1px;
+		line-height: 36px;
+		text-align: center;
+		margin: 0 5px 5px 0;
+		line-height:1.1em;
+	}
+}
 
 
 
+.chapter-list {
+	.chapter-list-row {
+		border-bottom:1px solid #d2d2d2;
+		padding-bottom:40px;
+		margin-bottom:40px;
+	}
+	.chapter-list-overview {
+		h3 {}
+		p {}
+		p.lead {}
+	}
+	.chapter-list-options {
 
-
+	}
+}
 
 
 

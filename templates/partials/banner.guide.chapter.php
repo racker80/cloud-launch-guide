@@ -35,7 +35,7 @@
 					<div class="col-md-10">
 						<div class="page-header">
 							<h5 style="font-size:1em;"><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">&laquo; {{book.title}}</a> Chapter {{chapter.index}} of {{chapter.indexOf}}</h5>
-							<h1 class="chapterTitle" data-title="{{chapter.title}}" data-slug="{{chapter.slug}}"><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}">{{chapter.title}}</a></h1>
+							<h1 class="chapterTitle" data-title="{{chapter.title}}" data-slug="{{chapter.slug}}">{{chapter.title}}</h1>
 
 							<div class="lead">
 								{{chapter.content|raw}}

@@ -35,7 +35,7 @@
 						<div class="page-header">
 							<h5 style="font-size:1.2em;">Time: {{book.time}}</h5>
 
-							<h1 class="chapterTitle" data-slug="{{book.slug}}"><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">{{book.title}}</a></h1>
+							<h1 class="chapterTitle" data-slug="{{book.slug}}">{{book.title}}</h1>
 
 							<div class="lead">
 								{{book.description|raw}}

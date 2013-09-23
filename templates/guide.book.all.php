@@ -9,8 +9,6 @@
 			<!-- CHAPTER HEADING -->
 			{% include 'partials/chapter.header.php' %}
 			
-			{% include 'partials/chapter.code.php' %}
-
 			{% include 'partials/chapter.page.php' %}
 		
 

@@ -5,7 +5,7 @@
 		<!-- CHAPTER HEADING -->
 		<div id="{{chapter.slug}}" class="chapter-container" ng-repeat="chapter in book.children">
 			
-			{% include 'partials/chapter.code.php' %}
+			<!-- {% include 'partials/chapter.code.php' %} -->
 
 			{% include 'partials/chapter.page.php' %}
 

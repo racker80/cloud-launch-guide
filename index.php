@@ -22,7 +22,7 @@
         //GET THE JSON
         // $json_url = 'http://192.237.203.16/'.$route;
         $json_url = 'http://192.237.165.197/api/'.$route;
-        // $json_url = 'http://projects.clgapi/'.$route;
+        $json_url = 'http://projects.clgapi/'.$route;
         $ch = curl_init( $json_url );
         $options = array(
         CURLOPT_RETURNTRANSFER => true,
@@ -94,19 +94,20 @@
         foreach($chapters as $chapter) {
             if(isset($chapter->code)) {
                 foreach($chapter->code as $code) {
-                    if(strstr($code->text, 'your.')) {
-                        $chapter->meta->iptool = true;
-                        $code->iptool = true;
-                    }
+                        if(strstr($code->text, 'your.')) {
+                            $chapter->meta->iptool = true;
+                            $code->iptool = true;
+                        }
+                    
                 }
                 foreach($chapter->children as $child) {
                     if($child->code) {
                         foreach($child->code as $code) {
-                            if(strstr($code->text, 'your.')) {
-                                $child->meta->iptool = true;
+                                if(strstr($code->text, 'your.')) {
+                                    $child->meta->iptool = true;
                                 $code->iptool = true;
+                                }
 
-                            }
                         }
                     }
                 }

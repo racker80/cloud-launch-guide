@@ -51,14 +51,14 @@ var expertBtn = $('*[data-toggle-expert]');
 		var expert = localStorage.getItem('expertChecked');
 		if (expert === 'yes') {
 			$(window).scrollTop(0);
-			$('.page-container').hide();
+			$('.page-content-full').hide();
 			$('.actionOverview').removeClass('hide');
 
 			expertBtn.addClass('btn-warning');
 			expertBtn.find('.glyphicon').removeClass('glyphicon-save').addClass('glyphicon-saved');
 
 		} else {
-			$('.page-container').show();
+			$('.page-content-full').show();
 			$('.actionOverview').addClass('hide');
 			expertBtn.removeClass('btn-warning');
 			expertBtn.find('.glyphicon').removeClass('glyphicon-saved').addClass('glyphicon-save');
@@ -77,6 +77,8 @@ var expertBtn = $('*[data-toggle-expert]');
 		toggleExpert();
 
 		$.waypoints('refresh');
+
+
 
 	});
 
@@ -109,6 +111,22 @@ function doConnections(){
 			target:value.pre, 
 			container:value.tool.parents('.row')
 		});
+	});
+}
+
+function makeConnection() {
+	jsPlumb.connect({
+    source:"element1", 
+    target:"element2",
+    Connector : [ "Bezier", { curviness: 50 } ],
+	Anchors : [ "RightMiddle", "LeftMiddle" ],
+	PaintStyle : {
+		lineWidth:2,
+		strokeStyle: 'rgba(200,0,0,100)',
+		"dashstyle":"2 4"
+	},
+	Endpoint:[ "Dot", { radius:3 } ],
+	EndpointStyle : { fillStyle : "rgba(200,0,0,100)" },
 	});
 }
 
@@ -197,13 +215,11 @@ function doConnection(source, target){
 					var str = htm.replace(re, '<span id="plumb-target-'+indexID+'" class="plumb_target"></span><span id="code-ip-target-'+indexID+'" data-code-ip-type="'+value+'" class="address '+cl+'">'+text+'</span>')
 
 					$(ths).html(str);
-
 					var source = $(ths).parentsUntil('.container').find('.sidebar *[data-ip-type="'+value+'"]')
 						.attr('data-target', '#code-ip-target-'+indexID).show();
 
 					var target = $('span#plumb-target-'+indexID);
-
-					doConnection(source, target)
+						doConnection(source, target)
 
 
 					// connections.push({
