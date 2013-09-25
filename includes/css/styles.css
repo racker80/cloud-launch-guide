@@ -6762,6 +6762,27 @@ a {
 	CONTENT
 	
 ---------------------------------------------------------------- */
+#content-container .pre-wrapper {
+  position: relative;
+}
+#content-container .pre-wrapper.copied pre {
+  border-color: #5cb85c;
+  background-color: #5cb85c;
+  color: #000;
+}
+#content-container .pre-wrapper.copied pre span {
+  background: transparent;
+  color: #000;
+}
+#content-container .pre-wrapper .address {
+  color: #fff;
+  background: red;
+}
+#content-container .pre-wrapper .copy-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 #content-container pre {
   position: relative;
 }
@@ -6771,9 +6792,6 @@ a {
 }
 #content-container .chapter-container .chapter-header-wrapper {
   padding: 45px 0 0;
-}
-#content-container .chapter-container .chapter-code-wrapper {
-  margin-bottom: -60px;
 }
 #content-container .chapter-container .chapter-code-wrapper .chapter-header-wrapper {
   padding: 0;
@@ -6825,6 +6843,8 @@ a {
 }
 #content-container .sidebar .panel.widget .ip-table div.edit-ip {
   display: none;
+  position: relative;
+  z-index: 100;
 }
 .page-title span {
   -webkit-border-radius: 99px;

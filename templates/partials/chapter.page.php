@@ -1,9 +1,12 @@
+
+
 			<!-- PAGE SECTION -->
 			{% for page in chapter.children %}
 			<div id="{{page.slug}}" class="page-container" ng-repeat="page in chapter.children">
 				<div class="page-content-full container">
 					<div class="row">
 						<div class="sidebar five columns alpha col-md-4">
+							
 							{% if page.meta.iptool %}
 
 								{% include 'partials/ip-tool.php' %}

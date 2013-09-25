@@ -282,6 +282,30 @@ a {
 	
 ---------------------------------------------------------------- */
 #content-container {
+	.pre-wrapper {
+		position:relative;
+		&.copied {
+			pre {
+				border-color:@brand-success;
+				background-color:@brand-success;
+				color:#000;
+				span {
+					background:transparent;
+					color:#000;
+				}
+			}
+			
+		}
+		.address {
+			color:#fff;
+			background:red;
+		}
+		.copy-button {
+			position:absolute;
+			top:0;
+			right:0;
+		}
+	}
 	pre {
 		position:relative;
 		&.terminal {
@@ -300,7 +324,6 @@ a {
 		}
 
 		.chapter-code-wrapper {
-			margin-bottom:-60px;
 			.chapter-header-wrapper {
 				padding:0;
 			}
@@ -383,6 +406,8 @@ a {
 				}
 				div.edit-ip {
 					display:none;
+					position:relative;
+					z-index:100;
 				}
 			}
 		}

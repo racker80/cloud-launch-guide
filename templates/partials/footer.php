@@ -24,15 +24,32 @@
 
 <script src="{{ baseurl }}/includes/bower_components/jquery/jquery.js"></script>
 
-<!-- MY SUTFF -->
+
 
 <script src="{{ baseurl }}/includes/bower_components/bootstrap/js/dropdown.js"></script>
 <script src="{{ baseurl }}/includes/bower_components/zeroclipboard/ZeroClipboard.js"></script>
 <script src="{{ baseurl }}/includes/bower_components/jquery-waypoints/waypoints.js"></script>
 <script src="{{ baseurl }}/includes/bower_components/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.js"></script>
 <script src="{{ baseurl }}/includes/bower_components/jsPlumb/dist/js/jquery.jsPlumb-1.5.2.js"></script>
-<script src="{{ baseurl }}/includes/js/main.js"></script>
+<!-- <script src="{{ baseurl }}/includes/js/main.js"></script> -->
 
+
+
+<script type="text/javascript">
+function downloadJSAtOnload() {
+
+var element = document.createElement("script");
+element.src = "{{ baseurl }}/includes/js/main.js";
+document.body.appendChild(element);
+
+
+}
+if (window.addEventListener)
+window.addEventListener("load", downloadJSAtOnload, false);
+else if (window.attachEvent)
+window.attachEvent("onload", downloadJSAtOnload);
+else window.onload = downloadJSAtOnload;
+</script>
 
 		
 </body>
