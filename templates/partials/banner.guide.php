@@ -17,7 +17,16 @@
 							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>-->						</div>							
 						</div>
 					<div class="col-md-5 col-md-offset-1">
-						<div class="well"></div>
+							<h4>This Guide on Twitter:</h4>
+							<div id="social-feed" class="widget"></div>
+							<div class="row tweet-box">
+								<div class="col-md-8">
+									<small style="line-height:5px; font-size:.8em">tweet what you think: <strong>#{{guide.slug}}clg</strong></small>
+								</div>
+								<div class="col-md-8">
+									<button class="btn btn-info btn-sm">tweet</button>
+								</div>
+							</div>
 					</div>
 				</div>
 				

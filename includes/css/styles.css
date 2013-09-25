@@ -7046,3 +7046,86 @@ a {
 	}
 }
 */
+#social-feed {
+  font-size: .8em;
+  line-height: 1em;
+}
+#social-feed:before,
+#social-feed:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+#social-feed:after {
+  clear: both;
+}
+#social-feed:before,
+#social-feed:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+#social-feed:after {
+  clear: both;
+}
+.feed-widget {
+  margin: 15px 0;
+}
+.feed-widget:before,
+.feed-widget:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.feed-widget:after {
+  clear: both;
+}
+.feed-widget:before,
+.feed-widget:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.feed-widget:after {
+  clear: both;
+}
+.feed-widget img {
+  float: left;
+  margin-right: 5px;
+}
+.feed-widget .author {
+  margin: 5px 0;
+}
+.feed-widget .timestamp {
+  font-weight: 800;
+  font-size: .7em;
+  margin-bottom: 15px;
+}
+.feed-widget .text {
+  font-size: .8em;
+  line-height: 1.4em;
+}
+.tweet-box {
+  border-top: 1px solid #d2d2d2;
+  padding-top: 15px;
+  font-size: .9em;
+  line-height: 1em;
+}
+.tweet-box small {
+  line-height: 1em;
+}
+.tweet-box small strong {
+  font-weight: 800;
+}

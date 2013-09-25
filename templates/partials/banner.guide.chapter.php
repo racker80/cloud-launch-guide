@@ -46,7 +46,16 @@
  -->						</div>							
 					</div>
 					<div class="col-md-5 col-md-offset-1">
-						<div class="well"></div>
+												<h4>This Chapter on Twitter:</h4>
+							<div id="social-feed" class="widget"></div>
+							<div class="row tweet-box">
+								<div class="col-md-8">
+									<small style="line-height:5px; font-size:.8em">tweet what you think: <strong>#{{guide.slug}}{{chapter.slug}}clg</strong></small>
+								</div>
+								<div class="col-md-8">
+									<button class="btn btn-info btn-sm">tweet</button>
+								</div>
+							</div>
 					</div>
 				</div>
 				
