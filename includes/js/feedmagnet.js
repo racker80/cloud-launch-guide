@@ -25,9 +25,13 @@ fm_ready(function($, _) {
     var feed = $FM.Feed('test-group').options({'limit': 3}).get()
 
     feed.connect('new_update', function(self, data) {
+
+      var effects = ['bounceInRight', 'flipInX', 'flipInY', 'fadeInUp']
+      var rand = effects[Math.floor(Math.random() * effects.length)];
+
        var udata = data.update.data
        data.update.html =
-       '<div class="feed-widget">' +
+       '<div class="feed-widget animated '+rand+'">' +
        '<div class="text">' + udata.text + '</div>' +
        '<img class="avatar" ' +
        'src="' + udata.author.avatar + '" />' +

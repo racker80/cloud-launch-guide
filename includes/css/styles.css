@@ -1,3 +1,4 @@
+@import url('../bower_components/animate.css/animate.css');
 /*!
  * Bootstrap v3.0.0
  *
@@ -7046,6 +7047,9 @@ a {
 	}
 }
 */
+.twitter-header {
+  text-align: center;
+}
 #social-feed {
   font-size: .8em;
   line-height: 1em;
@@ -7104,9 +7108,13 @@ a {
 .feed-widget img {
   float: left;
   margin-right: 5px;
+  display: block;
+  width: 35px;
+  height: 35px;
 }
 .feed-widget .author {
-  margin: 5px 0;
+  margin: 0px 0;
+  font-size: .9em;
 }
 .feed-widget .timestamp {
   font-weight: 800;
@@ -7114,17 +7122,21 @@ a {
   margin-bottom: 15px;
 }
 .feed-widget .text {
-  font-size: .8em;
+  font-size: .85em;
   line-height: 1.4em;
+  margin-bottom: 10px;
+  font-weight: 400;
 }
 .tweet-box {
   border-top: 1px solid #d2d2d2;
   padding-top: 15px;
   font-size: .9em;
   line-height: 1em;
+  text-align: center;
 }
 .tweet-box small {
   line-height: 1em;
+  font-size: .7em;
 }
 .tweet-box small strong {
   font-weight: 800;
