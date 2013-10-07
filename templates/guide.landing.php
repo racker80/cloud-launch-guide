@@ -8,7 +8,6 @@
 				
 				<div class="chapter-list-row row">
 					<div class="chapter-list-options col-md-5">
-						<h3><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">{{book.title}}</a></h3>
 
 						<ul class="list-unstyled">
 								{% for chapter in book.children %}
@@ -21,13 +20,14 @@
 					</div>
 
 					<div class="chapter-list-overview col-md-11">
+						<h3>{{book.title}}</h3>
 						<p>time: <strong>{{book.time}}</strong></p>
 						<p class="lead">{{book.description}} &nbsp;</p>
 						<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}" class="btn btn-primary">
 							Start Section &raquo;
 						</a>
 
-							
+
 					</div>
 
 

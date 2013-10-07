@@ -37,6 +37,38 @@
 
 
 
+
+    function getSitemap($data) {
+        
+
+        function walk($data) {
+            $sitemap = array();
+
+            foreach($data as $item) {
+                $sitemap[] = array(
+                    'title'=>$item->title
+                    );
+            }
+            
+            return $sitemap;
+        }
+
+        $sitemap = walk($data);
+
+        return $sitemap;
+
+    }
+
+    $app->get('/sitemap', function() use($app) {
+
+        $sitemap = getSitemap(getAPI('guides'));
+
+        print_r($sitemap);
+       
+        $app->render( 'sitemap.php', array('guides'=>$sitemap) );
+        
+    });
+
     $app->get('/', function() use($app) {
 
         $guides = getAPI('guides');

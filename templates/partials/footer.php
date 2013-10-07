@@ -31,7 +31,9 @@
 <script src="{{ baseurl }}/includes/bower_components/jquery-waypoints/waypoints.js"></script>
 <script src="{{ baseurl }}/includes/bower_components/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.js"></script>
 <script src="{{ baseurl }}/includes/bower_components/jsPlumb/dist/js/jquery.jsPlumb-1.5.2.js"></script>
+<script src="{{ baseurl }}/includes/bower_components/Socialite-master/socialite.js"></script>
 <script src="{{ baseurl }}/includes/js/feedmagnet.js"></script>
+<script src="{{ baseurl }}/includes/bower_components/move.js-master/move.js"></script>
 <!-- <script src="{{ baseurl }}/includes/js/main.js"></script> -->
 
 

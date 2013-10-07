@@ -1,7 +1,4 @@
-;(function ( ) {
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
-})();
 
 
 // the semi-colon before function invocation is a safety net against concatenated
@@ -79,6 +76,7 @@
 							// $.waypoints('refresh');
 
 						});
+						ths.toggleExpert();
 
 
 						/* ----------------------------------------------------------------
@@ -422,6 +420,41 @@ $(document).ready(function() {
 	});
 
 
+
+	$('.page-content-full .page-content').each(function(){
+		
+				
+		// var ths = $(this);
+		// var	container = ths.parent();
+
+		// var row = ths.find('.row').clone(true);
+		// var pageContent = row.find('.page-content');
+		// var content = {
+		// 	title: pageContent.find(' h4').clone(true),
+		// 	pre: pageContent.find('pre').parent().clone(true),
+		// }
+
+		
+		// pageContent.empty().append(content.title);
+
+		// $.each(content.pre, function(){
+		// 	pageContent.append(this);
+		// });
+
+
+		// // container.find('.chapter-code-wrapper').append(row);
+		// container.append(row);
+
+		// row.wrap('<div class="page-content-code container"></div>');
+
+		// ths.remove();
+
+		// console.log(container)
+
+	})
+
+
+
 	$('body').on('expertToggle', function(event){
 
 		$.each(connections, function(index, value){
@@ -435,10 +468,17 @@ $(document).ready(function() {
 			drawConnection(source, target);
 
 		});
+
+
+
 	});
 
 })();
 
+
+
+
+Socialite.load();
 
 
 });

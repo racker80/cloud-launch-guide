@@ -13,6 +13,7 @@
 							{% else %}
 							
 							{% endif %}
+
 						</div>
 						<div class="page-content col-md-11 col-md-offset-1">
 							<h4 class="page-title"><span>{{loop.index}}</span> {{page.title}}</h4>

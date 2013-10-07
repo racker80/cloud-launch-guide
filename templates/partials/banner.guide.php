@@ -21,10 +21,9 @@
 							<div class="tweet-box">
 								
 									
-									<a href="https://twitter.com/intent/tweet?button_hashtag=#{{guide.slug}}clg" class="twitter-hashtag-button" data-lang="en" data-url="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}" data-text="I really like {{chapter.title}} Chapter in the Rackspace {{guide.title}} Launch Guide!" data-hashtags="clg" data-size="large">
-										Tweet #{{guide.slug}}clg</a>
-										<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-									<br>
+									<a href="https://twitter.com/intent/tweet?button_hashtag=#{{guide.hashtag}}clg" class="socialite twitter-hashtag" data-lang="en" data-url="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}" data-text="I really like {{chapter.title}} Chapter in the Rackspace {{guide.title}} Launch Guide!" data-hashtags="clg" data-size="large">
+										Tweet #{{guide.hashtag}}clg</a>
+										
 									<small><em>Let us know what you think on Twitter with this hashtag!</em></small>
 
 							</div>
