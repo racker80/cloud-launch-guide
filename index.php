@@ -1,172 +1,192 @@
 <?php
-require 'Slim/Slim.php';
-require 'Views/TwigView.php';
-require 'lib/php-markdown-lib/Michelf/Markdown.php';
-use \Michelf\Markdown;
+    require 'vendor/autoload.php';
+    use \Michelf\Markdown;
 
-$app = new Slim(array(
-    'view' => new TwigView(),
-	'templates.path' => 'templates'
-));
-
-
-
-
-$app->get('/', function() use($app) {
-		// jSON URL which should be requested
-	$json_url = 'http://192.237.165.197/CLG/app/api/?action=getGuides';
-	// $json_url = 'http://projects.mongo/app/api/?action=getGuides';
-	// jSON String for request
-
-	// Initializing curl
-	$ch = curl_init( $json_url );
-
-	// Configuring curl options
-	$options = array(
-		CURLOPT_RETURNTRANSFER => true,
-		CURLOPT_HTTPHEADER => array('Content-type: application/json') ,
-		);
-
-	// Setting curl options
-	curl_setopt_array( $ch, $options );
-
-	// Getting results
-	$output =  json_decode(curl_exec($ch)); // Getting jSON result string
+    $app = new Slim(array(
+        'templates.path' => __DIR__.'/templates/',
+    ));
+    
+    require 'vendor/slim/extras/Views/TwigView.php';
+    TwigView::$twigExtensions = array('Twig_Extensions_Slim',);
+    
+    $app->view('TwigView');
 
 
 
-	$app->render('home.php', array('guides'=>$output));
-});
+    $script_location = str_replace('/index.php', '', $_SERVER['SCRIPT_NAME']);
+    $app->view()->getEnvironment()->addGlobal('baseurl', $script_location);
+    
 
 
+    function getAPI($route) {
+        //GET THE JSON
+        // $json_url = 'http://192.237.203.16/'.$route;
+        $json_url = 'http://192.237.165.197/api/'.$route;
+        // $json_url = 'http://projects.clgapi/'.$route;
+        $ch = curl_init( $json_url );
+        $options = array(
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HTTPHEADER => array('Content-type: application/json') ,
+        );
+        curl_setopt_array( $ch, $options );
+        //CREATE THE OUTPUT DATA
+        $output =  json_decode(curl_exec($ch)); // Getting jSON result string
 
-function getChildBySlug($children, $slug) {
-	foreach($children as $child) {
-		if(isset($child->slug) && $child->slug === $slug) {
-			return $child;
-		}
-	}
-	return;
-}
-
-function filterContent($content, $parent) {
-	if(isset($parent->code))
-	foreach($parent->code as $key=>$value) {
-		if(!isset($value->type)) $value->type="";
-		$content = str_replace('[code '.$key.']', '<pre class="'.$value->type.'">'.$value->text.'</pre>', $content);
-	}
-	
-	if(isset($parent->images))
-	foreach($parent->images as $key=>$value) {
-		$content = str_replace('[image '.$key.']', '<img src="'.$value->url.'">', $content);
-	}
-
-	return $content;
-}
-
-function getData() {
-
-	//GET THE JSON
-	$json_url = 'http://192.237.165.197/CLG/app/api/?action=getAll';
-	// $json_url = 'http://projects.mongo/app/api/?action=getGuides';
-
-	$ch = curl_init( $json_url );
-	$options = array(
-	CURLOPT_RETURNTRANSFER => true,
-	CURLOPT_HTTPHEADER => array('Content-type: application/json') ,
-	);
-	curl_setopt_array( $ch, $options );
-
-
-
-	//CREATE THE OUTPUT DATA
-	$output =  json_decode(curl_exec($ch)); // Getting jSON result string
-
-
-
-	//WALK THE TREE
-	function walk($parent) {
-		//CREATE THE ACTION OVERVIEW
-		if(isset($parent->type) && $parent->type === "chapter") {
-			if(isset($parent->children)) {
-				foreach($parent->children as $child) {
-					if(isset($child->code)) {
-						foreach($child->code as $code) {
-							$parent->code[] = $code;
-						}
-					}
-				}
-			}
-		}
-
-		//FILTER CONTENT FOR CODE AND IMAGES AND MARKDOWN
-		if(isset($parent->content)) {
-			$parent->content = filterContent($parent->content, $parent);
-			$parent->content = Markdown::defaultTransform($parent->content);
-		}
-		
-		if(isset($parent->additionalContent)) {
-			foreach($parent->additionalContent as $content) {
-				$content->text = Markdown::defaultTransform($content->text);
-			}
-		}
-
-		if(isset($parent->children)) {
-			foreach($parent->children as $child) {
-				walk($child);
-			}
-		}
-	}
-	
-
-	foreach($output->guides as $guide) {
-		$guide = walk($guide);
-	}
-	
-
-	return $output->guides;
-}
+        return $output->data;
+    }
 
 
 
 
-$app->get('/guides/(:guideSlug)', function ($guideSlug) use ($app) {
+    function getSitemap($data) {
+        
 
-	$guides = getData();
+        function walk($data) {
+            $sitemap = array();
 
-	$guide = getChildBySlug($guides, $guideSlug);
+            foreach($data as $item) {
+                $sitemap[] = array(
+                    'title'=>$item->title
+                    );
+            }
+            
+            return $sitemap;
+        }
 
-	$app->render('guide.landing.php', array('guide'=>$guide));
+        $sitemap = walk($data);
 
-});
+        return $sitemap;
+
+    }
+
+    $app->get('/sitemap', function() use($app) {
+
+        $sitemap = getSitemap(getAPI('guides'));
+
+        print_r($sitemap);
+       
+        $app->render( 'sitemap.php', array('guides'=>$sitemap) );
+        
+    });
+
+    $app->get('/', function() use($app) {
+
+        $guides = getAPI('guides');
+       
+        $app->render( 'home.php', array('guides'=>$guides) );
+        
+    });
+
+    $app->get('/index', function() use($app) {
+
+        $guides = getAPI('guides');
+
+       
+        $app->render( 'index.all.php', array('guides'=>$guides) );
+        
+    });
+
+    $app->get('/guides/(:guideSlug)', function ($guideSlug) use ($app) {
+
+        $guides = getAPI('guides/overview');
+        
+        $guide = getAPI('guides/slug/'.$guideSlug.'/markdown');
+
+        $app->render('guide.landing.php', array('guides'=>$guides, 'guide'=>$guide));
+
+    });
 
 
+    // $app->get('/guides/(:guideSlug)/(:bookSlug)', function ($guideSlug, $bookSlug) use ($app) {
 
 
-$app->get('/guides/(:guideSlug)/(:bookSlug)', function ($guideSlug, $bookSlug) use ($app) {
+    //     $guides = getAPI('guides/overview');
 
-	$guides = getData();
+    //     $api = getAPI('/guides/slug/'.$guideSlug.'/'.$bookSlug.'/markdown');    
 
-	$guide = getChildBySlug($guides, $guideSlug);
+    //     $guide = $api->guide;
 
-	$book = getChildBySlug($guide->children, $bookSlug);
+    //     $book = $api->book;
 
-	$app->render('guide.book.php', array('guide'=> $guide, 'book'=>$book));
+    //     $app->render('guide.book.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book));
 
-});
+    // });
 
-$app->get('/guides/(:guideSlug)/(:bookSlug)/(:chapterSlug)', function ($guideSlug, $bookSlug, $chapterSlug) use ($app) {
+    $app->get('/guides/(:guideSlug)/(:bookSlug)', function ($guideSlug, $bookSlug) use ($app) {
 
-	$guides = getData();
+        $guides = getAPI('guides/overview');
 
-	$guide = getChildBySlug($guides, $guideSlug);
+        $api = getAPI('/guides/slug/'.$guideSlug.'/'.$bookSlug.'/markdown');    
 
-	$book = getChildBySlug($guide->children, $bookSlug);
-	$chapter = getChildBySlug($book->children, $chapterSlug);
+        $guide = $api->guide;
 
-	$app->render('guide.book.chapter.php', array('guide'=> $guide, 'book'=>$book, 'chapter'=>$chapter));
+        $book = $api->book;
 
-});
+        $chapters = $api->book->children;
+        foreach($chapters as $chapter) {
+            if(isset($chapter->code)) {
+                foreach($chapter->code as $code) {
+                        if(strstr($code->text, 'your.')) {
+                            $chapter->meta->iptool = true;
+                            $code->iptool = true;
+                        }
+                    
+                }
+                foreach($chapter->children as $child) {
+                    if($child->code) {
+                        foreach($child->code as $code) {
+                                if(strstr($code->text, 'your.')) {
+                                    $child->meta->iptool = true;
+                                $code->iptool = true;
+                                }
+
+                        }
+                    }
+                }
+            }
+        }
+
+        $app->render('guide.book.all.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book, 'chapters'=>$chapters, 'allsteps'=>true));
+
+    });
+
+    $app->get('/guides/(:guideSlug)/(:bookSlug)/(:chapterSlug)', function ($guideSlug, $bookSlug, $chapterSlug) use ($app) {
+
+        $guides = getAPI('guides/overview');
+
+        $api = getAPI('/guides/slug/'.$guideSlug.'/'.$bookSlug.'/'.$chapterSlug.'/markdown');   
+
+        $guide = $api->guide;
+
+        $book = $api->book;
+
+        $chapter = $api->chapter;
+
+        if(isset($chapter->code)) {
+            foreach($chapter->code as $code) {
+                if(strstr($code->text, 'your.')) {
+                    $chapter->meta->iptool = true;
+                    $code->iptool = true;
+
+                }
+            }
+            foreach($chapter->children as $child) {
+                if($child->code) {
+                    foreach($child->code as $code) {
+                        if(strstr($code->text, 'your.')) {
+                            $child->meta->iptool = true;
+                            $code->iptool = true;
+
+                        }
+                    }
+                }
+            }
+        }
 
 
-$app->run();
+        $app->render('guide.book.chapter.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book, 'chapter'=>$chapter, 'chapterslug'=>'#'.$chapter->slug));
+
+    });
+
+    
+    $app->run();

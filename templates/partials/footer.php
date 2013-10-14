@@ -22,16 +22,37 @@
 
 
 
-<script src="/clg/includes/js/jquery-1.8.2.min.js"></script>
-<script src="/clg/includes/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="{{ baseurl }}/includes/bower_components/jquery/jquery.js"></script>
 
-<!-- MY SUTFF -->
 
-<script src="/clg/includes/js/plugins/ZeroClipboard.min.js"></script>
-<script src="/clg/includes/js/plugins/waypoints.js"></script>
-<script src="/clg/includes/js/plugins/shortcuts/sticky-elements/waypoints-sticky.js"></script>
-<script src="/clg/includes/js/main.js"></script>
 
+<script src="{{ baseurl }}/includes/bower_components/bootstrap/js/dropdown.js"></script>
+<script src="{{ baseurl }}/includes/bower_components/zeroclipboard/ZeroClipboard.js"></script>
+<script src="{{ baseurl }}/includes/bower_components/jquery-waypoints/waypoints.js"></script>
+<script src="{{ baseurl }}/includes/bower_components/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.js"></script>
+<script src="{{ baseurl }}/includes/bower_components/jsPlumb/dist/js/jquery.jsPlumb-1.5.2.js"></script>
+<script src="{{ baseurl }}/includes/bower_components/Socialite-master/socialite.js"></script>
+<script src="{{ baseurl }}/includes/js/feedmagnet.js"></script>
+<script src="{{ baseurl }}/includes/bower_components/move.js-master/move.js"></script>
+<!-- <script src="{{ baseurl }}/includes/js/main.js"></script> -->
+
+
+
+<script type="text/javascript">
+function downloadJSAtOnload() {
+
+var element = document.createElement("script");
+element.src = "{{ baseurl }}/includes/js/main.js";
+document.body.appendChild(element);
+
+
+}
+if (window.addEventListener)
+window.addEventListener("load", downloadJSAtOnload, false);
+else if (window.attachEvent)
+window.attachEvent("onload", downloadJSAtOnload);
+else window.onload = downloadJSAtOnload;
+</script>
 
 		
 </body>

@@ -1,68 +1,46 @@
 {% include 'partials/header.php' %}
 {% include 'partials/nav.php' %}
 
-<section class="container">
-	<div class="sixteen columns">
-				<div id="content-container">
-					<div id="book-header-image">
-						<img src="{{guide.images[0].url}}">
+	<div id="content-container">
+			
+			<div class="chapter-list container">
+				{% for book in guide.children %}
+				
+				<div class="chapter-list-row row">
+					<div class="chapter-list-options col-md-5">
+
+						<ul class="list-unstyled">
+								{% for chapter in book.children %}
+								<li><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}">{{chapter.title}}</a></li>
+								{% endfor %}
+							</ul>
+												
+
+
 					</div>
 
-					<div class="row">
-						<div class="sidebar five columns alpha col-md-5">
-							<aside id="well-time" class="home">
-								Guide Time: <span>{{ guide.time }}</span>
-							</aside> <!-- sidebar-well-time -->
-
-							{% for book in guide.children %}
-							<aside id="well-section" ng-repeat="book in guide.children">
-								{{book.title}} <span>Completion Time: {{book.time}}</span>
-							</aside>
-							{% endfor %}
-
-						</div>
-						<div class="eleven columns omega col-md-11">
-							<h2>Overview</h2>
-							
-
-							{{ guide.content | raw }}
+					<div class="chapter-list-overview col-md-11">
+						<h3>{{book.title}}</h3>
+						<p>time: <strong>{{book.time}}</strong></p>
+						<p class="lead">{{book.description}} &nbsp;</p>
+						<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}" class="btn btn-primary">
+							Start Section &raquo;
+						</a>
 
 
-							<hr>
-							{% for book in guide.children %}
-							<section ng-repeat="book in guide.children">
-								<h3>{{book.title}}</h3>
-								{{book.description}}
-							</section>
-							{% endfor %}
-
-							<hr>
-							<div class="notice help">
-								<h4>One Last Thing:</h4>
-								<p>You can remove all the detailed explanations and just get down to the brass tacks with <strong>Expert Mode</strong>. <a href="">Lorem ipsum dolor</a> sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							</div>		
-							<hr>
-							<div style="text-align:center;">
-								<p><a href="/guides/{{guide.slug}}/{{guide.children[0].slug}}" class="btn btn-primary btn-lg btn-block" title="">Get Started</a></p>
-							</div>				
-							
-						</div>
 					</div>
-															
-					<!-- MOAR CONENT HUR -->
-					
+
+
+
 				</div>
+
+				{%endfor%}
 			</div>
 
-
-</section>
+		
+		<!-- MOAR CONENT HUR -->
+		
+	</div>
 
 
 {% include 'partials/footer.php' %}
-
-
-
-
-
-
-
