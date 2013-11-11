@@ -34,7 +34,7 @@ div.table-content { /* =====  makes the tables scroll-x on small screens ===== *
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-	font-family:'RobotoLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	position: relative;
 	width: 100%;
 }
@@ -49,7 +49,7 @@ thead tr:first-child, thead tr:last-child {
 thead td {
 	border: 0 none;
 	color: #4C4C4C;
-	font-family:'RobotoMedium', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'SourceSansProSemibold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	padding: 0 0 10px 0;
 	margin: 0;
@@ -78,7 +78,7 @@ th {
 	border-bottom: 0;
 	border-left: 0;
 	color: #2C2C2C;
-	font-family:'RobotoRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 1em;
 	font-weight: normal;
 	line-height: 100%;
@@ -215,7 +215,7 @@ table.pricing tbody {
 }
 .pricing td.strong {
 	color: #2C2C2C;
-	font-family:'RobotoRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .pricing td.strong.big {
 	font-size: .875em;
@@ -267,7 +267,7 @@ table.pricing tbody {
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
-	font-family:'RobotoLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .well.dark {
 	background-color: #C4C4C4;
@@ -302,10 +302,10 @@ h6 {
 	line-height:110%;
 }
 h1, h2, h3, h4 {
-	font-family:'RobotoMedium', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/*	font-family:'RobotoMedium', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 }
 h5, h6 {
-	font-family:'RobotoRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/*	font-family:'RobotoRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 }
 h1 {
 	font-size:36px;
@@ -375,7 +375,7 @@ h6 {
 
 
 h1.em, h2.em, h3.em, h4.em, h5.em, h6.em, h1 .em, h2 .em, h3 .em, h4 .em, h5 .em, h6 .em {
-	font-family:'RobotoThin', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/*	font-family:'RobotoThin', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 	font-style: italic;
 }
 h1.double, h2.double, h3.double, h4.double, h5.double, h6.double {
@@ -386,7 +386,7 @@ h1.triple, h2.triple, h3.triple, h4.triple, h5.triple, h6.triple {
 }
 span.label {
 	color:#777777;
-	font-family:'RobotoLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/*	font-family:'RobotoLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 	font-size:11px;
 	letter-spacing:0.04em;
 	line-height:100%;
@@ -401,7 +401,7 @@ span.label {
 ---------------------------------------------------------------- */
 p {
 	color:#4C4C4C;
-	font-family:'RobotoLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style:normal;
 	font-weight:200;
 	margin:0;

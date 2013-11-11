@@ -7,7 +7,7 @@
 {% for guide in guides %}
     <div class="row featurette">
         <div class="col-md-11">
-          <h2 class="featurette-heading">{{guide.title}}</h2>
+          <h2 class="featurette-heading">FOO {{guide.title}}</h2>
           <p class="lead">{{guide.description}}</p>
           <a href="{{ baseurl }}/guides/{{guide.slug}}" class="">Learn More &raquo;</a>
         </div>

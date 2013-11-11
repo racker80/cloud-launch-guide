@@ -18,8 +18,6 @@
         <hr class="featurette-divider">
 
 {% endfor %}
-
-
 </div>
 
 
