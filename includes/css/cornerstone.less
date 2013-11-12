@@ -295,3 +295,58 @@ a {
 a.btn.btn-primary {
 	/*color:#fff;*/
 }
+
+// CUSTOMER QUOTES 
+
+.quote {
+    border: 0 none;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 140%;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    /* Prevent background color leak outs */
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    background-color: #E4E4E4;
+    padding: 25px;
+    margin: 0;
+}
+
+.quotepoint {
+    background-color: transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-left: 15px solid #E4E4E4;
+    font-size: 100%;
+    left: 40px;
+    position: relative;
+    height: 0;
+    width: 0;
+}
+
+.quote p:before {
+    content: "“";
+}
+
+.quote p:after {
+    content: "”";
+}
+
+.customername p {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 100%;
+    text-transform: none;
+    padding: .25em 0 0 0;
+}
+
+.companyname p {
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 100%;
+    text-transform: none;
+    padding: .25em 0 0 0;
+}

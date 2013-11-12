@@ -21,7 +21,7 @@ html {
 	background: #fff;
 	font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-/*	-webkit-text-size-adjust: 100%;*/
+	-webkit-text-size-adjust: 100%;
 }
 
 
@@ -333,20 +333,31 @@ a {
 	
 	.nav {
 		font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Geneva, sans-serif;
-		font-size: 16px;
+		font-size: 15px;
 		
 		a {
 			padding: 15px 20px;
 			color: #aaa;
-		
+			
+			.caret {
+				-moz-transition: all .15s linear;
+				-webkit-transition: all .15s linear;
+				transition: all .15s linear;
+				border-bottom-color: #666;
+				border-top-color: #666;
+			}
 		}
 		
 		a:hover {
-			color: #fff;
-		
-			.caret {color: #fff;}
+			color: #eee;
+			
+			.caret {
+				border-bottom-color: #eee;
+				border-top-color: #eee;
+			}
+			
 		}
-				
+								
 		li {
 			font-size: 100%;
 			
@@ -361,9 +372,22 @@ a {
 				-moz-border-radius: 0;
 				border-radius: 0;
 				background: #fff;
+				
+				.caret {
+					border-bottom-color: #aaa;
+					border-top-color: #aaa;
+				}
 			}	
 
-			a.dropdown-toggle:hover {color: #666;}
+			a.dropdown-toggle:hover {
+				color: #666;
+			
+				.caret {
+					border-bottom-color: #666;
+					border-top-color: #666;
+				}
+			
+			}
 			
 			ul.dropdown-menu {
 			    -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.175);
@@ -371,26 +395,25 @@ a {
 				-webkit-border-radius: 0;
 				-moz-border-radius: 0;
 				border-radius: 0;
+				
 				color: #666;
 				margin: 0;
 				padding: 0;
 				border: 0;
+				border-bottom: 1px solid #bbb;
 				
 				a {
 					font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 					padding: 12px 20px;
-					color: #666;
+					color: #333;
 				}
 				
 				a:hover {
 					background: #ddd;
-					color: #333;
+					color: #111;				
 				}
-				
-				
-				li {
-					margin: 0;
-				}
+								
+				li {margin: 0;}
 			}
 		}
 				
@@ -408,10 +431,11 @@ a {
 	background:@gray-lighter;
 
 	/*Reset the bootstrap jumbotron*/
-	&.jumbotron {
-		.bsreset;
-		padding:30px 0;
+	.jumbotron {
+		padding: 30px 0;
+		margin-bottom: 0px;
 		background:@gray-lighter;
+		border-bottom: 1px solid #ccc;
 	}
 
 	/*Reset the bootstrap page-header*/
@@ -420,20 +444,22 @@ a {
 		h1.homeTitle {
 			font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 			font-size: 48px;
+			letter-spacing: -2px;
 			margin-bottom: 0px;
+			padding-bottom: 7px;
 			
 			span {
 				font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 				font-size: 18px;
 				letter-spacing: 0.25px;
 				display: block;
-				line-height: 18px;
+				line-height: 15px;
 				text-indent: 3px;
 			}
 		}
 		.lead p {
-			font-size: 30px;
-			line-height: 35px;
+			font-size: 18px;
+			line-height: 27px;
 		}
 		
 		h1.guideTitle {

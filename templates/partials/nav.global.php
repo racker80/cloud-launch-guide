@@ -15,7 +15,7 @@
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 			<ul class="nav navbar-nav navbar-right nav-pills">
 				<li>
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Guides <b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Guides <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						{% for guide in guides %}
 							<li><a href="{{ baseurl }}/guides/{{guide.slug}}">{{guide.title}}</a></li>	
@@ -24,7 +24,7 @@
 				</li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Feedback</a></li>
-				<li><a href="#">Managed Support</a></li>
+				<li><a href="#">Fanatical Support</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</div>
