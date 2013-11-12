@@ -4,7 +4,7 @@
 	
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Cloud Launch Guide | Rackpace Hosting</title>	
+	<title>Cloud Launch Guides | Rackpace Hosting</title>	
 	
 	<link rel="stylesheet" href="{{ baseurl }}/includes/css/styles.css">
     

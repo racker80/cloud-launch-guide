@@ -6529,127 +6529,355 @@ a {
   margin: 0;
 }
 /* ----------------------------------------------------------------
-	EYEBROW-WRAPPER
-	a reset of the bootstrap navbar
+	EYEBROW
 ---------------------------------------------------------------- */
 #eyebrow-wrapper {
   width: 100%;
   background: #cdcdcd;
   height: 45px;
+  /* Buttons: Basics */
+
 }
-#eyebrow-container {
-  width: 940px;
+#eyebrow-wrapper #eyebrow-container {
+  width: 1200px;
   margin: 0 auto;
   padding: 7px 0;
   font-family: Arial, "Helvetica Neue", Helvetica, Verdana, Geneva, sans-serif;
   font-weight: lighter;
   color: #000;
+  /* Dropdown Buttons with Menus */
+
 }
-#eyebrow-container #eyebrow-logo,
-#eyebrow-container #eyebrow-nav-left {
+#eyebrow-wrapper #eyebrow-container #eyebrow-logo,
+#eyebrow-wrapper #eyebrow-container #eyebrow-nav-left {
   float: left;
 }
-#eyebrow-container #eyebrow-nav-right,
-#eyebrow-container #eyebrow-signup,
-#eyebrow-container #eyebrow-login {
+#eyebrow-wrapper #eyebrow-container #eyebrow-nav-right,
+#eyebrow-wrapper #eyebrow-container #eyebrow-signup-rs,
+#eyebrow-wrapper #eyebrow-container #eyebrow-login-rs {
   float: right;
   display: inline-block;
 }
-#eyebrow-container #eyebrow-nav-right {
+#eyebrow-wrapper #eyebrow-container #eyebrow-nav-right {
   margin-right: 15px;
   padding-top: 9px;
   font-size: 12px;
   line-height: 12px;
 }
-#eyebrow-container #eyebrow-nav-right a {
+#eyebrow-wrapper #eyebrow-container #eyebrow-nav-right a {
   font-family: Arial, "Helvetica Neue", Helvetica, Verdana, Geneva, sans-serif;
 }
-#eyebrow-container #eyebrow-signup {
-  margin-right: 15px;
-}
-#eyebrow-container #eyebrow-nav-left a,
-#eyebrow-container #eyebrow-nav-right a {
+#eyebrow-wrapper #eyebrow-container #eyebrow-signup-rs {
   margin-left: 15px;
 }
-/* START Override Cornerstone btn styles for signup & login buttons */
-#eyebrow-container #eyebrow-signup .btn,
-#eyebrow-container #eyebrow-login .btn {
+#eyebrow-wrapper #eyebrow-container #eyebrow-signup-rs .btn-eb {
   font-family: Arial, "Helvetica Neue", Helvetica, Verdana, Geneva, sans-serif;
 }
-#eyebrow-container #eyebrow-signup .medium,
-#eyebrow-container #eyebrow-login .medium {
+#eyebrow-wrapper #eyebrow-container #eyebrow-signup-rs .medium {
   font-size: 100% !important;
 }
-#eyebrow-container .dropdown-menu ul li ul li a {
+#eyebrow-wrapper #eyebrow-container #eyebrow-login-rs {
+  margin-left: 15px;
+}
+#eyebrow-wrapper #eyebrow-container #eyebrow-login-rs .btn-eb {
+  font-family: Arial, "Helvetica Neue", Helvetica, Verdana, Geneva, sans-serif;
+}
+#eyebrow-wrapper #eyebrow-container #eyebrow-login-rs .medium {
+  font-size: 100% !important;
+}
+#eyebrow-wrapper #eyebrow-container #eyebrow-nav-left a,
+#eyebrow-wrapper #eyebrow-container #eyebrow-container #eyebrow-nav-right a {
+  margin-left: 15px;
+}
+#eyebrow-wrapper #eyebrow-container #eyebrow-nav-right a,
+#eyebrow-wrapper #eyebrow-container #eyebrow-nav-left a {
+  color: #000;
+  text-decoration: none;
+}
+#eyebrow-wrapper #eyebrow-container #eyebrow-nav-right a:hover,
+#eyebrow-wrapper #eyebrow-container #eyebrow-nav-left a:hover {
+  text-decoration: underline;
+}
+#eyebrow-wrapper #eyebrow-container .link-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+#eyebrow-wrapper #eyebrow-container .icon {
+  background-image: url('http://034d24a88b3e71fd72a6-f083e9a6295a3f0714fa019ffdca65c3.r47.cf1.rackcdn.com/sprites/rackstories-eyebrow.png');
+  background-repeat: no-repeat;
+}
+#eyebrow-wrapper #eyebrow-container #sales-chat {
+  padding-left: 20px;
+  background-position: 0 -100px;
+}
+#eyebrow-wrapper #eyebrow-container #support-phone {
+  padding-left: 20px;
+  background-position: 0 -49px;
+}
+#eyebrow-wrapper #eyebrow-container #sales-chat {
+  padding-left: 20px;
+  margin-right: 20px;
+  background-position: 0 -15px;
+}
+#eyebrow-wrapper #eyebrow-container #sales-phone {
+  padding-left: 17px;
+  background-position: 0 -33px;
+}
+#eyebrow-wrapper #eyebrow-container #sales-responsive-small {
+  display: none;
+}
+#eyebrow-wrapper #eyebrow-container .dropdown-menu-eb ul li ul li a {
   font-family: 'Roboto', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
   color: #4c4c4c;
   text-decoration: none;
 }
-/* END Override */
-#eyebrow-container #eyebrow-nav-right a,
-#eyebrow-container #eyebrow-nav-left a {
-  color: #000;
+#eyebrow-wrapper #eyebrow-container .dropdown-menu-eb span:hover {
+  cursor: pointer;
+  background: none no-repeat right center #5c5c5c;
+  color: #FFFFFF;
+}
+#eyebrow-wrapper #eyebrow-container .dropdown-menu-eb > ul {
+  font-size: 12px;
+  line-height: 12px;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+#eyebrow-wrapper #eyebrow-container .dropdown-menu-eb > ul > li {
+  z-index: 10000;
+  list-style-type: none;
+  cursor: default;
+  float: left;
+  margin: 0 .5em 0 0;
+  padding: 0;
+  position: relative;
+}
+#eyebrow-wrapper #eyebrow-container .dropdown-menu-eb > ul > li:last-child {
+  margin-right: 0;
+}
+#eyebrow-wrapper #eyebrow-container .dropdown-menu-eb > ul > li > li {
+  height: 1em;
+}
+#eyebrow-wrapper #eyebrow-container .dropdown-menu-eb > ul > li > ul {
+  display: none;
+  list-style: none outside none;
+  margin: 0;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 900;
+  background: none no-repeat right center #ffffff;
+  color: #FFFFFF;
+  text-shadow: none;
+  width: auto;
+  min-width: 100%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+#eyebrow-wrapper #eyebrow-container .dropdown-menu-eb > ul > li > ul.right {
+  right: 0;
+  padding-left: 0;
+}
+#eyebrow-wrapper #eyebrow-container .dropdown-menu-eb > ul > li > ul > li {
+  list-style-type: none;
+  margin: 0;
+  padding: 4px 10px;
+  border-bottom: 1px solid #DDDDDD;
+}
+#eyebrow-wrapper #eyebrow-container .dropdown-menu-eb > ul > li > ul > li:first-child {
+  padding-top: 6px;
+}
+#eyebrow-wrapper #eyebrow-container .dropdown-menu-eb > ul > li > ul > li:last-child {
+  border-bottom: 0;
+}
+#eyebrow-wrapper #eyebrow-container .dropdown-menu-eb > ul > li > ul > li:hover {
+  background: none no-repeat right center #dddddd;
+  color: #FFFFFF;
+}
+#eyebrow-wrapper #eyebrow-container .dropdown-menu-eb > ul > li > ul > li:hover:first-child {
+  -webkit-border-radius: 2px 2px 0 0;
+  -moz-border-radius: 2px 2px 0 0;
+  border-radius: 2px 2px 0 0;
+}
+#eyebrow-wrapper #eyebrow-container .dropdown-menu-eb > ul > li > ul > li:hover:last-child {
+  -webkit-border-radius: 0 0 2px 2px;
+  -moz-border-radius: 0 0 2px 2px;
+  border-radius: 0 0 2px 2px;
+}
+#eyebrow-wrapper #eyebrow-container .dropdown-menu-eb > ul > li > ul > li a {
+  display: block;
+  padding: .5em;
+  text-align: left;
+  text-decoration: none;
+  color: #4c4c4c;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 100%;
+}
+#eyebrow-wrapper #eyebrow-container .dropdown-menu-eb > ul > li > ul > li a:hover {
+  color: #4c4c4c;
   text-decoration: none;
 }
-#eyebrow-container #eyebrow-nav-right a:hover,
-#eyebrow-container #eyebrow-nav-left a:hover {
-  text-decoration: underline;
+#eyebrow-wrapper #eyebrow-container .dropdown-menu-eb > ul > li:hover > ul {
+  color: #4c4c4c;
+  display: block;
 }
-#eyebrow-container .link-disabled {
-  pointer-events: none;
-  cursor: default;
+#eyebrow-wrapper #eyebrow-container span.dropdown {
+  background: none no-repeat right center #5c5c5c;
+  color: #FFFFFF;
+  z-index: 1000;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
-#eyebrow-container .icon {
-  background-image: url('http://034d24a88b3e71fd72a6-f083e9a6295a3f0714fa019ffdca65c3.r47.cf1.rackcdn.com/sprites/rackstories-eyebrow.png');
-  background-repeat: no-repeat;
+#eyebrow-wrapper #eyebrow-container .btn-eb.dropdown:after {
+  border-color: #FFFFFF transparent transparent transparent;
+  border-image: none;
+  border-style: solid;
+  border-width: 4px;
+  content: "";
+  font-size: 0;
+  height: 0;
+  left: 4px;
+  line-height: 0;
+  position: relative;
+  top: -2px;
+  width: 0;
 }
-#eyebrow-container #sales-chat {
-  padding-left: 20px;
-  background-position: 0 -100px;
+#eyebrow-wrapper span.button {
+  padding: 20px 20px 0 0;
+  display: block;
 }
-#eyebrow-container #support-phone {
-  padding-left: 20px;
-  background-position: 0 -49px;
+#eyebrow-wrapper .btn-eb {
+  background-color: #A5A5A5;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Roboto', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: .01em;
+  line-height: 100%;
+  padding: .7em 1em .7em 1em;
+  text-align: center;
+  text-decoration: none !important;
+  vertical-align: top;
+  box-shadow: none;
 }
-#eyebrow-container #sales-chat {
-  padding-left: 20px;
-  margin-right: 20px;
-  background-position: 0 -15px;
+#eyebrow-wrapper .btn-eb .medium {
+  font-size: 14px !important;
+  letter-spacing: .02em;
+  padding: .6em 1em .5em 1em !important;
 }
-#eyebrow-container #sales-phone {
-  padding-left: 17px;
-  background-position: 0 -33px;
+#eyebrow-wrapper .btn-eb .gray:hover {
+  background: none no-repeat right center #585858;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #535353;
+  color: #FFFFFF;
 }
-#eyebrow-container #sales-responsive-small {
-  display: none;
+#eyebrow-wrapper .btn-eb .gray:active {
+  background: none no-repeat right center #777777;
+}
+#eyebrow-wrapper .btn-eb .gray.flat,
+#eyebrow-wrapper .btn-eb .gray.flat:link,
+#eyebrow-wrapper .btn-eb .gray.flat:visited {
+  background: none no-repeat right center #585858;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #585858;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+#eyebrow-wrapper .btn-eb .gray.flat:hover {
+  background: none no-repeat right center #6a6a6a;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #585858;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+#eyebrow-wrapper .btn-eb .gray.flat:active {
+  background: none no-repeat right center #535353;
+}
+#eyebrow-wrapper .btn-eb:hover {
+  background-color: #AAAAAA;
+}
+#eyebrow-wrapper .btn-eb:active {
+  background-color: #999999;
 }
 /* ----------------------------------------------------------------
 	GLOBAL NAV
 	a reset of the bootstrap navbar
 ---------------------------------------------------------------- */
 #globalnav-wrapper {
+  background: #000;
   margin-bottom: 0;
-  margin-bottom: -60px;
-  border: 0;
-  background: #fff;
+  border-bottom: 3px solid #c40022;
 }
-#globalnav-wrapper .navbar-brand img {
+#globalnav-wrapper .container {
+  padding: 0;
+}
+#globalnav-wrapper a.navbar-brand {
+  color: #777;
+  background: url('../images/logo-cloud-launch-guide.png') no-repeat left center;
+  font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: italic;
+  text-align: right;
+  float: left;
+  width: 380px;
+  padding: 25px 0 25px 80px;
+}
+#globalnav-wrapper a.navbar-brand span {
+  font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #ddd;
+  font-style: normal;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  font-size: 170%;
+}
+#globalnav-wrapper a.navbar-brand img {
   height: 60px;
   width: auto;
   margin: 0;
 }
+#globalnav-wrapper a.navbar-brand {
+  opacity: 0.8;
+  -moz-opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+#globalnav-wrapper a.navbar-brand:hover {
+  opacity: 1.0;
+  -moz-opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+#globalnav-wrapper .nav {
+  font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Geneva, sans-serif;
+  font-size: 16px;
+}
+#globalnav-wrapper .nav a {
+  padding: 20px 0;
+  margin-left: 25px;
+  color: #aaa;
+}
+#globalnav-wrapper .nav a:hover {
+  color: #ffffff;
+}
 #globalnav-wrapper .nav li {
-  height: 30px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  font-size: 100%;
+  margin-top: 17.5px;
+  margin-bottom: 17.5px;
 }
 /* ----------------------------------------------------------------
 	banner-content
 	a reset of the bootstrap jumbotron class
 ---------------------------------------------------------------- */
 #banner-wrapper {
-  padding-top: 60px;
+  background: #000;
   margin: 0;
   background: #eeeeee;
   /*Reset the bootstrap jumbotron*/
@@ -6663,7 +6891,7 @@ a {
   line-height: 1em;
   background: transparent;
   border: 0;
-  padding: 40px 0;
+  padding: 30px 0;
   background: #eeeeee;
 }
 #banner-wrapper .page-header {
@@ -6674,9 +6902,17 @@ a {
   border: 0;
 }
 #banner-wrapper .page-header h1.homeTitle {
-  font-size: 56px;
-  line-height: 56px;
+  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 48px;
   margin-bottom: 0px;
+}
+#banner-wrapper .page-header h1.homeTitle span {
+  font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.25px;
+  display: block;
+  line-height: 18px;
+  text-indent: 3px;
 }
 #banner-wrapper .page-header .lead p {
   font-size: 30px;
@@ -6874,6 +7110,55 @@ a {
 }
 .lead img {
   display: none;
+  margin: 0 auto;
+}
+/* ----------------------------------------------------------------
+	FOOTER
+	
+---------------------------------------------------------------- */
+#basement-wrapper {
+  font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Geneva, sans-serif;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+
+  box-sizing: border-box;
+  /* IE 8+ */
+
+  width: 100%;
+  z-index: 1000;
+  position: relative;
+  font-size: 75%;
+  background: #000;
+  color: #aaa;
+  padding: 25px 0;
+}
+#basement-wrapper p,
+#basement-wrapper a {
+  color: #aaa;
+  text-decoration: none;
+}
+#basement-wrapper a:hover {
+  color: #fff;
+}
+#basement-wrapper #basement-nav a {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #666;
+}
+#basement-wrapper #basement-nav a:first-child {
+  border-left-width: 0;
+}
+#basement-wrapper #basement-copyright {
+  float: left;
+}
+#basement-wrapper #basement-nav {
+  float: right;
+}
+#basement-wrapper #basement-container {
+  width: 1200px;
   margin: 0 auto;
 }
 /*

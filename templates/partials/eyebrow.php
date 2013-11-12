@@ -2,9 +2,9 @@
 	<div id="eyebrow-container" class="container clearfix">
 		<div class="sixteen columns">
 			<div id="eyebrow-logo"><a href="http://www.rackspace.com"><img src="http://034d24a88b3e71fd72a6-f083e9a6295a3f0714fa019ffdca65c3.r47.cf1.rackcdn.com/header/logo-rackspace-black.png" /></a></div>
-			<div id="eyebrow-login" class="dropdown-menu">
+			<div id="eyebrow-login-rs" class="dropdown-menu-eb">
 				<ul>
-					<li><span class="btn medium gray flat dropdown">Log In</span>
+					<li><span class="btn-eb medium gray flat dropdown">Log In</span>
 						<ul class="right">
 							<li><a href="https://my.rackspace.com">MyRackspace Portal</a></li>
 							<li><a href="https://mycloud.rackspace.com">Cloud Control Panel</a></li>
@@ -15,9 +15,9 @@
 					</li>
 				</ul>
 			</div>
-			<div id="eyebrow-signup" class="dropdown-menu">
+			<div id="eyebrow-signup-rs" class="dropdown-menu-eb">
 				<ul>
-					<li><span class="btn medium gray flat dropdown">Sign Up</span>
+					<li><span class="btn-eb medium gray flat dropdown">Sign Up</span>
 						<ul class="right">
 							<li><a href="https://cart.rackspace.com/cloud/">Rackspace Cloud</a></li>
 							<li><a href="https://cart.rackspace.com/cloud/sites">Cloud Sites</a></li>
