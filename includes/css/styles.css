@@ -6959,6 +6959,7 @@ a {
   color: #777;
   background: url('../images/logo-cloud-launch-guide.png') no-repeat left center;
   font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
   font-style: italic;
   text-align: right;
   float: left;
@@ -6971,7 +6972,7 @@ a {
   font-style: normal;
   letter-spacing: -1px;
   text-transform: uppercase;
-  font-size: 170%;
+  font-size: 200%;
 }
 #globalnav-wrapper a.navbar-brand img {
   height: 60px;
@@ -7042,16 +7043,19 @@ a {
   margin: 0;
   padding: 0;
   border: 0;
-  border-bottom: 1px solid #bbb;
 }
 #globalnav-wrapper .nav li.open ul.dropdown-menu a {
   font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 12px 20px;
   color: #333;
+  border-bottom: 1px solid #eee;
 }
 #globalnav-wrapper .nav li.open ul.dropdown-menu a:hover {
-  background: #ddd;
+  background: #eee;
   color: #111;
+}
+#globalnav-wrapper .nav li.open ul.dropdown-menu a:last-child {
+  border-bottom: 1px solid #eee;
 }
 #globalnav-wrapper .nav li.open ul.dropdown-menu li {
   margin: 0;
