@@ -11,12 +11,8 @@
 					</div>
 				</div>
 				<div class="col-md-5 col-md-offset-1">
-					<div class="quote">
-						<p>We got beets!</p>
-					</div>
-					<div class="quotepoint"></div>
-					<div class="customername"><p><strong>Lisa Simpson</strong></p></div>
-					<div class="companyname"><p>Little Girl,<em> The Simpsons</em></p></div>
+					<h5 class="banner-quote">Cloud Launch Guide Chatter</h5>
+					<div id="social-feed"></div>
 				</div>
 			</div>
 		</div>

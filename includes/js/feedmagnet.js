@@ -20,29 +20,54 @@ var fm_server = 'rackspace.feedmagnet.com'
 
 
 fm_ready(function($, _) {
-    // code that interacts with FeedMagnet goes here
 
-    var feed = $FM.Feed('test-group').options({'limit': 3}).get()
+	// code that interacts with FeedMagnet goes here
 
-    feed.connect('new_update', function(self, data) {
+	// var feed = $FM.Feed('test-group').options({'limit': 1}).get()
+	// 
+	// feed.connect('new_update', function(self, data) {
+	// 
+	// var effects = ['bounceInRight', 'flipInX', 'flipInY', 'fadeInUp']
+	// var rand = effects[Math.floor(Math.random() * effects.length)];
+	// 
+	// var udata = data.update.data
+	// data.update.html =
+	// '<div class="feed-widget animated '+rand+'">' +
+	// '<div class="text">' + udata.text + '</div>' +
+	// '<img class="avatar" ' +
+	// 'src="' + udata.author.avatar + '" />' +
+	// '<div class="author">' + udata.author.alias + '</div>' +
+	// '<div class="timestamp">' +
+	// _(udata.timestamp).pretty_time() +
+	// '</div>' +
+	// 
+	// '</div>'
+	// })
 
-      var effects = ['bounceInRight', 'flipInX', 'flipInY', 'fadeInUp']
-      var rand = effects[Math.floor(Math.random() * effects.length)];
+// REVISED to fit into cornerstone quote box
 
-       var udata = data.update.data
-       data.update.html =
-       '<div class="feed-widget animated '+rand+'">' +
-       '<div class="text">' + udata.text + '</div>' +
-       '<img class="avatar" ' +
-       'src="' + udata.author.avatar + '" />' +
-       '<div class="author">' + udata.author.alias + '</div>' +
-       '<div class="timestamp">' +
-       _(udata.timestamp).pretty_time() +
-       '</div>' +
-       
-       '</div>'
-   })
+	var feed = $FM.Feed('test-group').options({'limit': 1}).get()
 
-    var output = $FM.Element('#social-feed').display(feed)
+	feed.connect('new_update', function(self, data) {
+
+	var effects = ['bounceInRight', 'flipInX', 'flipInY', 'fadeInUp']
+	var rand = effects[Math.floor(Math.random() * effects.length)];
+
+	var udata = data.update.data
+	data.update.html =
+	'<div class="quote">' + 
+		'<div class="feed-widget animated '+rand+'">' +
+			'<div class="text">' + '&ldquo;' + udata.text + '&rdquo;' + '</div>' +
+		'</div>' +
+	'</div>' +
+	'<div class="quotepoint"></div>' +
+	'<div class="customername"><p>' + udata.author.alias + '</p></div>' +
+	'<div class="companyname"><p>' +
+		_(udata.timestamp).pretty_time() +
+	'</p></div>'
+})
+
+
+var output = $FM.Element('#social-feed').display(feed)
 
 });
