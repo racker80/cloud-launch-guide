@@ -15,10 +15,6 @@ var fm_server = 'rackspace.feedmagnet.com'
     document.documentElement.firstChild.appendChild(fmjs);
 })();
 
-
-
-
-
 fm_ready(function($, _) {
 
 	// code that interacts with FeedMagnet goes here

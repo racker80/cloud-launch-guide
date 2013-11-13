@@ -17,6 +17,11 @@
 				<li>
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Guides <span class="caret"></span></a>
 					<ul class="dropdown-menu">
+					    <li role="presentation" class="dropdown-header">Basic Cloud Moves</li>
+						{% for guide in guides %}
+							<li><a href="{{ baseurl }}/guides/{{guide.slug}}">{{guide.title}}</a></li>	
+						{% endfor %}
+					    <li role="presentation" class="dropdown-header">Fundamentals</li>
 						{% for guide in guides %}
 							<li><a href="{{ baseurl }}/guides/{{guide.slug}}">{{guide.title}}</a></li>	
 						{% endfor %}

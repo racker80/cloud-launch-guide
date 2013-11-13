@@ -8,15 +8,15 @@
 						<div class="lead chapterDesc">
 							{{guide.content|raw}}
 						</div>
+						<div class="tweet-box clearfix">
+							<a href="https://twitter.com/intent/tweet?button_hashtag=#{{guide.hashtag}}clg" class="socialite twitter-hashtag" data-lang="en" data-url="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}" data-text='Check out "{{guide.title}}" in the Rackspace Cloud Launch Guides.' data-hashtags="clg" data-size="large">Tweet this guide</a>
+							<p>Share this guide on Twitter</p>
+						</div>
 					</div>
 				</div>
 				<div class="col-md-5 col-md-offset-1">
-					<h4 class="twitter-header">This Guide on Twitter:</h4>
-					<div id="social-feed" class="widget"></div>
-					<div class="tweet-box">
-						<a href="https://twitter.com/intent/tweet?button_hashtag=#{{guide.hashtag}}clg" class="socialite twitter-hashtag" data-lang="en" data-url="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}" data-text="I really like {{chapter.title}} Chapter in the Rackspace {{guide.title}} Launch Guide!" data-hashtags="clg" data-size="large">Tweet #{{guide.hashtag}}clg</a>
-						<small><em>Let us know what you think on Twitter with this hashtag!</em></small>
-					</div>
+					<h5 class="banner-quote">Cloud Launch Guide Chatter</h5>
+					<div id="social-feed"></div>					
 				</div>
 			</div>
 		</div>

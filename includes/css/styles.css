@@ -6555,6 +6555,180 @@ a.btn.btn-primary {
   text-transform: none;
   padding: .25em 0 0 0;
 }
+/* ================================================================
+	BUTTONS -- had to append with "-rs" due to stupid bootstrap
+================================================================ */
+/* BUTTONS: Basics */
+.btn-rs,
+.btn-rs:link,
+.btn-rs:visited {
+  background-color: #A5A5A5;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "SourceSansProRegular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.005em;
+  line-height: 100%;
+  padding: 0.7em 1em 0.7em 1em;
+  text-align: center;
+  text-decoration: none !important;
+  vertical-align: top;
+  color: #FFFFFF;
+  text-shadow: none;
+  position: relative;
+}
+.btn-rs:hover {
+  background: none no-repeat right center #6a6a6a;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.btn-rs:active {
+  background: none no-repeat right center #535353;
+}
+/* ================================================================
+	Buttons: Sizes
+================================================================ */
+.btn-rs.large {
+  font-size: 18px !important;
+  padding: 0.9em 1.3em 1em !important;
+}
+.btn-rs.medium.caret-icon {
+  padding: 0.95em 1.8em 0.95em 1.4em !important;
+}
+.btn-rs.medium.caret-icon:after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-left: 5px solid #FFFFFF;
+  top: 15px;
+  right: 5px;
+  width: 0px;
+  height: 0px;
+}
+.btn-rs.medium.caret-icon.dark:after {
+  border-left: 5px solid #6C6C6C;
+}
+.btn-rs.medium {
+  font-size: 14px !important;
+  letter-spacing: 0.0em;
+  padding: 0.55em 1em 0.6em !important;
+}
+.btn-rs.small {
+  font-size: 11px !important;
+  letter-spacing: .04em;
+  padding: 0.5em 1em !important;
+  text-transform: uppercase;
+}
+/* ================================================================
+	Buttons: Colors
+================================================================ */
+/* GREEN - GRADIENT */
+.btn-rs.green,
+.btn-rs.green:link,
+.btn-rs.green:visited {
+  background: none no-repeat right center #82d250;
+  background: -moz-linear-gradient(center top, #a0f06e 0%, #82d250 6.5%, #3c8c0a 100%) repeat scroll 0 0 transparent;
+  background: -webkit-linear-gradient(top, #a0f06e 0%, #82d250 6.5%, #3c8c0a 100%) repeat scroll 0 0 transparent;
+  background: -o-linear-gradient(center top, #a0f06e 0%, #82d250 6.5%, #3c8c0a 100%) repeat scroll 0 0 transparent;
+  background: -ms-linear-gradient(center top, #a0f06e 0%, #82d250 6.5%, #3c8c0a 100%) repeat scroll 0 0 transparent;
+  background: linear-gradient(to bottom, #a0f06e 0%, #82d250 6.5%, #3c8c0a 100%) repeat scroll 0 0 transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #3C8C0A;
+  color: #FFFFFF;
+}
+.btn-rs.green:hover {
+  background: none no-repeat right center #3c8c0a;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #3C8C0A;
+  color: #FFFFFF;
+}
+.btn-rs.green:active {
+  background: none no-repeat right center #50a01e;
+}
+/* GREEN - FLAT */
+.btn-rs.green.flat,
+.btn-rs.green.flat:link,
+.btn-rs.green.flat:visited {
+  background: none no-repeat right center #5aaa28;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #5AAA28;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.btn-rs.green.flat:hover {
+  background: none no-repeat right center #6ebe3c;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #5AAA28;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+.btn-rs.green.flat:active {
+  background: none no-repeat right center #50a01e;
+}
+/* CORNER ROUNDER OUTTERS */
+.round10 {
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  border-radius: 10px !important;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.round8 {
+  -webkit-border-radius: 8px !important;
+  -moz-border-radius: 8px !important;
+  border-radius: 8px !important;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.round6 {
+  -webkit-border-radius: 6px !important;
+  -moz-border-radius: 6px !important;
+  border-radius: 6px !important;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.round5 {
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  border-radius: 5px !important;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.round4 {
+  -webkit-border-radius: 4px !important;
+  -moz-border-radius: 4px !important;
+  border-radius: 4px !important;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.round3 {
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  border-radius: 3px !important;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.round2 {
+  -webkit-border-radius: 2px !important;
+  -moz-border-radius: 2px !important;
+  border-radius: 2px !important;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
 /*@import url('main.less');*/
 html {
   height: 100%;
@@ -6720,7 +6894,7 @@ a {
   list-style-type: none;
   cursor: default;
   float: left;
-  margin: 0 .5em 0 0;
+  margin: 0 0.5em 0 0;
   padding: 0;
   position: relative;
 }
@@ -6971,8 +7145,8 @@ a {
   border-top-color: #666;
 }
 #globalnav-wrapper .nav li.open ul.dropdown-menu {
-  -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.175);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.175);
+  -webkit-box-shadow: 0 9px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 9px 12px rgba(0, 0, 0, 0.175);
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -6996,6 +7170,12 @@ a {
 }
 #globalnav-wrapper .nav li.open ul.dropdown-menu li {
   margin: 0;
+}
+#globalnav-wrapper .nav li.open ul.dropdown-menu li.dropdown-header {
+  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #666;
+  font-size: 16px;
+  margin: 10px 0;
 }
 /* ----------------------------------------------------------------
 	banner-content
@@ -7036,22 +7216,30 @@ a {
   line-height: 15px;
   text-indent: 3px;
 }
-#banner-wrapper .page-header .lead p {
+#banner-wrapper .page-header .lead {
   font-size: 18px;
   line-height: 27px;
+}
+#banner-wrapper .page-header .chapterDesc {
+  font-size: 18px;
+  line-height: 27px;
+}
+#banner-wrapper .page-header .guideDesc {
+  font-size: 16px;
+  line-height: 19px;
+}
+#banner-wrapper .page-header .guideTime {
+  font-size: 16px;
 }
 #banner-wrapper .page-header h1.guideTitle {
-  font-size: 34px;
+  font-size: 28px;
   line-height: 36px;
-  margin-bottom: 0px;
-}
-#banner-wrapper .page-header .chapterDesc p {
-  font-size: 18px;
-  line-height: 27px;
+  padding: 0;
+  margin: 0px;
 }
 #banner-wrapper #banner-content-wrapper.jumbotron {
   margin: 0;
-  padding: 20px 0;
+  padding: 10px 0 15px 0;
   background: transparent;
 }
 #banner-wrapper h5.banner-quote {
@@ -7072,8 +7260,9 @@ a {
 }
 .guide-menu-wrapper .navbar {
   margin-bottom: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .navbar-options {
   padding: 0 10px;
@@ -7130,6 +7319,9 @@ a {
 	CONTENT
 	
 ---------------------------------------------------------------- */
+#content-container {
+  padding-top: 20px;
+}
 #content-container .pre-wrapper {
   position: relative;
 }
@@ -7159,7 +7351,7 @@ a {
   color: #fff;
 }
 #content-container .chapter-container .chapter-header-wrapper {
-  padding: 45px 0 0;
+  padding: ;
 }
 #content-container .chapter-container .chapter-code-wrapper .chapter-header-wrapper {
   padding: 0;
@@ -7232,9 +7424,30 @@ a {
   line-height: 1.1em;
 }
 .chapter-list .chapter-list-row {
-  border-bottom: 1px solid #d2d2d2;
-  padding-bottom: 40px;
-  margin-bottom: 40px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.chapter-list .chapter-list-row:last-child {
+  border-bottom: 0px;
+}
+.chapter-list .chapter-list-overview h3 {
+  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.chapter-list .chapter-list-overview .chapterTime {
+  text-indent: 2px;
+}
+.chapter-list .chapter-list-overview .chapterDesc {
+  font-size: 16px;
+}
+.chapter-list .chapter-list-options h4 {
+  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 5px;
+  padding-bottom: 0;
 }
 .lead img {
   display: none;
@@ -7463,16 +7676,18 @@ a {
   text-align: center;
 }
 .tweet-box {
-  border-top: 1px solid #d2d2d2;
+  border-top: 1px solid #ddd;
+  margin-top: 15px;
   padding-top: 15px;
-  font-size: .9em;
-  line-height: 1em;
-  text-align: center;
+  padding-bottom: 0px;
 }
-.tweet-box small {
-  line-height: 1em;
-  font-size: .7em;
+.tweet-box .socialite {
+  float: left;
+  width: 115px;
+  margin-right: 0px;
 }
-.tweet-box small strong {
-  font-weight: 800;
+.tweet-box p {
+  font-size: 14px;
+  line-height: 28px;
+  float: left;
 }
