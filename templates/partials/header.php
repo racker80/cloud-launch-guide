@@ -17,9 +17,13 @@
 </head>
 <body ng-app="myApp">
 
-{% include 'partials/eyebrow.php' %}
-{% include 'partials/nav.global.php' %}
-
+<div id="navigation-conatiner">
+	{% include 'partials/eyebrow.php' %}
+	{% include 'partials/nav.global.php' %}
+	{% if book is defined %}
+		{% include 'partials/nav.subnav.php' %}
+	{% endif %}
+</div>
 {% if chapter is defined %}
 	{% include 'partials/banner.guide.chapter.php' %}
 	{% include 'partials/nav.php' %}

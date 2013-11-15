@@ -286,10 +286,12 @@ a {
 ---------------------------------------------------------------- */
 @gnHeight: 60px;
 @gnLinkHeight: (@gnHeight - 50);
+
+#navigation-conatiner {border-bottom: 3px solid #c40022;}
+
 #globalnav-wrapper {
 	background: #000;
 	margin-bottom: 0;
-	border-bottom: 3px solid #c40022;
 	.container {padding: 0;}
 	a.navbar-brand {
 		color: #777;
@@ -476,20 +478,23 @@ a {
 			line-height: 27px;
 		}
 		
+		.guideTitle {
+			font-size: 32px;
+			line-height: 28px;
+			padding: 0;
+			margin-bottom: 2px;
+		}	
+		
 		.guideDesc {
 			font-size: 16px;
 			line-height: 19px;
 		}
 		
-		.guideTime {font-size: 16px;}
-			
-		.guideTitle {
-			font-size: 28px;
-			line-height: 28px;
-			padding: 0;
-			margin-bottom: 5px;
-		}	
-		
+		.guideTime {
+			text-indent: 2px;
+			font-size: 16px;
+		}
+					
 	}
 
 	.guide-menu-wrapper {}
@@ -500,17 +505,15 @@ a {
 		box-sizing: border-box;         /* IE 8+ */
 		float: left; 
 		width: 30%;
-		margin-right: 20px;
+		margin-left: 25px;
 		background: #fff;
-		border-top: 3px solid #3CA0F5;
 		text-align: center;
 		
 		h3 {
 			font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-			// color: #fff;
-			// background: #3CA0F5;
-			color: #3CA0F5;
-			font-size: 18px;
+			color: #fff;
+			background: #3CA0F5;
+			font-size: 20px;
 			text-transform: uppercase;
 			padding: 10px;
 			margin: 0;
@@ -523,7 +526,7 @@ a {
 			line-height: 20px;
 		}
 		
-		.card-badge {margin: 5px 0;}
+		.card-badge {margin-top: 10px;}
 		
 	}
 	
@@ -555,19 +558,41 @@ a {
 	
 ---------------------------------------------------------------- */
 .guide-menu-wrapper {
+	background: #333;
 	margin:0;
 	position:relative;
 	z-index:100;
 	.navbar {
+		padding: 0;
+		border-width: 0;
+		background: none;
 		margin-bottom:0;
 		-webkit-border-radius: 0;
 		-moz-border-radius: 0;
 		border-radius: 0;
+		
+		.crumbs li {
+			margin-right: 15px;
+			padding: 15px 0;
+			color: #fff;
+		}
+		
+		.crumbs a {
+			line-height: 14px;
+			padding: 0;
+			color: #fff;
+		}
+		
+		.crumbs span {
+			margin-left: 15px;
+			font-size: 20px;
+			line-height: -5px;
+		}	
 	}
 }
 
 .navbar-options {
-	padding:0 10px;
+	padding: 0;
 	.action-options {
 		position:relative;
 		.btn {
@@ -581,23 +606,22 @@ a {
 }
 
 .nav-drawer-container {
+	width: 100%;
 	display:none;
-
+	border-top: 1px solid #222;
 		.nav-index-container {
 			text-align:left;
-			font-size:1em;
 			padding-top:15px;
 			padding-bottom:15px;
 			.nav-thing {
 				h5 {
 					font-size:.8em;
 					font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+					margin-bottom: 5px;
 					.caps;
 				}
 				ul {
-					li {
-						font-size:.8em;
-					}
+					li {font-size:.8em;}
 				}
 			}
 		}

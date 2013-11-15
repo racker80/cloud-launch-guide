@@ -7058,10 +7058,12 @@ a {
 	GLOBAL NAV
 	a reset of the bootstrap navbar
 ---------------------------------------------------------------- */
+#navigation-conatiner {
+  border-bottom: 3px solid #c40022;
+}
 #globalnav-wrapper {
   background: #000;
   margin-bottom: 0;
-  border-bottom: 3px solid #c40022;
 }
 #globalnav-wrapper .container {
   padding: 0;
@@ -7224,18 +7226,19 @@ a {
   font-size: 18px;
   line-height: 27px;
 }
+#banner-wrapper .page-header .guideTitle {
+  font-size: 32px;
+  line-height: 28px;
+  padding: 0;
+  margin-bottom: 2px;
+}
 #banner-wrapper .page-header .guideDesc {
   font-size: 16px;
   line-height: 19px;
 }
 #banner-wrapper .page-header .guideTime {
+  text-indent: 2px;
   font-size: 16px;
-}
-#banner-wrapper .page-header .guideTitle {
-  font-size: 28px;
-  line-height: 28px;
-  padding: 0;
-  margin-bottom: 5px;
 }
 #banner-wrapper .banner-card {
   -webkit-box-sizing: border-box;
@@ -7246,15 +7249,15 @@ a {
   /* IE 8+ */
   float: left;
   width: 30%;
-  margin-right: 20px;
+  margin-left: 25px;
   background: #fff;
-  border-top: 3px solid #3CA0F5;
   text-align: center;
 }
 #banner-wrapper .banner-card h3 {
   font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #3CA0F5;
-  font-size: 18px;
+  color: #fff;
+  background: #3CA0F5;
+  font-size: 20px;
   text-transform: uppercase;
   padding: 10px;
   margin: 0;
@@ -7266,7 +7269,7 @@ a {
   line-height: 20px;
 }
 #banner-wrapper .banner-card .card-badge {
-  margin: 5px 0;
+  margin-top: 10px;
 }
 #banner-wrapper .banner-card:last-child {
   margin-right: 0;
@@ -7288,18 +7291,37 @@ a {
 	
 ---------------------------------------------------------------- */
 .guide-menu-wrapper {
+  background: #333;
   margin: 0;
   position: relative;
   z-index: 100;
 }
 .guide-menu-wrapper .navbar {
+  padding: 0;
+  border-width: 0;
+  background: none;
   margin-bottom: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
+.guide-menu-wrapper .navbar .crumbs li {
+  margin-right: 15px;
+  padding: 15px 0;
+  color: #fff;
+}
+.guide-menu-wrapper .navbar .crumbs a {
+  line-height: 14px;
+  padding: 0;
+  color: #fff;
+}
+.guide-menu-wrapper .navbar .crumbs span {
+  margin-left: 15px;
+  font-size: 20px;
+  line-height: -5px;
+}
 .navbar-options {
-  padding: 0 10px;
+  padding: 0;
 }
 .navbar-options .action-options {
   position: relative;
@@ -7313,17 +7335,19 @@ a {
   border-bottom-color: #333 !important;
 }
 .nav-drawer-container {
+  width: 100%;
   display: none;
+  border-top: 1px solid #222;
 }
 .nav-drawer-container .nav-index-container {
   text-align: left;
-  font-size: 1em;
   padding-top: 15px;
   padding-bottom: 15px;
 }
 .nav-drawer-container .nav-index-container .nav-thing h5 {
   font-size: .8em;
   font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-bottom: 5px;
   text-transform: uppercase;
 }
 .nav-drawer-container .nav-index-container .nav-thing ul li {
