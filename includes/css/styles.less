@@ -30,9 +30,7 @@ a {
 	-webkit-transition: all .15s linear;
 	transition: all .15s linear;
 }
-.container {
-	position:relative;
-}
+.container {position:relative;}
 
 /* ----------------------------------------------------------------
 	MIXINS
@@ -453,7 +451,7 @@ a {
 		.bsreset;
 		h1.homeTitle {
 			font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-			font-size: 48px;
+			font-size: 38px;
 			letter-spacing: -2px;
 			margin-bottom: 0px;
 			padding-bottom: 7px;
@@ -485,16 +483,51 @@ a {
 		
 		.guideTime {font-size: 16px;}
 			
-		h1.guideTitle {
+		.guideTitle {
 			font-size: 28px;
-			line-height: 36px;
+			line-height: 28px;
 			padding: 0;
-			margin: 0px;
+			margin-bottom: 5px;
 		}	
 		
 	}
 
 	.guide-menu-wrapper {}
+
+	.banner-card {
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* IE 8+ */
+		float: left; 
+		width: 30%;
+		margin-right: 20px;
+		background: #fff;
+		border-top: 3px solid #3CA0F5;
+		text-align: center;
+		
+		h3 {
+			font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			// color: #fff;
+			// background: #3CA0F5;
+			color: #3CA0F5;
+			font-size: 18px;
+			text-transform: uppercase;
+			padding: 10px;
+			margin: 0;
+			text-align: center;
+		}
+		
+		p {
+			padding: 10px;
+			font-size: 15px;
+			line-height: 20px;
+		}
+		
+		.card-badge {margin: 5px 0;}
+		
+	}
+	
+	.banner-card:last-child {margin-right: 0;}	
 
 	#banner-content-wrapper {
 		&.jumbotron {

@@ -1,10 +1,7 @@
 {% include 'partials/header.php' %}
 
-<br><br>
-
-<div class="container">
-
-{% for guide in guides %}
+<div class="container" id="content-container">
+	{% for guide in guides %}
     <div class="row featurette">
         <div class="col-md-11">
           <h2 class="featurette-heading">{{guide.title}}</h2>

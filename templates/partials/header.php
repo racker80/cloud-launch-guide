@@ -33,6 +33,5 @@
 	{% include 'partials/nav.php' %}
 
 {% else %}
-	{% include 'partials/banner.home.php' %}
-
+	{% include 'partials/banner.home.alt.php' %}
 {% endif %}
