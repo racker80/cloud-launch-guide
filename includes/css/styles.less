@@ -474,6 +474,7 @@ a {
 		}
 		
 		.chapterDesc {
+			margin-top: 15px;
 			font-size: 18px;
 			line-height: 27px;
 		}
@@ -482,9 +483,14 @@ a {
 			font-size: 32px;
 			line-height: 28px;
 			padding: 0;
-			margin-bottom: 2px;
-		}	
-		
+			margin-bottom: 0px;
+			
+			span {
+				font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				margin-right: 10px;
+			}
+		}
+				
 		.guideDesc {
 			font-size: 16px;
 			line-height: 19px;
@@ -494,7 +500,19 @@ a {
 			text-indent: 2px;
 			font-size: 16px;
 		}
-					
+		
+		h2 {
+			text-indent: 2px;
+			font-size: 18px;
+			margin: 5px 0 0 0;
+			padding-bottom: 0px;
+
+			span {
+				font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				margin-right: 10px;
+			}
+		}
+		
 	}
 
 	.guide-menu-wrapper {}
@@ -535,7 +553,7 @@ a {
 	#banner-content-wrapper {
 		&.jumbotron {
 			margin:0;
-			padding:10px 0 15px 0;
+			padding: 15px 0;
 			background:transparent;
 		}
 		
@@ -581,6 +599,18 @@ a {
 			line-height: 14px;
 			padding: 0;
 			color: #fff;
+			opacity: 0.7;
+			-moz-opacity: 0.7;
+			filter:alpha(opacity=70);
+		}
+		
+		.crumbs a:hover {
+			line-height: 14px;
+			padding: 0;
+			color: #fff;
+			opacity: 1.0;
+			-moz-opacity: 1.0;
+			filter:alpha(opacity=100);
 		}
 		
 		.crumbs span {
@@ -648,9 +678,7 @@ a {
 		}
 	}
 
-	.nav-index-container {
-		background:#fff;
-	}
+	.nav-index-container {}
 }
 
 
@@ -665,7 +693,6 @@ a {
 		position:relative;
 		&.copied {
 			pre {
-				border-color:@brand-success;
 				background-color:@brand-success;
 				color:#000;
 				span {
@@ -695,13 +722,44 @@ a {
 
 	
 	.chapter-container {
-
+		margin-bottom: 40px;
 		.chapter-header-wrapper {
-			padding: ;
-			&:first-child {
+				
+			h2 {
+				font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				font-size: 24px;
+				margin-bottom: 0px;
+				padding-bottom: 0px;
 			}
+			
+			.chapterUtility {
+				color: #666;
+				font-size: 16px;
+				line-height: 22px;
+				margin-bottom: 10px;
+				
+				.chapterCount {float: left; margin-right: 20px;}
+				.chapterTime {float: left; margin-right: 20px;}
+				.chapterLink{float: left; color: rgb(66, 139, 202);}
+								
+				.glyphicon {margin-right: 5px;}
+			}
+									
+			.chapterIntro {
+				font-size: 16px;
+				line-height: 22px;
+				padding-bottom: 10px;
+				
+				ul {
+					margin: 0;
+					padding-left: 15px;
+				}
+				
+				li {padding-bottom: 10px;}
+			}			
+			
 		}
-
+		
 		.chapter-code-wrapper {
 			.chapter-header-wrapper {
 				padding:0;
@@ -710,7 +768,8 @@ a {
 
 			}
 			.page-container {
-				padding:0px 0;
+				padding: 0;
+				margin-bottom: 30px;
 				background:black;
 			}
 			.sidebar {
@@ -722,8 +781,8 @@ a {
 		}
 
 		.page-container {
-			padding:45px 0;
-
+			padding: 15px 0;
+			margin-
 			.sidebar {}
 
 			.page-content {
@@ -795,6 +854,7 @@ a {
 
 .page-title {
 	span {
+		font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 		-webkit-border-radius: 99px;
 		-moz-border-radius: 99px;
 		border-radius: 99px;
@@ -802,13 +862,13 @@ a {
 		display: inline-block;
 		width: 36px;
 		height: 36px;
-		padding: 8px 7px 5px 7px;
-		background: #333;
-		color: #fff;
+		font-size: 16px;
+		padding: 7px 7px 5px 7px;
+		background:@gray-lighter;
+		border: 1px solid #ccc;
 		letter-spacing: -1px;
-		line-height: 36px;
 		text-align: center;
-		margin: 0 5px 5px 0;
+		margin-right: 5px;
 		line-height:1.1em;
 	}
 }
@@ -826,11 +886,24 @@ a {
 	.chapter-list-overview {
 		h3 {
 			font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-			margin-bottom: 0;
+			margin-bottom: 5px;
 			padding-bottom: 0;
 		}
-		.chapterTime {text-indent: 2px;}
+		
+		.chapterUtility {
+			color: #666;
+			font-size: 16px;
+			line-height: 22px;
+			margin-bottom: 0px;
+			
+			.chapterTime {float: left; margin-right: 20px;}
+			.chapterLink{float: left; color: rgb(66, 139, 202);}
+							
+			.glyphicon {margin-right: 5px;}
+		}
+		
 		.chapterDesc {font-size: 16px;}
+		
 	}
 	.chapter-list-options {
 

@@ -86,7 +86,7 @@
 						$('#waypoint-header').waypoint('sticky', {
 							wrapper: '<div class="sticky-wrapper" />',
 							stuckClass: 'stuck',
-							offset:-200,
+							offset: 0,
 							handler: function(direction){
 								$('.nav-index-wrapper').hide();
 							}

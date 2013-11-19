@@ -7,7 +7,11 @@
 		<div class="chapter-list-row row">
 			<div class="chapter-list-overview col-md-11">
 				<h3>{{book.title}}</h3>
-				<p class="chapterTime">{{book.time}}</p>
+				<div class="chapterUtility clearfix">
+					<p class="chapterTime"><span class="glyphicon glyphicon-time"></span>{{ guide.time }}</p>
+					<p class="chapterLink"><span class="glyphicon glyphicon-link"></span><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">permalink</a></p>
+				</div>
+				
 				<p class="chapterDesc">{{book.description}} &nbsp;</p>
 				<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}" class="btn-rs medium green flat round4 caret-icon" title="">Start this section</a>
 			</div>
