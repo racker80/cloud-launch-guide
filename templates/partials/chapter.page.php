@@ -4,16 +4,15 @@
 		<div class="page-content-full container">
 			<div class="row">
 				<div class="page-content col-md-11">
-					<h4 class="page-title"><span>{{loop.index}}</span> {{page.title}}</h4>
+					<h3 class="page-title"><span>{{loop.index}}</span> {{page.title}}</h3>
 					{{page.content | raw}}
 					{% if page.meta.contentNotes %}
-						<div class="notice-container">
+						<div class="notice-container {{note.type}}">
+							{{note.type}}
 							<h4>Additional Notes</h4>
-							<ul class="notice">
-								{% for note in page.meta.contentNotes %}
-									<li class="{{note.type}}">{{note.text | raw}}</li>
-								{% endfor  %}
-							</ul>
+							{% for note in page.meta.contentNotes %}
+								<p>{{note.text | raw}}</p>
+							{% endfor  %}
 						</div>
 						{% else %}
 					{% endif %}

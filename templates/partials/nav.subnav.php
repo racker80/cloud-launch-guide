@@ -10,9 +10,9 @@
 				
 				{% if chapter is defined %}
 					<li><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">{{book.title}} <span>&#187;</span></a></li>
-					<li>{{chapter.title}}</li>
+					<li class="selected">{{chapter.title}}</li>
 				{% else %}
-					<li>{{book.title}}</li>
+					<li class="selected">{{book.title}}</li>
 				{% endif %}				
 			</ul>
 

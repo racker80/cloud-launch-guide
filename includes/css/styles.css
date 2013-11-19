@@ -7070,7 +7070,7 @@ a {
 }
 #globalnav-wrapper a.navbar-brand {
   color: #777;
-  background: url('../images/logo-cloud-launch-guide.png') no-repeat left center;
+  background: url('../images/logo-cloud-launch-guide.svg') no-repeat left center;
   font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-style: italic;
@@ -7305,6 +7305,9 @@ a {
 	GUIDE MENU
 	
 ---------------------------------------------------------------- */
+.navbar-collapse {
+  padding-left: 0;
+}
 .guide-menu-wrapper {
   background: #333;
   margin: 0;
@@ -7312,10 +7315,16 @@ a {
   z-index: 100;
 }
 .guide-menu-wrapper .navbar {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* IE 8+ */
+  margin: 0 auto;
   padding: 0;
   border-width: 0;
   background: none;
-  margin-bottom: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -7346,7 +7355,12 @@ a {
   font-size: 20px;
   line-height: -5px;
 }
+.guide-menu-wrapper .navbar .crumbs .selected {
+  color: #fff;
+  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 .navbar-options {
+  margin-top: 2px;
   padding: 0;
 }
 .navbar-options .action-options {
@@ -7366,18 +7380,32 @@ a {
   border-top: 1px solid #222;
 }
 .nav-drawer-container .nav-index-container {
+  margin: 0 auto;
   text-align: left;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  font-size: 14px;
+  padding: 15px 0;
 }
 .nav-drawer-container .nav-index-container .nav-thing h5 {
-  font-size: .8em;
-  font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
   margin-bottom: 5px;
-  text-transform: uppercase;
+  color: #fff;
 }
-.nav-drawer-container .nav-index-container .nav-thing ul li {
-  font-size: .8em;
+.nav-drawer-container .nav-index-container .nav-thing a {
+  color: #fff;
+  opacity: 0.7;
+  -moz-opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+.nav-drawer-container .nav-index-container .nav-thing a:hover {
+  text-decoration: none;
+  color: #fff;
+  opacity: 1.0;
+  -moz-opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+.nav-drawer-container .nav-index-container .nav-thing:first-child {
+  border-right: 0;
 }
 /* ----------------------------------------------------------------
 	WAYPOINT STYICKY NAV
@@ -7400,15 +7428,31 @@ a {
 	CONTENT
 	
 ---------------------------------------------------------------- */
+.container {
+  padding: 0;
+}
 #content-container {
   padding-top: 20px;
 }
 #content-container .pre-wrapper {
   position: relative;
 }
+#content-container .pre-wrapper .cp {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #ddd;
+  padding: 15px;
+  font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  border: 0;
+  margin-bottom: 10px;
+}
+#content-container .pre-wrapper .terminal {
+  border: 0;
+}
 #content-container .pre-wrapper.copied pre {
-  background-color: #5cb85c;
-  color: #000;
+  color: #5cb85c;
 }
 #content-container .pre-wrapper.copied pre span {
   background: transparent;
@@ -7427,7 +7471,13 @@ a {
   position: relative;
 }
 #content-container pre.terminal {
-  background: #666;
+  font-family: Andale Mono, monospace;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 15px;
+  background: #333;
+  font-size: 13px;
   color: #fff;
 }
 #content-container .chapter-container {
@@ -7454,8 +7504,22 @@ a {
   margin-right: 20px;
 }
 #content-container .chapter-container .chapter-header-wrapper .chapterUtility .chapterLink {
+  -moz-transition: all .15s linear;
+  -webkit-transition: all .15s linear;
+  transition: all .15s linear;
+  opacity: 0.7;
+  -moz-opacity: 0.7;
+  filter: alpha(opacity=70);
   float: left;
   color: #428bca;
+}
+#content-container .chapter-container .chapter-header-wrapper .chapterUtility .chapterLink:hover {
+  opacity: 1.0;
+  -moz-opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+#content-container .chapter-container .chapter-header-wrapper .chapterUtility .chapterLink a:hover {
+  text-decoration: none;
 }
 #content-container .chapter-container .chapter-header-wrapper .chapterUtility .glyphicon {
   margin-right: 5px;
@@ -7483,21 +7547,37 @@ a {
 #content-container .chapter-container .page-container {
   padding: 15px 0;
 }
+#content-container .chapter-container .page-container .page-content h4 {
+  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 25px 0 10px 0;
+  padding: 0;
+}
+#content-container .chapter-container .page-container .page-content p {
+  font-size: 16px;
+  line-height: 22px;
+}
 #content-container .chapter-container .page-container .page-content .notice-container {
-  margin: 25px 0;
-  border: 1px solid #d2d2d2;
-  border-width: 1px 0;
-  padding: 25px 0;
+  padding-left: 45px;
+  min-height: 65px;
+  margin-bottom: 25px;
 }
-#content-container .chapter-container .page-container .page-content .notice-container ul.notice {
-  margin: 0!important;
-  padding: 0!important;
-  list-style: none;
+#content-container .chapter-container .page-container .page-content .notice-container h4 {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 25px 0 5px 0;
+  padding: 0;
 }
-#content-container .chapter-container .page-container .page-content .notice-container ul.notice li.tip {
+#content-container .chapter-container .page-container .page-content .notice-container p {
+  font-size: 16px;
+  line-height: 22px;
+}
+#content-container .chapter-container .page-container .page-content .tip {
   background: url('../images/icon-bulb.png') top left no-repeat;
-  padding-left: 50px;
-  margin: 15px 0;
+}
+#content-container .chapter-container .page-container .page-content .info {
+  background: url('../images/icon-notepad.png') top left no-repeat;
 }
 #content-container .sidebar .panel.widget {
   border-radius: 0;
@@ -7526,8 +7606,11 @@ a {
   position: relative;
   z-index: 100;
 }
-.page-title span {
-  font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+h3.page-title {
+  font-size: 20px;
+}
+h3.page-title span {
+  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-border-radius: 99px;
   -moz-border-radius: 99px;
   border-radius: 99px;
@@ -7535,49 +7618,81 @@ a {
   display: inline-block;
   width: 36px;
   height: 36px;
-  font-size: 16px;
-  padding: 7px 7px 5px 7px;
-  background: #eeeeee;
-  border: 1px solid #ccc;
+  padding: 5px 7px 5px 7px;
+  background: #333;
+  color: #fff;
   letter-spacing: -1px;
   text-align: center;
   margin-right: 5px;
   line-height: 1.1em;
 }
-.chapter-list .chapter-list-row {
+.book-list .book-list-row {
   border-bottom: 1px solid #eee;
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
-.chapter-list .chapter-list-row:last-child {
+.book-list .book-list-row:last-child {
   border-bottom: 0px;
 }
-.chapter-list .chapter-list-overview h3 {
+.book-list .book-list-overview h3 {
   font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin-bottom: 5px;
   padding-bottom: 0;
 }
-.chapter-list .chapter-list-overview .chapterUtility {
+.book-list .book-list-overview .bookUtility {
   color: #666;
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 0px;
 }
-.chapter-list .chapter-list-overview .chapterUtility .chapterTime {
+.book-list .book-list-overview .bookUtility .bookTime {
   float: left;
   margin-right: 20px;
 }
-.chapter-list .chapter-list-overview .chapterUtility .chapterLink {
+.book-list .book-list-overview .bookUtility .bookLink {
   float: left;
-  color: #428bca;
 }
-.chapter-list .chapter-list-overview .chapterUtility .glyphicon {
+.book-list .book-list-overview .bookUtility .bookLink a {
+  color: #428bca;
+  opacity: 0.7;
+  -moz-opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+.book-list .book-list-overview .bookUtility .bookLink a:hover {
+  opacity: 1.0;
+  -moz-opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+.book-list .book-list-overview .bookUtility .bookLink a:hover {
+  text-decoration: none;
+}
+.book-list .book-list-overview .bookUtility .glyphicon {
   margin-right: 5px;
 }
-.chapter-list .chapter-list-overview .chapterDesc {
+.book-list .book-list-overview .bookDesc {
   font-size: 16px;
 }
-.chapter-list .chapter-list-options h4 {
+.book-list .book-list-overview .bookStart {
+  font-size: 18px;
+  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.book-list .book-list-overview .bookStart a {
+  color: #428bca;
+  text-decoration: none;
+  padding: 10px 0;
+  opacity: 0.7;
+  -moz-opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+.book-list .book-list-overview .bookStart a:hover {
+  opacity: 1.0;
+  -moz-opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+.book-list .book-list-overview .bookStart a .glyphicon {
+  margin-left: 5px;
+}
+.book-list .book-list-options h4 {
   font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #777;

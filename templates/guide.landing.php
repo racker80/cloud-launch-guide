@@ -2,21 +2,22 @@
 {% include 'partials/nav.php' %}
 
 <div id="content-container">
-	<div class="chapter-list container">
+	<div class="book-list container">
 		{% for book in guide.children %}
-		<div class="chapter-list-row row">
-			<div class="chapter-list-overview col-md-11">
+		<div class="book-list-row row">
+			<div class="book-list-overview col-md-11">
 				<h3>{{book.title}}</h3>
-				<div class="chapterUtility clearfix">
-					<p class="chapterTime"><span class="glyphicon glyphicon-time"></span>{{ guide.time }}</p>
-					<p class="chapterLink"><span class="glyphicon glyphicon-link"></span><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">permalink</a></p>
+				<div class="bookUtility clearfix">
+					<p class="bookTime"><span class="glyphicon glyphicon-time"></span>{{ guide.time }}</p>
+					<p class="bookLink"><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}"><span class="glyphicon glyphicon-link"></span>permalink</a></p>
 				</div>
 				
-				<p class="chapterDesc">{{book.description}} &nbsp;</p>
-				<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}" class="btn-rs medium green flat round4 caret-icon" title="">Start this section</a>
+				<p class="bookDesc">{{book.description}} &nbsp;</p>
+				<!-- <a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}" class="btn-rs medium green flat round4 caret-icon" title="">Start this section</a> -->
+				<p class="bookStart"><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">Start this book<span class="glyphicon glyphicon-chevron-right"></span></a></p>
 			</div>
-			<div class="chapter-list-options col-md-5">
-				<h4>Section chapters</h4>
+			<div class="book-list-options col-md-5">
+				<h4>Chapters</h4>
 				<ul class="list-unstyled">
 					{% for chapter in book.children %}
 						<li><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}">{{chapter.title}}</a></li>

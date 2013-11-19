@@ -295,7 +295,7 @@ a {
 	.container {padding: 0;}
 	a.navbar-brand {
 		color: #777;
-		background: url('../images/logo-cloud-launch-guide.png') no-repeat left center;
+		background: url('../images/logo-cloud-launch-guide.svg') no-repeat left center;
 		font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 		font-size: 16px;
 		font-style: italic;
@@ -500,7 +500,7 @@ a {
 			text-indent: 2px;
 			font-size: 16px;
 		}
-		
+				
 		h2 {
 			text-indent: 2px;
 			font-size: 18px;
@@ -575,53 +575,67 @@ a {
 	GUIDE MENU
 	
 ---------------------------------------------------------------- */
+.navbar-collapse {padding-left: 0;}
 .guide-menu-wrapper {
 	background: #333;
 	margin:0;
 	position:relative;
 	z-index:100;
 	.navbar {
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* IE 8+ */
+		margin: 0 auto;
 		padding: 0;
 		border-width: 0;
 		background: none;
-		margin-bottom:0;
 		-webkit-border-radius: 0;
 		-moz-border-radius: 0;
 		border-radius: 0;
 		
-		.crumbs li {
-			margin-right: 15px;
-			padding: 15px 0;
-			color: #fff;
-		}
+		.crumbs {
+			
+		    li {
+		   			margin-right: 15px;
+		   			padding: 15px 0;
+		   			color: #fff;
+		   		}
+			
+			a {
+				line-height: 14px;
+				padding: 0;
+				color: #fff;
+				opacity: 0.7;
+				-moz-opacity: 0.7;
+				filter:alpha(opacity=70);
+			}
 		
-		.crumbs a {
-			line-height: 14px;
-			padding: 0;
-			color: #fff;
-			opacity: 0.7;
-			-moz-opacity: 0.7;
-			filter:alpha(opacity=70);
-		}
+			a:hover {
+				line-height: 14px;
+				padding: 0;
+				color: #fff;
+				opacity: 1.0;
+				-moz-opacity: 1.0;
+				filter:alpha(opacity=100);
+			}
 		
-		.crumbs a:hover {
-			line-height: 14px;
-			padding: 0;
-			color: #fff;
-			opacity: 1.0;
-			-moz-opacity: 1.0;
-			filter:alpha(opacity=100);
+			span {
+				margin-left: 15px;
+				font-size: 20px;
+				line-height: -5px;
+			}
+			
+			.selected {
+				// color: #0064B9;
+				color: #fff;
+				font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			}
 		}
-		
-		.crumbs span {
-			margin-left: 15px;
-			font-size: 20px;
-			line-height: -5px;
-		}	
 	}
 }
 
 .navbar-options {
+	margin-top: 2px;
 	padding: 0;
 	.action-options {
 		position:relative;
@@ -640,20 +654,42 @@ a {
 	display:none;
 	border-top: 1px solid #222;
 		.nav-index-container {
+			margin: 0 auto;
 			text-align:left;
-			padding-top:15px;
-			padding-bottom:15px;
+			font-size: 14px;
+			padding: 15px 0;
+			
 			.nav-thing {
+				
 				h5 {
-					font-size:.8em;
-					font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+					font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+					font-size: 13px;
 					margin-bottom: 5px;
-					.caps;
+					color: #fff;
 				}
+				
+				a {
+					color: #fff;
+					opacity: 0.7;
+					-moz-opacity: 0.7;
+					filter:alpha(opacity=70);
+				}
+				
+				a:hover {
+					text-decoration: none;
+					color: #fff;
+					opacity: 1.0;
+					-moz-opacity: 1.0;
+					filter:alpha(opacity=100);
+				}
+
 				ul {
-					li {font-size:.8em;}
+					li {}
 				}
 			}
+			
+			.nav-thing:first-child {border-right: 0;}
+			
 		}
 }
 
@@ -686,15 +722,28 @@ a {
 	CONTENT
 	
 ---------------------------------------------------------------- */
+.container {padding: 0;}
 #content-container {
 	padding-top: 20px;
 	
 	.pre-wrapper {
 		position:relative;
+		.cp {
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			background: #ddd;
+			padding: 15px;
+			font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-size: 15px;
+			border: 0;
+			margin-bottom: 10px;
+		}
+		
+		.terminal {border: 0;}
 		&.copied {
 			pre {
-				background-color:@brand-success;
-				color:#000;
+				color:@brand-success;;
 				span {
 					background:transparent;
 					color:#000;
@@ -702,10 +751,12 @@ a {
 			}
 			
 		}
+		
 		.address {
 			color:#fff;
 			background:red;
 		}
+		
 		.copy-button {
 			position:absolute;
 			top:0;
@@ -715,12 +766,18 @@ a {
 	pre {
 		position:relative;
 		&.terminal {
-			background:#666;
-			color:#fff;
+		    font-family: Andale Mono, monospace;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			background: #333;
+			padding: 15px;
+			background: #333;
+			font-size: 13px;
+			color: #fff;
 		}
 	}
 
-	
 	.chapter-container {
 		margin-bottom: 40px;
 		.chapter-header-wrapper {
@@ -740,7 +797,24 @@ a {
 				
 				.chapterCount {float: left; margin-right: 20px;}
 				.chapterTime {float: left; margin-right: 20px;}
-				.chapterLink{float: left; color: rgb(66, 139, 202);}
+				.chapterLink {
+					-moz-transition: all .15s linear;
+					-webkit-transition: all .15s linear;
+					transition: all .15s linear;
+					opacity: 0.7;
+					-moz-opacity: 0.7;
+					filter:alpha(opacity=70);
+					float: left; color: rgb(66, 139, 202);
+				}
+				
+				.chapterLink:hover {
+					opacity: 1.0;
+					-moz-opacity: 1.0;
+					filter:alpha(opacity=100);
+				}
+				
+				.chapterLink a:hover {text-decoration: none;}
+				
 								
 				.glyphicon {margin-right: 5px;}
 			}
@@ -786,29 +860,36 @@ a {
 			.sidebar {}
 
 			.page-content {
-				
 
-
-				.notice-container {
-					margin:25px 0;
-					border:1px solid #d2d2d2;
-					border-width:1px 0;
-					padding:25px 0;
-					ul.notice {
-						margin:0!important;
-						padding:0!important;
-						list-style:none;
-
-						li {
-							&.tip {
-								background:url('../images/icon-bulb.png') top left no-repeat;
-
-								padding-left:50px;
-								margin:15px 0;
-							}
-						}
-					}
+				h4 {
+					font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+					font-size: 18px;
+					line-height: 22px;
+					margin: 25px 0 10px 0;
+					padding: 0;
 				}
+
+				p {font-size: 16px; line-height: 22px;}
+					
+				.notice-container {
+					padding-left: 45px;
+					min-height: 65px;
+					margin-bottom: 25px;
+										
+					h4 {
+						font-size: 16px;
+						line-height: 22px;
+						margin: 25px 0 5px 0;
+						padding: 0;
+					}
+					
+					p {font-size: 16px; line-height: 22px;}
+					
+				}
+				
+				.tip {background:url('../images/icon-bulb.png') top left no-repeat;}
+				.info {background:url('../images/icon-notepad.png') top left no-repeat;}
+				
 			}
 		}
 	}
@@ -852,9 +933,10 @@ a {
 }
 
 
-.page-title {
+h3.page-title {
+	font-size: 20px;
 	span {
-		font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 		-webkit-border-radius: 99px;
 		-moz-border-radius: 99px;
 		border-radius: 99px;
@@ -862,10 +944,11 @@ a {
 		display: inline-block;
 		width: 36px;
 		height: 36px;
-		font-size: 16px;
-		padding: 7px 7px 5px 7px;
-		background:@gray-lighter;
-		border: 1px solid #ccc;
+		padding: 5px 7px 5px 7px;
+		// background:@gray-lighter;
+		// border: 1px solid #ccc;
+		background: #333;
+		color: #fff;
 		letter-spacing: -1px;
 		text-align: center;
 		margin-right: 5px;
@@ -875,37 +958,76 @@ a {
 
 
 
-.chapter-list {
-	.chapter-list-row {
+.book-list {
+	.book-list-row {
 		border-bottom:1px solid #eee;
 		padding-bottom: 20px;
 		margin-bottom: 20px;
 	}
-	.chapter-list-row:last-child {border-bottom: 0px;}
+	.book-list-row:last-child {border-bottom: 0px;}
 	
-	.chapter-list-overview {
+	.book-list-overview {
 		h3 {
 			font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 			margin-bottom: 5px;
 			padding-bottom: 0;
 		}
 		
-		.chapterUtility {
+		.bookUtility {
 			color: #666;
 			font-size: 16px;
 			line-height: 22px;
 			margin-bottom: 0px;
 			
-			.chapterTime {float: left; margin-right: 20px;}
-			.chapterLink{float: left; color: rgb(66, 139, 202);}
+			.bookTime {float: left; margin-right: 20px;}
+			.bookLink {float: left;}
+			
+			.bookLink a {
+				color: rgb(66, 139, 202);
+				opacity: 0.7;
+				-moz-opacity: 0.7;
+				filter:alpha(opacity=70);
+			}
+			
+			.bookLink a:hover {
+				opacity: 1.0;
+				-moz-opacity: 1.0;
+				filter:alpha(opacity=100);
+			}
+			
+			.bookLink a:hover {text-decoration: none;}
 							
 			.glyphicon {margin-right: 5px;}
 		}
 		
-		.chapterDesc {font-size: 16px;}
+		.bookDesc {font-size: 16px;}
+		
+		.bookStart {
+			font-size: 18px;
+			font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		}
+		
+		.bookStart a {
+			// color: #5AAA28;
+			color: rgb(66, 139, 202);
+			text-decoration: none;
+			padding: 10px 0;
+			opacity: 0.7;
+			-moz-opacity: 0.7;
+			filter:alpha(opacity=70);
+		}
+		
+		.bookStart a:hover {
+			// color: #6EBE3C;
+			opacity: 1.0;
+			-moz-opacity: 1.0;
+			filter:alpha(opacity=100);
+		}
+		
+		.bookStart a .glyphicon {margin-left: 5px;}
 		
 	}
-	.chapter-list-options {
+	.book-list-options {
 
 		h4 {
 			font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;

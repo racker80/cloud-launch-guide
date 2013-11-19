@@ -2,11 +2,11 @@
 		
 		{% if allsteps %}
 		    <a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}" class="btn btn-default btn-warning allSteps allStepsOn">
-				<span class="glyphicon glyphicon-th-list"></span> All Steps
+				<span class="glyphicon glyphicon-th-list"></span> All Chapters
 			</a>
 		{% else %}
 			<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}{{chapterslug}}" class="btn btn-default allSteps">
-				<span class="glyphicon glyphicon-th-list"></span> All Steps
+				<span class="glyphicon glyphicon-th-list"></span> All Chapters
 			</a>
 		{% endif %}
 		    
