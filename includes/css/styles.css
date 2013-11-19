@@ -7215,7 +7215,7 @@ a {
   font-size: 32px;
   line-height: 28px;
   padding: 0;
-  margin-bottom: 0px;
+  margin: 0;
 }
 #banner-wrapper .page-header .guideTitle span {
   font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -7430,7 +7430,7 @@ a {
   font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 15px;
   border: 0;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 #content-container .pre-wrapper .terminal {
   border: 0;
