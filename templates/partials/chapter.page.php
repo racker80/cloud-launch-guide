@@ -8,7 +8,6 @@
 					{{page.content | raw}}
 					{% if page.meta.contentNotes %}
 						<div class="notice-container {{note.type}}">
-							{{note.type}}
 							<h4>Additional Notes</h4>
 							{% for note in page.meta.contentNotes %}
 								<p>{{note.text | raw}}</p>

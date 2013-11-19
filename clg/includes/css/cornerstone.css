@@ -193,25 +193,8 @@ sup {
 sub {
   top: .5ex;
 }
-/* Preformatted Text */
-pre {
-  margin: 0;
-  padding: 0;
-  line-height: 100%;
-}
-code {
-  font-family: monospace;
-  font-weight: normal;
-  line-height: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  font-size: 12px;
-  color: #222222;
-}
-code span.look {
-  color: #1E82D7;
-}
+
+
 /* Dropdown Buttons with Menus */
 .dropdown-menu span:hover {
   cursor: pointer;
