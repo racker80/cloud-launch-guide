@@ -83,7 +83,6 @@
 						STICKY NAV WITH WAYPOINTS
 						//using the jquery waypoints plugin
 						---------------------------------------------------------------- */
-												
 						$('#waypoint-header').waypoint('sticky', {
 							wrapper: '<div class="sticky-wrapper" />',
 							stuckClass: 'stuck',
@@ -91,23 +90,24 @@
 								$('.nav-index-wrapper').hide();
 							}
 						});
-						$('#waypoint-header').waypoint( function(direction){
+						$('.chapter-container').waypoint( function(direction){
 							var $active = $(this);
 							var singleUrl = ths.settings.singleUrl();
-						
+
 							/* The waypoint is triggered at the top of each list item representing a dial section. When triggering in the down direction we want to use the dial section the waypoint is attached to. But in the up direction we want to use the previous dial section. */
 							if (direction === "up") {
 								$active = $active.prev();
 							}
-						
+
 							/* If we triggered in the up direction and the result from 'prev' came back with an empty set of elements, it means we were on the first element in the list, and we should just use the original element. */
 							if (!$active.length) {
 						    // $active = $(this);
 						    // $('.currentChapter').html();
 							}
-						
-							$('.currentChapter a').html($active.find('.chapterTitle').data('title'));
-						
+
+							// $('.currentChapter a').html($active.find('.chapterTitle').data('title'));
+							$('li.currentChapter em').html($active.find('.chapterTitle').data('title'));
+
 							$('.allStepsOn').attr('href',  singleUrl + '/' + $active.find('.chapterTitle').data('slug'));
 							$('.nav-thing li a').each(function(){
 								if( $(this).text() === $active.find('.chapterTitle').data('title') ) {
@@ -115,8 +115,8 @@
 									$(this).toggleClass('completed');
 								}
 							});
-						
-						
+
+
 						}, {} );
 
 				},
