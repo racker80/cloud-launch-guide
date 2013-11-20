@@ -7221,7 +7221,7 @@ a {
 }
 #banner-wrapper .page-header .guideTitle span {
   font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 #banner-wrapper .page-header .guideDesc {
   font-size: 16px;
@@ -7239,7 +7239,7 @@ a {
 }
 #banner-wrapper .page-header h2 span {
   font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 #banner-wrapper .banner-card {
   -webkit-box-sizing: border-box;
@@ -7537,6 +7537,9 @@ a {
 #content-container .chapter-container .chapter-header-wrapper .chapterIntro li {
   padding-bottom: 10px;
 }
+#content-container .chapter-container .chapter-container:last-child {
+  margin-bottom: 0;
+}
 #content-container .chapter-container .chapter-code-wrapper .chapter-header-wrapper {
   padding: 0;
 }
@@ -7547,6 +7550,8 @@ a {
 }
 #content-container .chapter-container .page-container {
   padding: 15px 0;
+  font-size: 16px;
+  line-height: 22px;
 }
 #content-container .chapter-container .page-container .page-content h4 {
   font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -7586,6 +7591,36 @@ a {
 }
 #content-container .chapter-container .page-container .page-content .info {
   background: url('../images/icon-notepad.png') top left no-repeat;
+}
+#content-container .chapter-actions {
+  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 25px;
+}
+#content-container .chapter-actions a {
+  opacity: 0.7;
+  -moz-opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+#content-container .chapter-actions a:hover {
+  text-decoration: none;
+  opacity: 1.0;
+  -moz-opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+#content-container .chapter-actions span {
+  line-height: 16px;
+  font-size: 20px;
+}
+#content-container .chapter-actions .action-previous {
+  margin-right: 40px;
+}
+#content-container .chapter-actions .action-previous span {
+  margin-right: 10px;
+}
+#content-container .chapter-actions .action-next span {
+  margin-left: 10px;
 }
 #content-container .sidebar .panel.widget {
   border-radius: 0;
