@@ -12,12 +12,12 @@
 				</div>
 				<div class="col-md-11">
 					<div class="banner-card">
-						<h3>Learn</h3>
+						<h3>Unbox</h3>
 						<div class="card-badge"><img src="{{ baseurl }}/includes/images/badge-build.png" /></div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</div>
 					<div class="banner-card">
-						<h3>Plan</h3>
+						<h3>Discover</h3>
 						<div class="card-badge"><img src="{{ baseurl }}/includes/images/badge-build.png" /></div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</div>

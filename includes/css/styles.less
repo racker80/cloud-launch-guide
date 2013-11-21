@@ -532,16 +532,15 @@ a {
 		box-sizing: border-box;         /* IE 8+ */
 		float: left; 
 		width: 30%;
-		margin-left: 25px;
+		margin-right: 25px;
 		background: #fff;
 		text-align: center;
 		
 		h3 {
-			font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 			color: #fff;
 			background: #3CA0F5;
 			font-size: 20px;
-			text-transform: uppercase;
 			padding: 10px;
 			margin: 0;
 			text-align: center;
@@ -750,6 +749,61 @@ a {
 .container {padding: 0;}
 #content-container {
 	padding-top: 20px;
+	
+	.category-content {
+		margin-bottom: 20px;
+		border-bottom: 1px solid #ccc;
+		
+		.category-header {
+			h2 {
+				padding: 17px 0;
+				margin-left: 80px;
+				font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				font-size: 28px;
+			}
+			.card-badge {
+				width: 70px;
+				float: left;
+				
+				img {width: 100%; height: auto;}
+			}
+			
+			p {font-size: 16px;}
+		}
+	
+		.guide-card {
+			position: relative;
+			border: 1px solid #ddd;
+			padding: 10px;
+			float: left;
+			margin: 0 20px 20px 0;
+			width: 30%;
+			height: 115px;
+			
+			h3 {font-size: 16px;}
+			
+			p.guide-actions {
+				a {padding: 10px;}
+			}
+			
+			.guide-actions-start {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+	
+			.guide-actions-learn {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+		
+			}
+			
+		}
+		
+	}
+	
+	.category-content:last-child {border-bottom: none;}	
 	
 	.pre-wrapper {
 		position:relative;

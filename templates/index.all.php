@@ -12,7 +12,7 @@
           <a href="{{ baseurl }}/guides/{{guide.slug}}" class="">Learn More &raquo;</a>
         </div>
         <div class="col-md-5">
-            <a href="{{ baseurl }}/guides/{{guide.slug}}/{{guide.children[0].slug}}" class="btn btn-lg btn-primary">Start Guide</a>
+            <a href="{{ baseurl }}/guides/{{guide.slug}}/{{guide.children[0].slug}}" class="btn btn-lg btn-primary">Start Guide FOO</a>
          </div>
     </div>
     
