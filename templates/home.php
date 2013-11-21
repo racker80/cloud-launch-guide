@@ -1,4 +1,5 @@
 {% include 'partials/header.php' %}
+{% include 'partials/banner.quickstart.php' %}
 
 <div class="container" id="content-container">
 <div class="row category-content">
