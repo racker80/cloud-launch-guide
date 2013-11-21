@@ -8,10 +8,10 @@
 	<div class="chapter-actions container">
 		<p>
 			{% if chapter.previous %}			
-				<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.previous.slug}}" class="action-previous" title=""><span class="glyphicon glyphicon-circle-arrow-left"></span>{{chapter.previous.title}}</a>
+				<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.previous.slug}}" class="action-previous" title=""><span class="glyphicon glyphicon-circle-arrow-left"></span><em>Previous:</em> {{chapter.previous.title}}</a>
 			{% endif %}
 			{% if chapter.next %}			
-				<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.next.slug}}" class="action-next" title="">{{chapter.next.title}}<span class="glyphicon glyphicon-circle-arrow-right"></span></a>
+				<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.next.slug}}" class="action-next" title=""><em>Next:</em> {{chapter.next.title}}<span class="glyphicon glyphicon-circle-arrow-right"></span></a>
 			{% endif %}
 		</p>
 	</div>	

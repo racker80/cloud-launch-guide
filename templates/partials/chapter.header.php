@@ -5,7 +5,11 @@
 			<h2 class="chapterTitle" data-title="{{chapter.title}}" data-slug="{{chapter.slug}}"> {{chapter.title}}</h2>
 			<div class="chapterUtility clearfix">
 				<p class="chapterCount"><span class="glyphicon glyphicon-bookmark"></span>Chapter {{chapter.index}} of {{chapter.indexOf}}</p>
-				<p class="chapterTime"><span class="glyphicon glyphicon-time"></span>this needs fixing{{ chapter.time }}</p>
+				{% if chapter.time is empty %}
+					<p class="chapterTime"><span class="glyphicon glyphicon-time"></span>Not specified</p>
+				{% else %}
+					<p class="chapterTime"><span class="glyphicon glyphicon-time"></span>{{ chapter.time }}</p>
+				{% endif %}
 				<p class="chapterLink"><span class="glyphicon glyphicon-link"></span><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}">permalink</a></p>
 			</div>
 			

@@ -18,12 +18,21 @@
 
 html {
 	height: 100%;
-	background: #fff;
+	background: #333 url('../images/bg-dark.png');
 	font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 	-webkit-text-size-adjust: 100%;
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+     html {
+	 	height: 100%;
+	 	background: #333 url('../images/bg-dark_@2x.png');
+	 	font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	 	-webkit-text-size-adjust: 100%;
+     }
+}
 
 a {
 	-moz-transition: all .15s linear;
@@ -757,7 +766,6 @@ a {
 		}
 		
 		.terminal {
-			background: #555;
 			border: 0;
 		}
 		&.copied {
@@ -765,7 +773,7 @@ a {
 				color:@brand-success;
 				span {
 					background:transparent;
-					color:#000;
+					color: #000;
 				}
 			}
 			
@@ -781,6 +789,8 @@ a {
 			top:0;
 			right:0;
 		}
+		
+		
 	}
 	pre {
 		position:relative;
@@ -789,7 +799,6 @@ a {
 			-webkit-border-radius: 3px;
 			-moz-border-radius: 3px;
 			border-radius: 3px;
-			background: #333;
 			padding: 15px;
 			background: #333;
 			font-size: 13px;
@@ -919,6 +928,12 @@ a {
 					
 				}
 				
+				img {
+					border: 4px solid #ddd;
+					margin: 10px 0;
+				}
+				
+				
 				.tip {background:url('../images/icon-bulb.png') top left no-repeat;}
 				.info {background:url('../images/icon-notepad.png') top left no-repeat;}
 				
@@ -947,7 +962,7 @@ a {
 		}
 		
 		span {
-			line-height: 16px;
+			line-height: 18px;
 			font-size: 20px;
 		}
 			
@@ -958,7 +973,12 @@ a {
 		}		
 		.action-next {
 			span {margin-left: 10px;}
-		}		
+		}
+		
+		em {
+			color: inherit;
+			font-style: normal;
+		}
 	}
 
 	.sidebar {
@@ -1125,7 +1145,7 @@ h3.page-title {
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* IE 8+ */
 	width: 100%;
-	z-index: 1000;
+	z-index: 0;
 	position: relative;
 	font-size: 75%;
 	background: #000;
