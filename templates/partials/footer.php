@@ -18,8 +18,10 @@
 			</div>
 		</footer>
 
-		<script src="{{ baseurl }}/includes/bower_components/jquery/jquery.js"></script>
+		<script src="{{ baseurl }}/includes/bower_components/jquery/jquery.min.js"></script>
+		<script src="{{ baseurl }}/includes/bower_components/jquery/jquery.ui.min.js"></script>
 
+		<script src="{{ baseurl }}/includes/js/other.js"></script>
 		<script src="{{ baseurl }}/includes/bower_components/bootstrap/js/dropdown.js"></script>
 		<script src="{{ baseurl }}/includes/bower_components/zeroclipboard/ZeroClipboard.js"></script>
 		<script src="{{ baseurl }}/includes/bower_components/jquery-waypoints/waypoints.js"></script>

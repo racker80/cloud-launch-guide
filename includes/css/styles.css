@@ -7304,6 +7304,10 @@ a {
   position: relative;
   padding: 15px 0 20px 0;
 }
+#banner-wrapper.quickstart-wrapper .quickstart .tooltip-rs {
+  border-bottom: 0;
+  cursor: pointer;
+}
 #banner-wrapper.quickstart-wrapper .quickstart .quickstart-close {
   position: absolute;
   top: 20px;
@@ -7864,6 +7868,81 @@ h3.page-title span {
 .lead img {
   display: none;
   margin: 0 auto;
+}
+/* START tooltips */
+.tooltip-rs {
+  position: relative;
+  border-bottom: 1px dotted #333;
+  cursor: help;
+}
+#tooltip {
+  position: absolute;
+  top: 175px;
+  left: 740px;
+  display: block;
+  height: 50px;
+  width: 50px;
+}
+.ui-tooltip {
+  font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 125%;
+  background: #1a1a1a;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  padding: 10px 15px;
+  position: absolute;
+  z-index: 9999;
+  max-width: 350px;
+}
+.arrow:after {
+  background: #1A1A1A;
+}
+.arrow {
+  width: 70px;
+  height: 10px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  bottom: -7px;
+}
+.arrow.top {
+  top: -7px;
+  bottom: auto;
+}
+.arrow.left {
+  left: 20%;
+}
+.arrow:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  tranform: rotate(45deg);
+}
+.arrow.top:after {
+  bottom: -20px;
+  top: auto;
+}
+/* END tooltips */
+/* START dialog */
+.ui-widget-overlay {
+  background-color: black;
 }
 /* ----------------------------------------------------------------
 	FOOTER

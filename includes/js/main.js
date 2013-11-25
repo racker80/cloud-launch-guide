@@ -181,7 +181,7 @@
 
 
 $(document).ready(function() {
-
+	
 	$('body').clgPlugin();
 
 		var types = [];
@@ -469,22 +469,13 @@ $(document).ready(function() {
 
 		});
 
-
-
 	});
-
+	
 })();
-
-
-
 
 Socialite.load();
 
-
 });
-
-
-
 
 // 	// toggle menu and state handling
 
