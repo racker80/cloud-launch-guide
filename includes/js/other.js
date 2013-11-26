@@ -21,22 +21,31 @@ $(document).ready(function() {
 	
 	$(function() {
 		var url = $('#video-quickstart').attr('src').replace('autoplay=0', 'autoplay=1');
-
+		
 		$('#dialog').dialog({
 			autoOpen: false,
-			width: 400,
+			modal: true,
+			width: 680,
 			closeOnEscape: true,
+			buttons: {},
 		    close: function() {
 				$('#video-quickstart').attr('src', '');
 		    },
 		    open: function() {
+				$(".ui-dialog-titlebar-close").hide();
 				$('#video-quickstart').attr('src', url);
 		    }
 		});
 	
 	    $('.dialog-rs').click(function() {
-	      $('#dialog').dialog( "open" );
+	      $('#dialog').dialog('open');
 	    });
+		
+	    $('a.dialog-close').click(function() {
+  	      $('#dialog').dialog('close');
+	    });
+		
+				
 	});
 
 });

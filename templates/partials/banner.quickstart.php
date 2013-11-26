@@ -13,6 +13,7 @@
 	</div>
 </div>
 
-<div class="video-quickstart" id="dialog" aria-labelledby="" aria-hidden="true">
-	<iframe id="video-quickstart" width="640" height="480" src="//www.youtube.com/embed/RB5mqsubMlg?rel=0&showinfow=0&autoplay=0" frameborder="0" allowfullscreen></iframe>
+<div class="video-quickstart" id="dialog">
+	<iframe id="video-quickstart" width="645" height="480" src="//www.youtube.com/embed/RB5mqsubMlg?rel=0&showinfo=0&autoplay=0" frameborder="0" allowfullscreen></iframe>
+	<a href="" class="glyphicon glyphicon-remove-circle dialog-close"></a>
 </div>
