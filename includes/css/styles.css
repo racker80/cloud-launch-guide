@@ -7953,16 +7953,25 @@ h3.page-title span {
   filter: alpha(opacity=70);
 }
 .ui-front {
-  z-index: 100;
+  z-index: 10000;
 }
 .ui-dialog {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 0 10px 10px 10px;
+  padding: 25px 10px 10px 10px;
   outline: 0;
-  background: #000;
-  border: 1px solid red;
+}
+.ui-dialog .video-quickstart-container {
+  text-align: center;
+}
+.ui-dialog .ui-dialog-content {
+  position: relative;
+  border: 0;
+  background: none;
+  overflow: auto;
+  padding: 15px;
+  background: #333;
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;
@@ -7970,26 +7979,19 @@ h3.page-title span {
   box-sizing: border-box;
   /* IE 8+ */
 }
-.ui-dialog .ui-dialog-content {
-  position: relative;
-  border: 0;
-  background: none;
-  overflow: auto;
-  border: 1px solid red;
-}
-.ui-dialog .ui-dialog-content .dialog-close {
+.ui-dialog .dialog-close {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: -5px;
+  right: -15px;
   color: #fff;
   border: 0;
-  font-size: 24px;
+  font-size: 28px;
   text-decoration: none;
   opacity: 0.7;
   -moz-opacity: 0.7;
   filter: alpha(opacity=70);
 }
-.ui-dialog .ui-dialog-content .dialog-close:hover {
+.ui-dialog .dialog-close:hover {
   opacity: 1.0;
   -moz-opacity: 1.0;
   filter: alpha(opacity=100);

@@ -27,9 +27,9 @@
 						{% endfor %}
 					</ul>
 				</li>
-				<li><a href="#">About</a></li>
+				<!-- <li><a href="#">About</a></li> -->
 				<li><a href="#">Feedback</a></li>
-				<li><a href="#">Fanatical Support</a></li>
+				<li><a href="https://www.rackspace.com/fanatical-support">Fanatical Support</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</div>

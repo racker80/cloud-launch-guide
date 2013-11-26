@@ -21,31 +21,33 @@ $(document).ready(function() {
 	
 	$(function() {
 		var url = $('#video-quickstart').attr('src').replace('autoplay=0', 'autoplay=1');
-		
+
 		$('#dialog').dialog({
 			autoOpen: false,
 			modal: true,
-			width: 680,
+			draggable: false,
+			width: 700,
 			closeOnEscape: true,
-			buttons: {},
 		    close: function() {
 				$('#video-quickstart').attr('src', '');
 		    },
 		    open: function() {
-				$(".ui-dialog-titlebar-close").hide();
 				$('#video-quickstart').attr('src', url);
-		    }
+		    },
+	        create: function (event, ui) {
+	            $(".ui-dialog-titlebar").html('<a href="#" class="glyphicon glyphicon-remove-circle dialog-close"></a>');
+	        },
 		});
 	
-	    $('.dialog-rs').click(function() {
-	      $('#dialog').dialog('open');
+	    $('a.dialog-rs').click(function() {
+	      $('#dialog').dialog( "open" );
 	    });
 		
 	    $('a.dialog-close').click(function() {
-  	      $('#dialog').dialog('close');
+	      $('#dialog').dialog( "close" );
 	    });
 		
-				
+		
 	});
 
 });
