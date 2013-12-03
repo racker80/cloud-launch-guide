@@ -15,7 +15,7 @@
 		<div class="guide-card">
 			<h3>{{guide.title}}</h3>
 			<p class="guide-actions">
-				<a href="{{ baseurl }}/guides/{{guide.slug}}" class="guide-actions-learn">Learn More</a>
+				<a href="{{ baseurl }}/guides/{{guide.slug}}" class="guide-actions-learn">Learn More FOO</a>
 				<a href="{{ baseurl }}/guides/{{guide.slug}}/{{guide.children[0].slug}}" class="guide-actions-start">Start Guide</a>
 			</p>
 		</div>
