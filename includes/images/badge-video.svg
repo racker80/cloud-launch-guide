@@ -3,7 +3,25 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="240px" height="130px" viewBox="0 0 240 130" enable-background="new 0 0 240 130" xml:space="preserve">
-<rect x="4" y="4" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="178" height="93"/>
-<polygon fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-	79,66.05 113.786,49.711 79,33.374 "/>
+<g>
+	
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="3.896" y1="87.966" x2="156.896" y2="87.966"/>
+	
+		<rect x="10.192" y="9.466" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="140.406" height="72.044"/>
+	
+		<polygon fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+		68.616,31.518 101.347,46.414 68.616,61.311 	"/>
+	<g>
+		
+			<rect x="54.521" y="122.827" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="51.75" height="4"/>
+		<g>
+			<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+				M64.419,105.966c0,0-0.514,9.773-1.719,12.273c-0.783,1.624-3.947,4.365-3.947,4.365"/>
+			<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+				M96.37,105.966c0,0,0.514,9.773,1.721,12.273c0.783,1.624,3.945,4.365,3.945,4.365"/>
+		</g>
+	</g>
+	<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M156.896,99.966c0,2.762-2.238,5-5,5h-143c-2.762,0-5-2.238-5-5v-91c0-2.762,2.238-5,5-5h143c2.762,0,5,2.238,5,5V99.966z"/>
+</g>
 </svg>

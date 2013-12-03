@@ -13,17 +13,17 @@
 				<div class="col-md-11">
 					<div class="banner-card">
 						<h3>Build</h3>
-						<div class="card-badge"><img src="{{ baseurl }}/includes/images/badge-build.png" /></div>
+						<div class="card-badge build"></div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</div>
 					<div class="banner-card">
 						<h3>Discover</h3>
-						<div class="card-badge"><img src="{{ baseurl }}/includes/images/badge-build.png" /></div>
+						<div class="card-badge discover"></div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</div>
 					<div class="banner-card">
 						<h3>Unbox</h3>
-						<div class="card-badge"><img src="{{ baseurl }}/includes/images/badge-build.png" /></div>
+						<div class="card-badge unbox"></div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</div>
  				</div>

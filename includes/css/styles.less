@@ -552,7 +552,16 @@ a {
 			line-height: 20px;
 		}
 		
-		.card-badge {margin-top: 10px;}
+		.card-badge {
+			display: block;
+			height: 160px;
+			width: 100%;
+			margin-top: 10px;
+		}
+		
+		.unbox {background: url('../images/badge-unbox.svg') no-repeat center top;}
+		.discover {background: url('../images/badge-discover.svg') no-repeat center top;}
+		.build {background: url('../images/badge-build.svg') no-repeat center top;}
 		
 	}
 	
@@ -623,7 +632,7 @@ a {
 				background: url('../images/badge-video.svg') no-repeat left top;
 				margin-top: 2px;
 				display: block;
-				height: 100px;
+				height: 127px;
 				width: 185px;
 				opacity: 0.7;
 				-moz-opacity: 0.7;
@@ -824,12 +833,18 @@ a {
 				font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 				font-size: 28px;
 			}
-			.card-badge {
-				width: 70px;
+			.card-badge-content {
 				float: left;
+				border: 2px solid #3CA0F5;
+				border-radius: 35px;
+				display: block;
+				width: 70px;
+				height: 70px;
 				
-				img {width: 100%; height: auto;}
 			}
+			.unbox {background: url('../images/badge-small-unbox.svg') no-repeat left top;}
+			.discover {background: url('../images/badge-small-discover.svg') no-repeat left top;}
+			.build {background: url('../images/badge-small-build.svg') no-repeat left top;}
 			
 			p {font-size: 16px;}
 		}
