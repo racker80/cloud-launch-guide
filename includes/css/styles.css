@@ -7180,17 +7180,19 @@ a {
 	a reset of the bootstrap jumbotron class
 ---------------------------------------------------------------- */
 #banner-wrapper {
-  background: #000;
   margin: 0;
-  background: #eeeeee;
   /*Reset the bootstrap jumbotron*/
   /*Reset the bootstrap page-header*/
 }
 #banner-wrapper .jumbotron {
-  padding: 30px 0;
+  padding: 25px 0;
   margin-bottom: 0px;
   background: #eeeeee;
   border-bottom: 1px solid #ccc;
+}
+#banner-wrapper .jumbotron.home-banner {
+  background: #eeeeee url('../images/bg-banner.svg');
+  border-bottom-width: 0px;
 }
 #banner-wrapper .page-header {
   margin: 0;
@@ -7321,43 +7323,12 @@ a {
   position: relative;
   padding: 15px 0 20px 0;
 }
-#banner-wrapper.quickstart-wrapper .quickstart .tooltip-rs {
-  border-bottom: 0;
-  cursor: pointer;
-}
-#banner-wrapper.quickstart-wrapper .quickstart .quickstart-close {
-  position: absolute;
-  top: 20px;
-  right: 0;
-  font-size: 18px;
-  color: #fff;
-  opacity: 0.7;
-  -moz-opacity: 0.7;
-  filter: alpha(opacity=70);
-}
-#banner-wrapper.quickstart-wrapper .quickstart .quickstart-close:hover {
-  opacity: 1.0;
-  -moz-opacity: 1.0;
-  filter: alpha(opacity=100);
-}
-#banner-wrapper.quickstart-wrapper .quickstart h2 {
-  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #fff;
-  font-style: italic;
-  font-size: 22px;
-  margin: 0;
-  padding: 0;
-}
-#banner-wrapper.quickstart-wrapper .quickstart p {
-  font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-}
 #banner-wrapper.quickstart-wrapper .quickstart a.video-launch {
   background: url('../images/badge-video.svg') no-repeat left top;
   margin-top: 2px;
   display: block;
   height: 127px;
-  width: 185px;
+  width: 165px;
   opacity: 0.7;
   -moz-opacity: 0.7;
   filter: alpha(opacity=70);
@@ -7366,6 +7337,22 @@ a {
   opacity: 1.0;
   -moz-opacity: 1.0;
   filter: alpha(opacity=100);
+}
+#banner-wrapper.quickstart-wrapper .quickstart .tooltip-rs {
+  border-bottom: 0;
+  cursor: pointer;
+}
+#banner-wrapper.quickstart-wrapper .quickstart h2 {
+  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #fff;
+  font-size: 22px;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+#banner-wrapper.quickstart-wrapper .quickstart p {
+  font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
 }
 /* ----------------------------------------------------------------
 	GUIDE MENU
@@ -7575,17 +7562,6 @@ a {
 #content-container .pre-wrapper {
   position: relative;
 }
-#content-container .pre-wrapper .cp {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background: #ddd;
-  padding: 15px;
-  font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  border: 0;
-  margin-bottom: 10px;
-}
 #content-container .pre-wrapper .terminal {
   border: 0;
 }
@@ -7604,6 +7580,17 @@ a {
   position: absolute;
   top: 0;
   right: 0;
+}
+#content-container .cp {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #ddd;
+  padding: 15px;
+  font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  border: 0;
+  margin-bottom: 10px;
 }
 #content-container pre {
   position: relative;

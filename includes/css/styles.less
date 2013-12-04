@@ -445,18 +445,22 @@ a {
 	a reset of the bootstrap jumbotron class
 ---------------------------------------------------------------- */
 #banner-wrapper {
-	background: #000;
 	margin:0;
-	background:@gray-lighter;
-
+	
 	/*Reset the bootstrap jumbotron*/
 	.jumbotron {
-		padding: 30px 0;
+		padding: 25px 0;
 		margin-bottom: 0px;
 		background:@gray-lighter;
 		border-bottom: 1px solid #ccc;
-	}
-
+	
+		&.home-banner {
+			background: #eee url('../images/bg-banner.svg');
+			border-bottom-width: 0px;
+		}
+				
+	}	
+	
 	/*Reset the bootstrap page-header*/
 	.page-header {
 		.bsreset;
@@ -597,60 +601,43 @@ a {
 		.quickstart {
 			position: relative;
 			padding: 15px 0 20px 0;
-			
-			.tooltip-rs {
-				border-bottom: 0;
-				cursor: pointer;				
-			}
-	
-			.quickstart-close {
-				position: absolute;
-				top: 20px;
-				right: 0;
-				font-size: 18px;
-				color: #fff;
-				opacity: 0.7;
-				-moz-opacity: 0.7;
-				filter:alpha(opacity=70);
-			}
-			
-			.quickstart-close:hover {
-				opacity: 1.0;
-				-moz-opacity: 1.0;
-				filter:alpha(opacity=100);
-			}
-				
-			h2 {
-				font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-				color: #fff;
-				font-style: italic;
-				font-size: 22px;
-				margin: 0;
-				padding: 0;
-			}
-		
-			p {
-				font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-				font-size: 16px;
-			}
-			
+
+							
 			a.video-launch {
 				background: url('../images/badge-video.svg') no-repeat left top;
 				margin-top: 2px;
 				display: block;
 				height: 127px;
-				width: 185px;
+				width: 165px;
 				opacity: 0.7;
 				-moz-opacity: 0.7;
 				filter:alpha(opacity=70);
 			}
-			
+		
 			a.video-launch:hover {
 				opacity: 1.0;
 				-moz-opacity: 1.0;
 				filter:alpha(opacity=100);
 			}
 			
+			.tooltip-rs {
+				border-bottom: 0;
+				cursor: pointer;				
+			}
+			
+			h2 {
+				font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				color: #fff;
+				font-size: 22px;
+				margin: 10px 0 0 0;
+				padding: 0;
+			}
+	
+			p {
+				font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				font-size: 16px;
+				line-height: 22px;
+			}
 		}
 	}
 	
@@ -892,18 +879,7 @@ a {
 	
 	.pre-wrapper {
 		position:relative;
-		.cp {
-			-webkit-border-radius: 3px;
-			-moz-border-radius: 3px;
-			border-radius: 3px;
-			background: #ddd;
-			padding: 15px;
-			font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-			font-size: 15px;
-			border: 0;
-			margin-bottom: 10px;
-		}
-		
+
 		.terminal {
 			border: 0;
 		}
@@ -931,6 +907,19 @@ a {
 		
 		
 	}
+	
+	.cp {
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		background: #ddd;
+		padding: 15px;
+		font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-size: 15px;
+		border: 0;
+		margin-bottom: 10px;
+	}
+	
 	pre {
 		position:relative;
 		&.terminal {
@@ -1366,6 +1355,7 @@ h3.page-title {
 	// text-align: center;
 
 	.video-quickstart-container {text-align: center;}
+	
 	.ui-dialog-content {
 		position: relative;
 		border: 0;

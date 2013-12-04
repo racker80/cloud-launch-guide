@@ -1,12 +1,12 @@
 <div id="banner-wrapper">
-	<div class="jumbotron">
+	<div class="jumbotron home-banner">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
 					<div class="page-header">
 						<h1 class="chapterTitle homeTitle" data-slug="{{guide.slug}}"><span>Welcome to Rackspace's</span> Cloud Launch Guides</h1>
 						<div class="lead">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, deserunt assumenda tempora ducimus ab laudantium at qui eos praesentium fugiat. Nesciunt, quibusdam pariatur ea alias velit quaerat beatae ut excepturi.</p>
+							<p>This site is designed to teach a new cloud consumer the everything they need to know for working with the cloud. Launch guides target a variety of topic. Ranging from getting started knowledge and fundamental techniques to example infrastructure build outs. Follow along and learn how to succeed in the Rackspace Cloud.</p>
 						</div>
 					</div>
 				</div>
@@ -14,21 +14,21 @@
 					<div class="banner-card unbox">
 						<h3>Unbox</h3>
 						<div class="card-badge unbox"></div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p>Guides designed to get your feet wet with cloud knowledge.</p>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="banner-card discover">
 						<h3>Discover</h3>
 						<div class="card-badge discover"></div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p>Infrastructure techniques enabled by the cloud.</p>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="banner-card build">
 						<h3>Build</h3>
 						<div class="card-badge build"></div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p>Step by step guides to deploy your Cloud Stack.</p>
 					</div>
  				</div>
 			</div>

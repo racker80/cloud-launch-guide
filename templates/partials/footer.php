@@ -30,7 +30,7 @@
 		<script src="{{ baseurl }}/includes/bower_components/Socialite-master/socialite.js"></script>
 		<script src="{{ baseurl }}/includes/js/feedmagnet.js"></script>
 		<script src="{{ baseurl }}/includes/bower_components/move.js-master/move.js"></script>
-		<!-- <script src="{{ baseurl }}/includes/js/main.js"></script> -->
+		<script src="{{ baseurl }}/includes/js/main.js"></script>
 
 		<script type="text/javascript">
 			function downloadJSAtOnload() {

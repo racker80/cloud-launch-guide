@@ -7,7 +7,7 @@
 		<div class="category-header">
 			<div class="card-badge-content unbox"></div>
 			<h2>Unbox</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>If you are new to cloud technologies it can be difficult to understand where to start. Unbox guides aim at addressing these concerns. Follow along and learn the required skills to be successful in the cloud.</p>
 		</div>
 	</div>
 	<div class="col-md-11">
@@ -28,7 +28,7 @@
 		<div class="category-header">
 			<div class="card-badge-content discover"></div>
 			<h2>Discover</h2>
-			<p>Lorem ipsum dolor sit amet, <span class="tooltip-rs" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt">consectetur adipisicing</span> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Rackspace Cloud technologies enable new techniques for dealing with your applications infrastructure needs. Learn the fundamental techniques enabled by the cloud.</p>
 		</div>
 	</div>
 	<div class="col-md-11">
@@ -49,7 +49,7 @@
 		<div class="category-header">
 			<div class="card-badge-content build"></div>
 			<h2>Build</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Ever wonder how a Racker would execute a cloud architecture build out? Our build guides are centered around exactly that. Follow along step by step during an example build out and configuration of a complex, scalable cloud environment.</p>
 		</div>
 	</div>
 	<div class="col-md-11">
