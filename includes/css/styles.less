@@ -462,7 +462,7 @@ a {
 		.bsreset;
 		h1.homeTitle {
 			font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-			font-size: 38px;
+			font-size: 32px;
 			letter-spacing: -2px;
 			margin-bottom: 0px;
 			padding-bottom: 7px;
@@ -478,8 +478,8 @@ a {
 		}
 					
 		.lead {
-			font-size: 18px;
-			line-height: 27px;
+			font-size: 16px;
+			line-height: 22px;
 		}
 		
 		.chapterDesc {
@@ -530,9 +530,9 @@ a {
 		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 		box-sizing: border-box;         /* IE 8+ */
-		float: right; 
-		width: 30%;
-		margin-left: 25px;
+		-moz-transition: all .15s linear;
+		-webkit-transition: all .15s linear;
+		transition: all .15s linear;
 		background: #fff;
 		text-align: center;
 		
@@ -554,7 +554,7 @@ a {
 		
 		.card-badge {
 			display: block;
-			height: 160px;
+			height: 142px;
 			width: 100%;
 			margin-top: 10px;
 		}
@@ -562,7 +562,13 @@ a {
 		.unbox {background: url('../images/badge-unbox.svg') no-repeat center top;}
 		.discover {background: url('../images/badge-discover.svg') no-repeat center top;}
 		.build {background: url('../images/badge-build.svg') no-repeat center top;}
-		
+	
+		&:hover {
+			cursor: pointer;
+		    -webkit-box-shadow: 0 9px 12px rgba(0, 0, 0, 0.175);
+            box-shadow: 0 9px 12px rgba(0, 0, 0, 0.175);
+			
+		}
 	}
 	
 	.banner-card:last-child {margin-right: 0;}	
@@ -835,7 +841,8 @@ a {
 			}
 			.card-badge-content {
 				float: left;
-				border: 2px solid #3CA0F5;
+				border: 3px solid #3CA0F5;
+				// border: 3px solid #333;
 				border-radius: 35px;
 				display: block;
 				width: 70px;

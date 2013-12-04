@@ -49,5 +49,33 @@ $(document).ready(function() {
 		
 		
 	});
+	
+	// scroll to elements on homepage
+
+	$(function() {
+
+		$('#banner-wrapper .unbox').click(function() {
+			$('html, body').animate({
+				scrollTop: $('#content-container .unbox').offset().top -10
+			}, 500);
+			return false;
+		});
+		
+		$('#banner-wrapper .discover').click(function() {
+			$('html, body').animate({
+				scrollTop: $('#content-container .discover').offset().top -10
+			}, 500);
+			return false;
+		});
+		
+		
+		$('#banner-wrapper .build').click(function() {
+			$('html, body').animate({
+				scrollTop: $('#content-container .build').offset().top -10
+			}, 500);
+			return false;
+		});
+		
+	});
 
 });

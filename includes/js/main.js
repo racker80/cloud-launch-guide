@@ -172,6 +172,7 @@
 						}
 				});
 		};
+				
 
 })( jQuery, window, document );
 
@@ -181,6 +182,7 @@
 
 
 $(document).ready(function() {
+		
 	
 	$('body').clgPlugin();
 
@@ -361,6 +363,7 @@ $(document).ready(function() {
 
 			return false;
 		});
+				
 
 })();
 

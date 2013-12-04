@@ -7201,7 +7201,7 @@ a {
 }
 #banner-wrapper .page-header h1.homeTitle {
   font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 38px;
+  font-size: 32px;
   letter-spacing: -2px;
   margin-bottom: 0px;
   padding-bottom: 7px;
@@ -7215,8 +7215,8 @@ a {
   text-indent: 3px;
 }
 #banner-wrapper .page-header .lead {
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 16px;
+  line-height: 22px;
 }
 #banner-wrapper .page-header .chapterDesc {
   margin-top: 15px;
@@ -7258,9 +7258,9 @@ a {
   /* Firefox, other Gecko */
   box-sizing: border-box;
   /* IE 8+ */
-  float: right;
-  width: 30%;
-  margin-left: 25px;
+  -moz-transition: all .15s linear;
+  -webkit-transition: all .15s linear;
+  transition: all .15s linear;
   background: #fff;
   text-align: center;
 }
@@ -7280,7 +7280,7 @@ a {
 }
 #banner-wrapper .banner-card .card-badge {
   display: block;
-  height: 160px;
+  height: 142px;
   width: 100%;
   margin-top: 10px;
 }
@@ -7292,6 +7292,11 @@ a {
 }
 #banner-wrapper .banner-card .build {
   background: url('../images/badge-build.svg') no-repeat center top;
+}
+#banner-wrapper .banner-card:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 9px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 9px 12px rgba(0, 0, 0, 0.175);
 }
 #banner-wrapper .banner-card:last-child {
   margin-right: 0;
@@ -7521,7 +7526,7 @@ a {
 }
 #content-container .category-content .category-header .card-badge-content {
   float: left;
-  border: 2px solid #3CA0F5;
+  border: 3px solid #3CA0F5;
   border-radius: 35px;
   display: block;
   width: 70px;
