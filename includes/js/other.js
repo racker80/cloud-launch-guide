@@ -26,7 +26,7 @@ $(document).ready(function() {
 			autoOpen: false,
 			modal: true,
 			draggable: false,
-			width: 700,
+			width: 800,
 			closeOnEscape: true,
 		    close: function() {
 				$('#video-quickstart').attr('src', '');

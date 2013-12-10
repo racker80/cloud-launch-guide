@@ -13,5 +13,5 @@
 </div>
 
 <div class="video-quickstart-container" id="dialog">
-	<iframe id="video-quickstart" width="645" height="480" src="//www.youtube.com/embed/RB5mqsubMlg?&showinfo=0&autoplay=0&rel=0" frameborder="0" allowfullscreen></iframe>
+	<iframe id="video-quickstart" width="740" height="460" src="//www.youtube.com/embed/RB5mqsubMlg?&showinfo=0&autoplay=0&rel=0&controls=1" frameborder="0" allowfullscreen></iframe>
 </div>

@@ -1,5 +1,5 @@
 <div id="banner-wrapper">
-	<div class="jumbotron">
+	<div class="jumbotron guide-banner">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-10">

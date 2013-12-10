@@ -7194,6 +7194,18 @@ a {
   background: #eeeeee url('../images/bg-banner.svg');
   border-bottom-width: 0px;
 }
+#banner-wrapper .jumbotron.guide-banner {
+  background: #eeeeee url('../images/bg-banner.svg');
+}
+#banner-wrapper .jumbotron.guide-banner .banner-guide-badge.unbox {
+  background: url('../images/badge-guide-unbox.svg') no-repeat right top;
+}
+#banner-wrapper .jumbotron.guide-banner .banner-guide-badge.discover {
+  background: url('../images/badge-guide-discover.svg') no-repeat center top;
+}
+#banner-wrapper .jumbotron.guide-banner .banner-guide-badge.build {
+  background: url('../images/badge-guide-build.svg') no-repeat center top;
+}
 #banner-wrapper .page-header {
   margin: 0;
   padding: 0;
@@ -7203,22 +7215,26 @@ a {
 }
 #banner-wrapper .page-header h1.homeTitle {
   font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
   font-size: 32px;
   letter-spacing: -2px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   padding-bottom: 7px;
 }
 #banner-wrapper .page-header h1.homeTitle span {
-  font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
   letter-spacing: 0.25px;
   display: block;
-  line-height: 15px;
+  line-height: 20px;
   text-indent: 3px;
 }
 #banner-wrapper .page-header .lead {
   font-size: 16px;
   line-height: 22px;
+}
+#banner-wrapper .page-header .lead strong {
+  font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 #banner-wrapper .page-header .chapterDesc {
   margin-top: 15px;
@@ -7272,19 +7288,26 @@ a {
   background: #3CA0F5;
   font-size: 20px;
   padding: 10px;
-  margin: 0;
+  margin: 0 0 10px 0;
   text-align: center;
 }
 #banner-wrapper .banner-card p {
-  padding: 10px;
-  font-size: 15px;
-  line-height: 20px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* IE 8+ */
+  font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #777;
+  padding: 0px 20px 20px 20px;
+  font-size: 16px;
+  line-height: 22px;
 }
 #banner-wrapper .banner-card .card-badge {
   display: block;
-  height: 142px;
+  height: 150px;
   width: 100%;
-  margin-top: 10px;
 }
 #banner-wrapper .banner-card .unbox {
   background: url('../images/badge-unbox.svg') no-repeat center top;
@@ -7306,7 +7329,7 @@ a {
 #banner-wrapper #banner-content-wrapper.jumbotron {
   margin: 0;
   padding: 15px 0;
-  background: transparent;
+  background: #eeeeee url('../images/bg-banner.svg');
 }
 #banner-wrapper h5.banner-quote {
   font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;

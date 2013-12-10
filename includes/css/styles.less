@@ -458,6 +458,16 @@ a {
 			background: #eee url('../images/bg-banner.svg');
 			border-bottom-width: 0px;
 		}
+		
+		&.guide-banner {
+			background: #eee url('../images/bg-banner.svg');
+			
+			.banner-guide-badge {
+				&.unbox {background: url('../images/badge-guide-unbox.svg') no-repeat right top;}
+				&.discover {background: url('../images/badge-guide-discover.svg') no-repeat center top;}
+				&.build {background: url('../images/badge-guide-build.svg') no-repeat center top;}				
+			}
+		}
 				
 	}	
 	
@@ -466,17 +476,18 @@ a {
 		.bsreset;
 		h1.homeTitle {
 			font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			color: #333;
 			font-size: 32px;
 			letter-spacing: -2px;
-			margin-bottom: 0px;
+			margin-bottom: 10px;
 			padding-bottom: 7px;
 			
 			span {
-				font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-				font-size: 18px;
+				font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				font-size: 20px;
 				letter-spacing: 0.25px;
 				display: block;
-				line-height: 15px;
+				line-height: 20px;
 				text-indent: 3px;
 			}
 		}
@@ -484,6 +495,8 @@ a {
 		.lead {
 			font-size: 16px;
 			line-height: 22px;
+			
+			strong {font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;}
 		}
 		
 		.chapterDesc {
@@ -544,23 +557,28 @@ a {
 			font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 			color: #fff;
 			background: #3CA0F5;
+			// color: #1E82D7;
 			font-size: 20px;
 			padding: 10px;
-			margin: 0;
+			margin: 0 0 10px 0;
 			text-align: center;
 		}
 		
 		p {
-			padding: 10px;
-			font-size: 15px;
-			line-height: 20px;
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+			box-sizing: border-box;         /* IE 8+ */
+			font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			color: #777;
+			padding: 0px 20px 20px 20px;
+			font-size: 16px;
+			line-height: 22px;
 		}
 		
 		.card-badge {
 			display: block;
-			height: 142px;
+			height: 150px;
 			width: 100%;
-			margin-top: 10px;
 		}
 		
 		.unbox {background: url('../images/badge-unbox.svg') no-repeat center top;}
@@ -581,7 +599,7 @@ a {
 		&.jumbotron {
 			margin:0;
 			padding: 15px 0;
-			background:transparent;
+			background: #eee url('../images/bg-banner.svg');
 		}
 		
 	}
@@ -641,7 +659,6 @@ a {
 		}
 	}
 	
-
 }
 
 /* ----------------------------------------------------------------

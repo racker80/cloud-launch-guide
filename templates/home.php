@@ -49,7 +49,7 @@
 		<div class="category-header">
 			<div class="card-badge-content build"></div>
 			<h2>Build</h2>
-			<p>Ever wonder how a Racker would execute a cloud architecture build out? Our build guides are centered around exactly that. Follow along step by step during an example build out and configuration of a complex, scalable cloud environment.</p>
+			<p>Ever wonder how a Racker would execute a cloud architecture build out? Our build guides are centered around exactly that. Follow along step by step during an example build out and configuration of a complex, scalable cloud environment.9</p>
 		</div>
 	</div>
 	<div class="col-md-11">
