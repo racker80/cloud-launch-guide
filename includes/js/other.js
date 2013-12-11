@@ -22,11 +22,12 @@ $(document).ready(function() {
 	$(function() {
 		var url = $('#video-quickstart').attr('src').replace('autoplay=0', 'autoplay=1');
 
-		$('#dialog').dialog({
+		$('#dialog-video').dialog({
 			autoOpen: false,
 			modal: true,
 			draggable: false,
-			width: 800,
+			position: ['center','middle'],
+			width: 770,
 			closeOnEscape: true,
 		    close: function() {
 				$('#video-quickstart').attr('src', '');
@@ -35,18 +36,17 @@ $(document).ready(function() {
 				$('#video-quickstart').attr('src', url);
 		    },
 	        create: function (event, ui) {
-	            $(".ui-dialog-titlebar").html('<a href="#" class="glyphicon glyphicon-remove-circle dialog-close"></a>');
+	            $(".ui-dialog-titlebar").html('<a href="#" class="glyphicon glyphicon-remove dialog-close"></a>');
 	        },
 		});
 	
 	    $('a.dialog-rs').click(function() {
-	      $('#dialog').dialog( "open" );
+	      $('#dialog-video').dialog( "open" );
 	    });
 		
 	    $('a.dialog-close').click(function() {
-	      $('#dialog').dialog( "close" );
+	      $('#dialog-video').dialog( "close" );
 	    });
-		
 		
 	});
 	

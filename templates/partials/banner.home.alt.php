@@ -2,7 +2,7 @@
 	<div class="jumbotron home-banner">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-5">
 					<div class="page-header">
 						<h1 class="chapterTitle homeTitle" data-slug="{{guide.slug}}"><span>Welcome to Rackspace's</span> Cloud Launch Guides</h1>
 						<div class="lead">
@@ -10,21 +10,17 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-10 col-md-offset-1">
 					<div class="banner-card unbox">
 						<h3>Unbox</h3>
 						<div class="card-badge unbox"></div>
 						<p>Guides designed to get your feet wet with cloud knowledge.</p>
 					</div>
-				</div>
-				<div class="col-md-4">
 					<div class="banner-card discover">
 						<h3>Discover</h3>
 						<div class="card-badge discover"></div>
 						<p>Infrastructure techniques enabled by the cloud.</p>
 					</div>
-				</div>
-				<div class="col-md-4">
 					<div class="banner-card build">
 						<h3>Build</h3>
 						<div class="card-badge build"></div>

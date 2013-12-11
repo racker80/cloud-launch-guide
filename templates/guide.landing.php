@@ -8,7 +8,7 @@
 			<div class="book-list-overview col-md-11">
 				<h3>{{book.title}}</h3>
 				<div class="bookUtility clearfix">
-					<p class="bookTime"><span class="glyphicon glyphicon-time"></span>{{ guide.time }}</p>
+					<p class="bookTime"><span class="glyphicon glyphicon-time"></span>{{ book.time }}</p>
 					<p class="bookLink"><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}"><span class="glyphicon glyphicon-link"></span>permalink</a></p>
 				</div>
 				

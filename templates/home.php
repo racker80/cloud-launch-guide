@@ -31,7 +31,7 @@
 			<p>Rackspace Cloud technologies enable new techniques for dealing with your applications infrastructure needs. Learn the fundamental techniques enabled by the cloud.</p>
 		</div>
 	</div>
-	<div class="col-md-11">
+	<div class="col-md-10 col-md-offset-1">
 		{% for guide in guides %}
 		<div class="guide-card">
 			<h3>{{guide.title}}</h3>

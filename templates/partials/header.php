@@ -17,6 +17,9 @@
 </head>
 <body ng-app="myApp">
 
+<!-- Load graphic: displays until page is fully loaded -->
+<div class="loader"></div>
+
 <div id="navigation-conatiner">
 	{% include 'partials/eyebrow.php' %}
 	{% include 'partials/nav.global.php' %}
