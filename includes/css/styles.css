@@ -7070,8 +7070,8 @@ a {
   font-style: italic;
   text-align: right;
   float: left;
-  width: 380px;
-  padding: 25px 0 25px 80px;
+  width: 350px;
+  padding: 20px 0 20px 80px;
 }
 #globalnav-wrapper a.navbar-brand span {
   font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -7079,7 +7079,7 @@ a {
   font-style: normal;
   letter-spacing: -1px;
   text-transform: uppercase;
-  font-size: 200%;
+  font-size: 180%;
 }
 #globalnav-wrapper a.navbar-brand img {
   height: 60px;
@@ -7101,7 +7101,7 @@ a {
   font-size: 15px;
 }
 #globalnav-wrapper .nav a {
-  padding: 15px 20px;
+  padding: 10px 20px;
   color: #aaa;
 }
 #globalnav-wrapper .nav a .caret {
@@ -7124,7 +7124,7 @@ a {
   margin-bottom: 20px;
 }
 #globalnav-wrapper .nav li:last-child a {
-  padding: 15px 0 15px 20px;
+  padding: 10px 0 10px 20px;
 }
 #globalnav-wrapper .nav li.open a.dropdown-toggle {
   -webkit-border-radius: 0;
@@ -7189,7 +7189,7 @@ a {
   padding: 25px 0;
   margin-bottom: 0px;
   background: #eeeeee;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ddd;
 }
 #banner-wrapper .jumbotron.home-banner {
   background: #eeeeee url('../images/bg-banner.svg');
@@ -7243,6 +7243,7 @@ a {
   line-height: 27px;
 }
 #banner-wrapper .page-header .guideTitle {
+  font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 32px;
   line-height: 28px;
   padding: 0;
@@ -7568,7 +7569,7 @@ a {
 #content-container .category-content {
   margin: 20px 0;
   padding: 20px 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #eee;
 }
 #content-container .category-content .category-header h2 {
   padding: 17px 0;
@@ -7671,30 +7672,37 @@ a {
   font-size: 13px;
   color: #fff;
 }
-#content-container .chapter-container {
+#content-container .chapter-container,
+#content-container page-content-code {
   margin-bottom: 40px;
 }
-#content-container .chapter-container .chapter-header-wrapper h2 {
-  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+#content-container .chapter-container .chapter-header-wrapper h2,
+#content-container page-content-code .chapter-header-wrapper h2 {
+  font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 24px;
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
-#content-container .chapter-container .chapter-header-wrapper .chapterUtility {
-  color: #666;
+#content-container .chapter-container .chapter-header-wrapper .chapterUtility,
+#content-container page-content-code .chapter-header-wrapper .chapterUtility {
+  color: #777;
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 10px;
 }
-#content-container .chapter-container .chapter-header-wrapper .chapterUtility .chapterCount {
+#content-container .chapter-container .chapter-header-wrapper .chapterUtility .chapterCount,
+#content-container page-content-code .chapter-header-wrapper .chapterUtility .chapterCount {
   float: left;
   margin-right: 20px;
 }
-#content-container .chapter-container .chapter-header-wrapper .chapterUtility .chapterTime {
+#content-container .chapter-container .chapter-header-wrapper .chapterUtility .chapterTime,
+#content-container page-content-code .chapter-header-wrapper .chapterUtility .chapterTime {
   float: left;
   margin-right: 20px;
 }
-#content-container .chapter-container .chapter-header-wrapper .chapterUtility .chapterLink {
+#content-container .chapter-container .chapter-header-wrapper .chapterUtility .chapterLink,
+#content-container page-content-code .chapter-header-wrapper .chapterUtility .chapterLink {
+  color: #559AD4;
   -moz-transition: all .15s linear;
   -webkit-transition: all .15s linear;
   transition: all .15s linear;
@@ -7704,86 +7712,123 @@ a {
   float: left;
   color: #428bca;
 }
-#content-container .chapter-container .chapter-header-wrapper .chapterUtility .chapterLink:hover {
+#content-container .chapter-container .chapter-header-wrapper .chapterUtility .chapterLink:hover,
+#content-container page-content-code .chapter-header-wrapper .chapterUtility .chapterLink:hover {
   opacity: 1.0;
   -moz-opacity: 1.0;
   filter: alpha(opacity=100);
 }
-#content-container .chapter-container .chapter-header-wrapper .chapterUtility .chapterLink a:hover {
+#content-container .chapter-container .chapter-header-wrapper .chapterUtility .chapterLink a:hover,
+#content-container page-content-code .chapter-header-wrapper .chapterUtility .chapterLink a:hover {
   text-decoration: none;
 }
-#content-container .chapter-container .chapter-header-wrapper .chapterUtility .glyphicon {
+#content-container .chapter-container .chapter-header-wrapper .chapterUtility .glyphicon,
+#content-container page-content-code .chapter-header-wrapper .chapterUtility .glyphicon {
   margin-right: 5px;
 }
-#content-container .chapter-container .chapter-header-wrapper .chapterIntro {
+#content-container .chapter-container .chapter-header-wrapper .chapterIntro,
+#content-container page-content-code .chapter-header-wrapper .chapterIntro {
   font-size: 16px;
   line-height: 22px;
   padding-bottom: 10px;
 }
-#content-container .chapter-container .chapter-header-wrapper .chapterIntro ul {
+#content-container .chapter-container .chapter-header-wrapper .chapterIntro ul,
+#content-container page-content-code .chapter-header-wrapper .chapterIntro ul {
   margin: 0;
   padding-left: 15px;
 }
-#content-container .chapter-container .chapter-header-wrapper .chapterIntro li {
+#content-container .chapter-container .chapter-header-wrapper .chapterIntro li,
+#content-container page-content-code .chapter-header-wrapper .chapterIntro li {
   padding-bottom: 10px;
 }
-#content-container .chapter-container .chapter-container:last-child {
+#content-container .chapter-container .chapter-container:last-child,
+#content-container page-content-code .chapter-container:last-child {
   margin-bottom: 0;
 }
-#content-container .chapter-container .chapter-code-wrapper .chapter-header-wrapper {
+#content-container .chapter-container .chapter-code-wrapper .chapter-header-wrapper,
+#content-container page-content-code .chapter-code-wrapper .chapter-header-wrapper {
   padding: 0;
 }
-#content-container .chapter-container .chapter-code-wrapper .page-container {
+#content-container .chapter-container .chapter-code-wrapper .page-container,
+#content-container page-content-code .chapter-code-wrapper .page-container {
   padding: 0;
   margin-bottom: 30px;
   background: black;
 }
-#content-container .chapter-container .page-container {
+#content-container .chapter-container .page-container,
+#content-container page-content-code .page-container {
   padding: 15px 0;
   font-size: 16px;
   line-height: 22px;
 }
-#content-container .chapter-container .page-container .page-content h4 {
-  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 18px;
+#content-container .chapter-container .page-container .page-content h4,
+#content-container page-content-code .page-container .page-content h4,
+#content-container .chapter-container .page-container .page-content-code h4,
+#content-container page-content-code .page-container .page-content-code h4 {
+  font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
   line-height: 22px;
   margin: 25px 0 10px 0;
   padding: 0;
 }
-#content-container .chapter-container .page-container .page-content h5 {
+#content-container .chapter-container .page-container .page-content h5,
+#content-container page-content-code .page-container .page-content h5,
+#content-container .chapter-container .page-container .page-content-code h5,
+#content-container page-content-code .page-container .page-content-code h5 {
   font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
   margin: 25px 0 10px 0;
   padding: 0;
 }
-#content-container .chapter-container .page-container .page-content p {
+#content-container .chapter-container .page-container .page-content p,
+#content-container page-content-code .page-container .page-content p,
+#content-container .chapter-container .page-container .page-content-code p,
+#content-container page-content-code .page-container .page-content-code p {
   font-size: 16px;
   line-height: 22px;
 }
-#content-container .chapter-container .page-container .page-content .notice-container {
+#content-container .chapter-container .page-container .page-content .notice-container,
+#content-container page-content-code .page-container .page-content .notice-container,
+#content-container .chapter-container .page-container .page-content-code .notice-container,
+#content-container page-content-code .page-container .page-content-code .notice-container {
   padding-left: 45px;
   min-height: 65px;
   margin-bottom: 25px;
 }
-#content-container .chapter-container .page-container .page-content .notice-container h4 {
+#content-container .chapter-container .page-container .page-content .notice-container h4,
+#content-container page-content-code .page-container .page-content .notice-container h4,
+#content-container .chapter-container .page-container .page-content-code .notice-container h4,
+#content-container page-content-code .page-container .page-content-code .notice-container h4 {
   font-size: 18px;
   line-height: 22px;
   margin: 25px 0 5px 0;
   padding: 0;
 }
-#content-container .chapter-container .page-container .page-content .notice-container p {
+#content-container .chapter-container .page-container .page-content .notice-container p,
+#content-container page-content-code .page-container .page-content .notice-container p,
+#content-container .chapter-container .page-container .page-content-code .notice-container p,
+#content-container page-content-code .page-container .page-content-code .notice-container p {
   font-size: 16px;
   line-height: 22px;
 }
-#content-container .chapter-container .page-container .page-content img {
+#content-container .chapter-container .page-container .page-content img,
+#content-container page-content-code .page-container .page-content img,
+#content-container .chapter-container .page-container .page-content-code img,
+#content-container page-content-code .page-container .page-content-code img {
   border: 4px solid #ddd;
   margin: 10px 0;
 }
-#content-container .chapter-container .page-container .page-content .tip {
+#content-container .chapter-container .page-container .page-content .tip,
+#content-container page-content-code .page-container .page-content .tip,
+#content-container .chapter-container .page-container .page-content-code .tip,
+#content-container page-content-code .page-container .page-content-code .tip {
   background: url('../images/icon-bulb.png') top left no-repeat;
 }
-#content-container .chapter-container .page-container .page-content .info {
+#content-container .chapter-container .page-container .page-content .info,
+#content-container page-content-code .page-container .page-content .info,
+#content-container .chapter-container .page-container .page-content-code .info,
+#content-container page-content-code .page-container .page-content-code .info {
   background: url('../images/icon-notepad.png') top left no-repeat;
 }
 #content-container .chapter-actions {
@@ -7848,10 +7893,11 @@ a {
   z-index: 100;
 }
 h3.page-title {
+  font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 20px;
 }
 h3.page-title span {
-  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-border-radius: 99px;
   -moz-border-radius: 99px;
   border-radius: 99px;
@@ -7860,7 +7906,7 @@ h3.page-title span {
   width: 36px;
   height: 36px;
   padding: 5px 7px 5px 7px;
-  background: #333;
+  background: #777;
   color: #fff;
   letter-spacing: -1px;
   text-align: center;
@@ -7872,20 +7918,20 @@ h3.page-title span {
   padding: 0;
 }
 .book-list .book-list-row {
-  border-bottom: 1px solid #ddd;
-  padding: 0 0 20px 0;
-  margin: 0 0 20px 0;
+  border-bottom: 1px solid #eee;
+  padding: 0 0 25px 0;
+  margin: 0 0 25px 0;
 }
 .book-list .book-list-row:last-child {
   border-bottom: 0px;
 }
 .book-list .book-list-overview h3 {
-  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin-bottom: 5px;
   padding-bottom: 0;
 }
 .book-list .book-list-overview .bookUtility {
-  color: #666;
+  color: #777;
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 0px;
@@ -7898,7 +7944,8 @@ h3.page-title span {
   float: left;
 }
 .book-list .book-list-overview .bookUtility .bookLink a {
-  color: #428bca;
+  font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #559AD4;
   opacity: 0.7;
   -moz-opacity: 0.7;
   filter: alpha(opacity=70);
@@ -7918,10 +7965,11 @@ h3.page-title span {
   font-size: 16px;
 }
 .book-list .book-list-overview .bookStart {
+  font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 18px;
-  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .book-list .book-list-overview .bookStart a {
+  color: #559AD4;
   color: #428bca;
   text-decoration: none;
   padding: 10px 0;
@@ -7938,9 +7986,9 @@ h3.page-title span {
   margin-left: 5px;
 }
 .book-list .book-list-options h4 {
-  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
-  color: #777;
+  color: #666;
   margin-bottom: 5px;
   padding-bottom: 0;
 }
