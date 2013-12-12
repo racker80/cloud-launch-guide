@@ -124,7 +124,7 @@ a {
 		
 		/* Dropdown Buttons with Menus */
 		
-		.dropdown-menu-eb ul li ul li a {font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 300; color: #4c4c4c; text-decoration: none;}
+		.dropdown-menu-eb ul li ul li a {font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #4c4c4c; text-decoration: none;}
 
 		.dropdown-menu-eb span:hover {
 			cursor: pointer;
@@ -132,8 +132,8 @@ a {
 		    color: #FFFFFF;
 		}
 		.dropdown-menu-eb > ul {
-			font-size: 14px;
-			line-height: 14px;
+			font-size: 13px;
+			line-height: 13px;
 		    list-style: none outside none;
 		    margin: 0;
 		    padding: 0;
@@ -198,8 +198,8 @@ a {
 			text-align: left;
 			text-decoration: none;
 			color: #4c4c4c;
-			font-size: 13px;
-			font-weight: 300;
+			font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-size: 14px;
 			line-height: 100%;
 		}
 		.dropdown-menu-eb > ul > li > ul > li a:hover {color: #4c4c4c; text-decoration: none;}
@@ -237,9 +237,9 @@ a {
 		cursor:pointer;
 		display:inline-block;
 		font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-		font-size:14px;
+		font-size: 13px;
 		letter-spacing:.01em;
-		line-height:14px;
+		line-height: 13px;
 		padding:.7em 1em .7em 1em;
 		text-align:center;
 		text-decoration:none !important;
@@ -476,9 +476,9 @@ a {
 	.page-header {
 		.bsreset;
 		h1.homeTitle {
-			font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 			color: #333;
-			font-size: 32px;
+			font-size: 36px;
 			letter-spacing: -2px;
 			margin-bottom: 10px;
 			padding-bottom: 7px;
@@ -551,20 +551,20 @@ a {
 		-moz-transition: all .15s linear;
 		-webkit-transition: all .15s linear;
 		transition: all .15s linear;
-		background: #fff;
+		// background: #fff;
 		text-align: center;
-		width: 228px;
+		width: 227px;
 		float: left; 
 		margin-right: 15px;
 		
 		h3 {
-			font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-			color: #fff;
-			background: #3CA0F5;
-			// color: #1E82D7;
-			font-size: 20px;
+			font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			// color: #fff;
+			// background: #3CA0F5;
+			color: #559AD4;
+			font-size: 24px;
 			padding: 10px;
-			margin: 0 0 10px 0;
+			margin: 0;
 			text-align: center;
 		}
 		
@@ -572,8 +572,8 @@ a {
 			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 			box-sizing: border-box;         /* IE 8+ */
-			font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-			color: #777;
+			font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			color: #222;
 			padding: 0px 7px 20px 7px;
 			font-size: 16px;
 			line-height: 22px;
@@ -591,8 +591,12 @@ a {
 	
 		&:hover {
 			cursor: pointer;
-		    -webkit-box-shadow: 0 9px 12px rgba(0, 0, 0, 0.175);
-            box-shadow: 0 9px 12px rgba(0, 0, 0, 0.175);
+			-webkit-transform: scale(1.025);
+			-moz-transform: scale(1.025);
+			transform: scale(1.025);
+		    // -webkit-box-shadow: 0 9px 12px rgba(0, 0, 0, 0.175);
+		    // -moz-box-shadow: 0 9px 12px rgba(0, 0, 0, 0.175);
+            // box-shadow: 0 9px 12px rgba(0, 0, 0, 0.175);
 			
 		}
 		
@@ -618,7 +622,7 @@ a {
 	}
 	
 	&.quickstart-wrapper {
-		background: #3CA0F5;
+		background: #559AD4;
 		color: #fff;
 		
 		.quickstart {
@@ -649,19 +653,19 @@ a {
 			}
 			
 			h2 {
-				font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 				color: #fff;
-				font-size: 22px;
-				margin: 10px 0 0 0;
+				font-size: 24px;
+				margin: 10px 0 5px 0;
 				padding: 0;
 			}
 	
 			p {
-				font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-				font-size: 16px;
-				line-height: 22px;
+				font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				font-size: 18px;
+				line-height: 24px;
 				
-				strong {font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #fff;}
+				strong {font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #fff;}
 				
 			}
 		}
@@ -872,7 +876,8 @@ a {
 	padding-top: 20px;
 	
 	.category-content {
-		margin-bottom: 20px;
+		margin: 20px 0;
+		padding: 20px 0;
 		border-bottom: 1px solid #ccc;
 		
 		.category-header {
@@ -880,8 +885,9 @@ a {
 			h2 {
 				padding: 17px 0;
 				margin-left: 80px;
-				font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 				font-size: 28px;
+				color: #559AD4;
 			}
 			
 			.card-badge-content {
@@ -905,7 +911,7 @@ a {
 			position: relative;
 			border: 1px solid #ddd;
 			padding: 10px;
-			float: right;
+			float: left;
 			margin: 0 0 20px 20px;
 			width: 30%;
 			height: 115px;
