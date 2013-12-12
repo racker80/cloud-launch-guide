@@ -6718,7 +6718,7 @@ a.btn.btn-primary {
 /*@import url('main.less');*/
 html {
   height: 100%;
-  background: #333333 url('../images/bg-dark.png');
+  background: #2d2d2d url('../images/bg-banner-dark.svg');
   font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   /* Fix for webkit rendering */
@@ -6727,7 +6727,7 @@ html {
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   html {
     height: 100%;
-    background: #333333 url('../images/bg-dark_@2x.png');
+    background: #2d2d2d url('../images/bg-banner-dark.svg');
     font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     /* Fix for webkit rendering */
@@ -7465,6 +7465,40 @@ a {
   border-top-color: #333 !important;
   border-bottom-color: #333 !important;
 }
+.navbar-options .allSteps .glyphicon {
+  margin-right: 5px;
+}
+.navbar-options .glyphicon-certificate {
+  margin-right: 5px;
+}
+.navbar-options .caret {
+  margin-left: 5px;
+}
+.navbar-options .tooltip-rs:hover {
+  cursor: pointer;
+}
+.navbar-options .btn-info-rs {
+  -moz-transition: all .15s linear;
+  -webkit-transition: all .15s linear;
+  transition: all .15s linear;
+  color: #ffffff;
+  background-color: #3CA0F5;
+  border-color: #3492DE;
+}
+.navbar-options .btn-info-rs:hover,
+.navbar-options .btn-info-rs:focus,
+.navbar-options .btn-info-rs:active,
+.navbar-options .btn-info-rs.active,
+.navbar-options .open .dropdown-toggle.btn-info-rs {
+  color: #ffffff;
+  background-color: #3696E4;
+  border-color: #3594E1;
+}
+.navbar-options .btn-info-rs:active,
+.navbar-options .btn-info-rs.active,
+.navbar-options .open .dropdown-toggle.btn-info-rs {
+  background-image: none;
+}
 .nav-drawer-container {
   width: 100%;
   display: none;
@@ -8011,7 +8045,6 @@ h3.page-title span {
   text-align: center;
 }
 .ui-dialog .ui-dialog-content {
-  position: relative;
   border: 0;
   background: none;
   overflow: auto;

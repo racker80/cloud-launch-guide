@@ -18,7 +18,7 @@
 
 html {
 	height: 100%;
-	background: #333 url('../images/bg-dark.png');
+	background: #2d2d2d url('../images/bg-banner-dark.svg');
 	font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 	-webkit-text-size-adjust: 100%;
@@ -27,7 +27,7 @@ html {
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
      html {
 	 	height: 100%;
-	 	background: #333 url('../images/bg-dark_@2x.png');
+		background: #2d2d2d url('../images/bg-banner-dark.svg');
 	 	font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 	 	-webkit-text-size-adjust: 100%;
@@ -752,6 +752,37 @@ a {
 			border-bottom-color: #333 !important;
 		}
 	}
+	
+	.allSteps .glyphicon {margin-right: 5px;}
+	.glyphicon-certificate {margin-right: 5px;}
+	.caret {margin-left: 5px;}
+	.tooltip-rs:hover {cursor: pointer;}
+	
+	.btn-info-rs {
+		-moz-transition: all .15s linear;
+		-webkit-transition: all .15s linear;
+		transition: all .15s linear;
+	  color: #ffffff;
+	  background-color: #3CA0F5;
+	  border-color: #3492DE;
+	}
+
+	.btn-info-rs:hover,
+	.btn-info-rs:focus,
+	.btn-info-rs:active,
+	.btn-info-rs.active,
+	.open .dropdown-toggle.btn-info-rs {
+	  color: #ffffff;
+	  background-color: #3696E4;
+	  border-color: #3594E1;
+	}
+
+	.btn-info-rs:active,
+	.btn-info-rs.active,
+	.open .dropdown-toggle.btn-info-rs {
+	  background-image: none;
+	}
+	
 }
 
 .nav-drawer-container {
@@ -1384,7 +1415,6 @@ h3.page-title {
 	.video-quickstart-container {text-align: center;}
 	
 	.ui-dialog-content {
-		position: relative;
 		border: 0;
 		background: none;
 		overflow: auto;

@@ -145,14 +145,14 @@
 						$('.page-content-full').hide();
 						$('.actionOverview').removeClass('hide');
 						// doSource(connections)
-						expertBtn.addClass('btn-warning');
-						expertBtn.find('.glyphicon').removeClass('glyphicon-save').addClass('glyphicon-saved');
+						expertBtn.addClass('btn-info-rs');
+						expertBtn.find('.glyphicon').removeClass('glyphicon-certificate').addClass('glyphicon-certificate');
 
 					} else {
 						$('.page-content-full').show();
 						$('.actionOverview').addClass('hide');
-						expertBtn.removeClass('btn-warning');
-						expertBtn.find('.glyphicon').removeClass('glyphicon-saved').addClass('glyphicon-save');
+						expertBtn.removeClass('btn-info-rs');
+						expertBtn.find('.glyphicon').removeClass('glyphicon-certificate').addClass('glyphicon-certificate');
 					}
 
 					$('body').trigger('expertToggle');

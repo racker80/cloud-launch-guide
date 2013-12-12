@@ -26,7 +26,6 @@ $(document).ready(function() {
 			autoOpen: false,
 			modal: true,
 			draggable: false,
-			position: ['center','middle'],
 			width: 770,
 			closeOnEscape: true,
 		    close: function() {
