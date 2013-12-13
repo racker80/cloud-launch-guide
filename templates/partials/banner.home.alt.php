@@ -6,7 +6,7 @@
 					<div class="page-header">
 						<h1 class="chapterTitle homeTitle" data-slug="{{guide.slug}}"><span>Welcome to Rackspace's</span> Cloud Launch Guides</h1>
 						<div class="lead">
-							<p><strong>This site is designed to teach you everything you need to know about working with the cloud.</strong> Cloud Launch Guides target a variety of topics, ranging from getting started knowledge &amp; fundamental techniques to example infrastructure build&#8211;outs. Follow along and learn how to succeed in the Rackspace Cloud.</p>
+							<p><strong>This site is designed to teach you everything you need to know about working with the cloud.</strong> Cloud Launch Guides target a variety of topics, ranging from getting started knowledge &amp; fundamental techniques to example infrastructure build&#8211;outs. Follow along through these categories and learn how to succeed in the Rackspace Cloud.</p>
 						</div>
 					</div>
 				</div>

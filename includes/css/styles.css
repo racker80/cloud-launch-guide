@@ -7372,18 +7372,57 @@ a {
 #banner-wrapper.quickstart-wrapper .quickstart h2 {
   font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #fff;
-  font-size: 24px;
-  margin: 10px 0 5px 0;
+  font-size: 22px;
+  margin: 3px 0 3px 0;
   padding: 0;
 }
 #banner-wrapper.quickstart-wrapper .quickstart p {
   font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 17px;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+#banner-wrapper.quickstart-wrapper .quickstart p:last-child {
+  margin-bottom: 0;
 }
 #banner-wrapper.quickstart-wrapper .quickstart p strong {
   font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #fff;
+}
+#banner-wrapper.quickstart-wrapper .quickstart p.quickstart-links a {
+  position: relative;
+  -moz-transition: all .15s linear;
+  -webkit-transition: all .15s linear;
+  transition: all .15s linear;
+  font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: inline-block;
+  background: #fff;
+  font-size: 14px;
+  padding: 3px 15px;
+  margin-right: 10px;
+  opacity: 0.8;
+  -moz-opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+#banner-wrapper.quickstart-wrapper .quickstart p.quickstart-links a:hover {
+  text-decoration: none;
+  opacity: 1.0;
+  -moz-opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+#banner-wrapper.quickstart-wrapper .quickstart p.quickstart-links a.advance:hover {
+  padding-right: 20px;
+}
+#banner-wrapper.quickstart-wrapper .quickstart p.quickstart-links a.advance:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: -14px;
+  width: 0;
+  height: 0;
+  border-color: transparent transparent transparent #fff;
+  border-style: solid;
+  border-width: 14px 0 14px 14px;
 }
 /* ----------------------------------------------------------------
 	GUIDE MENU
@@ -7600,28 +7639,73 @@ a {
 }
 #content-container .category-content .guide-card {
   position: relative;
+  background: #eeeeee url('../images/bg-banner.svg');
   border: 1px solid #ddd;
-  padding: 10px;
+  color: #fff;
+  padding: 15px;
   float: left;
-  margin: 0 0 20px 20px;
-  width: 30%;
-  height: 115px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 210px;
+  height: 250px;
+  -moz-transition: all .15s linear;
+  -webkit-transition: all .15s linear;
+  transition: all .15s linear;
+}
+#content-container .category-content .guide-card:hover {
+  -webkit-transform: scale(1.025);
+  -moz-transform: scale(1.025);
+  transform: scale(1.025);
 }
 #content-container .category-content .guide-card h3 {
-  font-size: 16px;
+  font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #444;
+  font-size: 22px;
+  line-height: 26px;
 }
-#content-container .category-content .guide-card p.guide-actions a {
-  padding: 10px;
-}
-#content-container .category-content .guide-card .guide-actions-start {
+#content-container .category-content .guide-card p.guidestart-links {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 15px;
 }
-#content-container .category-content .guide-card .guide-actions-learn {
+#content-container .category-content .guide-card p.guidestart-links a {
+  position: relative;
+  -moz-transition: all .15s linear;
+  -webkit-transition: all .15s linear;
+  transition: all .15s linear;
+  font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: inline-block;
+  background: #aaa;
+  color: #fff;
+  font-size: 15px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  opacity: 0.8;
+  -moz-opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+#content-container .category-content .guide-card p.guidestart-links a:hover {
+  text-decoration: none;
+  opacity: 1.0;
+  -moz-opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+#content-container .category-content .guide-card p.guidestart-links a.advance {
+  background: #559AD4;
+}
+#content-container .category-content .guide-card p.guidestart-links a.advance:hover {
+  padding-right: 20px;
+}
+#content-container .category-content .guide-card p.guidestart-links a.advance:after {
+  content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
+  top: 0px;
+  right: -15px;
+  width: 0;
+  height: 0;
+  border-color: transparent transparent transparent #559AD4;
+  border-style: solid;
+  border-width: 15px 0 15px 15px;
 }
 #content-container .category-content:last-child {
   border-bottom: none;
