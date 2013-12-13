@@ -11,7 +11,7 @@
 		</div>
 	</div>
 	<div class="col-md-10 col-md-offset-1">
-		{% for guide in guides %}
+		<!-- {% for guide in guides %}
 		<div class="guide-card">
 			<h3>{{guide.title}}</h3>
 			<p class="guidestart-links">
@@ -19,7 +19,20 @@
 				<a href="{{ baseurl }}/guides/{{guide.slug}}/{{guide.children[0].slug}}" class="advance">Start Guide</a>
 			</p>
 		</div>
-		{% endfor %}
+		{% endfor %} -->
+		<div class="guide-card unbox">
+			<h3>Securing a Cloud Server</h3>
+			<p class="guidestart-links">
+				<a href="{{ baseurl }}/guides/securing-server" class="guide-actions-learn">Tell me more</a>
+				<a href="{{ baseurl }}/guides/securing-server/rpm-based" class="advance">Let's get started</a>
+			</p>
+		</div>
+		
+		<div class="guide-card unbox coming-soon">
+			<h3>Moving Data to Your Server</h3>
+			<p class="ribbon">Coming Soon</p>
+		</div>
+		
 	</div>
 </div>
 
@@ -56,9 +69,9 @@
 		{% for guide in guides %}
 		<div class="guide-card">
 			<h3>{{guide.title}}</h3>
-			<p class="guide-actions">
+			<p class="guidestart-links">
 				<a href="{{ baseurl }}/guides/{{guide.slug}}" class="guide-actions-learn">Learn More</a>
-				<a href="{{ baseurl }}/guides/{{guide.slug}}/{{guide.children[0].slug}}" class="guide-actions-start">Start Guide</a>
+				<a href="{{ baseurl }}/guides/{{guide.slug}}/{{guide.children[0].slug}}" class="advance">Start Guide</a>
 			</p>
 		</div>
 		{% endfor %}

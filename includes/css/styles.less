@@ -952,30 +952,47 @@ a {
 	
 		.guide-card {
 			position: relative;
-			// background: #559AD4;
-			background: #eee url('../images/bg-banner.svg');
-			border: 1px solid #ddd;
-			color: #fff;
 			padding: 15px;
 			float: left;
 			margin-right: 20px;
 			margin-bottom: 20px; // <- Remove for production!
-			width: 210px;
-			height: 250px;
+			width: 290px;
+			height: 170px;
 			-moz-transition: all .15s linear;
 			-webkit-transition: all .15s linear;
 			transition: all .15s linear;
 			
 			
 			&:hover {
-				-webkit-transform: scale(1.025);
-				-moz-transform: scale(1.025);
-				transform: scale(1.025);
+				// -webkit-transform: scale(1.025);
+				// -moz-transform: scale(1.025);
+				// transform: scale(1.025);
+			}
+			
+			&.unbox {background: #eee url('../images/bg-guide-unbox.svg');}
+			&.discover {background: #eee url('../images/bg-guide-discover.svg');}
+			&.build {background: #eee url('../images/bg-guide-build.svg');}
+			
+						
+			&.coming-soon {
+				opacity: 0.5;
+				-moz-opacity: 0.5;
+				filter:alpha(opacity=50);
+				
+				p {
+					position: absolute;
+					bottom: 15px;
+					right: 0;
+					background: #559AD4;
+					width: 100%;
+					padding: 10px 0;
+					text-align: center;
+				}
 			}
 			
 			h3 {
-				font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-				color: #444;
+				font-family:'SourceSansProlight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				color: #333;
 				font-size: 22px;
 				line-height: 26px;
 			}
@@ -993,10 +1010,10 @@ a {
 				
 				font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 				display: inline-block;
-				background: #aaa;
-				color: #fff;
-				font-size: 15px;
-				padding: 5px 10px;
+				background: #559AD4;
+				color: #eee;
+				font-size: 14px;
+				padding: 7px 15px;
 				margin-top: 10px;
 				margin-right: 10px;
 				opacity: 0.8;
@@ -1011,7 +1028,7 @@ a {
 				filter:alpha(opacity=100);
 			}
 			
-			p.guidestart-links a.advance {background: #559AD4;}
+			p.guidestart-links a.advance {}
 			
 			p.guidestart-links a.advance:hover {padding-right: 20px;}
 						
@@ -1019,13 +1036,13 @@ a {
 				content: "";
 				position: absolute;
 				top: 0px;
-				right: -15px;
+				right: -17px;
 				width: 0;
 				height: 0;
 				border-color: transparent transparent transparent #559AD4;
 				border-style: solid;
-				border-width: 15px 0 15px 15px;  
-			}
+				border-width: 17px 0 17px 17px;  
+			}			
 						
 		}
 		
