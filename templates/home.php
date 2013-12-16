@@ -30,7 +30,7 @@
 		
 		<div class="guide-card unbox coming-soon">
 			<h3>Moving Data to Your Server</h3>
-			<p class="ribbon">Coming Soon</p>
+			<p class="ribbon"><a href="">Coming soon</a></p>
 		</div>
 		
 	</div>
@@ -45,15 +45,20 @@
 		</div>
 	</div>
 	<div class="col-md-10 col-md-offset-1">
-		{% for guide in guides %}
-		<div class="guide-card">
-			<h3>{{guide.title}}</h3>
+		<div class="guide-card discover">
+			<h3>Moving from one server to multiple servers</h3>
 			<p class="guidestart-links">
-				<a href="{{ baseurl }}/guides/{{guide.slug}}" class="guide-actions-learn">Learn More</a>
-				<a href="{{ baseurl }}/guides/{{guide.slug}}/{{guide.children[0].slug}}" class="advance">Start Guide</a>
+				<a href="{{ baseurl }}/guides/one-to-many" class="guide-actions-learn">Tell me more</a>
+				<a href="{{ baseurl }}/guides/one-to-many/Splitting-the-server" class="advance">Let's get started</a>
 			</p>
 		</div>
-		{% endfor %}
+		<div class="guide-card discover">
+			<h3>Horizontally scaling your Web layer</h3>
+			<p class="guidestart-links">
+				<a href="{{ baseurl }}/guides/horizontal" class="guide-actions-learn">Tell me more</a>
+				<a href="{{ baseurl }}/guides/horizontal/Imaging" class="advance">Let's get started</a>
+			</p>
+		</div>
 	</div>
 </div>
 
@@ -65,16 +70,36 @@
 			<p>Ever wonder how a Racker would execute a cloud architecture build out? Our <strong>Build</strong> guides are centered around exactly that. Follow along step by step during an example build out and configuration of a complex, scalable cloud environment.9</p>
 		</div>
 	</div>
-	<div class="col-md-11">
-		{% for guide in guides %}
-		<div class="guide-card">
-			<h3>{{guide.title}}</h3>
+	<div class="col-md-10 col-md-offset-1">
+		<div class="guide-card build">
+			<h3>CMS with WordPress</h3>
 			<p class="guidestart-links">
-				<a href="{{ baseurl }}/guides/{{guide.slug}}" class="guide-actions-learn">Learn More</a>
-				<a href="{{ baseurl }}/guides/{{guide.slug}}/{{guide.children[0].slug}}" class="advance">Start Guide</a>
+				<a href="{{ baseurl }}/guides/wordpress" class="guide-actions-learn">Tell me more</a>
+				<a href="{{ baseurl }}/guides/wordpress/infrastructure" class="advance">Let's get started</a>
 			</p>
 		</div>
-		{% endfor %}
+		
+		<div class="guide-card build coming-soon">
+			<h3>Developing with Django</h3>
+			<p class="ribbon"><a href="">Coming soon</a></p>
+		</div>
+		
+		<div class="guide-card build coming-soon">
+			<h3>eCommerce with Magento</h3>
+			<p class="ribbon"><a href="">Coming soon</a></p>
+		</div>
+		
+		<div class="guide-card build coming-soon">
+			<h3>Developing with Ruby on Rails</h3>
+			<p class="ribbon"><a href="">Coming soon</a></p>
+		</div>
+		
+		<div class="guide-card build coming-soon">
+			<h3>NoSQL database with MongoDB</h3>
+			<p class="ribbon"><a href="">Coming soon</a></p>
+		</div>
+		
+		
 	</div>
 </div>
 </div>
