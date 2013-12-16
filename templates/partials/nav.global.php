@@ -18,13 +18,12 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Guides <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 					    <li role="presentation" class="dropdown-header">Unbox</li>
-						{% for guide in guides %}
-							<li><a href="{{ baseurl }}/guides/{{guide.slug}}">{{guide.title}}</a></li>	
-						{% endfor %}
+						<li><a href="{{ baseurl }}/guides/securing-server">Securing a Cloud Server</a></li>	
 					    <li role="presentation" class="dropdown-header">Discover</li>
-						{% for guide in guides %}
-							<li><a href="{{ baseurl }}/guides/{{guide.slug}}">{{guide.title}}</a></li>	
-						{% endfor %}
+						<li><a href="{{ baseurl }}/guides/one-to-many">Moving from one server to multiple servers</a></li>	
+						<li><a href="{{ baseurl }}/guides/horizontal">Horizontally scaling your Web layer</a></li>	
+					    <li role="presentation" class="dropdown-header">Build</li>
+						<li><a href="{{ baseurl }}/guides/wordpress">CMS with WordPress</a></li>	
 					</ul>
 				</li>
 				<!-- <li><a href="#">About</a></li> -->
