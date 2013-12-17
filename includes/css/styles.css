@@ -8188,18 +8188,13 @@ h3.page-title span {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 25px 10px 10px 10px;
+  padding-top: 25px;
   outline: 0;
-}
-.ui-dialog .video-quickstart-container {
-  text-align: center;
 }
 .ui-dialog .ui-dialog-content {
   border: 0;
-  background: none;
   overflow: auto;
-  padding: 5px 5px 0px 5px;
-  background: #444;
+  background: none;
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;
@@ -8210,7 +8205,7 @@ h3.page-title span {
 .ui-dialog button.ui-button {
   position: absolute;
   top: 15px;
-  right: -15px;
+  right: -25px;
   background: none;
   border: 0;
   outline: none;
@@ -8232,15 +8227,10 @@ h3.page-title span {
   color: #fff;
   font-size: 20px;
 }
-.ui-dialog .video-quickstart-container {
-  width: 770px;
-  height: 460px;
-}
 .ui-dialog .feedback-container {
   width: 770px;
   height: 460px;
   background: #fff;
-  border: 5px solid #777;
   padding: 20px;
 }
 .ui-dialog .feedback-container h3 {

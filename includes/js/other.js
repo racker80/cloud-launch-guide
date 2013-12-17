@@ -49,7 +49,7 @@ $(document).ready(function() {
 			autoOpen: false,
 			modal: true,
 			draggable: false,
-			width: 770,
+			width: 740,
 			closeText: "",
 			closeOnEscape: true,
 		    close: function() {

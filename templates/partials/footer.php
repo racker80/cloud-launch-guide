@@ -19,6 +19,7 @@
 		</footer>
 		
 		<!-- Feedback form -->
+		
 		<div class="feedback-container" id="dialog-feedback">
 			<h3>Feedback</h3>
 			<p>Help us make this site better for you. Fill out this form and the feedback will go directly to the Cloud Launch Guide team.</p>
@@ -26,9 +27,9 @@
 			<form action="" method="post" accept-charset="utf-8">
 				<div class="form-container">
 				    <label for="what">What could we do?</label>
-				    <textarea class="form-control" id="what" placeholder="Required"></textarea>
+				    <textarea class="form-control" id="what" placeholder="Required" required></textarea>
 				    <label for="how">How might this help you?</label>
-				    <textarea class="form-control" id="how" placeholder="Required"></textarea>
+				    <textarea class="form-control" id="how" placeholder="Required" required></textarea>
 				    <label for="emailAddress">Email address <span>(We will never share this.)</span></label>
 				    <input type="email" class="form-control" id="emailAddress" placeholder="Optional">
 				</div>
@@ -52,6 +53,7 @@
 		<script src="{{ baseurl }}/includes/js/main.js"></script>
 		
 		<script src="{{ baseurl }}/includes/js/other.js"></script>
+		<script src="{{ baseurl }}/includes/js/jquery.validate.js"></script>
 
 		<script type="text/javascript">
 			function downloadJSAtOnload() {
