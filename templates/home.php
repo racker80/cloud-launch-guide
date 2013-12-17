@@ -30,7 +30,7 @@
 		
 		<div class="guide-card unbox coming-soon">
 			<h3>Moving Data to Your Server</h3>
-			<p class="ribbon"><a href="">Coming soon</a></p>
+			<p class="ribbon"><a href="##" class="dialog-c">Coming soon</a></p>
 		</div>
 		
 	</div>
@@ -81,22 +81,22 @@
 		
 		<div class="guide-card build coming-soon">
 			<h3>Developing with Django</h3>
-			<p class="ribbon"><a href="">Coming soon</a></p>
+			<p class="ribbon"><a href="##" class="dialog-c">Coming soon</a></p>
 		</div>
 		
 		<div class="guide-card build coming-soon">
 			<h3>eCommerce with Magento</h3>
-			<p class="ribbon"><a href="">Coming soon</a></p>
+			<p class="ribbon"><a href="##" class="dialog-c">Coming soon</a></p>
 		</div>
 		
 		<div class="guide-card build coming-soon">
 			<h3>Developing with Ruby on Rails</h3>
-			<p class="ribbon"><a href="">Coming soon</a></p>
+			<p class="ribbon"><a href="##" class="dialog-c">Coming soon</a></p>
 		</div>
 		
 		<div class="guide-card build coming-soon">
 			<h3>NoSQL database with MongoDB</h3>
-			<p class="ribbon"><a href="">Coming soon</a></p>
+			<p class="ribbon"><a href="##" class="dialog-c">Coming soon</a></p>
 		</div>
 		
 		

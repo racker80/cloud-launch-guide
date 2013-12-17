@@ -19,6 +19,8 @@ $(document).ready(function() {
 		});
 	});
 	
+	// Modals
+	
 	$(function() {
 		$('#dialog-feedback').dialog({
 			autoOpen: false,
@@ -29,7 +31,6 @@ $(document).ready(function() {
 			closeOnEscape: true,
 		    create: function(event, ui) { 
 				$('span.ui-button-icon-primary').remove();
-				// $('button.ui-button').prop('disabled', true);
 
 				var widget = $(this).dialog('widget');
 				$('.ui-dialog-titlebar-close span', widget).addClass('glyphicon glyphicon-remove dialog-close');
@@ -40,7 +41,30 @@ $(document).ready(function() {
 	      $('#dialog-feedback').dialog('open');
 	    });
 		
-	});		
+	});
+	
+	$(function() {
+		$('#dialog-comingsoon').dialog({
+			autoOpen: false,
+			modal: true,
+			draggable: false,
+			width: 550,
+			closeText: "",
+			closeOnEscape: true,
+		    create: function(event, ui) { 
+				$('span.ui-button-icon-primary').remove();
+
+				var widget = $(this).dialog('widget');
+				$('.ui-dialog-titlebar-close span', widget).addClass('glyphicon glyphicon-remove dialog-close');
+			}
+		});
+	
+	    $('a.dialog-c').click(function() {
+	      $('#dialog-comingsoon').dialog('open');
+	    });
+		
+	});
+	
 	
 	$(function() {
 		var url = $('#video-quickstart').attr('src').replace('autoplay=0', 'autoplay=1');
@@ -60,7 +84,6 @@ $(document).ready(function() {
 		    },
 		    create: function(event, ui) { 
 				$('span.ui-button-icon-primary').remove();
-				// $('button.ui-button').prop('disabled', true);
 
 				var widget = $(this).dialog('widget');
 				$('.ui-dialog-titlebar-close span', widget).addClass('glyphicon glyphicon-remove dialog-close');
@@ -71,9 +94,9 @@ $(document).ready(function() {
 	      $('#dialog-video').dialog('open');
 	    });
 		
-	});		
+	});
 	
-	// scroll to elements on homepage
+	// Scroll to elements on homepage
 
 	$(function() {
 
@@ -101,7 +124,7 @@ $(document).ready(function() {
 		
 	});
 	
-	// validate feedback form 
+	// Validate feedback form 
 	
 
 });

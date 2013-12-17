@@ -27,9 +27,9 @@
 			<form action="" method="post" accept-charset="utf-8">
 				<div class="form-container">
 				    <label for="what">What could we do?</label>
-				    <textarea class="form-control" id="what" placeholder="Required" required></textarea>
+				    <textarea class="form-control" id="what" placeholder="Required"></textarea>
 				    <label for="how">How might this help you?</label>
-				    <textarea class="form-control" id="how" placeholder="Required" required></textarea>
+				    <textarea class="form-control" id="how" placeholder="Required"></textarea>
 				    <label for="emailAddress">Email address <span>(We will never share this.)</span></label>
 				    <input type="email" class="form-control" id="emailAddress" placeholder="Optional">
 				</div>
@@ -38,6 +38,25 @@
 				</div>
 			</form>
 		</div>
+		
+		<!-- Coming soon modal -->
+		
+		<div class="comingsoon-container" id="dialog-comingsoon">
+			<h3>This guide is <strong>coming soon</strong>.</h3>
+			<p>Thanks for your interest. We're working hard on the next round of Cloud Launch Guides. Sign up for updates about new guides.</p>
+			
+			<form action="" method="post" accept-charset="utf-8">
+				<div class="form-container">
+				    <label for="emailAddress">Email address <span>(We will never share this.)</span></label>
+				    <input type="email" class="form-control" id="emailAddress" placeholder="Optional">
+				</div>
+				<div class="form-actions">
+					<button type="submit">Sign up</button>
+				</div>
+			</form>
+			
+		</div>
+		
 
 		<script src="{{ baseurl }}/includes/bower_components/jquery/jquery.min.js"></script>
 		<script src="{{ baseurl }}/includes/bower_components/jquery/jquery.ui.min.js"></script>

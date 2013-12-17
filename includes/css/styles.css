@@ -8227,51 +8227,67 @@ h3.page-title span {
   color: #fff;
   font-size: 20px;
 }
-.ui-dialog .feedback-container {
+.ui-dialog .feedback-container,
+.ui-dialog .comingsoon-container {
   width: 770px;
   height: 460px;
   background: #fff;
   padding: 20px;
 }
-.ui-dialog .feedback-container h3 {
+.ui-dialog .feedback-container h3,
+.ui-dialog .comingsoon-container h3 {
   font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #666;
   padding-bottom: 0px;
 }
-.ui-dialog .feedback-container p {
+.ui-dialog .feedback-container p,
+.ui-dialog .comingsoon-container p {
   font-family: 'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 15px;
 }
-.ui-dialog .feedback-container .form-container {
+.ui-dialog .feedback-container strong,
+.ui-dialog .comingsoon-container strong {
+  color: #666;
+  font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.ui-dialog .feedback-container .form-container,
+.ui-dialog .comingsoon-container .form-container {
   border-top: 1px solid #eee;
   padding: 15px 0;
 }
-.ui-dialog .feedback-container .form-container label {
+.ui-dialog .feedback-container .form-container label,
+.ui-dialog .comingsoon-container .form-container label {
   font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: normal;
   letter-spacing: 0.25px;
 }
-.ui-dialog .feedback-container .form-container label span {
+.ui-dialog .feedback-container .form-container label span,
+.ui-dialog .comingsoon-container .form-container label span {
   margin-left: 10px;
   color: #999;
 }
 .ui-dialog .feedback-container .form-container input,
-.ui-dialog .feedback-container .form-container textarea {
+.ui-dialog .comingsoon-container .form-container input,
+.ui-dialog .feedback-container .form-container textarea,
+.ui-dialog .comingsoon-container .form-container textarea {
   margin-bottom: 15px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
 .ui-dialog .feedback-container .form-container input:focus,
-.ui-dialog .feedback-container .form-container textarea:focus {
+.ui-dialog .comingsoon-container .form-container input:focus,
+.ui-dialog .feedback-container .form-container textarea:focus,
+.ui-dialog .comingsoon-container .form-container textarea:focus {
   border-color: #559AD4;
   -webkit-box-shadow: 0 0 3px #66BAFF;
   -moz-box-shadow: 0 0 3px #66BAFF;
   box-shadow: 0 0 3px #66BAFF;
 }
-.ui-dialog .feedback-container .form-actions button {
+.ui-dialog .feedback-container .form-actions button,
+.ui-dialog .comingsoon-container .form-actions button {
   font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   border: 0;
   background: #76A8D9;
@@ -8281,7 +8297,8 @@ h3.page-title span {
   -webkit-transition: all .15s linear;
   transition: all .15s linear;
 }
-.ui-dialog .feedback-container .form-actions button:hover {
+.ui-dialog .feedback-container .form-actions button:hover,
+.ui-dialog .comingsoon-container .form-actions button:hover {
   background: #559AD4;
 }
 /* ----------------------------------------------------------------

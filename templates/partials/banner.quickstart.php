@@ -2,7 +2,7 @@
 	<div class="container quickstart">
 		<div class="row">
 			<div class="col-md-3">
-				<a href="#" class="video-launch tooltip-rs dialog-v" title="Watch the Quick Start Guide video instead."></a>
+				<a href="##" class="video-launch tooltip-rs dialog-v" title="Watch the Quick Start Guide video instead."></a>
 			</div>
 			<div class="col-md-13">
 				<h2>Quick Start Guide</h2>
