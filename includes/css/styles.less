@@ -1549,19 +1549,22 @@ h3.page-title {
 		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 		box-sizing: border-box;         /* IE 8+ */
 	}
-
-	.dialog-close {
+	
+	button.ui-button {
 		position: absolute;
-		top: 5px;
+		top: 15px;
 		right: -15px;
-		color: #fff;
+		background: none;
 		border: 0;
-		font-size: 20px;
-		text-decoration: none;
+	    outline: none;
+		-moz-transition: all .15s linear;
+		-webkit-transition: all .15s linear;
+		transition: all .15s linear;
+		
 		opacity: 0.7;
 		-moz-opacity: 0.7;
 		filter:alpha(opacity=70);
-
+		
 		&:hover {
 			opacity: 1.0;
 			-moz-opacity: 1.0;
@@ -1569,12 +1572,83 @@ h3.page-title {
 			text-decoration: none;
 		}
 	}
-	
+
+	.dialog-close {
+		background-color: none;
+		color: #fff;
+		font-size: 20px;
+
+	}
+			
 	.video-quickstart-container {
 		width: 770px;
 		height: 460px;
 	}
 
+	.feedback-container {
+		width: 770px;
+		height: 460px;
+		background: #fff;
+		border: 5px solid #777;
+		padding: 20px;
+		
+		h3 {
+			font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			color: #666;
+			padding-bottom: 0px;
+		}
+		
+		p {
+			font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-size: 16px;
+			line-height: 22px;
+			margin-bottom: 15px;
+		}
+		
+		.form-container {
+			border-top: 1px solid #eee;
+			padding: 15px 0;
+			
+			label {
+				font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				font-weight: normal;
+				letter-spacing: 0.25px;
+				
+				span {margin-left: 10px; color: #999;}
+			}
+			
+			input, textarea {
+				margin-bottom: 15px;
+				-webkit-border-radius: 0px;
+				-moz-border-radius: 0px;
+				border-radius: 0px;
+			
+				&:focus {
+					border-color: #559AD4;
+					-webkit-box-shadow: 0 0 3px #66BAFF;
+					-moz-box-shadow: 0 0 3px #66BAFF;
+					box-shadow: 0 0 3px #66BAFF;
+				}
+			}
+			
+		}
+		
+		.form-actions {
+			button {
+				font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				border: 0;
+				background: #76A8D9;
+				color: #fff;
+				padding: 7px 15px;
+				-moz-transition: all .15s linear;
+				-webkit-transition: all .15s linear;
+				transition: all .15s linear;
+			
+			}
+			
+			button:hover {background: #559AD4;}
+		}
+	}
 }
 
 

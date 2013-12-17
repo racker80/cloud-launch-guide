@@ -311,3 +311,39 @@ Stack trace:
 #7 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Slim.php(1094): Slim_Middleware_PrettyExceptions->call()
 #8 /Users/jonathanstovall/Desktop/sites/index.php(192): Slim->run()
 #9 {main}
+exception 'ErrorException' with message 'Creating default object from empty value' in /Users/jonathanstovall/Desktop/sites/index.php:130
+Stack trace:
+#0 /Users/jonathanstovall/Desktop/sites/index.php(130): Slim::handleErrors(2, 'Creating defaul...', '/Users/jonathan...', 130, Array)
+#1 [internal function]: {closure}('securing-server', 'rpm-based')
+#2 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Router.php(187): call_user_func_array(Object(Closure), Array)
+#3 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Slim.php(1146): Slim_Router->dispatch(Object(Slim_Route))
+#4 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Middleware/Flash.php(84): Slim->call()
+#5 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Middleware/MethodOverride.php(91): Slim_Middleware_Flash->call()
+#6 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Middleware/PrettyExceptions.php(65): Slim_Middleware_MethodOverride->call()
+#7 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Slim.php(1094): Slim_Middleware_PrettyExceptions->call()
+#8 /Users/jonathanstovall/Desktop/sites/index.php(192): Slim->run()
+#9 {main}
+exception 'ErrorException' with message 'Creating default object from empty value' in /Users/jonathanstovall/Desktop/sites/index.php:130
+Stack trace:
+#0 /Users/jonathanstovall/Desktop/sites/index.php(130): Slim::handleErrors(2, 'Creating defaul...', '/Users/jonathan...', 130, Array)
+#1 [internal function]: {closure}('securing-server', 'rpm-based')
+#2 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Router.php(187): call_user_func_array(Object(Closure), Array)
+#3 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Slim.php(1146): Slim_Router->dispatch(Object(Slim_Route))
+#4 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Middleware/Flash.php(84): Slim->call()
+#5 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Middleware/MethodOverride.php(91): Slim_Middleware_Flash->call()
+#6 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Middleware/PrettyExceptions.php(65): Slim_Middleware_MethodOverride->call()
+#7 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Slim.php(1094): Slim_Middleware_PrettyExceptions->call()
+#8 /Users/jonathanstovall/Desktop/sites/index.php(192): Slim->run()
+#9 {main}
+exception 'ErrorException' with message 'Creating default object from empty value' in /Users/jonathanstovall/Desktop/sites/index.php:130
+Stack trace:
+#0 /Users/jonathanstovall/Desktop/sites/index.php(130): Slim::handleErrors(2, 'Creating defaul...', '/Users/jonathan...', 130, Array)
+#1 [internal function]: {closure}('securing-server', 'rpm-based')
+#2 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Router.php(187): call_user_func_array(Object(Closure), Array)
+#3 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Slim.php(1146): Slim_Router->dispatch(Object(Slim_Route))
+#4 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Middleware/Flash.php(84): Slim->call()
+#5 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Middleware/MethodOverride.php(91): Slim_Middleware_Flash->call()
+#6 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Middleware/PrettyExceptions.php(65): Slim_Middleware_MethodOverride->call()
+#7 /Users/jonathanstovall/Desktop/sites/vendor/slim/slim/Slim/Slim.php(1094): Slim_Middleware_PrettyExceptions->call()
+#8 /Users/jonathanstovall/Desktop/sites/index.php(192): Slim->run()
+#9 {main}

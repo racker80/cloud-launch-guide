@@ -17,11 +17,30 @@
 				</div>
 			</div>
 		</footer>
+		
+		<!-- Feedback form -->
+		<div class="feedback-container" id="dialog-feedback">
+			<h3>Feedback</h3>
+			<p>Help us make this site better for you. Fill out this form and the feedback will go directly to the Cloud Launch Guide team.</p>
+	
+			<form action="" method="post" accept-charset="utf-8">
+				<div class="form-container">
+				    <label for="what">What could we do?</label>
+				    <textarea class="form-control" id="what" placeholder="Required"></textarea>
+				    <label for="how">How might this help you?</label>
+				    <textarea class="form-control" id="how" placeholder="Required"></textarea>
+				    <label for="emailAddress">Email address <span>(We will never share this.)</span></label>
+				    <input type="email" class="form-control" id="emailAddress" placeholder="Optional">
+				</div>
+				<div class="form-actions">
+					<button type="submit">Submit feedback</button>
+				</div>
+			</form>
+		</div>
 
 		<script src="{{ baseurl }}/includes/bower_components/jquery/jquery.min.js"></script>
 		<script src="{{ baseurl }}/includes/bower_components/jquery/jquery.ui.min.js"></script>
 
-		<script src="{{ baseurl }}/includes/js/other.js"></script>
 		<script src="{{ baseurl }}/includes/bower_components/bootstrap/js/dropdown.js"></script>
 		<script src="{{ baseurl }}/includes/bower_components/zeroclipboard/ZeroClipboard.js"></script>
 		<script src="{{ baseurl }}/includes/bower_components/jquery-waypoints/waypoints.js"></script>
@@ -31,6 +50,8 @@
 		<script src="{{ baseurl }}/includes/js/feedmagnet.js"></script>
 		<script src="{{ baseurl }}/includes/bower_components/move.js-master/move.js"></script>
 		<script src="{{ baseurl }}/includes/js/main.js"></script>
+		
+		<script src="{{ baseurl }}/includes/js/other.js"></script>
 
 		<script type="text/javascript">
 			function downloadJSAtOnload() {
