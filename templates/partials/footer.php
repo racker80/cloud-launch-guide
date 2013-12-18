@@ -22,7 +22,7 @@
 		
 		<div class="feedback-container" id="dialog-feedback">
 			<h3>We love feedback.</h3>
-			<p>Help us make this site better for you. Fill out this form and the feedback will go directly to the Cloud Launch Guide team.</p>
+			<p>Help us make this site better for you. Fill out this form and your feedback will go directly to the Cloud Launch Guide team.</p>
 	
 			<form action="" method="post" accept-charset="utf-8">
 				<div class="form-container">
@@ -43,7 +43,7 @@
 		
 		<div class="comingsoon-container" id="dialog-comingsoon">
 			<h3>This guide is coming soon.</h3>
-			<p>Thanks for your interest. We're working hard on the next round of Cloud Launch Guides. Sign up for email updates about new guides.</p>
+			<p>Thanks for your interest. We're working hard on the next round of Cloud Launch Guides. Sign up below for email updates about when new guides are available.</p>
 			
 			<form action="" method="post" accept-charset="utf-8">
 				<div class="form-container">
