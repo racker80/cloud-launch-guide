@@ -195,6 +195,11 @@ $(document).ready(function() {
 		var preGroup = $('pre');
 
 		preGroup.each(function(index){
+			//The thing is actually looping through all the items multiple times.  this is 
+			//really borking thing up.  what i'm doing here is checking to see if the pre
+			//tag is wrapped in a pre-wrpper.  if it is, then i'm removing it from the array.
+			//i am a genius!
+			//just kidding, this will need to be redone.  
 			var ths = $(this);
 			if(!ths.parent().hasClass('pre-wrapper')) {
 				ths.wrap('<div class="pre-wrapper"></div>');
