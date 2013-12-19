@@ -7368,6 +7368,7 @@ a {
   filter: alpha(opacity=70);
 }
 #banner-wrapper.quickstart-wrapper .quickstart a.video-launch:hover {
+  background: url('../images/badge-video.svg') no-repeat left top;
   opacity: 1.0;
   -moz-opacity: 1.0;
   filter: alpha(opacity=100);
@@ -8310,6 +8311,7 @@ h3.page-title span {
 }
 .ui-dialog .feedback-container .form-container label.error,
 .ui-dialog .comingsoon-container .form-container label.error {
+  display: none;
   color: red;
 }
 .ui-dialog .feedback-container .form-container input,
