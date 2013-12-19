@@ -7,10 +7,10 @@
 					<h3 class="page-title"><span>{{loop.index}}</span> {{page.title}}</h3>
 					{{page.content | raw}}
 					{% if page.meta.contentNotes %}
-						<div class="notice-container {{note.type}}">
+						<div class="notice-container">
 							<h4>Additional Notes</h4>
 							{% for note in page.meta.contentNotes %}
-								<p>{{note.text | raw}}</p>
+								<p class="{{note.type}}">{{note.text | raw}}</p>
 							{% endfor  %}
 						</div>
 						{% else %}
