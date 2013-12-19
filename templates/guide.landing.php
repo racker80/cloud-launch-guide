@@ -14,7 +14,9 @@
 				
 				<p class="bookDesc">{{book.description}} &nbsp;</p>
 				<!-- <a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}" class="btn-rs medium green flat round4 caret-icon" title="">Start this section</a> -->
-				<p class="bookStart"><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">Start this book<span class="glyphicon glyphicon-chevron-right"></span></a></p>
+				<div class="bookStart-container">
+					<p class="bookStart"><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">Start this book</a></p>
+				</div>
 			</div>
 			<div class="book-list-options col-md-5">
 				<h4>Chapters</h4>

@@ -21,42 +21,46 @@
 		<!-- Feedback form -->
 		
 		<div class="feedback-container" id="dialog-feedback">
-			<h3>We love feedback.</h3>
+			<h3>We love <strong>feedback</strong>.</h3>
 			<p>Help us make this site better for you. Fill out this form and your feedback will go directly to the Cloud Launch Guide team.</p>
 	
-			<form action="" method="post" accept-charset="utf-8">
-				<div class="form-container">
-				    <label for="what">What could we do?</label>
-				    <textarea class="form-control" id="what" placeholder="Required"></textarea>
-				    <label for="how">How might this help you?</label>
-				    <textarea class="form-control" id="how" placeholder="Required"></textarea>
-				    <label for="emailAddress">Email address <span>(We will never share this.)</span></label>
-				    <input type="email" class="form-control" id="emailAddress" placeholder="Optional">
-				</div>
+			<form action="" method="get" id="feedbackForm" accept-charset="utf-8">
+				<dl class="form-container">
+					<dt><label for="feedbackWhat">What could we do?</label></dt>
+				    <dd><textarea class="form-control" id="feedbackWhat" placeholder="Required" required></textarea></dd>
+				    <dt><label for="feedbackHow">How might this help you?</label></dt>
+				    <dd><textarea class="form-control" id="feedbackHow" placeholder="Required" required></textarea></dd>
+				    <dt><label for="feedbackEmail">Email address <span>(We will never share this.)</span></label></dt>
+				    <dd><input type="email" class="form-control" id="feedbackEmail" placeholder="Optional"></dd>
+				</dl>
 				<div class="form-actions">
 					<button type="submit">Submit feedback</button>
 				</div>
 			</form>
 		</div>
-		
+				
 		<!-- Coming soon modal -->
 		
 		<div class="comingsoon-container" id="dialog-comingsoon">
-			<h3>This guide is coming soon.</h3>
+			<h3>This guide is <strong>coming soon</strong>.</h3>
 			<p>Thanks for your interest. We're working hard on the next round of Cloud Launch Guides. Sign up below for email updates about when new guides are available.</p>
 			
-			<form action="" method="post" accept-charset="utf-8">
-				<div class="form-container">
-				    <label for="emailAddress">Email address <span>(We will never share this.)</span></label>
-				    <input type="email" class="form-control" id="emailAddress" placeholder="Optional">
-				</div>
+			<form action="" method="get" id="csForm" accept-charset="utf-8">
+				<dl class="form-container">
+				    <dt><label for="csEmail">Email address <span>(We will never share this.)</span></label></dt>
+				    <dd><input type="email" class="form-control" id="csEmail" placeholder="Required" required></dd>
+				</dl>
 				<div class="form-actions">
 					<button type="submit">Sign up</button>
 				</div>
 			</form>
-			
 		</div>
 		
+		<!-- Quickstart modal -->
+		
+		<div class="video-quickstart-container" id="dialog-video">
+			<iframe id="video-quickstart" width="740" height="460" src="//www.youtube.com/embed/RB5mqsubMlg?&showinfo=0&autoplay=0&rel=0&controls=1" frameborder="0" allowfullscreen></iframe>
+		</div>		
 
 		<script src="{{ baseurl }}/includes/bower_components/jquery/jquery.min.js"></script>
 		<script src="{{ baseurl }}/includes/bower_components/jquery/jquery.ui.min.js"></script>
@@ -67,7 +71,6 @@
 		<script src="{{ baseurl }}/includes/bower_components/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.js"></script>
 		<script src="{{ baseurl }}/includes/bower_components/jsPlumb/dist/js/jquery.jsPlumb-1.5.2.js"></script>
 		<script src="{{ baseurl }}/includes/bower_components/Socialite-master/socialite.js"></script>
-		<script src="{{ baseurl }}/includes/js/feedmagnet.js"></script>
 		<script src="{{ baseurl }}/includes/bower_components/move.js-master/move.js"></script>
 		<script src="{{ baseurl }}/includes/js/main.js"></script>
 		

@@ -370,7 +370,7 @@ a {
 		li {
 			font-size: 100%;
 			
-			.navbar-vertical-align(10px;);
+			.navbar-vertical-align(8px;);
 			
 			&:last-child a {padding: 10px 0 10px 20px;}			
 			
@@ -450,7 +450,7 @@ a {
 	
 	/*Reset the bootstrap jumbotron*/
 	.jumbotron {
-		padding: 25px 0;
+		padding: 25px 0 15px 0;
 		margin-bottom: 0px;
 		background:@gray-lighter;
 		border-bottom: 1px solid #ddd;
@@ -458,6 +458,7 @@ a {
 		&.home-banner {
 			// background: #eee url('../images/bg-banner.svg');
 			background: #eee;
+			padding: 40px 0 45px 0;
 			border-bottom-width: 0px;
 		}
 		
@@ -478,8 +479,8 @@ a {
 	.page-header {
 		.bsreset;
 		h1.homeTitle {
-			font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-			color: #333;
+			font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			color: #444;
 			font-size: 36px;
 			letter-spacing: -2px;
 			margin-bottom: 10px;
@@ -509,7 +510,8 @@ a {
 		}
 		
 		.guideTitle {
-			font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			color: #444;
 			font-size: 32px;
 			line-height: 28px;
 			padding: 0;
@@ -575,8 +577,8 @@ a {
 			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 			box-sizing: border-box;         /* IE 8+ */
-			font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-			color: #222;
+			font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			color: #559AD4;
 			padding: 0px 7px 20px 7px;
 			font-size: 16px;
 			line-height: 22px;
@@ -631,11 +633,16 @@ a {
 		
 		.quickstart {
 			position: relative;
-			padding: 15px 0 20px 0;
+			padding: 25px 0 40px 0;
 
-							
+			.video-launch-container {
+				background: url('../images/video.png') no-repeat 10px 10px;
+				height: 127px;
+				width: 165px;
+			}
+			
 			a.video-launch {
-				background: url('../images/badge-video.svg') no-repeat left top;
+				background: url('../images/badge-video-alt.svg') no-repeat left top;
 				margin-top: 2px;
 				display: block;
 				height: 127px;
@@ -657,7 +664,7 @@ a {
 			}
 			
 			h2 {
-				font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 				color: #fff;
 				font-size: 22px;
 				margin: 3px 0 3px 0;
@@ -958,7 +965,7 @@ a {
 			padding: 15px;
 			float: left;
 			margin-right: 20px;
-			margin-bottom: 20px; // <- Remove for production!
+			margin-bottom: 20px;
 			width: 290px;
 			height: 170px;
 			border-top: 1px solid #559AD4;
@@ -1001,8 +1008,8 @@ a {
 			}
 			
 			h3 {
-				font-family:'SourceSansProlight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-				color: #333;
+				font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				color: #444;
 				font-size: 22px;
 				line-height: 26px;
 			}
@@ -1024,7 +1031,6 @@ a {
 				color: #eee;
 				font-size: 14px;
 				padding: 7px 15px;
-				margin-top: 10px;
 				margin-right: 10px;
 				opacity: 0.8;
 				-moz-opacity: 0.8;
@@ -1368,7 +1374,8 @@ h3.page-title {
 	
 	.book-list-overview {
 		h3 {
-			font-family:'SourceSansProLight', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			color: #444;
 			margin-bottom: 5px;
 			padding-bottom: 0;
 		}
@@ -1379,7 +1386,11 @@ h3.page-title {
 			line-height: 22px;
 			margin-bottom: 0px;
 			
-			.bookTime {float: left; margin-right: 20px;}
+			.bookTime {
+				font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				float: left;
+				margin-right: 20px;
+			}
 			.bookLink {float: left;}
 			
 			.bookLink a {
@@ -1403,39 +1414,72 @@ h3.page-title {
 		
 		.bookDesc {font-size: 16px;}
 		
-		.bookStart {
+		.bookStart-container {
+			position: relative;
+			display: block;
+			margin-top: 20px;
+			height: 30px;
+		}
+		
+		p.bookStart {
+			position: absolute;
 			font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 			font-size: 18px;
 		}
 		
-		.bookStart a {
-			color: #559AD4;
-			color: rgb(66, 139, 202);
-			text-decoration: none;
-			padding: 10px 0;
-			opacity: 0.7;
-			-moz-opacity: 0.7;
-			filter:alpha(opacity=70);
-		}
+		p.bookStart a {
+			position: relative;
+			-moz-transition: all .15s linear;
+			-webkit-transition: all .15s linear;
+			transition: all .15s linear;
 		
-		.bookStart a:hover {
-			// color: #6EBE3C;
+			font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			background: #559AD4;
+			color: #fff;
+			font-size: 14px;
+			padding: 8px 15px;
+			opacity: 0.8;
+			-moz-opacity: 0.8;
+			filter:alpha(opacity=80);
+		}
+	
+		p.bookStart a:hover {
+			text-decoration: none;
+			padding-right: 20px;
+		
 			opacity: 1.0;
 			-moz-opacity: 1.0;
 			filter:alpha(opacity=100);
 		}
 		
-		.bookStart a .glyphicon {margin-left: 5px;}
-		
+		p.bookStart a:after {			
+			content: "";
+			position: absolute;
+			top: 0px;
+			right: -17px;
+			width: 0;
+			height: 0;
+			border-color: transparent transparent transparent #559AD4;
+			border-style: solid;
+			border-width: 17px 0 17px 17px;  
+		}
+						
 	}
 	.book-list-options {
 
 		h4 {
-			font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 			font-size: 14px;
 			color: #666;
 			margin-bottom: 5px;
 			padding-bottom: 0;
+		}
+		
+		a:hover {
+			opacity: 1.0;
+			-moz-opacity: 1.0;
+			filter:alpha(opacity=100);
+			text-decoration: none;
 		}
 	}
 }
@@ -1604,7 +1648,9 @@ h3.page-title {
 		
 		.form-container {
 			border-top: 1px solid #eee;
-			padding: 15px 0;
+			padding-top: 15px;
+			
+			dd {margin-bottom: 15px;}
 			
 			label {
 				font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -1612,13 +1658,15 @@ h3.page-title {
 				letter-spacing: 0.25px;
 				
 				span {margin-left: 10px; color: #999;}
+				
+				&.error {color: red;}
 			}
 			
 			input, textarea {
-				margin-bottom: 15px;
 				-webkit-border-radius: 0px;
 				-moz-border-radius: 0px;
 				border-radius: 0px;
+				font-family:'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 			
 				&:focus {
 					border-color: #559AD4;
@@ -1626,8 +1674,15 @@ h3.page-title {
 					-moz-box-shadow: 0 0 3px #66BAFF;
 					box-shadow: 0 0 3px #66BAFF;
 				}
+				
+				&.error {
+					border-color: red;
+					-webkit-box-shadow: none;
+					-moz-box-shadow: none;
+					box-shadow: none;
+				}
 			}
-			
+						
 		}
 		
 		.form-actions {
@@ -1688,252 +1743,17 @@ h3.page-title {
 	
 }
 
-/*
-#guide-nav-container {
-		display:block;
-		position:relative;
-		height:54px;
-		z-index:100;
-		#guide-navbar-bs {
-			display:static;
-			height:auto;
-			.navbar {
-				border-top-left-radius: 0;
-				border-top-right-radius:0;
-				padding:0;
-				.navbar-collapse {
-					padding:0;
-					a {
-
-					}
-				}
-			}
-			ul.nav.navbar-nav.crumbs {
-				margin:0;
-				padding:0;
-				li {
-					a {
-						border-right:1px solid #000;
-						border-left:1px solid #666;
-
-					} 
-					&:first-child a {
-						border-left:0;
-					}
-					&:last-child a {
-						border-right:0;
-					}
-
-				}
-			}
-			.page-header-options {
-				position:absolute;
-				top:0;
-				right:0;
-			}
-		}
-	}
-
-
-
-#waypoint-header {
-#guide-nav-container {
-	display:none;
-		#guide-navbar-bs {
-			position:absolute;
-			top:0;
-			left:0;
-			width:100%;
-
-			.navbar {
-				margin:0;
-				padding:0;
-				border-radius: 0;
-			}
-		}
-}
-}*/
-
-/*#banner-content {
-	h4, h5 {
-		font-size:1em;
-	}
-	h1.guideTitle {
-
-		font-size:2.2em;
-		margin-bottom:15px;
-	}
-	h2 {
-
-		font-size:2em;
-		.lite;
-	}
-	.page-header-options {
-		position:relative;
-		float:right;
-	}
-	.nav-index-wrapper {
-		text-align:left;
-		font-size:1em;
-		.nav-index {
-			.nav-thing {
-				h5 {
-					font-size:.8em;
-					font-family:'RobotoCondensedBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-					.caps;
-				}
-				ul {
-					li {
-						font-size:.8em;
-					}
-				}
-			}
-		}
-		.nav-index-utility-wrapper {
-			display:none;
-		}
-	}
-}*/
-
-/*.book-intro, .chapter-intro {
-	.page-header {
-		border:0;
-		padding:0;
-		margin:15px 0 30px;
-	}
-	.intro-content {
-		img {display:none;}
-		p {
-			.lead;
-			line-height:1.6em!important;
-		}
-		margin-bottom:45px;
-	}
-
-}
-
-.book-intro {
-	border-bottom:2px solid #d2d2d2;
-	margin-bottom:60px;
-	padding-bottom:40px;
-	margin-top:60px;
-}
-
-.chapter-list {
-	.row {
-		padding:35px 15px 35px;
-		border-bottom:1px solid #ddd;
-		&:hover {
-			border-color:#a80000;
-		}
-	}
-	p.lead {
-		font-size:1.2em;
-	}
-}
-
-.chapter-container {
-	margin-top:60px;
-	margin-bottom:120px;
-}
-
-.book-casing {
-	border:1px solid #d2d2d2;
-	background:#f1f1f1;
-	overflow:hidden;
-	margin:10px 0;
-	h2 {
-		margin:0;
-		line-height:1em;
-		padding:0;
-		font-size:24px;
-	}
-	p.lead {
-		font-size:1.2em;
-		height:180px;
-		overflow:hidden;
-	}
-}
-
-
-.list-options {
-	a.btn.title-btn {
-		width:200px;
-		overflow:hidden;
-	}
-}
-*/
-
-
-
-
-
-
-.notice-container {
-	
-}
-
-.twitter-header {
-	text-align:center;
-}
-
-// #social-feed {
-// 	.clearfix;
-// 	font-size:.8em;
-// 	line-height:1em;
-// 
-// }
-// 
-// .feed-widget {
-// 	.clearfix;
-// 	margin:15px 0;
-// 	img {
-// 		float:left;
-// 		margin-right:5px;
-// 		display:block;
-// 		width:35px;
-// 		height:35px;
-// 	}
-// 	* {
-// 	}
-// 	.author {
-// 		margin:0px 0;
-// 		font-size:.9em;
-// 	}
-// 	.timestamp {
-// 		font-weight:800;
-// 		font-size:.7em;
-// 		margin-bottom:15px;
-// 	}
-// 	.text {
-// 		font-size:.85em;
-// 		line-height:1.4em;
-// 		margin-bottom:10px;
-// 		font-weight:400;
-// 	}
-// 
-// }
+.notice-container { }
+.twitter-header {text-align:center;}
 
 .tweet-box {
-	border-top:1px solid #ddd;
-	margin-top:15px;
-	padding-top: 15px;
 	padding-bottom: 0px;
 	
-	.socialite {
-		float: left;
-		width: 115px;
-		margin-right: 0px;
-	}
+	.socialite {width: 115px;}
 	
-	p {		
+	p {
+		font-family:'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-style: italic;
 		font-size: 14px;
-		line-height: 28px;
-		float: left;
 	}
 }
-
-
-
-
-

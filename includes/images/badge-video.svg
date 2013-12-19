@@ -3,17 +3,21 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="240px" height="130px" viewBox="0 0 240 130" enable-background="new 0 0 240 130" xml:space="preserve">
-<line fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="3.896" y1="87.966" x2="156.896" y2="87.966"/>
-<rect x="10.192" y="9.466" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="140.406" height="72.044"/>
-<polygon fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-	68.616,31.518 101.347,46.414 68.616,61.311 "/>
-<rect x="54.521" y="122.827" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="51.75" height="4"/>
+<line fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="3.228" y1="87.626" x2="156.228" y2="87.626"/>
+<rect x="9.524" y="9.126" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="140.406" height="72.044"/>
+<rect x="53.853" y="122.487" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="51.75" height="4"/>
 <g>
 	<path fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-		M64.419,105.966c0,0-0.514,9.773-1.719,12.273c-0.783,1.624-3.947,4.364-3.947,4.364"/>
+		M63.489,105.626c0,0-0.516,9.773-1.719,12.273c-0.783,1.624-3.947,4.364-3.947,4.364"/>
 	<path fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-		M96.37,105.966c0,0,0.514,9.773,1.721,12.273c0.783,1.624,3.945,4.364,3.945,4.364"/>
+		M95.44,105.626c0,0,0.515,9.773,1.721,12.273c0.783,1.624,3.945,4.364,3.945,4.364"/>
 </g>
 <path fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-	M156.896,99.966c0,2.763-2.238,5-5,5h-143c-2.762,0-5-2.237-5-5v-91c0-2.762,2.238-5,5-5h143c2.762,0,5,2.238,5,5V99.966z"/>
+	M156.228,99.626c0,2.763-2.237,5-5,5h-143c-2.764,0-5-2.237-5-5v-91c0-2.762,2.236-5,5-5h143c2.763,0,5,2.238,5,5V99.626z"/>
+<path fill="#FFFFFF" d="M74.269,54.923c-0.188,0-0.377-0.05-0.545-0.147c-0.326-0.19-0.529-0.536-0.536-0.914
+	c-0.104-5.407-0.104-10.889,0-16.295c0.007-0.377,0.21-0.724,0.536-0.914c0.326-0.19,0.726-0.197,1.059-0.018
+	c2.14,1.154,4.312,2.336,6.499,3.526c2.82,1.535,5.665,3.083,8.493,4.599c0.352,0.188,0.57,0.555,0.57,0.954
+	c0,0.399-0.219,0.766-0.57,0.954c-2.86,1.532-5.737,3.099-8.59,4.652c-2.154,1.173-4.293,2.337-6.401,3.474
+	C74.623,54.879,74.445,54.923,74.269,54.923z"/>
+<circle fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="79.728" cy="45.147" r="24.467"/>
 </svg>

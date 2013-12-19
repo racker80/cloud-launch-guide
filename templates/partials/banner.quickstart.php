@@ -2,7 +2,9 @@
 	<div class="container quickstart">
 		<div class="row">
 			<div class="col-md-3">
-				<a href="##" class="video-launch tooltip-rs dialog-v" title="Watch the Quick Start Guide video instead."></a>
+				<div class="video-launch-container">
+					<a href="##" class="video-launch tooltip-rs dialog-v" title="Show me the video instead."></a>
+				</div>
 			</div>
 			<div class="col-md-13">
 				<h2>Quick Start Guide</h2>
@@ -11,8 +13,4 @@
 			</div>
 		</div>
 	</div>
-</div>
-
-<div class="video-quickstart-container" id="dialog-video">
-	<iframe id="video-quickstart" width="740" height="460" src="//www.youtube.com/embed/RB5mqsubMlg?&showinfo=0&autoplay=0&rel=0&controls=1" frameborder="0" allowfullscreen></iframe>
 </div>

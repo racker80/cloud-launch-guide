@@ -124,7 +124,36 @@ $(document).ready(function() {
 		
 	});
 	
-	// Validate feedback form 
+	// Validate forms
+	
+	$.validator.setDefaults({
+		submitHandler: function() { alert("submitted!"); }
+	});
+
+	$(function() {
+		$("#feedbackForm").validate({
+			rules: {
+				feedbackWhat: "required",
+				feedbackHow: "required"
+			},
+			messages: {
+				feedbackWhat: "Required",
+				feedbackHow: "Required"
+			}
+		});
+	});
+	
+	$(function() {
+		$("#csForm").validate({
+			rules: {
+				csEmail: "required"
+			},
+			messages: {
+				csEmail: "Required"
+			}
+		});
+	});
+	
 	
 
 });
