@@ -24,12 +24,12 @@
 			<h3>We love <strong>feedback</strong>.</h3>
 			<p>Help us make this site better for you. Fill out this form and your feedback will go directly to the Cloud Launch Guide team.</p>
 	
-			<form action="" method="get" id="feedbackForm" accept-charset="utf-8">
+			<form action="feedback.php" method="post" id="feedbackForm">
 				<dl class="form-container">
-					<dt><label for="feedbackWhat">What could we do?</label></dt>
-				    <dd><textarea class="form-control" id="feedbackWhat" placeholder="Required" required></textarea></dd>
-				    <dt><label for="feedbackHow">How might this help you?</label></dt>
-				    <dd><textarea class="form-control" id="feedbackHow" placeholder="Required" required></textarea></dd>
+					<dt><label for="feedbackwhat">What could we do?</label></dt>
+				    <dd><textarea class="form-control" id="feedbackwhat" placeholder="Required" required></textarea></dd>
+				    <dt><label for="feedbackhow">How might this help you?</label></dt>
+				    <dd><textarea class="form-control" id="feedbackhow" placeholder="Required" required></textarea></dd>
 				    <dt><label for="feedbackEmail">Email address <span>(We will never share this.)</span></label></dt>
 				    <dd><input type="email" class="form-control" id="feedbackEmail" placeholder="Optional"></dd>
 				</dl>
@@ -47,6 +47,9 @@
 			
 			<form action="" method="get" id="csForm" accept-charset="utf-8">
 				<dl class="form-container">
+					<dt><label for="csWhat">What would you like to see in this guide?</label></dt>
+				    <dd><textarea class="form-control" id="csWhat" placeholder="Optional"></textarea></dd>
+					
 				    <dt><label for="csEmail">Email address <span>(We will never share this.)</span></label></dt>
 				    <dd><input type="email" class="form-control" id="csEmail" placeholder="Required" required></dd>
 				</dl>

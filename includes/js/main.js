@@ -417,8 +417,8 @@ $(document).ready(function() {
 		});
 
 		jsPlumb.makeSource(source, {
-			isSource:true,
-			dragOptions:null,
+			isSource: true,
+			dragOptions: false,
 			anchor: "LeftMiddle",
 			maxConnections:1,
 			endpoint:[ "Dot", { radius:3 } ],

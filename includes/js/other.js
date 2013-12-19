@@ -127,7 +127,7 @@ $(document).ready(function() {
 	// Validate forms
 	
 	$.validator.setDefaults({
-		submitHandler: function() { alert("submitted!"); }
+		submitHandler: function() { alert("Thank you! Your information has been sucessfully submitted."); }
 	});
 
 	$(function() {
@@ -137,7 +137,7 @@ $(document).ready(function() {
 				feedbackHow: "required"
 			},
 			messages: {
-				feedbackWhat: "Required",
+				feedbackWhat: "Please tell us what we can do fo you.",
 				feedbackHow: "Required"
 			}
 		});

@@ -7246,7 +7246,7 @@ a {
 #banner-wrapper .page-header .guideTitle {
   font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #444;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 28px;
   padding: 0;
   margin: 0;
@@ -7909,6 +7909,7 @@ a {
 #content-container page-content-code .page-container .page-content .notice-container h4,
 #content-container .chapter-container .page-container .page-content-code .notice-container h4,
 #content-container page-content-code .page-container .page-content-code .notice-container h4 {
+  font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 22px;
   margin: 25px 0 5px 0;
@@ -8015,7 +8016,7 @@ h3.page-title span {
   width: 36px;
   height: 36px;
   padding: 5px 7px 5px 7px;
-  background: #777;
+  background: #555;
   color: #fff;
   letter-spacing: -1px;
   text-align: center;
