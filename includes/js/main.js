@@ -373,7 +373,7 @@ $(document).ready(function() {
 ;(function() {
 	var common = {
 			connector : [ "Bezier", { curviness: 50 } ],
-			anchors : [ "RightMiddle", "LeftMiddle" ],
+			anchors : [ "LeftMiddle", "RightMiddle" ],
 			paintStyle : {
 				lineWidth:2,
 				strokeStyle: 'rgba(200,0,0,100)',
@@ -386,8 +386,8 @@ $(document).ready(function() {
 	function drawConnection(source, target) {
 		if(jsPlumb.isSource(source) && source.is(":visible")) {
 			jsPlumb.connect({
-				source:source, 
-				target:target, 
+				source:target, 
+				target:source, 
 				container:source.parents('.row'),
 				detachable:false,
 				endpointsOnTop:false, 
@@ -397,17 +397,18 @@ $(document).ready(function() {
 	}
 	
 	$.each(connections, function(index, value){
-		var target = value.target;
-		var source = value.source;
+		var target = value.source;
+		var source = $(value.target).parents('.pre-wrapper');
 
 		target.offset({
-			left: target.parent().offset().left
+			// left: target.parent().offset().left
+			// left: target.offset().left
 		});
 
 		jsPlumb.makeSource(source, {
 			isSource:true,
 			dragOptions:null,
-			anchor: "RightMiddle",
+			anchor: "LeftMiddle",
 			maxConnections:1,
 			endpoint:[ "Dot", { radius:3 } ],
 			uniqueEndpoint:true,
@@ -424,51 +425,24 @@ $(document).ready(function() {
 
 
 
-	$('.page-content-full .page-content').each(function(){
-		
-				
-		// var ths = $(this);
-		// var	container = ths.parent();
-
-		// var row = ths.find('.row').clone(true);
-		// var pageContent = row.find('.page-content');
-		// var content = {
-		// 	title: pageContent.find(' h4').clone(true),
-		// 	pre: pageContent.find('pre').parent().clone(true),
-		// }
-
-		
-		// pageContent.empty().append(content.title);
-
-		// $.each(content.pre, function(){
-		// 	pageContent.append(this);
-		// });
-
-
-		// // container.find('.chapter-code-wrapper').append(row);
-		// container.append(row);
-
-		// row.wrap('<div class="page-content-code container"></div>');
-
-		// ths.remove();
-
-		// console.log(container)
-
-	})
-
-
-
 	$('body').on('expertToggle', function(event){
 
 		$.each(connections, function(index, value){
-			var target = value.target;
-			var source = value.source;
+			var target = value.source;
+			var source = $(value.target).parents('.pre-wrapper');
 
-			target.offset({
-				left: target.parent().offset().left
-			});
+			// target.offset({
+			// 	// left: target.parent().offset().left
+			// });
+			// drawConnection(target, source);
+			// // drawConnection(source,target);
 
 			drawConnection(source, target);
+
+			$(source).find('input').bind('click', function(){
+				$(this).focus();
+			});
+
 
 		});
 
