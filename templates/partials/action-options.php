@@ -7,12 +7,16 @@
 	    
 	<button type="button" data-toggle-expert class="btn btn-default"><span class="glyphicon glyphicon-certificate"></span>Expert Mode</button>
 	<button type="button" data-toggle-nav class="btn btn-default">Guide Index<span class="caret"></span></button>
-	{% if chapter and chapter.next %}
-	    <a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.next.slug}}" class="btn btn-default"><span class="glyphicon glyphicon-chevron-right"></span></a>
-	{% elseif allsteps %}
-		<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.next.slug}}" class="btn btn-default tooltip-rs" title="Next chapter"><span class="glyphicon glyphicon-chevron-right"></span></a>
+	{% if allsteps %}
+		{% if book.next %}
+			<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.next.slug}}" class="btn btn-default tooltip-rs" title="Next chapter"><span class="glyphicon glyphicon-chevron-right"></span></a>
+		{% endif %}
 	{% else %}
-		<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.next.slug}}" class="btn btn-default tooltip-rs" title="Next chapter"><span class="glyphicon glyphicon-chevron-right"></span></a>
+		{% if chapter and chapter.next %}
+			<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.next.slug}}" class="btn btn-default"><span class="glyphicon glyphicon-chevron-right"></span></a>
+		{% else %}
+			<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.next.slug}}" class="btn btn-default tooltip-rs" title="Next chapter"><span class="glyphicon glyphicon-chevron-right"></span></a>
+		{% endif %}
 	{% endif %}
-	
+
 </div>
