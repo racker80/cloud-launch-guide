@@ -390,6 +390,7 @@ $(document).ready(function() {
 				strokeStyle: 'rgba(200,0,0,100)',
 				"dashstyle":"2 4"
 			},
+			maxConnections:-1,			
 			endpoint:[ "Dot", { radius:3 } ],
 			endpointStyle : { fillStyle : "rgba(200,0,0,100)" },
 		}
@@ -401,7 +402,8 @@ $(document).ready(function() {
 				target:source, 
 				container:source.parents('.row'),
 				detachable:false,
-				endpointsOnTop:false, 
+				maxConnections:-1,
+
 			}, common);		
 
 		}
@@ -417,20 +419,16 @@ $(document).ready(function() {
 		});
 
 		jsPlumb.makeSource(source, {
-			isSource: true,
-			dragOptions: false,
 			anchor: "LeftMiddle",
-			maxConnections:1,
+			maxConnections:-1,
 			endpoint:[ "Dot", { radius:3 } ],
-			uniqueEndpoint:true,
 			paintStyle : { fillStyle : "rgba(200,0,0,100)" },
 		}, common);
 
 		drawConnection(source, target);
 
-		$(source).find('input').bind('click', function(){
-			$(this).focus();
-		});
+		jsPlumb.toggleSourceEnabled(source);
+
 
 	});
 
@@ -450,9 +448,9 @@ $(document).ready(function() {
 
 			drawConnection(source, target);
 
-			$(source).find('input').bind('click', function(){
-				$(this).focus();
-			});
+			jsPlumb.toggleSourceEnabled(source);
+
+
 
 
 		});
