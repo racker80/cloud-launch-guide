@@ -27,11 +27,11 @@
 			<form action="feedback.php" method="post" id="feedbackForm">
 				<dl class="form-container">
 					<dt><label for="feedbackwhat">What could we do?</label></dt>
-				    <dd><textarea class="form-control" id="feedbackwhat" placeholder="Required" required></textarea></dd>
+				    <dd><textarea class="form-control" id="feedbackwhat" name="feedbackwhat" placeholder="Required" required></textarea></dd>
 				    <dt><label for="feedbackhow">How might this help you?</label></dt>
-				    <dd><textarea class="form-control" id="feedbackhow" placeholder="Required" required></textarea></dd>
+				    <dd><textarea class="form-control" id="feedbackhow" name="feedbackhow" placeholder="Required" required></textarea></dd>
 				    <dt><label for="feedbackEmail">Email address <span>(We will never share this.)</span></label></dt>
-				    <dd><input type="email" class="form-control" id="feedbackEmail" placeholder="Optional"></dd>
+				    <dd><input type="email" class="form-control" id="feedbackEmail" name="feedbackEmail" placeholder="Optional"></dd>
 				</dl>
 				<div class="form-actions">
 					<button type="submit">Submit feedback</button>
