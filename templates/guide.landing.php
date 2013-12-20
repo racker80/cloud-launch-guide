@@ -12,7 +12,7 @@
 					<p class="bookLink"><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}"><span class="glyphicon glyphicon-link"></span>permalink</a></p>
 				</div>
 				
-				<p class="bookDesc">{{book.content}} &nbsp;</p>
+				<p class="bookDesc">{{book.description}} &nbsp;</p>
 				<!-- <a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}" class="btn-rs medium green flat round4 caret-icon" title="">Start this section</a> -->
 				<div class="bookStart-container">
 					<p class="bookStart"><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">Start this book</a></p>
