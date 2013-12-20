@@ -203,9 +203,9 @@ $(document).ready(function() {
 			var ths = $(this);
 			if(!ths.parent().hasClass('pre-wrapper')) {
 				ths.wrap('<div class="pre-wrapper"></div>');
-				if(ths.hasClass('terminal')) {
-					var copybtn = $('<button class="btn btn-sm btn-default copy-button" >Copy</button>').attr('data-clipboard-text', ths.text()).insertAfter(ths);
-				}
+				// if(ths.hasClass('terminal')) {
+				// 	var copybtn = $('<button class="btn btn-sm btn-default copy-button" >Copy</button>').attr('data-clipboard-text', ths.text()).insertAfter(ths);
+				// }
 			} else {
 				preGroup.splice(index, 1);
 			}
