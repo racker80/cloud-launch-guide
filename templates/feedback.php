@@ -1,6 +1,9 @@
 <?php
 
-$message = "The following information was submitted from the form on your website:\n\nWhat could we do? ".$_REQUEST["feedbackwhat"]."\n\nHow might this help you? ".$_REQUEST["feedbackhow"]."\n\nEmail address: ".$_REQUEST["feedbackEmail"];
+$message = "The following information was submitted to on your website:\n\n";
+$message .= "What could we do? ".$_POST["feedbackwhat"]."\n\n";
+$message .= "How might this help you? ".$_POST["feedbackhow"]."\n\n";
+$message .= "Email address: ".$_POST["feedbackEmail"];
 $email = $_REQUEST["feedbackEmail"];
 
 $to = "jonathan@jonathanstovall.com";

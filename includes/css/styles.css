@@ -7186,6 +7186,7 @@ a {
   /*Reset the bootstrap page-header*/
 }
 #banner-wrapper .jumbotron {
+  z-index: 99;
   padding: 25px 0 15px 0;
   margin-bottom: 0px;
   background: #eeeeee;
@@ -8416,4 +8417,78 @@ h3.page-title span {
   font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 14px;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #globalnav-wrapper a.navbar-brand {
+    padding: 15px 0 15px 80px;
+    margin-left: -20px;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  #globalnav-wrapper .nav {
+    margin-right: -20px;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  #globalnav-wrapper .nav li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #globalnav-wrapper .nav li:last-child a {
+    padding: 8px 0 8px 20px;
+  }
+  #globalnav-wrapper .nav a {
+    padding: 8px 20px;
+  }
+  #globalnav-wrapper .nav a li.open ul.dropdown-menu {
+    z-index: 999;
+  }
+  #banner-wrapper .jumbotron.home-banner {
+    padding: 15px 0;
+  }
+  #banner-wrapper .jumbotron.home-banner .container {
+    z-index: 99;
+  }
+  #banner-wrapper .jumbotron.home-banner .col-md-5 {
+    width: 300px;
+  }
+  #banner-wrapper .jumbotron.home-banner .col-md-5 .page-header h1 {
+    font-size: 28px;
+    line-height: 24px;
+  }
+  #banner-wrapper .jumbotron.home-banner .col-md-5 .page-header h1 span {
+    font-size: 16px;
+  }
+  #banner-wrapper .jumbotron.home-banner .col-md-5 .page-header p {
+    font-size: 14px;
+  }
+  #banner-wrapper .jumbotron .banner-card {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  #globalnav-wrapper a.navbar-brand {
+    margin-left: -20px;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  #globalnav-wrapper .nav {
+    margin-right: -20px;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  #globalnav-wrapper .nav a li.open ul.dropdown-menu {
+    z-index: 999;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  div {
+    background: yellow;
+  }
 }

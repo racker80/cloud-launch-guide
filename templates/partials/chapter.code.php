@@ -2,7 +2,7 @@
 	{% for code in chapter.code %}
 		<div class="row">
 			<div class="page-content col-md-11 col-md-offset-1">
-				<h4 class="page-title"><span>{{loop.index}}</span> {{code.title}}</h4>
+				<h4 class="page-title">FOO<span>{{loop.index}}</span> {{code.title}}</h4>
 			</div>
 			<div class="sidebar col-md-4"></div>
 		</div>

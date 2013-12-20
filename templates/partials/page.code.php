@@ -3,14 +3,14 @@
 	<div class="page-content-code container">
 		<div class="row">
 			<div class="page-content col-md-11">
-				<h4 class="page-title"><span>{{loop.index}}</span> {{page.title}}</h4>
+				<h3 class="page-title"><span>{{loop.index}}</span> {{page.title}}</h4>
 				{% for code in page.code %}
 				<div class="code">
 					<ul class="list-unstyled">
 						<li><pre class="{{code.type}}">{{code.text}}</pre></li>
 					</ul>
 				</div>
-				{%endfor%}
+				{% endfor %}
 			</div>
 			<div class="sidebar col-md-4 col-md-offset-1">
 				{% if page.meta.iptool %}

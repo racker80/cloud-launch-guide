@@ -450,6 +450,7 @@ a {
 	
 	/*Reset the bootstrap jumbotron*/
 	.jumbotron {
+		z-index: 99;
 		padding: 25px 0 15px 0;
 		margin-bottom: 0px;
 		background:@gray-lighter;
@@ -1760,3 +1761,115 @@ h3.page-title {
 		font-size: 14px;
 	}
 }
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	#globalnav-wrapper {
+		a.navbar-brand {
+			// -webkit-transform: scale(0.9);
+			// -moz-transform: scale(0.9);
+			// transform: scale(0.9);
+		}
+		
+		.nav {
+			// -webkit-transform: scale(0.9);
+			// -moz-transform: scale(0.9);
+			// transform: scale(0.9);
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	#globalnav-wrapper {
+		a.navbar-brand {
+			padding: 15px 0 15px 80px;
+			margin-left: -20px;
+			-webkit-transform: scale(0.9);
+			-moz-transform: scale(0.9);
+			transform: scale(0.9);
+		}
+		
+		.nav {
+			margin-right: -20px;
+			-webkit-transform: scale(0.9);
+			-moz-transform: scale(0.9);
+			transform: scale(0.9);
+			
+			li {		
+				.navbar-vertical-align(10px;);
+		
+				&:last-child a {padding: 8px 0 8px 20px;}			
+		
+			}
+			
+			a {
+				padding: 8px 20px;				
+				
+				li.open {
+					ul.dropdown-menu {
+						z-index:999;
+					}
+				}
+			}
+		}
+	}
+	#banner-wrapper {
+		.jumbotron {
+			&.home-banner {
+				padding: 15px 0;
+				.container {z-index:99;}
+
+				.col-md-5 {
+					width: 300px;
+					
+					.page-header {
+						h1 {
+							font-size: 28px;
+							line-height: 24px;
+							
+							span {font-size: 16px;}							
+						}
+						
+						p {font-size: 14px;}
+					}
+				}
+			}	
+			.banner-card {
+				-webkit-transform: scale(0.8);
+				-moz-transform: scale(0.8);
+				transform: scale(0.8);
+			}
+		}
+	}
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	#globalnav-wrapper {
+		a.navbar-brand {
+			margin-left: -20px;
+			-webkit-transform: scale(0.9);
+			-moz-transform: scale(0.9);
+			transform: scale(0.9);
+		}
+		
+		.nav {
+			margin-right: -20px;
+			-webkit-transform: scale(0.9);
+			-moz-transform: scale(0.9);
+			transform: scale(0.9);
+			
+			a {
+				li.open {
+					ul.dropdown-menu {
+						z-index:999;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	div {background: yellow;}
+}
+
