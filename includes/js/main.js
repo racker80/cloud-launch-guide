@@ -203,9 +203,9 @@ $(document).ready(function() {
 			var ths = $(this);
 			if(!ths.parent().hasClass('pre-wrapper')) {
 				ths.wrap('<div class="pre-wrapper"></div>');
-				if(ths.hasClass('terminal')) {
-					var copybtn = $('<button class="btn btn-sm btn-default copy-button" >Copy</button>').attr('data-clipboard-text', ths.text()).insertAfter(ths);
-				}
+				// if(ths.hasClass('terminal')) {
+				// 	var copybtn = $('<button class="btn btn-sm btn-default copy-button" >Copy</button>').attr('data-clipboard-text', ths.text()).insertAfter(ths);
+				// }
 			} else {
 				preGroup.splice(index, 1);
 			}
@@ -390,6 +390,7 @@ $(document).ready(function() {
 				strokeStyle: 'rgba(200,0,0,100)',
 				"dashstyle":"2 4"
 			},
+			maxConnections:-1,			
 			endpoint:[ "Dot", { radius:3 } ],
 			endpointStyle : { fillStyle : "rgba(200,0,0,100)" },
 		}
@@ -401,7 +402,8 @@ $(document).ready(function() {
 				target:source, 
 				container:source.parents('.row'),
 				detachable:false,
-				endpointsOnTop:false, 
+				maxConnections:-1,
+
 			}, common);		
 
 		}
@@ -417,20 +419,16 @@ $(document).ready(function() {
 		});
 
 		jsPlumb.makeSource(source, {
-			isSource: true,
-			dragOptions: false,
 			anchor: "LeftMiddle",
-			maxConnections:1,
+			maxConnections:-1,
 			endpoint:[ "Dot", { radius:3 } ],
-			uniqueEndpoint:true,
 			paintStyle : { fillStyle : "rgba(200,0,0,100)" },
 		}, common);
 
 		drawConnection(source, target);
 
-		$(source).find('input').bind('click', function(){
-			$(this).focus();
-		});
+		jsPlumb.toggleSourceEnabled(source);
+
 
 	});
 
@@ -450,9 +448,9 @@ $(document).ready(function() {
 
 			drawConnection(source, target);
 
-			$(source).find('input').bind('click', function(){
-				$(this).focus();
-			});
+			jsPlumb.toggleSourceEnabled(source);
+
+
 
 
 		});
