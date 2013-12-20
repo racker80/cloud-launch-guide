@@ -85,6 +85,13 @@
         $app->render( 'index.all.php', array('guides'=>$guides) );
         
     });
+	
+    $app->get('/feedback.php', function() use($app) {
+
+        $app->render( 'feedback.php' );
+        
+    });
+	
 
     $app->get('/guides/(:guideSlug)', function ($guideSlug) use ($app) {
 

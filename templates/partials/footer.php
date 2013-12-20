@@ -24,7 +24,7 @@
 			<h3>We love <strong>feedback</strong>.</h3>
 			<p>Help us make this site better for you. Fill out this form and your feedback will go directly to the Cloud Launch Guide team.</p>
 	
-			<form action="{{ baseurl }}/guides/feedback.php" method="post" id="feedbackForm">
+			<form action="{{ baseurl }}/feedback.php" method="post" id="feedbackForm">
 				<dl class="form-container">
 					<dt><label for="feedbackwhat">What could we do?</label></dt>
 				    <dd><textarea class="form-control" id="feedbackwhat" placeholder="Required" required></textarea></dd>
