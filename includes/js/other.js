@@ -126,22 +126,26 @@ $(document).ready(function() {
 	
 	// Validate forms
 	
-	$.validator.setDefaults({
-		submitHandler: function() { alert("Thank you! Your information has been sucessfully submitted."); }
-	});
-
 	$(function() {
 		$("#feedbackForm").validate({
 			rules: {
 				feedbackWhat: "required",
 				feedbackHow: "required"
 			},
-			messages: {
-				feedbackWhat: "Please tell us what we can do fo you.",
-				feedbackHow: "Required"
+			submitHandler: function(form) {
+				$.ajax({
+					type: "POST",
+					url: "feedback.php",
+					data: $('#feedbackForm').serialize(),
+					timeout: 3000,
+					success: function() {alert('works');},
+					error: function() {alert('failed');}
+				});
+				return false;
 			}
 		});
 	});
+		
 	
 	$(function() {
 		$("#csForm").validate({

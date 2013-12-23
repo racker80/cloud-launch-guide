@@ -86,7 +86,7 @@
         
     });
 	
-    $app->get('/feedback.php', function() use($app) {
+    $app->post('/feedback.php', function() use($app) {
 
         $app->render( 'feedback.php' );
         
