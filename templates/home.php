@@ -10,7 +10,7 @@
 			<p>If you are new to cloud technologies it can be difficult to understand where to start. <strong>Unbox</strong> guides aim at addressing these concerns. Follow along and learn the required skills to be successful in the cloud.</p>
 		</div>
 	</div>
-	<div class="col-md-10 col-md-offset-1">
+	<div class="col-md-10 col-md-offset-1 clearfix">
 		<!-- {% for guide in guides %}
 		<div class="guide-card">
 			<h3>{{guide.title}}</h3>

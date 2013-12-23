@@ -8418,19 +8418,94 @@ h3.page-title span {
   font-style: italic;
   font-size: 14px;
 }
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  #banner-wrapper .jumbotron.home-banner {
+    padding: 10px 0;
+  }
+  #banner-wrapper .jumbotron.home-banner .page-header {
+    margin-left: -15px;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  #banner-wrapper .jumbotron.home-banner .banner-card {
+    margin-left: -40px;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  #banner-wrapper .jumbotron.home-banner .banner-card:hover {
+    -webkit-transform: scale(0.92);
+    -moz-transform: scale(0.92);
+    transform: scale(0.92);
+  }
+  #banner-wrapper.quickstart-wrapper .quickstart {
+    padding: 15px 0 20px 0;
+  }
+  #banner-wrapper.quickstart-wrapper .quickstart .video-launch-container {
+    margin-left: -20px;
+    -webkit-font-smoothing: antialiased;
+    /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  #banner-wrapper.quickstart-wrapper .quickstart h2 {
+    font-size: 21px;
+  }
+  #banner-wrapper.quickstart-wrapper .quickstart p {
+    font-size: 15px;
+  }
+  #banner-wrapper.quickstart-wrapper .quickstart .quickstart-links {
+    margin-left: -600px;
+    -webkit-font-smoothing: antialiased;
+    /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  #content-container {
+    padding-top: 20px;
+  }
+  #content-container .category-content {
+    margin: 10px 0;
+    padding: 10px 0;
+  }
+  #content-container .category-content .category-header {
+    margin-left: -20px;
+    -webkit-font-smoothing: antialiased;
+    /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  #content-container .category-content .guide-card {
+    margin-left: -35px;
+    margin-bottom: 0;
+    -webkit-font-smoothing: antialiased;
+    /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   #globalnav-wrapper a.navbar-brand {
     padding: 15px 0 15px 80px;
     margin-left: -20px;
+    -webkit-font-smoothing: antialiased;
+    /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
     -webkit-transform: scale(0.9);
     -moz-transform: scale(0.9);
     transform: scale(0.9);
   }
   #globalnav-wrapper .nav {
-    margin-right: -20px;
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    transform: scale(0.9);
+    font-size: 14px;
   }
   #globalnav-wrapper .nav li {
     margin-top: 20px;
@@ -8446,39 +8521,122 @@ h3.page-title span {
     z-index: 999;
   }
   #banner-wrapper .jumbotron.home-banner {
-    padding: 15px 0;
-  }
-  #banner-wrapper .jumbotron.home-banner .container {
-    z-index: 99;
+    padding: 0px;
   }
   #banner-wrapper .jumbotron.home-banner .col-md-5 {
-    width: 300px;
+    float: left;
+    width: 250px;
+    margin-right: 12px;
   }
-  #banner-wrapper .jumbotron.home-banner .col-md-5 .page-header h1 {
-    font-size: 28px;
-    line-height: 24px;
+  #banner-wrapper .jumbotron.home-banner .page-header {
+    margin-left: -20px;
+    -webkit-font-smoothing: antialiased;
+    /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    transform: scale(0.85);
   }
-  #banner-wrapper .jumbotron.home-banner .col-md-5 .page-header h1 span {
-    font-size: 16px;
+  #banner-wrapper .jumbotron.home-banner .page-header h1 {
+    font-size: 30px;
   }
-  #banner-wrapper .jumbotron.home-banner .col-md-5 .page-header p {
+  #banner-wrapper .jumbotron.home-banner .banner-card {
+    margin-left: -30px;
+    width: 180px;
+    -webkit-font-smoothing: antialiased;
+    /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    transform: scale(0.85);
+  }
+  #banner-wrapper .jumbotron.home-banner .banner-card:hover {
+    -webkit-font-smoothing: antialiased;
+    /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+    -webkit-transform: scale(0.88);
+    -moz-transform: scale(0.88);
+    transform: scale(0.88);
+  }
+  #banner-wrapper.quickstart-wrapper .quickstart {
+    padding: 5px 0 10px 0;
+  }
+  #banner-wrapper.quickstart-wrapper .quickstart .col-md-3 {
+    float: left;
+    width: 150px;
+    margin-right: 12px;
+  }
+  #banner-wrapper.quickstart-wrapper .quickstart .video-launch-container {
+    margin: -5px 0 0 -15px;
+    -webkit-font-smoothing: antialiased;
+    /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    transform: scale(0.85);
+  }
+  #banner-wrapper.quickstart-wrapper .quickstart h2 {
+    font-size: 18px;
+  }
+  #banner-wrapper.quickstart-wrapper .quickstart p {
+    line-height: 16px;
     font-size: 14px;
   }
-  #banner-wrapper .jumbotron .banner-card {
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    transform: scale(0.8);
+  #banner-wrapper.quickstart-wrapper .quickstart .quickstart-links {
+    margin-left: -400px;
+    line-height: 22px;
+    -webkit-font-smoothing: antialiased;
+    /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    transform: scale(0.85);
+  }
+  #content-container {
+    padding-top: 10px;
+  }
+  #content-container .category-content {
+    margin: 5px 0;
+    padding: 5px 0;
+  }
+  #content-container .category-content .category-header {
+    margin-left: -65px;
+    margin-right: -65px;
+    -webkit-font-smoothing: antialiased;
+    /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    transform: scale(0.85);
+  }
+  #content-container .category-content .guide-card {
+    margin: 0 0 0 -20px;
+    -webkit-font-smoothing: antialiased;
+    /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    transform: scale(0.85);
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+  div {
+    background: red;
+  }
   #globalnav-wrapper a.navbar-brand {
     margin-left: -20px;
+    -webkit-font-smoothing: antialiased;
+    /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
     -webkit-transform: scale(0.9);
     -moz-transform: scale(0.9);
     transform: scale(0.9);
   }
   #globalnav-wrapper .nav {
     margin-right: -20px;
+    -webkit-font-smoothing: antialiased;
+    /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
     -webkit-transform: scale(0.9);
     -moz-transform: scale(0.9);
     transform: scale(0.9);
