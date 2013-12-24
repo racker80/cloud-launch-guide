@@ -2,17 +2,12 @@
 			<div id="basement-wrapper">
 				<div id="basement-container" class="clearfix">
 					<div id="basement-copyright">
-						<p>&#169; 2013 <a href="">Rackspace</a>, US Inc.</p>
+						<p>&#169; 2013 <a href="http://http://www.rackspace.com">Rackspace</a>, US Inc.</p>
 					</div>
 					<nav id="basement-nav">
-						<a href="">About Rackspace</a>
-						<a href="">Fanatical Support</a>
-						<a href="">Hosting Solutions</a>
-						<a href="">Investors</a>
-						<a href="">Careers</a>
-						<a href="">Privacy Statement</a>
-						<a href="">Website Terms</a>
-						<a href="">Sitemap</a>
+						<a href="http://www.rackspace.com/about/">About Rackspace</a>
+						<a href="http://www.rackspace.com/information/legal/websiteterms">Website Terms</a>
+						<a href="http://www.rackspace.com/information/legal/privacystatement">Privacy Statement</a>
 					</nav>
 				</div>
 			</div>
@@ -43,8 +38,10 @@
 		
 		<div class="comingsoon-container" id="dialog-comingsoon">
 			<h3>This guide is <strong>coming soon</strong>.</h3>
-			<p>Thanks for your interest. We're working hard on the next round of Cloud Launch Guides. Sign up below for email updates about when new guides are available.</p>
+			<p>Thanks for your interest. We're working hard on the next round of Cloud Launch Guides. Want to see something particular higlighted in this guide? <a href="mailto:cloudlaunchguide@rackspace.com?subject=I have a suggestion for this guide">Send an email</a> to Cloud Launch Guides team.</p>
+			<!-- <p>Thanks for your interest. We're working hard on the next round of Cloud Launch Guides. Sign up below for email updates about when new guides are available.</p> -->
 			
+			<!-- 
 			<form action="" method="get" id="csForm" accept-charset="utf-8">
 				<dl class="form-container">
 					<dt><label for="csWhat">What would you like to see in this guide?</label></dt>
@@ -57,6 +54,7 @@
 					<button type="submit">Sign up</button>
 				</div>
 			</form>
+			-->
 		</div>
 		
 		<!-- Quickstart modal -->

@@ -5,13 +5,13 @@
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav crumbs">
 					<li><a href="{{ baseurl }}/"><img src="{{ baseurl }}/includes/images/logo-cloud-launch-guide.svg" style="height:20px; width:auto;" /></a></li>
-					<li class="show-this"><a href="{{ baseurl }}/guides/{{guide.slug}}">Guide Overview  <span>&#187;</span></a></li>
+					<li class="show-this"><a href="{{ baseurl }}/guides/{{guide.slug}}">Guide Overview  <span class="hide-small">&#187;</span></a></li>
 					{% if chapter %}
-						<li><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">{{book.title}}  <span>&#187;</span></a></li>
-						<li class="selected">{{chapter.title}}</li>
+						<li class="hide-small"><a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}">{{book.title}}  <span>&#187;</span></a></li>
+						<li class="selected hide-small">{{chapter.title}}</li>
 					{% else %}
-						<li class="selected">{{book.title}}</li>
-						<li class="currentChapter">:<em></em></li>
+						<li class="selected hide-small">{{book.title}}</li>
+						<li class="currentChapter hide-small">:<em></em></li>
 					{% endif %}
 				</ul>
 				<ul class="nav navbar-nav navbar-right">

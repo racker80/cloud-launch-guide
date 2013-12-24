@@ -27,8 +27,9 @@
 					</ul>
 				</li>
 				<!-- <li><a href="#">About</a></li> -->
-				<li><a href="#" class="dialog-f">Feedback</a></li>
-				<li><a href="https://www.rackspace.com/fanatical-support">Fanatical Support</a></li>
+				<!-- <li><a href="#" class="dialog-f">Feedback</a></li> -->
+				<li><a href="mailto:cloudlaunchguide@rackspace.com?subject=Cloud Launch Guides Feedback" class="tooltip-rs pointer" title="Send an email to the Cloud Launch Guides team">Feedback</a></li>
+				<li><a href="http://support.rackspace.com">Fanatical Support</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</div>

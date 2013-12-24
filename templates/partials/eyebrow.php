@@ -1,7 +1,8 @@
 <div id="eyebrow-wrapper"> <!-- START Eyebrow (Grey Bar)) -->
 	<div id="eyebrow-container" class="container clearfix">
 		<div class="sixteen columns">
-			<div id="eyebrow-logo"><a href="http://www.rackspace.com"><img src="http://034d24a88b3e71fd72a6-f083e9a6295a3f0714fa019ffdca65c3.r47.cf1.rackcdn.com/header/logo-rackspace-black.png" /></a></div>
+			<!-- <div id="eyebrow-logo"><a href="http://www.rackspace.com"><img src="http://034d24a88b3e71fd72a6-f083e9a6295a3f0714fa019ffdca65c3.r47.cf1.rackcdn.com/header/logo-rackspace-black.png" /></a></div> -->
+			<div id="eyebrow-logo"><a class="eyebrow-logo-link" href="http://www.rackspace.com"></a></div>
 			<div id="eyebrow-login-rs" class="dropdown-menu-eb">
 				<ul>
 					<li><span class="btn-eb medium gray flat dropdown">Log In</span>

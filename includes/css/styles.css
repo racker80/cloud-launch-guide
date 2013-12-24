@@ -6723,6 +6723,7 @@ html {
   -webkit-font-smoothing: antialiased;
   /* Fix for webkit rendering */
   -webkit-text-size-adjust: 100%;
+  min-width: 780px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   html {
@@ -6732,6 +6733,7 @@ html {
     -webkit-font-smoothing: antialiased;
     /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
+    min-width: 780px;
   }
 }
 a {
@@ -6740,6 +6742,7 @@ a {
   transition: all .15s linear;
 }
 .container {
+  min-width: 780px;
   position: relative;
 }
 /* ----------------------------------------------------------------
@@ -6796,6 +6799,20 @@ a {
   float: right;
   display: inline-block;
 }
+#eyebrow-wrapper #eyebrow-container .eyebrow-logo-link {
+  display: inline-block;
+  height: 30px;
+  width: 100px;
+  background: url('../images/logo-rackspace.svg') no-repeat left center;
+  opacity: 0.8;
+  -moz-opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+#eyebrow-wrapper #eyebrow-container .eyebrow-logo-link:hover {
+  opacity: 1.0;
+  -moz-opacity: 1.0;
+  filter: alpha(opacity=100);
+}
 #eyebrow-wrapper #eyebrow-container #eyebrow-nav-right {
   margin-right: 15px;
   padding-top: 9px;
@@ -6841,7 +6858,7 @@ a {
   cursor: default;
 }
 #eyebrow-wrapper #eyebrow-container .icon {
-  background-image: url('http://034d24a88b3e71fd72a6-f083e9a6295a3f0714fa019ffdca65c3.r47.cf1.rackcdn.com/sprites/rackstories-eyebrow.png');
+  background-image: url('../images/sprite-eyebrow.svg');
   background-repeat: no-repeat;
 }
 #eyebrow-wrapper #eyebrow-container #sales-chat {
@@ -7611,6 +7628,9 @@ a {
 .container {
   padding: 0;
 }
+.container img {
+  max-width: 100%;
+}
 #content-container {
   padding-top: 20px;
 }
@@ -7781,6 +7801,9 @@ a {
   background: #333;
   font-size: 13px;
   color: #fff;
+}
+#content-container .page-container {
+  border-bottom: 1px solid #eee;
 }
 #content-container .chapter-container,
 #content-container page-content-code {
@@ -8143,6 +8166,10 @@ h3.page-title span {
   border-bottom: 1px dotted #333;
   cursor: help;
 }
+.tooltip-rs.pointer {
+  cursor: pointer;
+  border-bottom: none;
+}
 #tooltip {
   position: absolute;
   top: 175px;
@@ -8165,7 +8192,7 @@ h3.page-title span {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
   padding: 10px 15px;
   position: absolute;
-  z-index: 9999;
+  z-index: 99999;
   max-width: 350px;
 }
 .arrow:after {
@@ -8286,6 +8313,22 @@ h3.page-title span {
   line-height: 22px;
   margin-bottom: 15px;
 }
+.ui-dialog .feedback-container p a,
+.ui-dialog .comingsoon-container p a {
+  color: #559AD4;
+  outline: none;
+  text-decoration: none;
+  opacity: 0.8;
+  -moz-opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.ui-dialog .feedback-container p a:hover,
+.ui-dialog .comingsoon-container p a:hover {
+  text-decoration: none;
+  opacity: 1.0;
+  -moz-opacity: 1.0;
+  filter: alpha(opacity=100);
+}
 .ui-dialog .feedback-container strong,
 .ui-dialog .comingsoon-container strong {
   color: #666;
@@ -8401,7 +8444,7 @@ h3.page-title span {
   float: right;
 }
 #basement-wrapper #basement-container {
-  width: 1200px;
+  width: 460px;
   margin: 0 auto;
 }
 .twitter-header {
@@ -8438,6 +8481,22 @@ h3.page-title span {
     -webkit-transform: scale(0.92);
     -moz-transform: scale(0.92);
     transform: scale(0.92);
+  }
+  #banner-wrapper .jumbotron.guide-banner {
+    padding: 15px 0 5px 0;
+  }
+  #banner-wrapper .jumbotron.guide-banner p {
+    font-size: 16px;
+  }
+  #banner-wrapper .jumbotron .tweet-box p {
+    font-size: 13px;
+  }
+  #banner-wrapper .page-header h1.guideTitle {
+    font-size: 24px;
+  }
+  #banner-wrapper .page-header h2 {
+    font-size: 16px;
+    line-height: 16px;
   }
   #banner-wrapper.quickstart-wrapper .quickstart {
     padding: 15px 0 20px 0;
@@ -8492,8 +8551,15 @@ h3.page-title span {
     -moz-transform: scale(0.9);
     transform: scale(0.9);
   }
+  .book-list h3 {
+    font-size: 18px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
+  .hide-small,
+  li.hide-small {
+    display: none;
+  }
   #globalnav-wrapper a.navbar-brand {
     padding: 15px 0 15px 80px;
     margin-left: -20px;
@@ -8558,6 +8624,30 @@ h3.page-title span {
     -moz-transform: scale(0.88);
     transform: scale(0.88);
   }
+  #banner-wrapper .jumbotron.guide-banner {
+    padding: 15px 0 5px 0;
+  }
+  #banner-wrapper .jumbotron.guide-banner h1.guideTitle {
+    font-size: 22px;
+  }
+  #banner-wrapper .jumbotron.guide-banner p {
+    font-size: 16px;
+  }
+  #banner-wrapper .jumbotron .tweet-box p {
+    font-size: 13px;
+  }
+  #banner-wrapper .page-header h1.guideTitle {
+    font-size: 24px;
+  }
+  #banner-wrapper .page-header h2 {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  #banner-wrapper .page-header p,
+  #banner-wrapper .page-header ul {
+    font-size: 16px;
+    line-height: 22px;
+  }
   #banner-wrapper.quickstart-wrapper .quickstart {
     padding: 5px 0 10px 0;
   }
@@ -8618,35 +8708,13 @@ h3.page-title span {
     -moz-transform: scale(0.85);
     transform: scale(0.85);
   }
-}
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  div {
-    background: red;
+  #content-container .book-list {
+    margin-top: 20px;
   }
-  #globalnav-wrapper a.navbar-brand {
-    margin-left: -20px;
-    -webkit-font-smoothing: antialiased;
-    /* Fix for webkit rendering */
-    -webkit-text-size-adjust: 100%;
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    transform: scale(0.9);
+  #content-container .book-list h3 {
+    font-size: 20px;
   }
-  #globalnav-wrapper .nav {
-    margin-right: -20px;
-    -webkit-font-smoothing: antialiased;
-    /* Fix for webkit rendering */
-    -webkit-text-size-adjust: 100%;
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-  #globalnav-wrapper .nav a li.open ul.dropdown-menu {
-    z-index: 999;
-  }
-}
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  div {
-    background: yellow;
+  #content-container .book-list .book-list-options {
+    margin-top: 20px;
   }
 }
