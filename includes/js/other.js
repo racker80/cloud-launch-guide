@@ -156,8 +156,6 @@ $(document).ready(function() {
 				csEmail: "Required"
 			}
 		});
-	});
-	
-	
+	});	
 
 });
