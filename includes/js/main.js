@@ -248,10 +248,10 @@ $(document).ready(function() {
 						'<h5></h5>'+
 						'<div class="current-ip">'+
 						'<span data-ip-current="" class="ip-current"></span>'+
-						'<a href="#" class="edit">edit</a>'+
+						'<a href="#" class="edit">Edit</a>'+
 						'</div>'+
 						'<div class="edit-ip">'+
-						'<input type="text" class="text" id="uniqueID"> <a href="#" class="save">save</a>'+
+						'<input type="text" class="text" id="uniqueID"> <a href="#" class="save">Save</a>'+
 						'</div>'+
 						'</div>');
 					template.find('h5').html(value.split('.').join(' '));
