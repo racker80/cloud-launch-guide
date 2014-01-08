@@ -145,7 +145,6 @@ $(document).ready(function() {
 			}
 		});
 	});
-		
 	
 	$(function() {
 		$("#csForm").validate({

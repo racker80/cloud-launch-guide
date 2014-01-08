@@ -94,12 +94,15 @@
 							var $active = $(this);
 							var singleUrl = ths.settings.singleUrl();
 
-							/* The waypoint is triggered at the top of each list item representing a dial section. When triggering in the down direction we want to use the dial section the waypoint is attached to. But in the up direction we want to use the previous dial section. */
+							/* The waypoint is triggered at the top of each list item representing a dial section. 
+							When triggering in the down direction we want to use the dial section the waypoint is attached to. 
+							But in the up direction we want to use the previous dial section. */
 							if (direction === "up") {
 								$active = $active.prev();
 							}
 
-							/* If we triggered in the up direction and the result from 'prev' came back with an empty set of elements, it means we were on the first element in the list, and we should just use the original element. */
+							/* If we triggered in the up direction and the result from 'prev' came back with an empty set of elements, 
+							it means we were on the first element in the list, and we should just use the original element. */
 							if (!$active.length) {
 						    // $active = $(this);
 						    // $('.currentChapter').html();

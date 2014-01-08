@@ -7447,7 +7447,7 @@ a {
   right: -14px;
   width: 0;
   height: 0;
-  border-color: transparent transparent transparent #fff;
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #ffffff;
   border-style: solid;
   border-width: 14px 0 14px 14px;
 }
@@ -7750,9 +7750,22 @@ a {
   right: -17px;
   width: 0;
   height: 0;
-  border-color: transparent transparent transparent #559AD4;
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #559ad4;
   border-style: solid;
   border-width: 17px 0 17px 17px;
+}
+@-moz-document url-prefix() {
+  p.guidestart-links a.advance:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: -17px;
+    width: 0;
+    height: 0;
+    border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #ff0000;
+    border-style: solid;
+    border-width: 17px 0 17px 17px;
+  }
 }
 #content-container .category-content:last-child {
   border-bottom: none;
@@ -8140,9 +8153,22 @@ h3.page-title span {
   right: -17px;
   width: 0;
   height: 0;
-  border-color: transparent transparent transparent #559AD4;
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #559ad4;
   border-style: solid;
   border-width: 17px 0 17px 17px;
+}
+@-moz-document url-prefix() {
+  p.bookStart a:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: -18px;
+    width: 0;
+    height: 0;
+    border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #ff0000;
+    border-style: solid;
+    border-width: 8px 0 18px 18px;
+  }
 }
 .book-list .book-list-options h4 {
   font-family: 'SourceSansProBold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -8802,9 +8828,6 @@ h3.page-title span {
   #globalnav-wrapper .nav a li.open ul.dropdown-menu {
     z-index: 999;
   }
-  .guide-menu-wrapper {
-    display: none;
-  }
   #banner-wrapper .jumbotron.home-banner {
     padding: 0px;
   }
@@ -9000,9 +9023,6 @@ h3.page-title span {
   }
   #globalnav-wrapper .nav a li.open ul.dropdown-menu {
     z-index: 999;
-  }
-  .guide-menu-wrapper {
-    display: none;
   }
   #banner-wrapper .jumbotron.home-banner {
     padding: 0px;
