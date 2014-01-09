@@ -23,14 +23,14 @@
 		<div class="guide-card unbox">
 			<h3>Securing a Cloud Server</h3>
 			<p class="guidestart-links">
-				<a href="{{ baseurl }}/guides/securing-server" class="guide-actions-learn">Tell me more</a>
-				<a href="{{ baseurl }}/guides/securing-server/rpm-based" class="advance">Let's get started</a>
+				<a href="{{ baseurl }}/guides/securing-server" class="guide-actions-learn" onClick="_gaq.push(['_trackEvent', 'Guides', 'Securing a Cloud Server’, 'Tell me more']);">Tell me more</a>
+				<a href="{{ baseurl }}/guides/securing-server/rpm-based" class="advance" onClick="_gaq.push(['_trackEvent', 'Guides', 'Securing a Cloud Server’, 'Lets get started']);">Let's get started</a>
 			</p>
 		</div>
 		
 		<div class="guide-card unbox coming-soon">
 			<h3>Moving Data to Your Server</h3>
-			<p class="ribbon"><a href="##" class="dialog-c">Coming soon</a></p>
+			<p class="ribbon"><a href="##" class="dialog-c" onClick="_gaq.push(['_trackEvent', 'Guides', 'Coming soon’, 'Lets get started']);">Moving Data to Your Server</a></p>
 		</div>
 		
 	</div>
@@ -48,15 +48,15 @@
 		<div class="guide-card discover">
 			<h3>Moving from one server to multiple servers</h3>
 			<p class="guidestart-links">
-				<a href="{{ baseurl }}/guides/one-to-many" class="guide-actions-learn">Tell me more</a>
-				<a href="{{ baseurl }}/guides/one-to-many/Splitting-the-server" class="advance">Let's get started</a>
+				<a href="{{ baseurl }}/guides/one-to-many" class="guide-actions-learn" onClick="_gaq.push(['_trackEvent', 'Guides', 'Moving from one server to multiple servers’, 'Tell me more']);">Tell me more</a>
+				<a href="{{ baseurl }}/guides/one-to-many/Splitting-the-server" class="advance" onClick="_gaq.push(['_trackEvent', 'Guides', 'Moving from one server to multiple servers’, 'Lets get started']);">Let's get started</a>
 			</p>
 		</div>
 		<div class="guide-card discover">
 			<h3>Horizontally scaling your Web layer</h3>
 			<p class="guidestart-links">
-				<a href="{{ baseurl }}/guides/horizontal" class="guide-actions-learn">Tell me more</a>
-				<a href="{{ baseurl }}/guides/horizontal/Imaging" class="advance">Let's get started</a>
+				<a href="{{ baseurl }}/guides/horizontal" class="guide-actions-learn" onClick="_gaq.push(['_trackEvent', 'Guides', 'Horizontally scaling your Web layer’, 'Tell me more']);">Tell me more</a>
+				<a href="{{ baseurl }}/guides/horizontal/Imaging" class="advance" onClick="_gaq.push(['_trackEvent', 'Guides', 'Horizontally scaling your Web layer’, 'Lets get started']);">Let's get started</a>
 			</p>
 		</div>
 	</div>
@@ -74,29 +74,29 @@
 		<div class="guide-card build">
 			<h3>CMS with WordPress</h3>
 			<p class="guidestart-links">
-				<a href="{{ baseurl }}/guides/wordpress" class="guide-actions-learn">Tell me more</a>
-				<a href="{{ baseurl }}/guides/wordpress/infrastructure" class="advance">Let's get started</a>
+				<a href="{{ baseurl }}/guides/wordpress" class="guide-actions-learn" onClick="_gaq.push(['_trackEvent', 'Guides', 'CMS with WordPress’, 'Tell me more']);">Tell me more</a>
+				<a href="{{ baseurl }}/guides/wordpress/infrastructure" class="advance" onClick="_gaq.push(['_trackEvent', 'Guides', 'CMS with WordPress’, 'Lets get started']);">Let's get started</a>
 			</p>
 		</div>
 		
 		<div class="guide-card build coming-soon">
 			<h3>Developing with Django</h3>
-			<p class="ribbon"><a href="##" class="dialog-c">Coming soon</a></p>
+			<p class="ribbon"><a href="##" class="dialog-c" onClick="_gaq.push(['_trackEvent', 'Guides', 'Coming soon’, 'Developing with Django']);">Coming soon</a></p>
 		</div>
 		
 		<div class="guide-card build coming-soon">
 			<h3>eCommerce with Magento</h3>
-			<p class="ribbon"><a href="##" class="dialog-c">Coming soon</a></p>
+			<p class="ribbon"><a href="##" class="dialog-c" onClick="_gaq.push(['_trackEvent', 'Guides', 'Coming soon’, 'eCommerce with Magento']);">Coming soon</a></p>
 		</div>
 		
 		<div class="guide-card build coming-soon">
 			<h3>Developing with Ruby on Rails</h3>
-			<p class="ribbon"><a href="##" class="dialog-c">Coming soon</a></p>
+			<p class="ribbon"><a href="##" class="dialog-c" onClick="_gaq.push(['_trackEvent', 'Guides', 'Coming soon’, 'Developing with Ruby on Rails']);">Coming soon</a></p>
 		</div>
 		
 		<div class="guide-card build coming-soon">
 			<h3>NoSQL database with MongoDB</h3>
-			<p class="ribbon"><a href="##" class="dialog-c">Coming soon</a></p>
+			<p class="ribbon"><a href="##" class="dialog-c" onClick="_gaq.push(['_trackEvent', 'Guides', 'Coming soon’, 'NoSQL database with MongoDB']);">Coming soon</a></p>
 		</div>
 		
 		

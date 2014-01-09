@@ -7525,6 +7525,10 @@ a {
   border-top-color: #333 !important;
   border-bottom-color: #333 !important;
 }
+.navbar-options .action-options .tooltip-rs {
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
 .navbar-options .allSteps .glyphicon {
   margin-right: 5px;
 }
@@ -7757,7 +7761,7 @@ a {
     right: -17px;
     width: 0;
     height: 0;
-    border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #ff0000;
+    border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #559ad4;
     border-style: solid;
     border-width: 17px 0 17px 17px;
   }
