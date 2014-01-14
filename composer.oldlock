@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "c4fd762acaaa66fb19bf1c44de1f1a53",
+    "hash": "c5f58ff7f91fad96b57cbf75b7e52668",
     "packages": [
         {
             "name": "michelf/php-markdown",
-            "version": "1.4.0",
+            "version": "1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/michelf/php-markdown.git",
-                "reference": "96d8150406f67e683ef4acc09fef91785fef1266"
+                "reference": "fcdd3e0781ae40c2b9847874e0755ff4f5559688"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/michelf/php-markdown/zipball/96d8150406f67e683ef4acc09fef91785fef1266",
-                "reference": "96d8150406f67e683ef4acc09fef91785fef1266",
+                "url": "https://api.github.com/repos/michelf/php-markdown/zipball/fcdd3e0781ae40c2b9847874e0755ff4f5559688",
+                "reference": "fcdd3e0781ae40c2b9847874e0755ff4f5559688",
                 "shasum": ""
             },
             "require": {
@@ -25,7 +25,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-lib": "1.4.x-dev"
+                    "dev-lib": "1.3.x-dev"
                 }
             },
             "autoload": {
@@ -54,54 +54,7 @@
             "keywords": [
                 "markdown"
             ],
-            "time": "2013-11-29 17:09:24"
-        },
-        {
-            "name": "predis/predis",
-            "version": "v0.8.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nrk/predis.git",
-                "reference": "cb18d67b6ab6b8e567c1ab50fe999d1d624f9884"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nrk/predis/zipball/cb18d67b6ab6b8e567c1ab50fe999d1d624f9884",
-                "reference": "cb18d67b6ab6b8e567c1ab50fe999d1d624f9884",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "suggest": {
-                "ext-curl": "Allows access to Webdis when paired with phpiredis",
-                "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Predis": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniele Alessandri",
-                    "email": "suppakilla@gmail.com",
-                    "homepage": "http://clorophilla.net"
-                }
-            ],
-            "description": "Flexible and feature-complete PHP client library for Redis",
-            "homepage": "http://github.com/nrk/predis",
-            "keywords": [
-                "nosql",
-                "predis",
-                "redis"
-            ],
-            "time": "2013-07-27 09:13:54"
+            "time": "2013-04-11 18:53:11"
         },
         {
             "name": "slim/extras",
