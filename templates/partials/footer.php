@@ -16,7 +16,7 @@
 		<!-- Feedback form -->
 		
 		<div class="feedback-container" id="dialog-feedback">
-			<h3>We love <strong>feedback</strong>.</h3>
+			<h3>We love feedback.</h3>
 			<p>Help us make this site better for you. Fill out this form and your feedback will go directly to the Cloud Launch Guide team.</p>
 	
 			<form action="" method="post" id="feedbackForm">
@@ -37,16 +37,15 @@
 		<!-- Coming soon modal -->
 		
 		<div class="comingsoon-container" id="dialog-comingsoon">
-			<h3>This guide is <strong>coming soon</strong>.</h3>
-			<p>Thanks for your interest. We're working hard on the next round of Cloud Launch Guides. Want to see something particular higlighted in this guide? <a href="mailto:cloudlaunchguide@rackspace.com?subject=I have a suggestion for this guide">Send an email</a> to Cloud Launch Guides team.</p>
-			<!-- <p>Thanks for your interest. We're working hard on the next round of Cloud Launch Guides. Sign up below for email updates about when new guides are available.</p> -->
+			<h3>This guide is coming soon.</h3>
+			<!-- <p>Thanks for your interest. We're working hard on the next round of Cloud Launch Guides. Want to see something particular higlighted in this guide? <a href="mailto:cloudlaunchguide@rackspace.com?subject=I have a suggestion for this guide">Send an email</a> to Cloud Launch Guides team.</p> -->
+			<p>Thanks for your interest. We're working hard on the next round of Cloud Launch Guides. Sign up below for email updates about when new guides are available.</p>
 			
-			<!-- 
 			<form action="" method="get" id="csForm" accept-charset="utf-8">
 				<dl class="form-container">
 					<dt><label for="csWhat">What would you like to see in this guide?</label></dt>
 				    <dd><textarea class="form-control" id="csWhat" placeholder="Optional"></textarea></dd>
-					
+			
 				    <dt><label for="csEmail">Email address <span>(We will never share this.)</span></label></dt>
 				    <dd><input type="email" class="form-control" id="csEmail" placeholder="Required" required></dd>
 				</dl>
@@ -54,7 +53,7 @@
 					<button type="submit">Sign up</button>
 				</div>
 			</form>
-			-->
+			
 		</div>
 		
 		<!-- Quickstart modal -->
