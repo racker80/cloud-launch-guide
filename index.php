@@ -92,6 +92,12 @@
         
     });
 	
+    $app->post('/idea.php', function() use($app) {
+
+        $app->render( 'ideas.php' );
+        
+    });
+	
 
     $app->get('/guides/(:guideSlug)', function ($guideSlug) use ($app) {
 

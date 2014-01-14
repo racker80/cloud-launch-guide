@@ -138,8 +138,8 @@ $(document).ready(function() {
 					url: "feedback.php",
 					data: $('#feedbackForm').serialize(),
 					timeout: 3000,
-					success: function() {alert('works');},
-					error: function() {alert('failed');}
+					success: function() {alert('Thank you. Your feedback has been received.');},
+					error: function() {alert('Something went wrong. Please try again.');}
 				});
 				return false;
 			}
@@ -153,6 +153,17 @@ $(document).ready(function() {
 			},
 			messages: {
 				csEmail: "Required"
+			},
+			submitHandler: function(form) {
+				$.ajax({
+					type: "POST",
+					url: "idea.php",
+					data: $('#csForm').serialize(),
+					timeout: 3000,
+					success: function() {alert('Thank you. Your feedback has been received.');},
+					error: function() {alert('Something went wrong. Please try again.');}
+				});
+				return false;
 			}
 		});
 	});	
