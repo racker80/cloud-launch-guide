@@ -1,9 +1,9 @@
 <div class="action-options btn-group btn-group-sm">
-	{% if allsteps %}
+	<!-- {% if allsteps %}
 	    <a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}" class="btn btn-default btn-info-rs allSteps allStepsOn" onClick="_gaq.push(['_trackEvent', 'Buttons', 'Click', 'All Chapters’]);"><span class="glyphicon glyphicon-th-list"></span>All Chapters</a>
 	{% else %}
 		<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}{{chapterslug}}" class="btn btn-default allSteps" onClick="_gaq.push(['_trackEvent', 'Buttons', 'Click', 'All Chapters’]);"><span class="glyphicon glyphicon-th-list"></span>All Chapters</a>
-	{% endif %}
+	{% endif %} -->
 	    
 	<button type="button" data-toggle-expert class="btn btn-default tooltip-rs" title="Toggle imformative content" onClick="_gaq.push(['_trackEvent', 'Buttons', 'Click', 'Expert Mode’]);"><span class="glyphicon glyphicon-certificate"></span>Expert Mode</button>
 	<button type="button" data-toggle-nav class="btn btn-default" >Guide Index<span class="caret"></span></button>

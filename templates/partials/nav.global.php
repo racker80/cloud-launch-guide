@@ -28,8 +28,8 @@
 					</ul>
 				</li>
 				<!-- <li><a href="#">About</a></li> -->
-				<li><a href="#" class="dialog-f">Feedback</a></li>
-				<!-- <li><a href="mailto:cloudlaunchguide@rackspace.com?subject=Cloud Launch Guides Feedback" class="tooltip-rs pointer" title="Send an email to the Cloud Launch Guides team" onClick="_gaq.push(['_trackEvent', 'Buttons', 'Click', 'Feedback’]);">Feedback</a></li> -->
+				<!-- <li><a href="#" class="dialog-f">Feedback</a></li> -->
+				<li><a href="mailto:cloudlaunchguide@rackspace.com?subject=Cloud Launch Guides Feedback" class="tooltip-rs pointer" title="Send an email to the Cloud Launch Guides team" onClick="_gaq.push(['_trackEvent', 'Buttons', 'Click', 'Feedback’]);">Feedback</a></li>
 				<li><a href="http://support.rackspace.com" onClick="_gaq.push(['_trackEvent', 'Buttons', 'Click', 'Fanatical Support’]);">Fanatical Support</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->

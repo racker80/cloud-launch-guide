@@ -38,10 +38,10 @@
 		
 		<div class="comingsoon-container" id="dialog-comingsoon">
 			<h3>This guide is coming soon.</h3>
-			<!-- <p>Thanks for your interest. We're working hard on the next round of Cloud Launch Guides. Want to see something particular higlighted in this guide? <a href="mailto:cloudlaunchguide@rackspace.com?subject=I have a suggestion for this guide">Send an email</a> to Cloud Launch Guides team.</p> -->
-			<p>Thanks for your interest. We're working hard on the next round of Cloud Launch Guides. Sign up below for email updates about when new guides are available.</p>
+			<p>Thanks for your interest. We're working hard on the next round of Cloud Launch Guides. Want to see something particular higlighted in this guide? <a href="mailto:cloudlaunchguide@rackspace.com?subject=I have a suggestion for this guide">Send an email</a> to Cloud Launch Guides team.</p>
+			<!-- <p>Thanks for your interest. We're working hard on the next round of Cloud Launch Guides. Sign up below for email updates about when new guides are available.</p> -->
 			
-			<form action="" method="post" id="csForm" accept-charset="utf-8">
+			<!-- <form action="" method="post" id="csForm" accept-charset="utf-8">
 				<dl class="form-container">
 					<dt><label for="csWhat">What would you like to see in this guide?</label></dt>
 				    <dd><textarea class="form-control" id="csWhat" name="csWhat" placeholder="Optional"></textarea></dd>
@@ -52,7 +52,7 @@
 				<div class="form-actions">
 					<button type="submit">Sign up</button>
 				</div>
-			</form>
+			</form> -->
 			
 		</div>
 		
