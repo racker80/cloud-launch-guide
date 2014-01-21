@@ -87,13 +87,6 @@
         
     });
 	
-    $app->post('/feedback.php', function() use($app) {
-
-        $app->render( 'feedback.php' );
-        
-    });
-	
-
     $app->get('/guides/(:guideSlug)', function ($guideSlug) use ($app) {
 
         $guides = getAPI('guides/overview');
