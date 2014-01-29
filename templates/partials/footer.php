@@ -59,7 +59,7 @@
 		<!-- Quickstart modal -->
 		
 		<div class="video-quickstart-container" id="dialog-video">
-			<iframe id="video-quickstart" width="740" height="460" src="//www.youtube.com/embed/RB5mqsubMlg?&showinfo=0&autoplay=0&rel=0&controls=1" frameborder="0" allowfullscreen></iframe>
+			<iframe id="video-quickstart" width="740" height="460" src="https://www.youtube.com/embed/RB5mqsubMlg?&showinfo=0&autoplay=0&rel=0&controls=1" frameborder="0" allowfullscreen></iframe>
 		</div>		
 
 		<script src="{{ baseurl }}/includes/bower_components/jquery/jquery.min.js"></script>
