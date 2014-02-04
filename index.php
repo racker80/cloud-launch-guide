@@ -127,7 +127,7 @@
         foreach($chapters as $chapter) {
             if(isset($chapter->code)) {
                 foreach($chapter->code as $code) {
-		$code = new stdClass();
+		//$code = new stdClass();
                         if(strstr($code->text, 'your.')) {
                             $chapter->meta->iptool = true;
                             $code->iptool = true;
@@ -166,7 +166,7 @@
 
         if(isset($chapter->code)) {
             foreach($chapter->code as $code) {
-		$code = new stdClass();
+		//$code = new stdClass();
                 if(strstr($code->text, 'your.')) {
                     $chapter->meta->iptool = true;
                     $code->iptool = true;
