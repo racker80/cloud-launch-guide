@@ -178,5 +178,12 @@ $(document).ready(function() {
 	
 	$('#spanYear').html(new Date().getFullYear());
 	
+	// Prevent special characters in IP Tool
+	
+	$("#uniqueID").keyup(function(event) {
+		name = $("#uniqueID").val();
+		name = name.replace(/[^a-zA-Z 0-9.]+/g,'');
+		$("#uniqueID").val(name);
+	});
 
 });

@@ -6,9 +6,6 @@
 		
 		<div class="widgetSection">
 
-
-
-
 		</div>
 
 		<div class="panel-footer">
