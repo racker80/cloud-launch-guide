@@ -2,7 +2,7 @@
 			<div id="basement-wrapper">
 				<div id="basement-container" class="clearfix">
 					<div id="basement-copyright">
-						<p>&#169; 2013 <a href="http://http://www.rackspace.com">Rackspace</a>, US Inc.</p>
+						<p>&#169; <span id="spanYear">2013</span> <a href="http://http://www.rackspace.com">Rackspace</a>, US Inc.</p>
 					</div>
 					<nav id="basement-nav">
 						<a href="http://www.rackspace.com/about/">About Rackspace</a>
@@ -13,7 +13,7 @@
 			</div>
 		</footer>
 		
-		<!-- Feedback form -->
+		<!-- Feedback form modal -->
 		
 		<div class="feedback-container" id="dialog-feedback">
 			<h3>We love feedback.</h3>
@@ -62,6 +62,8 @@
 			<iframe id="video-quickstart" width="740" height="460" src="https://www.youtube.com/embed/RB5mqsubMlg?&showinfo=0&autoplay=0&rel=0&controls=1" frameborder="0" allowfullscreen></iframe>
 		</div>		
 
+		<!-- scripts -->
+		
 		<script src="{{ baseurl }}/includes/bower_components/jquery/jquery.min.js"></script>
 		<script src="{{ baseurl }}/includes/bower_components/jquery/jquery.ui.min.js"></script>
 

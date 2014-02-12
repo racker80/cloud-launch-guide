@@ -30,7 +30,7 @@
 		
 		<div class="guide-card unbox coming-soon">
 			<h3>Moving Data to Your Server</h3>
-			<p class="ribbon"><a href="##" class="dialog-c" onClick="_gaq.push(['_trackEvent', 'Guides', 'Coming soon’, 'Lets get started']);">Moving Data to Your Server</a></p>
+			<p class="ribbon"><a href="##" class="dialog-c" onClick="_gaq.push(['_trackEvent', 'Guides', 'Coming soon’, 'Moving Data to Your Server']);">Coming soon</a></p>
 		</div>
 		
 	</div>
