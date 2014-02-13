@@ -382,8 +382,6 @@ $(document).ready(function() {
 })();
 
 
-
-
 ;(function() {
 	var common = {
 			connector : [ "Bezier", { curviness: 50 } ],
@@ -432,9 +430,7 @@ $(document).ready(function() {
 
 		jsPlumb.toggleSourceEnabled(source);
 
-
 	});
-
 
 
 	$('body').on('expertToggle', function(event){
@@ -459,8 +455,12 @@ $(document).ready(function() {
 		});
 
 	});
-	
+		
 })();
+
+$(window).resize(function(){
+    jsPlumb.repaintEverything();
+});
 
 Socialite.load();
 
