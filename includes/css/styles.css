@@ -6875,6 +6875,11 @@ a {
 }
 #eyebrow-wrapper #eyebrow-container #sales-responsive-small {
   display: none;
+  margin-right: 15px;
+  padding-top: 9px;
+  font-size: 12px;
+  line-height: 12px;
+  float: right;
 }
 #eyebrow-wrapper #eyebrow-container .dropdown-menu-eb ul li ul li a {
   font-family: 'SourceSansProRegular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -8797,18 +8802,18 @@ h3.page-title span {
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  div {
-    background: red;
-  }
   .hide-small,
   li.hide-small {
     display: none;
   }
   #eyebrow-wrapper {
-    padding: 0 20px 0 10px;
+    padding: 0 10px 0 10px;
   }
   #eyebrow-wrapper #eyebrow-container #eyebrow-nav-right {
-    margin-right: 45px;
+    margin: 0;
+  }
+  #eyebrow-wrapper #eyebrow-container a#sales-chat {
+    margin: 0;
   }
   #eyebrow-wrapper #eyebrow-container #eyebrow-login-rs {
     display: none;
@@ -8820,14 +8825,14 @@ h3.page-title span {
     padding: 0 10px;
   }
   #globalnav-wrapper a.navbar-brand {
-    padding: 15px 0 15px 80px;
-    margin-left: -10px;
+    padding: 10px 0 10px 80px;
+    margin-left: -50px;
     -webkit-font-smoothing: antialiased;
     /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    transform: scale(0.9);
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    transform: scale(0.7);
   }
   #globalnav-wrapper .navbar-toggle {
     position: absolute;
@@ -8844,14 +8849,17 @@ h3.page-title span {
     font-size: 14px;
   }
   #globalnav-wrapper .nav li {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 17.5px;
+    margin-bottom: 17.5px;
   }
   #globalnav-wrapper .nav li:last-child a {
-    padding: 8px 0 8px 20px;
+    padding: 5px 0 5px 20px;
+  }
+  #globalnav-wrapper .nav li.hide-nav-medium {
+    display: none;
   }
   #globalnav-wrapper .nav a {
-    padding: 8px 20px;
+    padding: 5px 20px;
   }
   #globalnav-wrapper .nav a li.open ul.dropdown-menu {
     z-index: 999;
@@ -8994,6 +9002,9 @@ h3.page-title span {
   #content-container .book-list .book-list-options {
     margin-top: 20px;
   }
+  #basement-wrapper {
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .hide-small,
@@ -9011,6 +9022,10 @@ h3.page-title span {
   }
   #eyebrow-wrapper #eyebrow-container #eyebrow-signup-rs {
     display: none;
+  }
+  #eyebrow-wrapper #eyebrow-container #sales-responsive-small {
+    margin: 0;
+    display: inline-block;
   }
   #globalnav-wrapper {
     padding: 0 10px;
@@ -9040,14 +9055,17 @@ h3.page-title span {
     font-size: 14px;
   }
   #globalnav-wrapper .nav li {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 17.5px;
+    margin-bottom: 17.5px;
   }
   #globalnav-wrapper .nav li:last-child a {
-    padding: 8px 0 8px 20px;
+    padding: 5px 0 5px 20px;
+  }
+  #globalnav-wrapper .nav li.hide-nav-medium {
+    display: none;
   }
   #globalnav-wrapper .nav a {
-    padding: 8px 20px;
+    padding: 5px 20px;
   }
   #globalnav-wrapper .nav a li.open ul.dropdown-menu {
     z-index: 999;
@@ -9234,9 +9252,7 @@ h3.page-title span {
   #content-container .book-list .book-list-options {
     margin-top: 20px;
   }
-  #basement-container {
-    font-size: 10px;
-    width: 250px;
-    margin: 0 auto;
+  #basement-wrapper {
+    width: 100%;
   }
 }
