@@ -266,8 +266,8 @@ $(document).ready(function() {
 					if( ths.html().match(re) ) {
 						var cl = value.replace(/\./g, '-');
 
-						if(localStorage.getItem(value)) {
-							var text = localStorage.getItem(value);
+						if(sessionStorage.getItem(value)) {
+							var text = sessionStorage.getItem(value);
 
 						//if a value exists, we don't need the footer
 						$('.ip-panel .panel-footer').hide();
@@ -309,7 +309,7 @@ $(document).ready(function() {
 		var showIPtoolFooter = function(){
 			var i = 0;
 			$.each(types, function(index, value){
-				if(localStorage.getItem(value)) {
+				if(sessionStorage.getItem(value)) {
 					i++;
 				}
 			});
@@ -323,11 +323,11 @@ $(document).ready(function() {
 		showIPtoolFooter();
 
 		var setCurrentIP = function(target, type) {
-			if(localStorage.getItem(type)) {
+			if(sessionStorage.getItem(type)) {
 				if(target.is('input')) {
-					target.val(localStorage.getItem(type));
+					target.val(sessionStorage.getItem(type));
 				} else {
-					target.html(localStorage.getItem(type));
+					target.html(sessionStorage.getItem(type));
 				}
 			} else {
 
@@ -339,7 +339,7 @@ $(document).ready(function() {
 				$('.ip-panel *[data-ip-type="'+type+'"] .edit-ip input.text').val(value);
 				$('.ip-panel *[data-ip-type="'+type+'"] .ip-current').html(value);
 				$('span[data-code-ip-type="'+type+'"]').html(value);
-				localStorage.setItem(type, value)
+				sessionStorage.setItem(type, value)
 			}
 
 

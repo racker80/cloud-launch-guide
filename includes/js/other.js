@@ -56,6 +56,12 @@ $(document).ready(function() {
 
 				var widget = $(this).dialog('widget');
 				$('.ui-dialog-titlebar-close span', widget).addClass('glyphicon glyphicon-remove dialog-close');
+			},
+			position: {
+				my: "center",
+				at: "center",
+				of: $(window),
+				within: $(window)
 			}
 		});
 	
@@ -124,7 +130,7 @@ $(document).ready(function() {
 		
 	});
 	
-	// Validate forms
+	// Validate forms (not in production yet)
 	
 	$(function() {
 		$("#feedbackForm").validate({
@@ -166,6 +172,18 @@ $(document).ready(function() {
 				return false;
 			}
 		});
-	});	
+	});
+	
+	// Update copyright date
+	
+	$('#spanYear').html(new Date().getFullYear());
+	
+	// Prevent special characters in IP Tool
+	
+	$("#uniqueID").keyup(function(event) {
+		name = $("#uniqueID").val();
+		name = name.replace(/[^a-zA-Z 0-9.]+/g,'');
+		$("#uniqueID").val(name);
+	});
 
 });

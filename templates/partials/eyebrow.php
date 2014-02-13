@@ -28,10 +28,10 @@
 		</div>
 		<nav id="eyebrow-nav-right">
 			<span id="sales-responsive-large"><a href="https://livechat.boldchat.com/aid/181086145682362661/bc.chat?resize=true&amp;cwdid=2174346711453254157&amp;wdid=3585965807641389340&amp;rdid=493576000255290256&amp;customField_RACKUID=&amp;customField_CMPCode=&amp;customField_ReferringURL=&amp;customField_CurrentURL=&amp;customField_Territory=&amp;customField_coreSessionId=" target="_blank" onclick="window.open((window.pageViewer &amp;&amp; pageViewer.link || function(link){return link;})(this.href + (this.href.indexOf('?')>=0 ? '&amp;' : '?') + 'url=' + escape(document.location.href)), 'Chat3149683090568712612', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=640,height=480');return false;track_chat_button('Home: Live Chat');" id="sales-chat" class="icon chat">Sales Chat</a> 1&#8211;800&#8211;961&#8211;2888</span>
-			<a href="http://www.rackspace.com/support/" id="support-phone" class="icon">Support</a>: 1&#8211;800&#8211;961&#8211;4454
+			<a href="http://www.rackspace.com/support/" id="support-phone" class="icon">Support</a>: 1-800-961-4454
 		</nav>
 		
-		<p id="sales-responsive-small">Sales: 1&#8211;800&#8211;961&#8211;2888</p>
+		<p id="sales-responsive-small">Sales: 1-800-961-2888</p>
 			
 	</div>
 </div> <!-- END Eyebrow (Grey Bar) -->
