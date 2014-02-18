@@ -7777,9 +7777,21 @@ a {
   border-bottom: none;
 }
 #content-container .pre-wrapper {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* IE 8+ */
   position: relative;
 }
 #content-container .pre-wrapper .terminal {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* IE 8+ */
   border: 0;
 }
 #content-container .pre-wrapper.copied pre {
@@ -8866,6 +8878,16 @@ h3.page-title span {
   #globalnav-wrapper .nav a li.open ul.dropdown-menu {
     z-index: 999;
   }
+  .guide-menu-wrapper {
+    width: 100%;
+    padding: 0 15px;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* IE 8+ */
+  }
   #banner-wrapper .jumbotron.home-banner {
     padding: 0px;
   }
@@ -8960,6 +8982,13 @@ h3.page-title span {
     transform: scale(0.85);
   }
   #content-container {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* IE 8+ */
+    padding: 0 5px;
     padding-top: 10px;
   }
   #content-container .col-md-5 {
@@ -9000,6 +9029,10 @@ h3.page-title span {
   #content-container .book-list .book-list-options {
     margin-top: 20px;
   }
+  #content-container .chapter-actions a {
+    display: block;
+    margin-bottom: 10px;
+  }
   #basement-nav a {
     border-left-width: 0;
   }
@@ -9031,6 +9064,12 @@ h3.page-title span {
     margin: 0;
     display: inline-block;
   }
+  .guide-menu-wrapper {
+    display: none;
+  }
+  .navbar {
+    display: none;
+  }
   #globalnav-wrapper {
     padding: 0 10px;
   }
@@ -9039,7 +9078,7 @@ h3.page-title span {
   }
   #globalnav-wrapper a.navbar-brand {
     padding: 10px 0 10px 80px;
-    margin-left: -60px;
+    margin-left: -70px;
     -webkit-font-smoothing: antialiased;
     /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
@@ -9062,8 +9101,8 @@ h3.page-title span {
     font-size: 14px;
   }
   #globalnav-wrapper .nav li {
-    margin-top: 17.5px;
-    margin-bottom: 17.5px;
+    margin-top: 12.5px;
+    margin-bottom: 12.5px;
   }
   #globalnav-wrapper .nav li:last-child a {
     padding: 5px 0 5px 20px;
@@ -9072,7 +9111,8 @@ h3.page-title span {
     display: none;
   }
   #globalnav-wrapper .nav a {
-    padding: 5px 20px;
+    font-size: 12px;
+    padding: 3px 5px;
   }
   #globalnav-wrapper .nav a li.open ul.dropdown-menu {
     z-index: 999;
@@ -9113,7 +9153,6 @@ h3.page-title span {
     padding: 10px 0 5px 0;
   }
   #banner-wrapper .jumbotron.guide-banner .col-md-10 {
-    width: 360px;
     padding-left: 10px;
   }
   #banner-wrapper .jumbotron.guide-banner .col-md-10 h1.guideTitle {
@@ -9122,12 +9161,14 @@ h3.page-title span {
   #banner-wrapper .jumbotron.guide-banner .col-md-10 p,
   #banner-wrapper .jumbotron.guide-banner .col-md-10 ul {
     font-size: 14px;
+    line-height: 17px;
   }
   #banner-wrapper .jumbotron .tweet-box {
     padding-left: 10px;
   }
   #banner-wrapper .jumbotron .tweet-box p {
     font-size: 13px;
+    line-height: 16px;
   }
   #banner-wrapper .page-header {
     padding-left: 5px;
@@ -9149,8 +9190,8 @@ h3.page-title span {
     padding: 5px 0 10px 0;
   }
   #banner-wrapper.quickstart-wrapper .quickstart .col-md-13 {
-    width: 350px;
-    margin-left: 15px;
+    width: 90%;
+    margin-left: 20px;
   }
   #banner-wrapper.quickstart-wrapper .quickstart .video-launch-container {
     margin: -5px 0 0 -5px;
@@ -9180,12 +9221,17 @@ h3.page-title span {
     transform: scale(0.85);
   }
   #content-container {
-    padding-top: 0;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* IE 8+ */
+    padding: 0 5px;
   }
   #content-container .category-content {
     margin: 0;
     padding: 0 0 5px 0;
-    width: 360px;
   }
   #content-container .category-content .category-header {
     margin-left: -50px;
@@ -9205,7 +9251,7 @@ h3.page-title span {
   #content-container .category-content .guide-card {
     float: left;
     height: 150px;
-    margin: 0 0 -5px -15px;
+    margin: 0 0 -5px -10px;
     -webkit-font-smoothing: antialiased;
     /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
@@ -9218,11 +9264,14 @@ h3.page-title span {
     letter-spacing: -1px;
   }
   #content-container .chapter-container {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* IE 8+ */
     margin-top: 10px;
-    padding-left: 5px;
-  }
-  #content-container .chapter-container .col-md-11 {
-    width: 360px;
+    padding: 0 5px;
   }
   #content-container .book-list {
     margin-top: 20px;
@@ -9235,16 +9284,25 @@ h3.page-title span {
     font-size: 14px;
     line-height: 18px;
   }
-  #content-container .book-list p.bookDesc {
-    width: 360px;
-  }
   #content-container .book-list .book-list-options {
     margin-top: 20px;
+  }
+  #content-container .chapter-actions a {
+    font-size: 13px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  #basement-nav {
+    font-size: 10px;
+    margin: 0;
   }
   #basement-nav a:first-child {
     display: none;
   }
+  #basement-nav a:last-child {
+    display: none;
+  }
   #basement-wrapper #basement-container {
-    width: 350px;
+    width: 270px;
   }
 }

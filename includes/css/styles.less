@@ -1119,9 +1119,16 @@ a {
 	.category-content:last-child {border-bottom: none;}	
 	
 	.pre-wrapper {
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* IE 8+ */
+		
 		position:relative;
 
 		.terminal {
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+			box-sizing: border-box;         /* IE 8+ */
 			border: 0;
 		}
 		&.copied {
@@ -2192,7 +2199,6 @@ h3.page-title {
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-
 	.hide-small, li.hide-small {display: none;}
 	
 	#eyebrow-wrapper {
@@ -2257,8 +2263,13 @@ h3.page-title {
 			}
 		}
 	}
-	
-	// .guide-menu-wrapper {display: none;}
+	.guide-menu-wrapper {
+		width: 100%;
+		padding: 0 15px;
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* IE 8+ */
+	}
 	
 	#banner-wrapper {
 		
@@ -2354,6 +2365,12 @@ h3.page-title {
 	}
 		
 	#content-container {
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* IE 8+ */
+		
+		padding: 0 5px;
+		
 		.col-md-5 {
 			width: 98%;
 			padding-left: 15px;
@@ -2393,8 +2410,14 @@ h3.page-title {
 			
 			.book-list-options {margin-top: 20px;}
 		}
+	
+		.chapter-actions a {
+			display: block;
+			margin-bottom: 10px;
+		}
 				
 	}
+	
 	.chapter-container, .page-content, .page-container {
 		p, ul {}				
 	}
@@ -2423,13 +2446,16 @@ h3.page-title {
 		}
 	}
 	
+	.guide-menu-wrapper {display: none;}
+	.navbar {display: none;}
+	
 	#globalnav-wrapper {
 		.navbar-header {width: 50%;}
 		padding: 0 10px;
 		
 		a.navbar-brand {
 			padding: 10px 0 10px 80px;
-			margin-left: -60px;
+			margin-left: -70px;
 		 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		 	-webkit-text-size-adjust: 100%;
 			-webkit-transform: scale(0.6);
@@ -2455,7 +2481,7 @@ h3.page-title {
 			// transform: scale(0.9);
 			
 			li {		
-				.navbar-vertical-align(15px;);
+				.navbar-vertical-align(25px;);
 		
 				&:last-child a {padding: 5px 0 5px 20px;}			
 		
@@ -2464,7 +2490,8 @@ h3.page-title {
 			li.hide-nav-medium {display: none;}
 			
 			a {
-				padding: 5px 20px;				
+				font-size: 12px;
+				padding: 3px 5px;				
 				
 				li.open {
 					ul.dropdown-menu {
@@ -2511,17 +2538,22 @@ h3.page-title {
 			&.guide-banner {
 				padding: 10px 0 5px 0;
 				.col-md-10 {
-					width: 360px;
 					padding-left: 10px;
 					h1.guideTitle {font-size: 20px;}
-					p, ul {font-size: 14px;}
+					p, ul {
+						font-size: 14px;
+						line-height: 17px;
+					}
 				}
 			}
 			
 			.tweet-box {
 				padding-left: 10px;
 				
-				p {font-size: 13px;}
+				p {
+					font-size: 13px;
+					line-height: 16px
+				}
 			}
 			
 		}
@@ -2543,8 +2575,8 @@ h3.page-title {
 				.col-md-3 {	}
 				
 				.col-md-13 {
-					width: 350px;
-					margin-left: 15px;
+					width: 90%;
+					margin-left: 20px;
 				}
 				
 				.video-launch-container {
@@ -2576,12 +2608,15 @@ h3.page-title {
 	}
 		
 	#content-container {
-		padding-top: 0;
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* IE 8+ */
+		
+		padding: 0 5px;
 		
 		.category-content {
 			margin: 0;
 			padding: 0 0 5px 0;
-			width: 360px;
 									
 			.category-header {
 				margin-left: -50px;
@@ -2598,7 +2633,7 @@ h3.page-title {
 			.guide-card {
 				float: left;
 				height: 150px;
-				margin: 0 0 -5px -15px;
+				margin: 0 0 -5px -10px;
 			 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 			 	-webkit-text-size-adjust: 100%;
 				-webkit-transform: scale(0.85);
@@ -2611,10 +2646,13 @@ h3.page-title {
 						
 		}
 		.chapter-container {
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+			box-sizing: border-box;         /* IE 8+ */
 			margin-top: 10px;
-			padding-left: 5px;
+			padding: 0 5px;
 			
-			.col-md-11 {width: 360px;}
+			.col-md-11 {}
 			
 			
 		}
@@ -2627,14 +2665,24 @@ h3.page-title {
 				font-size: 14px;
 				line-height: 18px;
 				
-				&.bookDesc {width: 360px;}
+				&.bookDesc {}
 			}
 				
 			.book-list-options {margin-top: 20px;}
 		}
+		
+		.chapter-actions a {
+			font-size: 13px;
+			display: block;
+			margin-bottom: 10px;
+		}
+		
 	}
 	
+	#basement-nav {font-size: 10px; margin: 0;}
 	#basement-nav a:first-child {display: none;}
-	#basement-wrapper #basement-container {width: 350px;}
+	#basement-nav a:last-child {display: none;}
+	#basement-wrapper #basement-container {width: 270px;}
+		
 	
 }
