@@ -48,7 +48,6 @@ $(document).ready(function() {
 			autoOpen: false,
 			modal: true,
 			draggable: false,
-			width: 550,
 			closeText: "",
 			closeOnEscape: true,
 		    create: function(event, ui) { 
@@ -79,7 +78,7 @@ $(document).ready(function() {
 			autoOpen: false,
 			modal: true,
 			draggable: false,
-			width: 740,
+			width: 550,
 			closeText: "",
 			closeOnEscape: true,
 		    close: function() {
