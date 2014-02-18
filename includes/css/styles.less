@@ -1245,7 +1245,6 @@ a {
 			.page-container {
 				padding: 0;
 				margin-bottom: 30px;
-				background:black;
 			}
 			.sidebar {
 
@@ -1999,6 +1998,7 @@ h3.page-title {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
+
 	.hide-small, li.hide-small {display: none;}
 	
 	#eyebrow-logo {margin-left: 10px;}
@@ -2193,8 +2193,6 @@ h3.page-title {
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
-// HERE
-
 	.hide-small, li.hide-small {display: none;}
 	
 	#eyebrow-wrapper {
@@ -2205,6 +2203,8 @@ h3.page-title {
 			a#sales-chat {margin: 0;}
 			#eyebrow-login-rs {display: none;}
 			#eyebrow-signup-rs {display: none;}
+			
+			#sales-responsive-large {margin-right: 10px}
 		}
 	}
 	
@@ -2268,8 +2268,8 @@ h3.page-title {
 				
 				.col-md-5 {
 					float: left;
-					width: 250px;
-					margin-right: 12px;
+					width: 100%;
+					margin-left: -12px;
 				}
 				
 				.page-header {
@@ -2284,24 +2284,7 @@ h3.page-title {
 										
 				}
 				
-				.banner-card {
-					margin-left: -30px;
-					// padding-right: 20px;
-					width: 180px;
-				 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-				 	-webkit-text-size-adjust: 100%;
-					-webkit-transform: scale(0.85);
-					-moz-transform: scale(0.85);
-					transform: scale(0.85);
-					
-					&:hover {
-					 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-					 	-webkit-text-size-adjust: 100%;
-						-webkit-transform: scale(0.88);
-						-moz-transform: scale(0.88);
-						transform: scale(0.88);
-					}
-				}
+				.banner-card {display: none;}
 			}
 			
 			&.guide-banner {
@@ -2327,32 +2310,39 @@ h3.page-title {
 						
 		&.quickstart-wrapper {
 			.quickstart {
-				padding: 5px 0 10px 0;
-				
-				.col-md-3 {
-					float: left;
-					width: 150px;
-					margin-right: 12px;
-				}
-				
+				padding: 5px 0 20px 0;
+								
 				.video-launch-container {
-					margin: -5px 0 0 -5px;
+					margin: -10px 0 0 -5px;
 				 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 				 	-webkit-text-size-adjust: 100%;
-					-webkit-transform: scale(0.85);
-					-moz-transform: scale(0.85);
-					transform: scale(0.85);
+					-webkit-transform: scale(0.80);
+					-moz-transform: scale(0.80);
+					transform: scale(0.80);
+				}
+				
+				.col-md-13 {
+					position: absolute;
+					display: inline-block;
+					top: 5px;
+					left: 150px;
+					width: 69%;
+					-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+					-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+					box-sizing: border-box;         /* IE 8+ */
+					
 				}
 				
 				h2 {font-size: 18px;}
+				
 				p {
+					font-size: 13px;
 					line-height: 16px;
-					font-size: 14px;
 				}
 				
 				.quickstart-links {
-					margin-left: -400px;
 					line-height: 22px;
+					margin-left: -25px;
 				 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 				 	-webkit-text-size-adjust: 100%;
 					-webkit-transform: scale(0.85);
@@ -2364,6 +2354,11 @@ h3.page-title {
 	}
 		
 	#content-container {
+		.col-md-5 {
+			width: 98%;
+			padding-left: 15px;
+		}
+		
 		padding-top: 10px;
 	
 		.category-content {
@@ -2371,8 +2366,8 @@ h3.page-title {
 			padding: 5px 0;
 									
 			.category-header {
-				margin-left: -65px;
-				margin-right: -65px;
+				margin-left: -60px;
+				// margin-right: -65px;
 			 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 			 	-webkit-text-size-adjust: 100%;
 				-webkit-transform: scale(0.85);
@@ -2387,8 +2382,7 @@ h3.page-title {
 				-webkit-transform: scale(0.85);
 				-moz-transform: scale(0.85);
 				transform: scale(0.85);
-			}
-			
+			}			
 		}
 		.chapter-container {padding-left: 5px;}
 		
@@ -2405,7 +2399,10 @@ h3.page-title {
 		p, ul {}				
 	}
 
-	#basement-wrapper {width: 100%;}
+	#basement-nav a {border-left-width: 0;}
+
+	#basement-nav a:first-child {display: none;}
+	#basement-wrapper #basement-container {width: 350px;}
 	
 }
 
@@ -2427,16 +2424,17 @@ h3.page-title {
 	}
 	
 	#globalnav-wrapper {
+		.navbar-header {width: 50%;}
 		padding: 0 10px;
 		
 		a.navbar-brand {
 			padding: 10px 0 10px 80px;
-			margin-left: -45px;
+			margin-left: -60px;
 		 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		 	-webkit-text-size-adjust: 100%;
-			-webkit-transform: scale(0.7);
-			-moz-transform: scale(0.7);
-			transform: scale(0.7);
+			-webkit-transform: scale(0.6);
+			-moz-transform: scale(0.6);
+			transform: scale(0.6);
 		}
 		
 		.navbar-toggle {
@@ -2485,10 +2483,10 @@ h3.page-title {
 			&.home-banner {
 				padding: 0px;
 				
-				.col-md-5 {}
+				.col-md-5 {width: 100%}
 				
 				.page-header {
-					width: 390px;
+					width: 100%;
 					margin-left: -20px;
 				 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 				 	-webkit-text-size-adjust: 100%;
@@ -2502,30 +2500,12 @@ h3.page-title {
 						span {font-size: 18px;}
 					}
 					
-					p {font-size: 16px; line-height: 22px;}					
+					p {font-size: 15px; line-height: 20px;}					
 				}
 				
 				.lead {margin-bottom: 0;}
-				.col-md-10 {margin-top: -40px;}
 				
-				.banner-card {
-					margin-left: -20px;
-					width: 140px;
-				 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-				 	-webkit-text-size-adjust: 100%;
-					-webkit-transform: scale(0.7);
-					-moz-transform: scale(0.7);
-					transform: scale(0.7);
-					
-					&:hover {
-					 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-					 	-webkit-text-size-adjust: 100%;
-						-webkit-transform: scale(0.71);
-						-moz-transform: scale(0.71);
-						transform: scale(0.71);
-					}
-					p {font-size: 18px;}
-				}
+				.banner-card {display: none;}
 			}
 			
 			&.guide-banner {
@@ -2578,8 +2558,8 @@ h3.page-title {
 				
 				h2 {font-size: 18px; letter-spacing: -1px;}
 				p {
+					font-size: 13px;
 					line-height: 16px;
-					font-size: 14px;
 				}
 				
 				.quickstart-links {
@@ -2652,8 +2632,9 @@ h3.page-title {
 				
 			.book-list-options {margin-top: 20px;}
 		}
-				
 	}
 	
-	#basement-wrapper {width: 100%;}
+	#basement-nav a:first-child {display: none;}
+	#basement-wrapper #basement-container {width: 350px;}
+	
 }
