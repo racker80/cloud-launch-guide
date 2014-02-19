@@ -8,7 +8,7 @@
 		<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.previous.slug}}" class="btn btn-default tooltip-rs" title="Previous chapter"><span class="glyphicon glyphicon-chevron-left"></span></a>
 	{% endif %}
 	
-	<button type="button" data-toggle-expert class="btn btn-default tooltip-rs" title="Toggle imformative content" onClick="_gaq.push(['_trackEvent', 'Buttons', 'Click', 'Expert Mode’]);"><span class="glyphicon glyphicon-certificate"></span>Expert Mode</button>
+	<button type="button" data-toggle-expert class="btn btn-default tooltip-rs" title="Toggle informative content" onClick="_gaq.push(['_trackEvent', 'Buttons', 'Click', 'Expert Mode’]);"><span class="glyphicon glyphicon-certificate"></span>Expert Mode</button>
 	<button type="button" data-toggle-nav class="btn btn-default" >Guide Index<span class="caret"></span></button>
 	{% if allsteps %}
 	<!-- {% if book.next %}
