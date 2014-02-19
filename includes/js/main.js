@@ -376,85 +376,81 @@ $(document).ready(function() {
 })();
 
 
-;(function() {
-	var common = {
-			connector : [ "Bezier", { curviness: 50 } ],
-			anchors : [ "LeftMiddle", "RightMiddle" ],
-			paintStyle : {
-				lineWidth:2,
-				strokeStyle: 'rgba(200,0,0,100)',
-				"dashstyle":"2 4"
-			},
-			maxConnections:-1,			
-			endpoint:[ "Dot", { radius:3 } ],
-			endpointStyle : { fillStyle : "rgba(200,0,0,100)" },
-		}
+// ;(function() {
+// 	var common = {
+// 			connector : [ "Bezier", { curviness: 50 } ],
+// 			anchors : [ "LeftMiddle", "RightMiddle" ],
+// 			paintStyle : {
+// 				lineWidth:2,
+// 				strokeStyle: 'rgba(200,0,0,100)',
+// 				"dashstyle":"2 4"
+// 			},
+// 			maxConnections:-1,			
+// 			endpoint:[ "Dot", { radius:3 } ],
+// 			endpointStyle : { fillStyle : "rgba(200,0,0,100)" },
+// 		}
+// 
+// 	function drawConnection(source, target) {
+// 		if(jsPlumb.isSource(source) && source.is(":visible")) {
+// 			jsPlumb.connect({
+// 				source:target, 
+// 				target:source, 
+// 				container:source.parents('.row'),
+// 				detachable:false,
+// 				maxConnections:-1,
+// 
+// 			}, common);		
+// 
+// 		}
+// 	}
+// 	
+// 	$.each(connections, function(index, value){
+// 		var target = value.source;
+// 		var source = $(value.target).parents('.pre-wrapper');
+// 
+// 		target.offset({
+// 			// left: target.parent().offset().left
+// 			// left: target.offset().left
+// 		});
+// 
+// 		jsPlumb.makeSource(source, {
+// 			anchor: "LeftMiddle",
+// 			maxConnections:-1,
+// 			endpoint:[ "Dot", { radius:3 } ],
+// 			paintStyle : { fillStyle : "rgba(200,0,0,100)" },
+// 		}, common);
+// 
+// 		drawConnection(source, target);
+// 
+// 		jsPlumb.toggleSourceEnabled(source);
+// 
+// 	});
+// 
+// 
+// 	$('body').on('expertToggle', function(event){
+// 
+// 		$.each(connections, function(index, value){
+// 			var target = value.source;
+// 			var source = $(value.target).parents('.pre-wrapper');
+// 
+// 			// target.offset({
+// 			// 	// left: target.parent().offset().left
+// 			// });
+// 			// drawConnection(target, source);
+// 			// // drawConnection(source,target);
+// 
+// 			drawConnection(source, target);
+// 			jsPlumb.toggleSourceEnabled(source);
+// 
+// 		});
+// 
+// 	});
+// 		
+// })();
 
-	function drawConnection(source, target) {
-		if(jsPlumb.isSource(source) && source.is(":visible")) {
-			jsPlumb.connect({
-				source:target, 
-				target:source, 
-				container:source.parents('.row'),
-				detachable:false,
-				maxConnections:-1,
-
-			}, common);		
-
-		}
-	}
-	
-	$.each(connections, function(index, value){
-		var target = value.source;
-		var source = $(value.target).parents('.pre-wrapper');
-
-		target.offset({
-			// left: target.parent().offset().left
-			// left: target.offset().left
-		});
-
-		jsPlumb.makeSource(source, {
-			anchor: "LeftMiddle",
-			maxConnections:-1,
-			endpoint:[ "Dot", { radius:3 } ],
-			paintStyle : { fillStyle : "rgba(200,0,0,100)" },
-		}, common);
-
-		drawConnection(source, target);
-
-		jsPlumb.toggleSourceEnabled(source);
-
-	});
-
-
-	$('body').on('expertToggle', function(event){
-
-		$.each(connections, function(index, value){
-			var target = value.source;
-			var source = $(value.target).parents('.pre-wrapper');
-
-			// target.offset({
-			// 	// left: target.parent().offset().left
-			// });
-			// drawConnection(target, source);
-			// // drawConnection(source,target);
-
-			drawConnection(source, target);
-
-			jsPlumb.toggleSourceEnabled(source);
-
-
-
-
-		});
-
-	});
-		
-})();
-
-$(window).resize(function(){
-    jsPlumb.repaintEverything();
-});
+// $(window).resize(function(){
+//     jsPlumb.repaintEverything();
+// });
 
 Socialite.load();
 
