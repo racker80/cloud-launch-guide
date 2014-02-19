@@ -7777,9 +7777,21 @@ a {
   border-bottom: none;
 }
 #content-container .pre-wrapper {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* IE 8+ */
   position: relative;
 }
 #content-container .pre-wrapper .terminal {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* IE 8+ */
   border: 0;
 }
 #content-container .pre-wrapper.copied pre {
@@ -7906,7 +7918,6 @@ a {
 #content-container page-content-code .chapter-code-wrapper .page-container {
   padding: 0;
   margin-bottom: 30px;
-  background: black;
 }
 #content-container .chapter-container .page-container,
 #content-container page-content-code .page-container {
@@ -8800,6 +8811,9 @@ h3.page-title span {
   #content-container .book-list .book-list-options {
     margin-top: 20px;
   }
+  div.ip-panel {
+    display: none;
+  }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .hide-small,
@@ -8820,6 +8834,9 @@ h3.page-title span {
   }
   #eyebrow-wrapper #eyebrow-container #eyebrow-signup-rs {
     display: none;
+  }
+  #eyebrow-wrapper #eyebrow-container #sales-responsive-large {
+    margin-right: 10px;
   }
   #globalnav-wrapper {
     padding: 0 10px;
@@ -8864,13 +8881,23 @@ h3.page-title span {
   #globalnav-wrapper .nav a li.open ul.dropdown-menu {
     z-index: 999;
   }
+  .guide-menu-wrapper {
+    width: 100%;
+    padding: 0 15px;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* IE 8+ */
+  }
   #banner-wrapper .jumbotron.home-banner {
     padding: 0px;
   }
   #banner-wrapper .jumbotron.home-banner .col-md-5 {
     float: left;
-    width: 250px;
-    margin-right: 12px;
+    width: 100%;
+    margin-left: -12px;
   }
   #banner-wrapper .jumbotron.home-banner .page-header {
     margin-left: -10px;
@@ -8885,22 +8912,7 @@ h3.page-title span {
     font-size: 30px;
   }
   #banner-wrapper .jumbotron.home-banner .banner-card {
-    margin-left: -30px;
-    width: 180px;
-    -webkit-font-smoothing: antialiased;
-    /* Fix for webkit rendering */
-    -webkit-text-size-adjust: 100%;
-    -webkit-transform: scale(0.85);
-    -moz-transform: scale(0.85);
-    transform: scale(0.85);
-  }
-  #banner-wrapper .jumbotron.home-banner .banner-card:hover {
-    -webkit-font-smoothing: antialiased;
-    /* Fix for webkit rendering */
-    -webkit-text-size-adjust: 100%;
-    -webkit-transform: scale(0.88);
-    -moz-transform: scale(0.88);
-    transform: scale(0.88);
+    display: none;
   }
   #banner-wrapper .jumbotron.guide-banner {
     padding: 15px 0 5px 5px;
@@ -8931,32 +8943,40 @@ h3.page-title span {
     line-height: 22px;
   }
   #banner-wrapper.quickstart-wrapper .quickstart {
-    padding: 5px 0 10px 0;
-  }
-  #banner-wrapper.quickstart-wrapper .quickstart .col-md-3 {
-    float: left;
-    width: 150px;
-    margin-right: 12px;
+    padding: 5px 0 20px 0;
   }
   #banner-wrapper.quickstart-wrapper .quickstart .video-launch-container {
-    margin: -5px 0 0 -5px;
+    margin: -10px 0 0 -5px;
     -webkit-font-smoothing: antialiased;
     /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
-    -webkit-transform: scale(0.85);
-    -moz-transform: scale(0.85);
-    transform: scale(0.85);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  #banner-wrapper.quickstart-wrapper .quickstart .col-md-13 {
+    position: absolute;
+    display: inline-block;
+    top: 5px;
+    left: 150px;
+    width: 69%;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* IE 8+ */
   }
   #banner-wrapper.quickstart-wrapper .quickstart h2 {
     font-size: 18px;
   }
   #banner-wrapper.quickstart-wrapper .quickstart p {
+    font-size: 13px;
     line-height: 16px;
-    font-size: 14px;
   }
   #banner-wrapper.quickstart-wrapper .quickstart .quickstart-links {
-    margin-left: -400px;
     line-height: 22px;
+    margin-left: -25px;
     -webkit-font-smoothing: antialiased;
     /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
@@ -8965,15 +8985,25 @@ h3.page-title span {
     transform: scale(0.85);
   }
   #content-container {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* IE 8+ */
+    padding: 0 5px;
     padding-top: 10px;
+  }
+  #content-container .col-md-5 {
+    width: 98%;
+    padding-left: 15px;
   }
   #content-container .category-content {
     margin: 5px 0;
     padding: 5px 0;
   }
   #content-container .category-content .category-header {
-    margin-left: -65px;
-    margin-right: -65px;
+    margin-left: -60px;
     -webkit-font-smoothing: antialiased;
     /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
@@ -9002,8 +9032,27 @@ h3.page-title span {
   #content-container .book-list .book-list-options {
     margin-top: 20px;
   }
-  #basement-wrapper {
-    width: 100%;
+  #content-container .chapter-actions a {
+    display: block;
+    margin-bottom: 10px;
+  }
+  #basement-nav a {
+    border-left-width: 0;
+  }
+  #basement-nav a:first-child {
+    display: none;
+  }
+  #basement-wrapper #basement-container {
+    width: 350px;
+  }
+  .ui-dialog {
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    transform: scale(0.85);
+    margin-left: 0px;
+  }
+  div.ip-panel {
+    display: none;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -9027,18 +9076,27 @@ h3.page-title span {
     margin: 0;
     display: inline-block;
   }
+  .guide-menu-wrapper {
+    display: none;
+  }
+  .navbar {
+    display: none;
+  }
   #globalnav-wrapper {
     padding: 0 10px;
   }
+  #globalnav-wrapper .navbar-header {
+    width: 50%;
+  }
   #globalnav-wrapper a.navbar-brand {
     padding: 10px 0 10px 80px;
-    margin-left: -45px;
+    margin-left: -70px;
     -webkit-font-smoothing: antialiased;
     /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
-    -webkit-transform: scale(0.7);
-    -moz-transform: scale(0.7);
-    transform: scale(0.7);
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    transform: scale(0.6);
   }
   #globalnav-wrapper .navbar-toggle {
     position: absolute;
@@ -9055,8 +9113,8 @@ h3.page-title span {
     font-size: 14px;
   }
   #globalnav-wrapper .nav li {
-    margin-top: 17.5px;
-    margin-bottom: 17.5px;
+    margin-top: 12.5px;
+    margin-bottom: 12.5px;
   }
   #globalnav-wrapper .nav li:last-child a {
     padding: 5px 0 5px 20px;
@@ -9065,7 +9123,8 @@ h3.page-title span {
     display: none;
   }
   #globalnav-wrapper .nav a {
-    padding: 5px 20px;
+    font-size: 12px;
+    padding: 3px 5px;
   }
   #globalnav-wrapper .nav a li.open ul.dropdown-menu {
     z-index: 999;
@@ -9073,8 +9132,11 @@ h3.page-title span {
   #banner-wrapper .jumbotron.home-banner {
     padding: 0px;
   }
+  #banner-wrapper .jumbotron.home-banner .col-md-5 {
+    width: 100%;
+  }
   #banner-wrapper .jumbotron.home-banner .page-header {
-    width: 390px;
+    width: 100%;
     margin-left: -20px;
     -webkit-font-smoothing: antialiased;
     /* Fix for webkit rendering */
@@ -9090,41 +9152,19 @@ h3.page-title span {
     font-size: 18px;
   }
   #banner-wrapper .jumbotron.home-banner .page-header p {
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 15px;
+    line-height: 20px;
   }
   #banner-wrapper .jumbotron.home-banner .lead {
     margin-bottom: 0;
   }
-  #banner-wrapper .jumbotron.home-banner .col-md-10 {
-    margin-top: -40px;
-  }
   #banner-wrapper .jumbotron.home-banner .banner-card {
-    margin-left: -20px;
-    width: 140px;
-    -webkit-font-smoothing: antialiased;
-    /* Fix for webkit rendering */
-    -webkit-text-size-adjust: 100%;
-    -webkit-transform: scale(0.7);
-    -moz-transform: scale(0.7);
-    transform: scale(0.7);
-  }
-  #banner-wrapper .jumbotron.home-banner .banner-card:hover {
-    -webkit-font-smoothing: antialiased;
-    /* Fix for webkit rendering */
-    -webkit-text-size-adjust: 100%;
-    -webkit-transform: scale(0.71);
-    -moz-transform: scale(0.71);
-    transform: scale(0.71);
-  }
-  #banner-wrapper .jumbotron.home-banner .banner-card p {
-    font-size: 18px;
+    display: none;
   }
   #banner-wrapper .jumbotron.guide-banner {
     padding: 10px 0 5px 0;
   }
   #banner-wrapper .jumbotron.guide-banner .col-md-10 {
-    width: 360px;
     padding-left: 10px;
   }
   #banner-wrapper .jumbotron.guide-banner .col-md-10 h1.guideTitle {
@@ -9133,12 +9173,14 @@ h3.page-title span {
   #banner-wrapper .jumbotron.guide-banner .col-md-10 p,
   #banner-wrapper .jumbotron.guide-banner .col-md-10 ul {
     font-size: 14px;
+    line-height: 17px;
   }
   #banner-wrapper .jumbotron .tweet-box {
     padding-left: 10px;
   }
   #banner-wrapper .jumbotron .tweet-box p {
     font-size: 13px;
+    line-height: 16px;
   }
   #banner-wrapper .page-header {
     padding-left: 5px;
@@ -9160,8 +9202,8 @@ h3.page-title span {
     padding: 5px 0 10px 0;
   }
   #banner-wrapper.quickstart-wrapper .quickstart .col-md-13 {
-    width: 350px;
-    margin-left: 15px;
+    width: 90%;
+    margin-left: 20px;
   }
   #banner-wrapper.quickstart-wrapper .quickstart .video-launch-container {
     margin: -5px 0 0 -5px;
@@ -9177,8 +9219,8 @@ h3.page-title span {
     letter-spacing: -1px;
   }
   #banner-wrapper.quickstart-wrapper .quickstart p {
+    font-size: 13px;
     line-height: 16px;
-    font-size: 14px;
   }
   #banner-wrapper.quickstart-wrapper .quickstart .quickstart-links {
     line-height: 22px;
@@ -9191,12 +9233,17 @@ h3.page-title span {
     transform: scale(0.85);
   }
   #content-container {
-    padding-top: 0;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* IE 8+ */
+    padding: 0 5px;
   }
   #content-container .category-content {
     margin: 0;
     padding: 0 0 5px 0;
-    width: 360px;
   }
   #content-container .category-content .category-header {
     margin-left: -50px;
@@ -9216,7 +9263,7 @@ h3.page-title span {
   #content-container .category-content .guide-card {
     float: left;
     height: 150px;
-    margin: 0 0 -5px -15px;
+    margin: 0 0 -5px -10px;
     -webkit-font-smoothing: antialiased;
     /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
@@ -9229,11 +9276,14 @@ h3.page-title span {
     letter-spacing: -1px;
   }
   #content-container .chapter-container {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* IE 8+ */
     margin-top: 10px;
-    padding-left: 5px;
-  }
-  #content-container .chapter-container .col-md-11 {
-    width: 360px;
+    padding: 0 5px;
   }
   #content-container .book-list {
     margin-top: 20px;
@@ -9246,13 +9296,31 @@ h3.page-title span {
     font-size: 14px;
     line-height: 18px;
   }
-  #content-container .book-list p.bookDesc {
-    width: 360px;
-  }
   #content-container .book-list .book-list-options {
     margin-top: 20px;
   }
-  #basement-wrapper {
-    width: 100%;
+  #content-container .chapter-actions a {
+    font-size: 13px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  #basement-nav {
+    font-size: 10px;
+    margin: 0;
+  }
+  #basement-nav a:first-child {
+    display: none;
+  }
+  #basement-nav a:last-child {
+    display: none;
+  }
+  #basement-wrapper #basement-container {
+    width: 270px;
+  }
+  .video-launch-container {
+    display: none;
+  }
+  div.ip-panel {
+    display: none;
   }
 }

@@ -54,7 +54,6 @@
 						// call them like so: this.yourOtherFunction(this.element, this.settings).
 						var ths = this;
 						var settings = this.settings;
-						console.log("xD");
 
 						$('*[data-toggle-nav]').click(function(){
 							ths.showNav();
@@ -178,11 +177,6 @@
 				
 
 })( jQuery, window, document );
-
-
-
-
-
 
 $(document).ready(function() {
 		
