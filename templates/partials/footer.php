@@ -59,14 +59,11 @@
 		<!-- Quickstart modal -->
 		
 		<div class="video-quickstart-container" id="dialog-video">
-			<iframe id="video-quickstart" width="740" height="460" src="https://www.youtube.com/embed/RB5mqsubMlg?&showinfo=0&autoplay=0&rel=0&controls=1" frameborder="0" allowfullscreen></iframe>
+			<iframe id="video-quickstart" width="550" height="400" src="https://www.youtube.com/embed/RB5mqsubMlg?&showinfo=0&autoplay=0&rel=0&controls=1" frameborder="0" allowfullscreen></iframe>
 		</div>		
 
 		<!-- scripts -->
 		
-		<script src="{{ baseurl }}/includes/bower_components/jquery/jquery.min.js"></script>
-		<script src="{{ baseurl }}/includes/bower_components/jquery/jquery.ui.min.js"></script>
-
 		<script src="{{ baseurl }}/includes/bower_components/bootstrap/js/dropdown.js"></script>
 		<script src="{{ baseurl }}/includes/bower_components/zeroclipboard/ZeroClipboard.js"></script>
 		<script src="{{ baseurl }}/includes/bower_components/jquery-waypoints/waypoints.js"></script>

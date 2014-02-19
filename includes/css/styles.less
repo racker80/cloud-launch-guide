@@ -1119,9 +1119,16 @@ a {
 	.category-content:last-child {border-bottom: none;}	
 	
 	.pre-wrapper {
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* IE 8+ */
+		
 		position:relative;
 
 		.terminal {
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+			box-sizing: border-box;         /* IE 8+ */
 			border: 0;
 		}
 		&.copied {
@@ -1245,7 +1252,6 @@ a {
 			.page-container {
 				padding: 0;
 				margin-bottom: 30px;
-				background:black;
 			}
 			.sidebar {
 
@@ -1996,9 +2002,11 @@ h3.page-title {
 			p.bookDesc {font-size: 16px; line-height: 22px;}
 		}
 	}
+	
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
+
 	.hide-small, li.hide-small {display: none;}
 	
 	#eyebrow-logo {margin-left: 10px;}
@@ -2188,13 +2196,11 @@ h3.page-title {
 		}
 				
 	}
-		
+	div.ip-panel {display: none;}
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-
-// HERE
-
+	
 	.hide-small, li.hide-small {display: none;}
 	
 	#eyebrow-wrapper {
@@ -2205,6 +2211,8 @@ h3.page-title {
 			a#sales-chat {margin: 0;}
 			#eyebrow-login-rs {display: none;}
 			#eyebrow-signup-rs {display: none;}
+			
+			#sales-responsive-large {margin-right: 10px}
 		}
 	}
 	
@@ -2257,8 +2265,13 @@ h3.page-title {
 			}
 		}
 	}
-	
-	// .guide-menu-wrapper {display: none;}
+	.guide-menu-wrapper {
+		width: 100%;
+		padding: 0 15px;
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* IE 8+ */
+	}
 	
 	#banner-wrapper {
 		
@@ -2268,8 +2281,8 @@ h3.page-title {
 				
 				.col-md-5 {
 					float: left;
-					width: 250px;
-					margin-right: 12px;
+					width: 100%;
+					margin-left: -12px;
 				}
 				
 				.page-header {
@@ -2284,24 +2297,7 @@ h3.page-title {
 										
 				}
 				
-				.banner-card {
-					margin-left: -30px;
-					// padding-right: 20px;
-					width: 180px;
-				 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-				 	-webkit-text-size-adjust: 100%;
-					-webkit-transform: scale(0.85);
-					-moz-transform: scale(0.85);
-					transform: scale(0.85);
-					
-					&:hover {
-					 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-					 	-webkit-text-size-adjust: 100%;
-						-webkit-transform: scale(0.88);
-						-moz-transform: scale(0.88);
-						transform: scale(0.88);
-					}
-				}
+				.banner-card {display: none;}
 			}
 			
 			&.guide-banner {
@@ -2327,32 +2323,39 @@ h3.page-title {
 						
 		&.quickstart-wrapper {
 			.quickstart {
-				padding: 5px 0 10px 0;
-				
-				.col-md-3 {
-					float: left;
-					width: 150px;
-					margin-right: 12px;
-				}
-				
+				padding: 5px 0 20px 0;
+								
 				.video-launch-container {
-					margin: -5px 0 0 -5px;
+					margin: -10px 0 0 -5px;
 				 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 				 	-webkit-text-size-adjust: 100%;
-					-webkit-transform: scale(0.85);
-					-moz-transform: scale(0.85);
-					transform: scale(0.85);
+					-webkit-transform: scale(0.80);
+					-moz-transform: scale(0.80);
+					transform: scale(0.80);
+				}
+				
+				.col-md-13 {
+					position: absolute;
+					display: inline-block;
+					top: 5px;
+					left: 150px;
+					width: 69%;
+					-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+					-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+					box-sizing: border-box;         /* IE 8+ */
+					
 				}
 				
 				h2 {font-size: 18px;}
+				
 				p {
+					font-size: 13px;
 					line-height: 16px;
-					font-size: 14px;
 				}
 				
 				.quickstart-links {
-					margin-left: -400px;
 					line-height: 22px;
+					margin-left: -25px;
 				 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 				 	-webkit-text-size-adjust: 100%;
 					-webkit-transform: scale(0.85);
@@ -2364,6 +2367,17 @@ h3.page-title {
 	}
 		
 	#content-container {
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* IE 8+ */
+		
+		padding: 0 5px;
+		
+		.col-md-5 {
+			width: 98%;
+			padding-left: 15px;
+		}
+		
 		padding-top: 10px;
 	
 		.category-content {
@@ -2371,8 +2385,8 @@ h3.page-title {
 			padding: 5px 0;
 									
 			.category-header {
-				margin-left: -65px;
-				margin-right: -65px;
+				margin-left: -60px;
+				// margin-right: -65px;
 			 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 			 	-webkit-text-size-adjust: 100%;
 				-webkit-transform: scale(0.85);
@@ -2387,8 +2401,7 @@ h3.page-title {
 				-webkit-transform: scale(0.85);
 				-moz-transform: scale(0.85);
 				transform: scale(0.85);
-			}
-			
+			}			
 		}
 		.chapter-container {padding-left: 5px;}
 		
@@ -2399,13 +2412,30 @@ h3.page-title {
 			
 			.book-list-options {margin-top: 20px;}
 		}
+	
+		.chapter-actions a {
+			display: block;
+			margin-bottom: 10px;
+		}
 				
 	}
+	
 	.chapter-container, .page-content, .page-container {
 		p, ul {}				
 	}
 
-	#basement-wrapper {width: 100%;}
+	#basement-nav a {border-left-width: 0;}
+
+	#basement-nav a:first-child {display: none;}
+	#basement-wrapper #basement-container {width: 350px;}
+	
+	.ui-dialog {
+		-webkit-transform: scale(0.85);
+		-moz-transform: scale(0.85);
+		transform: scale(0.85);
+		margin-left: 0px;
+	}
+	div.ip-panel {display: none;}
 	
 }
 
@@ -2426,17 +2456,21 @@ h3.page-title {
 		}
 	}
 	
+	.guide-menu-wrapper {display: none;}
+	.navbar {display: none;}
+	
 	#globalnav-wrapper {
+		.navbar-header {width: 50%;}
 		padding: 0 10px;
 		
 		a.navbar-brand {
 			padding: 10px 0 10px 80px;
-			margin-left: -45px;
+			margin-left: -70px;
 		 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		 	-webkit-text-size-adjust: 100%;
-			-webkit-transform: scale(0.7);
-			-moz-transform: scale(0.7);
-			transform: scale(0.7);
+			-webkit-transform: scale(0.6);
+			-moz-transform: scale(0.6);
+			transform: scale(0.6);
 		}
 		
 		.navbar-toggle {
@@ -2457,7 +2491,7 @@ h3.page-title {
 			// transform: scale(0.9);
 			
 			li {		
-				.navbar-vertical-align(15px;);
+				.navbar-vertical-align(25px;);
 		
 				&:last-child a {padding: 5px 0 5px 20px;}			
 		
@@ -2466,7 +2500,8 @@ h3.page-title {
 			li.hide-nav-medium {display: none;}
 			
 			a {
-				padding: 5px 20px;				
+				font-size: 12px;
+				padding: 3px 5px;				
 				
 				li.open {
 					ul.dropdown-menu {
@@ -2485,10 +2520,10 @@ h3.page-title {
 			&.home-banner {
 				padding: 0px;
 				
-				.col-md-5 {}
+				.col-md-5 {width: 100%}
 				
 				.page-header {
-					width: 390px;
+					width: 100%;
 					margin-left: -20px;
 				 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 				 	-webkit-text-size-adjust: 100%;
@@ -2502,46 +2537,33 @@ h3.page-title {
 						span {font-size: 18px;}
 					}
 					
-					p {font-size: 16px; line-height: 22px;}					
+					p {font-size: 15px; line-height: 20px;}					
 				}
 				
 				.lead {margin-bottom: 0;}
-				.col-md-10 {margin-top: -40px;}
 				
-				.banner-card {
-					margin-left: -20px;
-					width: 140px;
-				 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-				 	-webkit-text-size-adjust: 100%;
-					-webkit-transform: scale(0.7);
-					-moz-transform: scale(0.7);
-					transform: scale(0.7);
-					
-					&:hover {
-					 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-					 	-webkit-text-size-adjust: 100%;
-						-webkit-transform: scale(0.71);
-						-moz-transform: scale(0.71);
-						transform: scale(0.71);
-					}
-					p {font-size: 18px;}
-				}
+				.banner-card {display: none;}
 			}
 			
 			&.guide-banner {
 				padding: 10px 0 5px 0;
 				.col-md-10 {
-					width: 360px;
 					padding-left: 10px;
 					h1.guideTitle {font-size: 20px;}
-					p, ul {font-size: 14px;}
+					p, ul {
+						font-size: 14px;
+						line-height: 17px;
+					}
 				}
 			}
 			
 			.tweet-box {
 				padding-left: 10px;
 				
-				p {font-size: 13px;}
+				p {
+					font-size: 13px;
+					line-height: 16px
+				}
 			}
 			
 		}
@@ -2563,8 +2585,8 @@ h3.page-title {
 				.col-md-3 {	}
 				
 				.col-md-13 {
-					width: 350px;
-					margin-left: 15px;
+					width: 90%;
+					margin-left: 20px;
 				}
 				
 				.video-launch-container {
@@ -2578,8 +2600,8 @@ h3.page-title {
 				
 				h2 {font-size: 18px; letter-spacing: -1px;}
 				p {
+					font-size: 13px;
 					line-height: 16px;
-					font-size: 14px;
 				}
 				
 				.quickstart-links {
@@ -2596,12 +2618,15 @@ h3.page-title {
 	}
 		
 	#content-container {
-		padding-top: 0;
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* IE 8+ */
+		
+		padding: 0 5px;
 		
 		.category-content {
 			margin: 0;
 			padding: 0 0 5px 0;
-			width: 360px;
 									
 			.category-header {
 				margin-left: -50px;
@@ -2618,7 +2643,7 @@ h3.page-title {
 			.guide-card {
 				float: left;
 				height: 150px;
-				margin: 0 0 -5px -15px;
+				margin: 0 0 -5px -10px;
 			 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 			 	-webkit-text-size-adjust: 100%;
 				-webkit-transform: scale(0.85);
@@ -2631,10 +2656,13 @@ h3.page-title {
 						
 		}
 		.chapter-container {
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+			box-sizing: border-box;         /* IE 8+ */
 			margin-top: 10px;
-			padding-left: 5px;
+			padding: 0 5px;
 			
-			.col-md-11 {width: 360px;}
+			.col-md-11 {}
 			
 			
 		}
@@ -2647,13 +2675,26 @@ h3.page-title {
 				font-size: 14px;
 				line-height: 18px;
 				
-				&.bookDesc {width: 360px;}
+				&.bookDesc {}
 			}
 				
 			.book-list-options {margin-top: 20px;}
 		}
-				
+		
+		.chapter-actions a {
+			font-size: 13px;
+			display: block;
+			margin-bottom: 10px;
+		}
+		
 	}
 	
-	#basement-wrapper {width: 100%;}
+	#basement-nav {font-size: 10px; margin: 0;}
+	#basement-nav a:first-child {display: none;}
+	#basement-nav a:last-child {display: none;}
+	#basement-wrapper #basement-container {width: 270px;}
+	
+	.video-launch-container {display: none;}
+	div.ip-panel {display: none;}
+	
 }
