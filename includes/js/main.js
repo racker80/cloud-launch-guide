@@ -245,7 +245,7 @@ $(document).ready(function() {
 						'<a href="#" class="edit">Edit</a>'+
 						'</div>'+
 						'<div class="edit-ip">'+
-						'<input type="text" class="text" id="uniqueID"> <a href="#" class="save">Save</a>'+
+						'<input type="text" class="text" id="uniqueID" maxlength="20" > <a href="#" class="save">Save</a>'+
 						'</div>'+
 						'</div>');
 					template.find('h5').html(value.split('.').join(' '));
