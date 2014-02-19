@@ -8811,6 +8811,9 @@ h3.page-title span {
   #content-container .book-list .book-list-options {
     margin-top: 20px;
   }
+  div.ip-panel {
+    display: none;
+  }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .hide-small,
@@ -9047,6 +9050,9 @@ h3.page-title span {
     -moz-transform: scale(0.85);
     transform: scale(0.85);
     margin-left: 0px;
+  }
+  div.ip-panel {
+    display: none;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -9312,6 +9318,9 @@ h3.page-title span {
     width: 270px;
   }
   .video-launch-container {
+    display: none;
+  }
+  div.ip-panel {
     display: none;
   }
 }
