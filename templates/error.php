@@ -1,31 +1,15 @@
 {% include 'partials/header.php' %}
-
+	<style type="text/css" media="screen">
+		#banner-wrapper {display: none;}
+		#content-container .container {height: 150px; margin: 50px auto; padding: 10px;}
+		#content-container .container p {font-size: 16px;}
+	</style>
 	<div id="content-container">
 
-		<section class="chapter-list container">
-			{% for chapter in book.children %}
-				<div class="row">
-					<div class="col-md-11">
-						<h3>{{chapter.title}}</h3>
-						<p class="lead">{{chapter.description}} &nbsp;</p>
-					</div>
-
-					<div class="col-md-3">
-						30 minutes  
-					</div>
-					<div class="col-md-1">
-						<a href="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}" class="btn btn-primary btn-sm">Start Chapter</a>
-					</div>
-				</div>
-			{%endfor%}
+		<section class="container">
+			<h3>Oops! Something went wrong.</h3>
+			<p>A website error has occured. Sorry for the temporary inconvenience.</p>
+			<p>Try heading back to the <a href="{{ baseurl }}/">home page</a>.</p>
 		</section>
 	</div>
-
 {% include 'partials/footer.php' %}
-
-
-
-
-
-
-
