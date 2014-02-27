@@ -54,7 +54,6 @@
 						// call them like so: this.yourOtherFunction(this.element, this.settings).
 						var ths = this;
 						var settings = this.settings;
-						console.log("xD");
 
 						$('*[data-toggle-nav]').click(function(){
 							ths.showNav();
@@ -179,11 +178,6 @@
 
 })( jQuery, window, document );
 
-
-
-
-
-
 $(document).ready(function() {
 		
 	
@@ -251,7 +245,7 @@ $(document).ready(function() {
 						'<a href="#" class="edit">Edit</a>'+
 						'</div>'+
 						'<div class="edit-ip">'+
-						'<input type="text" class="text" id="uniqueID"> <a href="#" class="save">Save</a>'+
+						'<input type="text" class="text" id="uniqueID" maxlength="20" > <a href="#" class="save">Save</a>'+
 						'</div>'+
 						'</div>');
 					template.find('h5').html(value.split('.').join(' '));
@@ -266,8 +260,8 @@ $(document).ready(function() {
 					if( ths.html().match(re) ) {
 						var cl = value.replace(/\./g, '-');
 
-						if(localStorage.getItem(value)) {
-							var text = localStorage.getItem(value);
+						if(sessionStorage.getItem(value)) {
+							var text = sessionStorage.getItem(value);
 
 						//if a value exists, we don't need the footer
 						$('.ip-panel .panel-footer').hide();
@@ -309,7 +303,7 @@ $(document).ready(function() {
 		var showIPtoolFooter = function(){
 			var i = 0;
 			$.each(types, function(index, value){
-				if(localStorage.getItem(value)) {
+				if(sessionStorage.getItem(value)) {
 					i++;
 				}
 			});
@@ -323,11 +317,11 @@ $(document).ready(function() {
 		showIPtoolFooter();
 
 		var setCurrentIP = function(target, type) {
-			if(localStorage.getItem(type)) {
+			if(sessionStorage.getItem(type)) {
 				if(target.is('input')) {
-					target.val(localStorage.getItem(type));
+					target.val(sessionStorage.getItem(type));
 				} else {
-					target.html(localStorage.getItem(type));
+					target.html(sessionStorage.getItem(type));
 				}
 			} else {
 
@@ -339,7 +333,7 @@ $(document).ready(function() {
 				$('.ip-panel *[data-ip-type="'+type+'"] .edit-ip input.text').val(value);
 				$('.ip-panel *[data-ip-type="'+type+'"] .ip-current').html(value);
 				$('span[data-code-ip-type="'+type+'"]').html(value);
-				localStorage.setItem(type, value)
+				sessionStorage.setItem(type, value)
 			}
 
 
@@ -382,85 +376,81 @@ $(document).ready(function() {
 })();
 
 
+// ;(function() {
+// 	var common = {
+// 			connector : [ "Bezier", { curviness: 50 } ],
+// 			anchors : [ "LeftMiddle", "RightMiddle" ],
+// 			paintStyle : {
+// 				lineWidth:2,
+// 				strokeStyle: 'rgba(200,0,0,100)',
+// 				"dashstyle":"2 4"
+// 			},
+// 			maxConnections:-1,			
+// 			endpoint:[ "Dot", { radius:3 } ],
+// 			endpointStyle : { fillStyle : "rgba(200,0,0,100)" },
+// 		}
+// 
+// 	function drawConnection(source, target) {
+// 		if(jsPlumb.isSource(source) && source.is(":visible")) {
+// 			jsPlumb.connect({
+// 				source:target, 
+// 				target:source, 
+// 				container:source.parents('.row'),
+// 				detachable:false,
+// 				maxConnections:-1,
+// 
+// 			}, common);		
+// 
+// 		}
+// 	}
+// 	
+// 	$.each(connections, function(index, value){
+// 		var target = value.source;
+// 		var source = $(value.target).parents('.pre-wrapper');
+// 
+// 		target.offset({
+// 			// left: target.parent().offset().left
+// 			// left: target.offset().left
+// 		});
+// 
+// 		jsPlumb.makeSource(source, {
+// 			anchor: "LeftMiddle",
+// 			maxConnections:-1,
+// 			endpoint:[ "Dot", { radius:3 } ],
+// 			paintStyle : { fillStyle : "rgba(200,0,0,100)" },
+// 		}, common);
+// 
+// 		drawConnection(source, target);
+// 
+// 		jsPlumb.toggleSourceEnabled(source);
+// 
+// 	});
+// 
+// 
+// 	$('body').on('expertToggle', function(event){
+// 
+// 		$.each(connections, function(index, value){
+// 			var target = value.source;
+// 			var source = $(value.target).parents('.pre-wrapper');
+// 
+// 			// target.offset({
+// 			// 	// left: target.parent().offset().left
+// 			// });
+// 			// drawConnection(target, source);
+// 			// // drawConnection(source,target);
+// 
+// 			drawConnection(source, target);
+// 			jsPlumb.toggleSourceEnabled(source);
+// 
+// 		});
+// 
+// 	});
+// 		
+// })();
 
-
-;(function() {
-	var common = {
-			connector : [ "Bezier", { curviness: 50 } ],
-			anchors : [ "LeftMiddle", "RightMiddle" ],
-			paintStyle : {
-				lineWidth:2,
-				strokeStyle: 'rgba(200,0,0,100)',
-				"dashstyle":"2 4"
-			},
-			maxConnections:-1,			
-			endpoint:[ "Dot", { radius:3 } ],
-			endpointStyle : { fillStyle : "rgba(200,0,0,100)" },
-		}
-
-	function drawConnection(source, target) {
-		if(jsPlumb.isSource(source) && source.is(":visible")) {
-			jsPlumb.connect({
-				source:target, 
-				target:source, 
-				container:source.parents('.row'),
-				detachable:false,
-				maxConnections:-1,
-
-			}, common);		
-
-		}
-	}
-	
-	$.each(connections, function(index, value){
-		var target = value.source;
-		var source = $(value.target).parents('.pre-wrapper');
-
-		target.offset({
-			// left: target.parent().offset().left
-			// left: target.offset().left
-		});
-
-		jsPlumb.makeSource(source, {
-			anchor: "LeftMiddle",
-			maxConnections:-1,
-			endpoint:[ "Dot", { radius:3 } ],
-			paintStyle : { fillStyle : "rgba(200,0,0,100)" },
-		}, common);
-
-		drawConnection(source, target);
-
-		jsPlumb.toggleSourceEnabled(source);
-
-
-	});
-
-
-
-	$('body').on('expertToggle', function(event){
-
-		$.each(connections, function(index, value){
-			var target = value.source;
-			var source = $(value.target).parents('.pre-wrapper');
-
-			// target.offset({
-			// 	// left: target.parent().offset().left
-			// });
-			// drawConnection(target, source);
-			// // drawConnection(source,target);
-
-			drawConnection(source, target);
-
-			jsPlumb.toggleSourceEnabled(source);
-
-
-
-
-		});
-
-	});
-	
-})();
+// $(window).resize(function(){
+//     jsPlumb.repaintEverything();
+// });
 
 Socialite.load();
 

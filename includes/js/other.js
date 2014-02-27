@@ -48,7 +48,6 @@ $(document).ready(function() {
 			autoOpen: false,
 			modal: true,
 			draggable: false,
-			width: 550,
 			closeText: "",
 			closeOnEscape: true,
 		    create: function(event, ui) { 
@@ -56,6 +55,12 @@ $(document).ready(function() {
 
 				var widget = $(this).dialog('widget');
 				$('.ui-dialog-titlebar-close span', widget).addClass('glyphicon glyphicon-remove dialog-close');
+			},
+			position: {
+				my: "center",
+				at: "center",
+				of: $(window),
+				within: $(window)
 			}
 		});
 	
@@ -73,7 +78,7 @@ $(document).ready(function() {
 			autoOpen: false,
 			modal: true,
 			draggable: false,
-			width: 740,
+			width: 550,
 			closeText: "",
 			closeOnEscape: true,
 		    close: function() {
@@ -124,7 +129,7 @@ $(document).ready(function() {
 		
 	});
 	
-	// Validate forms
+	// Validate forms (not in production yet)
 	
 	$(function() {
 		$("#feedbackForm").validate({
@@ -166,6 +171,18 @@ $(document).ready(function() {
 				return false;
 			}
 		});
-	});	
+	});
+	
+	// Update copyright date
+	
+	$('#spanYear').html(new Date().getFullYear());
+	
+	// Prevent special characters in IP Tool
+	
+	$("#uniqueID").keyup(function(event) {
+		name = $("#uniqueID").val();
+		name = name.replace(/^[0-9.,\b]+/g,'');
+		$("#uniqueID").val(name);
+	});
 
 });

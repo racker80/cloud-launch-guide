@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-md-3">
 				<div class="video-launch-container">
-					<a href="##" class="video-launch tooltip-rs dialog-v" title="Show me the video instead."></a>
+					<a href="##" class="video-launch tooltip-rs dialog-v" title="Watch the Quick Start Guide video."></a>
 				</div>
 			</div>
 			<div class="col-md-13">

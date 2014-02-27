@@ -13,7 +13,7 @@
 				<div class="col-md-5 col-md-offset-1">
 					<div class="tweet-box clearfix">
 						<p>Share this guide:</p>
-						<a href="https://twitter.com/intent/tweet?button_hashtag=#{{guide.hashtag}}clg" class="socialite twitter-hashtag" data-lang="en" data-url="{{ baseurl }}/guides/{{guide.slug}}/{{book.slug}}/{{chapter.slug}}" data-text='Check out "{{guide.title}}" in the Rackspace Cloud Launch Guides.' data-hashtags="clg" data-size="large">Tweet this guide</a>
+						<a href="https://twitter.com/intent/tweet?button_hashtag=#{{guide.hashtag}}clg" class="socialite twitter-hashtag" data-lang="en" data-url="https://launch.rackspace.com/guides/{{guide.slug}}" data-text='Check out "{{guide.title}}" in the Rackspace Cloud Launch Guides:' data-hashtags="clg" data-size="large">Tweet this guide</a>
 					</div>
 				</div>
 			</div>

@@ -13,24 +13,24 @@
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse navbar-ex1-collapse">
+		<div class="">
 			<ul class="nav navbar-nav navbar-right nav-pills">
 				<li>
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Guides <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 					    <li role="presentation" class="dropdown-header">Unbox</li>
-						<li><a href="{{ baseurl }}/guides/securing-server" onClick="_gaq.push(['_trackEvent', 'Guides', 'Securing a Cloud Server’, 'Global nav']);">Securing a Cloud Server</a></li>	
+						<li><a href="{{ baseurl }}/guides/securing-server" onclick="_gaq.push(['_trackEvent', 'Guides', 'Securing a Cloud Server’, 'Global nav']);">Securing a Cloud Server</a></li>	
 					    <li role="presentation" class="dropdown-header">Discover</li>
-						<li><a href="{{ baseurl }}/guides/one-to-many" onClick="_gaq.push(['_trackEvent', 'Guides', 'Moving from one server to multiple servers’, 'Global nav']);">Moving from one server to multiple servers</a></li>	
-						<li><a href="{{ baseurl }}/guides/horizontal" onClick="_gaq.push(['_trackEvent', 'Guides', 'Horizontally scaling your Web layer’, 'Global nav']);">Horizontally scaling your Web layer</a></li>	
+						<li><a href="{{ baseurl }}/guides/one-to-many" onclick="_gaq.push(['_trackEvent', 'Guides', 'Moving from one server to multiple servers’, 'Global nav']);">Moving from one server to multiple servers</a></li>	
+						<li><a href="{{ baseurl }}/guides/horizontal" onclick="_gaq.push(['_trackEvent', 'Guides', 'Horizontally scaling your Web layer’, 'Global nav']);">Horizontally scaling your Web layer</a></li>	
 					    <li role="presentation" class="dropdown-header">Build</li>
-						<li><a href="{{ baseurl }}/guides/wordpress" onClick="_gaq.push(['_trackEvent', 'Guides', 'CMS with WordPress’, 'Global nav']);">CMS with WordPress</a></li>	
+						<li><a href="{{ baseurl }}/guides/wordpress" onclick="_gaq.push(['_trackEvent', 'Guides', 'CMS with WordPress’, 'Global nav']);">CMS with WordPress</a></li>	
 					</ul>
 				</li>
 				<!-- <li><a href="#">About</a></li> -->
 				<!-- <li><a href="#" class="dialog-f">Feedback</a></li> -->
-				<li><a href="mailto:cloudlaunchguide@rackspace.com?subject=Cloud Launch Guides Feedback" class="tooltip-rs pointer" title="Send an email to the Cloud Launch Guides team" onClick="_gaq.push(['_trackEvent', 'Buttons', 'Click', 'Feedback’]);">Feedback</a></li>
-				<li><a href="http://support.rackspace.com" onClick="_gaq.push(['_trackEvent', 'Buttons', 'Click', 'Fanatical Support’]);">Fanatical Support</a></li>
+				<li class="hide-nav-medium"><a href="mailto:cloudlaunchguide@rackspace.com?subject=Cloud Launch Guides Feedback" class="tooltip-rs pointer" title="Send an email to the Cloud Launch Guides team" onClick="_gaq.push(['_trackEvent', 'Buttons', 'Click', 'Feedback’]);">Feedback</a></li>
+				<li class="hide-nav-medium"><a href="http://support.rackspace.com" onClick="_gaq.push(['_trackEvent', 'Buttons', 'Click', 'Fanatical Support’]);">Fanatical Support</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</div>

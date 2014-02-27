@@ -7,14 +7,13 @@
 	<title>Cloud Launch Guides | Rackpace Hosting</title>	
 	
 	<link rel="stylesheet" href="{{ baseurl }}/includes/css/styles.css">
-    
-	<script src="{{ baseurl }}/includes/bower_components/modernizr/modernizr.js"></script>	
+    	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>	
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	
 
-	<!-- IE Fix for HTML5 Tags -->
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-		
+	<script src="{{ baseurl }}/includes/bower_components/modernizr/modernizr.js"></script>	
+	
 	<!-- BEGIN GOOGLE ANALYTICS -->
 	<script type="text/javascript">
 		var _gaq = _gaq || []; _gaq.push(["_setAccount", "UA-35639070-1"]); _gaq.push(["_trackPageview"]);
@@ -24,7 +23,14 @@
 			var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
 		})();
 	</script>
-	<!-- END GOOGLE ANALYTICS -->		
+	<!-- END GOOGLE ANALYTICS -->
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>		
+	<![endif]-->		
 		
 </head>
 <body ng-app="myApp">
