@@ -5,6 +5,8 @@
     $app = new Slim(array(
         'templates.path' => __DIR__.'/templates/',
     ));
+	
+	
     
     require 'vendor/slim/extras/Views/TwigView.php';
     TwigView::$twigExtensions = array('Twig_Extensions_Slim',);
@@ -22,8 +24,8 @@
         //GET THE JSON
         // $json_url = 'http://192.237.203.16/'.$route;
         //$json_url = 'http://192.237.165.197/api/'.$route;
+        $json_url = 'http://launch.snet.api.rackspace.com/'.$route;
 	//$json_url = 'http://launch.snet.api.henshin.co/'.$route;
-	$json_url = 'http://launch.snet.api.rackspace.com/'.$route;
         // $json_url = 'http://projects.clgapi/'.$route;
         $ch = curl_init( $json_url );
         $options = array(
@@ -34,9 +36,19 @@
         //CREATE THE OUTPUT DATA
         $output =  json_decode(curl_exec($ch)); // Getting jSON result string
 
-        return $output->data;
+
+		if(!isset($output->data)){
+			$app = Slim::getInstance();
+			$app->redirect('/error');
+		} else {
+			return $output->data;
+		}
+        
     }
 
+    $app->get('/error', function() use($app) {
+        $app->render( 'error.php');        
+    });
 
 
 
@@ -61,16 +73,6 @@
 
     }
 
-    $app->get('/sitemap', function() use($app) {
-
-        $sitemap = getSitemap(getAPI('guides'));
-
-        print_r($sitemap);
-       
-        $app->render( 'sitemap.php', array('guides'=>$sitemap) );
-        
-    });
-
     $app->get('/', function() use($app) {
 
         $guides = getAPI('guides');
@@ -83,20 +85,21 @@
 
         $guides = getAPI('guides');
 
-       
         $app->render( 'index.all.php', array('guides'=>$guides) );
         
     });
 	
-    $app->get('/guides/(:guideSlug)', function ($guideSlug) use ($app) {
+    $app->get('/guides/(:guideSlug)', function ($guideSlug='') use ($app) {
 
         $guides = getAPI('guides/overview');
         
         $guide = getAPI('guides/slug/'.$guideSlug.'/markdown');
+		
 
         $app->render('guide.landing.php', array('guides'=>$guides, 'guide'=>$guide));
-
+		
     });
+		
 
 
     // $app->get('/guides/(:guideSlug)/(:bookSlug)', function ($guideSlug, $bookSlug) use ($app) {
@@ -114,7 +117,7 @@
 
     // });
 
-    $app->get('/guides/(:guideSlug)/(:bookSlug)', function ($guideSlug, $bookSlug) use ($app) {
+    $app->get('/guides/(:guideSlug)/(:bookSlug)', function ($guideSlug='', $bookSlug='') use ($app) {
 
         $guides = getAPI('guides/overview');
 
@@ -129,8 +132,12 @@
             if(isset($chapter->code)) {
                 foreach($chapter->code as $code) {
 		$code = new stdClass();
+		
+		
                         if(strstr($code->text, 'your.')) {
-                            $chapter->meta->iptool = true;
+							if(isset($chapter->meta)) {
+								$chapter->meta->iptool = true;
+							}                           
                             $code->iptool = true;
                         }
                     
@@ -150,12 +157,18 @@
         }
 
         $app->render('guide.book.all.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book, 'chapters'=>$chapters, 'allsteps'=>true));
-
+		
     });
 
-    $app->get('/guides/(:guideSlug)/(:bookSlug)/(:chapterSlug)', function ($guideSlug, $bookSlug, $chapterSlug) use ($app) {
+    $app->get('/guides/(:guideSlug)/(:bookSlug)/(:chapterSlug)', function ($guideSlug='', $bookSlug='', $chapterSlug='') use ($app) {
 
         $guides = getAPI('guides/overview');
+		
+		var_dump($guides);
+		if(!$guides) {
+			$app->render('error.php');
+			return;
+		}
 
         $api = getAPI('/guides/slug/'.$guideSlug.'/'.$bookSlug.'/'.$chapterSlug.'/markdown');   
 
@@ -187,10 +200,9 @@
             }
         }
 
-
         $app->render('guide.book.chapter.php', array('guides'=>$guides, 'guide'=> $guide, 'book'=>$book, 'chapter'=>$chapter, 'chapterslug'=>'#'.$chapter->slug));
 
     });
-
+	
     
     $app->run();

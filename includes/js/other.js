@@ -181,7 +181,7 @@ $(document).ready(function() {
 	
 	$("#uniqueID").keyup(function(event) {
 		name = $("#uniqueID").val();
-		name = name.replace(/[^a-zA-Z 0-9.]+/g,'');
+		name = name.replace(/^[0-9.,\b]+/g,'');
 		$("#uniqueID").val(name);
 	});
 
