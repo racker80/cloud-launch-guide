@@ -49,8 +49,6 @@
         $app->render( 'error.php');        
     });
 
-
-
     function getSitemap($data) {
         
 
@@ -163,7 +161,6 @@
 
         $guides = getAPI('guides/overview');
 		
-		var_dump($guides);
 		if(!$guides) {
 			$app->render('error.php');
 			return;
