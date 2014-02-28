@@ -130,9 +130,8 @@
             if(isset($chapter->code)) {
                 foreach($chapter->code as $code) {
 		$code = new stdClass();
-		
-		
-                        if(strstr($code->text, 'your.')) {
+                        //if(strstr($code->text, 'your.')) {
+			if(isset($code->text) && strstr($code->text, 'your.')) {
 							if(isset($chapter->meta)) {
 								$chapter->meta->iptool = true;
 							}                           
@@ -143,7 +142,8 @@
                 foreach($chapter->children as $child) {
                     if($child->code) {
                         foreach($child->code as $code) {
-                                if(strstr($code->text, 'your.')) {
+                                //if(strstr($code->text, 'your.')) {
+				if(isset($code->text) && strstr($code->text, 'your.')) {
                                     $child->meta->iptool = true;
                                 $code->iptool = true;
                                 }
@@ -178,7 +178,8 @@
         if(isset($chapter->code)) {
             foreach($chapter->code as $code) {
 		$code = new stdClass();
-                if(strstr($code->text, 'your.')) {
+                //if(strstr($code->text, 'your.')) {
+		if(isset($code->text) && strstr($code->text, 'your.')) {
                     $chapter->meta->iptool = true;
                     $code->iptool = true;
 
@@ -187,7 +188,8 @@
             foreach($chapter->children as $child) {
                 if($child->code) {
                     foreach($child->code as $code) {
-                        if(strstr($code->text, 'your.')) {
+                        //if(strstr($code->text, 'your.')) {
+			if(isset($code->text) && strstr($code->text, 'your.')) {
                             $child->meta->iptool = true;
                             $code->iptool = true;
 
